@@ -23,7 +23,20 @@ namespace Bot_Scout_RAPID_REACT
 
         }
 
-        private void button2_Click(object sender, EventArgs e)
+        public void addTeam(string team)
+        {
+            File.Create(team + ".txt").Close();
+
+        }
+        public void addLines(string team)
+        {
+            for (int i = 0; i < 5000; i++)
+            {
+                File.AppendAllText(team + ".txt", "0" + Environment.NewLine);
+            }
+            Console.WriteLine("Added team!");
+        }
+        private void button3_Click_1(object sender, EventArgs e)
         {
             string current = Directory.GetCurrentDirectory() + "\\";
             int autoCargo;
@@ -36,117 +49,100 @@ namespace Bot_Scout_RAPID_REACT
             string teleAccuracy;
             int team1;
             string prompt;
-
-            Console.WriteLine("Enter Scouting Data (Type q or quit to go back to menu)");
-            Console.Write("Team #: ");
-            Console.ForegroundColor = ConsoleColor.Cyan;
-            team.Text = Console.ReadLine();
-            if (!int.TryParse(team.Text, out team1))
+            if (!File.Exists("blank.txt"))
             {
-                Console.ForegroundColor = ConsoleColor.DarkRed;
-                Console.WriteLine("This is not a team. Going back to menu. Press enter to continue");
-                Console.ForegroundColor = ConsoleColor.White;
-                Console.ReadLine();
-                menu.menu();
+                addTeam("blank");
+                addLines("blank");
+
             }
-            Console.ForegroundColor = ConsoleColor.White;
             if (!File.Exists(team.Text + ".txt"))
             {
                 addTeam(team.Text);
                 addLines(team.Text);
                 
             }
+            //addTeam(team.Text);
+            //addLines(team.Text);
 
 
-            climbTime = (Int32.Parse(climbStart) - Int32.Parse(climbEnd));
+            //User match data
+            climbTime = (Int32.Parse(climbStart.Text) - Int32.Parse(climbEnd.Text));
 
-            double autoUpperInt = Double.Parse(autoUpper);
-            double autoLowerInt = Double.Parse(autoLower);
-            double autoMissedInt = Double.Parse(autoMissed);
+            double autoUpperInt = Double.Parse(autoUpper.Text);
+            double autoLowerInt = Double.Parse(autoLower.Text);
+            double autoMissedInt = Double.Parse(autoMissed.Text);
             autoAccuracy = (autoUpperInt + autoLowerInt) / (autoUpperInt + autoLowerInt + autoMissedInt) * 100 + "%";
 
             double teleUpperInt = Double.Parse(teleUpper.Text);
-            double teleLowerInt = Double.Parse(teleLower);
-            double teleMissedInt = Double.Parse(teleMissed);
+            double teleLowerInt = Double.Parse(teleLower.Text);
+            double teleMissedInt = Double.Parse(teleMissed.Text);
             teleAccuracy = (teleUpperInt + teleLowerInt) / (teleUpperInt + teleLowerInt + teleMissedInt) * 100 + "%";
 
             //User match data
             writeToFile(team.Text, "Match Number: " + match.Text);
-            writeToFile(team.Text, "Taxi: " + taxi);
-            writeToFile(team.Text, "Tele Lower: " + teleLower);
-            writeToFile(team.Text, "Tele Upper: " + teleUpper);
-            int totalAuto = Int32.Parse(autoUpper) + Int32.Parse(autoLower);
+            writeToFile(team.Text, "Taxi: " + taxi.Text);
+            writeToFile(team.Text, "Tele Lower: " + teleLower.Text);
+            writeToFile(team.Text, "Tele Upper: " + teleUpper.Text);
+            int totalAuto = Int32.Parse(autoUpper.Text) + Int32.Parse(autoLower.Text);
 
             if ((totalAuto).ToString().Length == 1)
             {
-                writeToFile(team.Text.Text, "Auto Cargo Total: 0" + totalAuto);
+                writeToFile(team.Text, "Auto Cargo Total: 0" + totalAuto);
             }
             else
             {
-                writeToFile(team.Text.Text, "Auto Cargo Total: " + totalAuto);
+                writeToFile(team.Text, "Auto Cargo Total: " + totalAuto);
             }
-            writeToFile(team.Text, "Auto Upper: " + autoUpper);
-            writeToFile(team.Text, "Auto Lower: " + autoLower);
-            writeToFile(team.Text, "Auto Missed: " + autoMissed);
+            writeToFile(team.Text, "Auto Upper: " + autoUpper.Text);
+            writeToFile(team.Text, "Auto Lower: " + autoLower.Text);
+            writeToFile(team.Text, "Auto Missed: " + autoMissed.Text);
 
-            writeToFile(team.Text, "Tele Missed: " + teleMissed);
+            writeToFile(team.Text, "Tele Missed: " + teleMissed.Text);
 
 
-            writeToFile(team.Text, "Start: " + climbStart);
-            writeToFile(team.Text, "End: " + climbEnd);
+            writeToFile(team.Text, "Start: " + climbStart.Text);
+            writeToFile(team.Text, "End: " + climbEnd.Text);
             if ((climbTime).ToString().Length == 1)
             {
-                writeToFile(team.Text.Text, "Total Climb Time: 0" + climbTime);
+                writeToFile(team.Text, "Total Climb Time: 0" + climbTime);
             }
             else
             {
-                writeToFile(team.Text.Text, "Total Climb Time: " + climbTime);
+                writeToFile(team.Text, "Total Climb Time: " + climbTime);
             }
-            writeToFile(team.Text, "Climb Type: " + climbType);
-            writeToFile(team.Text, "Defense: " + "0" + defense);
-            writeToFile(team.Text, "Position: " + position);
-            writeToFile(team.Text, "Entry: " + climbEnter);
+            writeToFile(team.Text, "Climb Type: " + climbType.Text);
+            writeToFile(team.Text, "Defense: " + "0" + defense.Text);
+            writeToFile(team.Text, "Position: " + position.Text);
+            writeToFile(team.Text, "Entry: " + climbEnter.Text);
 
-            teleCargo = (Int32.Parse(teleUpper) * 2) + (Int32.Parse(teleLower) * 1);
-            autoCargo = (Int32.Parse(autoUpper) * 4) + (Int32.Parse(autoLower) * 2);
+            teleCargo = (Int32.Parse(teleUpper.Text) * 2) + (Int32.Parse(teleLower.Text) * 1);
+            autoCargo = (Int32.Parse(autoUpper.Text) * 4) + (Int32.Parse(autoLower.Text) * 2);
             //Calculated match data
 
 
             if ((teleCargo).ToString().Length == 1)
             {
-                writeToFile(team.Text.Text, "Tele Cargo Score: 0" + teleCargo);
+                writeToFile(team.Text, "Tele Cargo Score: 0" + teleCargo);
             }
             else
             {
-                writeToFile(team.Text.Text, "Tele Cargo Score: " + teleCargo);
+                writeToFile(team.Text, "Tele Cargo Score: " + teleCargo);
             }
             if ((autoCargo).ToString().Length == 1)
             {
-                writeToFile(team.Text.Text, "Auto Cargo Score: 0" + autoCargo);
+                writeToFile(team.Text, "Auto Cargo Score: 0" + autoCargo);
             }
             else
             {
-                writeToFile(team.Text.Text, "Auto Cargo Score: " + autoCargo);
+                writeToFile(team.Text, "Auto Cargo Score: " + autoCargo);
             }
 
 
-            writeToFile(team.Text.Text, "Auto Accuracy: " + autoAccuracy);
-            writeToFile(team.Text.Text, "Tele Accuracy: " + teleAccuracy);
+            writeToFile(team.Text, "Auto Accuracy: " + autoAccuracy);
+            writeToFile(team.Text, "Tele Accuracy: " + teleAccuracy);
 
-            writeToFile(team.Text.Text, "------------------------");
-            Console.Clear();
-            Console.ForegroundColor = ConsoleColor.Yellow;
-            Console.WriteLine("***********************");
-            Console.ForegroundColor = ConsoleColor.Green;
-            //Console.WriteLine(autoAccuracy);
-            Console.WriteLine("Success!");
-            Console.ForegroundColor = ConsoleColor.Yellow;
-            Console.WriteLine("***********************");
+            writeToFile(team.Text, "------------------------");
 
-            Thread.Sleep(2500);
-            Console.Clear();
-            Console.ForegroundColor = ConsoleColor.White;
-            menu.menu();
         }
 
         public string GetLine(string fileName, int line)
@@ -199,6 +195,19 @@ namespace Bot_Scout_RAPID_REACT
             }
         }
 
+        private void team_TextChanged(object sender, EventArgs e)
+        {
 
+        }
+
+        private void label9_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label13_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
