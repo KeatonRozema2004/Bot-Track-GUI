@@ -47,12 +47,13 @@ namespace Bot_Scout_RAPID_REACT
             this.teleHigh = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.loadText = new System.Windows.Forms.Label();
+            this.button2 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(12, 12);
+            this.button1.Location = new System.Drawing.Point(89, 34);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(88, 46);
             this.button1.TabIndex = 0;
@@ -62,7 +63,7 @@ namespace Bot_Scout_RAPID_REACT
             // 
             // team
             // 
-            this.team.Location = new System.Drawing.Point(246, 38);
+            this.team.Location = new System.Drawing.Point(89, 8);
             this.team.Name = "team";
             this.team.Size = new System.Drawing.Size(100, 20);
             this.team.TabIndex = 1;
@@ -71,7 +72,7 @@ namespace Bot_Scout_RAPID_REACT
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(156, 38);
+            this.label1.Location = new System.Drawing.Point(12, 9);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(68, 16);
             this.label1.TabIndex = 2;
@@ -195,7 +196,7 @@ namespace Bot_Scout_RAPID_REACT
             // 
             this.pictureBox1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox1.BackgroundImage")));
             this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pictureBox1.Location = new System.Drawing.Point(476, 1);
+            this.pictureBox1.Location = new System.Drawing.Point(12, 28);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(60, 57);
             this.pictureBox1.TabIndex = 15;
@@ -206,17 +207,28 @@ namespace Bot_Scout_RAPID_REACT
             this.loadText.AutoSize = true;
             this.loadText.Font = new System.Drawing.Font("Microsoft YaHei UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.loadText.ForeColor = System.Drawing.SystemColors.MenuHighlight;
-            this.loadText.Location = new System.Drawing.Point(231, 61);
+            this.loadText.Location = new System.Drawing.Point(212, 9);
             this.loadText.Name = "loadText";
             this.loadText.Size = new System.Drawing.Size(168, 17);
             this.loadText.TabIndex = 16;
             this.loadText.Text = "Enter Valid Team Number";
+            // 
+            // button2
+            // 
+            this.button2.Location = new System.Drawing.Point(198, 34);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(92, 46);
+            this.button2.TabIndex = 17;
+            this.button2.Text = "Recent Match 1";
+            this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // Data
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.button2);
             this.Controls.Add(this.loadText);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.teleHigh);
@@ -261,5 +273,6 @@ namespace Bot_Scout_RAPID_REACT
         private System.Windows.Forms.Label teleHigh;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Label loadText;
+        private System.Windows.Forms.Button button2;
     }
 }

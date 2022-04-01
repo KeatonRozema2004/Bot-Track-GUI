@@ -179,5 +179,74 @@ namespace Bot_Scout_RAPID_REACT
             Console.WriteLine();
 
         }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            driveData();
+        }
+
+
+        public void driveData()
+        {
+            Form1 match = new Form1();
+            int i = 0;
+            string team1 = team.Text;
+            Console.WriteLine("Getting team data........");
+            Console.WriteLine("--------------------");
+            while (match.GetLine(team1 + ".txt", i) != match.GetLine("blank.txt", 1))
+            {
+                i++;
+                Console.WriteLine(match.GetLine(team1 + ".txt", i));
+                Console.ForegroundColor = ConsoleColor.DarkGreen;
+                if (match.GetLine(team1 + ".txt", i).Contains("Match Number"))
+                {
+                    Console.WriteLine(match.GetLine(team1 + ".txt", i));
+                }
+                if (match.GetLine(team1 + ".txt", i).Contains("Tele Lower"))
+                {
+                    string num1 = match.GetLine(team1 + ".txt", i)[12].ToString();
+                    string num2 = match.GetLine(team1 + ".txt", i)[13].ToString();
+                    teleLow.Text = num1 + num2;
+                    Console.WriteLine(match.GetLine(team1 + ".txt", i));
+                }
+                Console.ForegroundColor = ConsoleColor.DarkCyan;
+                if (match.GetLine(team1 + ".txt", i).Contains("Tele Upper"))
+                {
+                    string num1 = match.GetLine(team1 + ".txt", i)[12].ToString();
+                    string num2 = match.GetLine(team1 + ".txt", i)[13].ToString();
+                    teleHigh.Text = num1 + num2;
+                    Console.WriteLine(match.GetLine(team1 + ".txt", i));
+                }
+                Console.ForegroundColor = ConsoleColor.Cyan;
+                if (match.GetLine(team1 + ".txt", i).Contains("Auto Cargo Total"))
+                {
+                    string num1 = match.GetLine(team1 + ".txt", i)[18].ToString();
+                    string num2 = match.GetLine(team1 + ".txt", i)[19].ToString();
+                    autoTotal.Text = num1 + num2;
+                    Console.WriteLine(match.GetLine(team1 + ".txt", i));
+                }
+                Console.ForegroundColor = ConsoleColor.DarkCyan;
+                if (match.GetLine(team1 + ".txt", i).Contains("Climb Time"))
+                {
+                    string num1 = match.GetLine(team1 + ".txt", i)[18].ToString();
+                    string num2 = match.GetLine(team1 + ".txt", i)[19].ToString();
+                    time.Text = num1 + num2;
+                }
+                Console.ForegroundColor = ConsoleColor.Cyan;
+                if (match.GetLine(team1 + ".txt", i).Contains("Climb Type"))
+                {
+                    string climb = match.GetLine(team1 + ".txt", i)[12].ToString();
+                    climbType.Text = climb;
+                }
+                Console.ForegroundColor = ConsoleColor.DarkCyan;
+                if (match.GetLine(team1 + ".txt", i).Contains("Defense"))
+                {
+                    string num1 = match.GetLine(team1 + ".txt", i)[9].ToString();
+                    defense.Text = num1;
+                }
+
+            }
+            Console.WriteLine("Done");
+        }
     }
 }
