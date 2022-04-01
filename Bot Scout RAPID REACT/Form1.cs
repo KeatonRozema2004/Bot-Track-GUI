@@ -81,8 +81,24 @@ namespace Bot_Scout_RAPID_REACT
             //User match data
             writeToFile(team.Text, "Match Number: " + match.Text);
             writeToFile(team.Text, "Taxi: " + taxi.Text);
-            writeToFile(team.Text, "Tele Lower: " + teleLower.Text);
-            writeToFile(team.Text, "Tele Upper: " + teleUpper.Text);
+            //writeToFile(team.Text, "Tele Lower: " + teleLower.Text);
+            if ((teleLower.Text).ToString().Length == 1)
+            {
+                writeToFile(team.Text, "Tele Lower: 0" + teleLower.Text);
+            }
+            else
+            {
+                writeToFile(team.Text, "Tele Lower: " + teleLower.Text);
+            }
+            //writeToFile(team.Text, "Tele Upper: " + teleUpper.Text);
+            if ((teleUpper.Text).ToString().Length == 1)
+            {
+                writeToFile(team.Text, "Tele Upper: 0" + teleUpper.Text);
+            }
+            else
+            {
+                writeToFile(team.Text, "Tele Upper: " + teleUpper.Text);
+            }
             int totalAuto = Int32.Parse(autoUpper.Text) + Int32.Parse(autoLower.Text);
 
             if ((totalAuto).ToString().Length == 1)
@@ -93,15 +109,71 @@ namespace Bot_Scout_RAPID_REACT
             {
                 writeToFile(team.Text, "Auto Cargo Total: " + totalAuto);
             }
-            writeToFile(team.Text, "Auto Upper: " + autoUpper.Text);
-            writeToFile(team.Text, "Auto Lower: " + autoLower.Text);
-            writeToFile(team.Text, "Auto Missed: " + autoMissed.Text);
+
+
+
+
+
+            //writeToFile(team.Text, "Auto Upper: " + autoUpper.Text);
+            if ((autoUpper.Text).ToString().Length == 1)
+            {
+                writeToFile(team.Text, "Auto Upper: 0" + autoUpper.Text);
+            }
+            else
+            {
+                writeToFile(team.Text, "Auto Upper: " + autoUpper.Text);
+            }
+            //writeToFile(team.Text, "Auto Lower: " + autoLower.Text);
+            if ((autoLower.Text).ToString().Length == 1)
+            {
+                writeToFile(team.Text, "Auto Lower: 0" + autoLower.Text);
+            }
+            else
+            {
+                writeToFile(team.Text, "Auto Lower: " + autoLower.Text);
+            }
+
+
+            //writeToFile(team.Text, "Auto Missed: " + autoMissed.Text);
+            if ((autoMissed.Text).ToString().Length == 1)
+            {
+                writeToFile(team.Text, "Auto Missed: 0" + autoMissed.Text);
+            }
+            else
+            {
+                writeToFile(team.Text, "Auto Missed: " + autoMissed.Text);
+            }
 
             writeToFile(team.Text, "Tele Missed: " + teleMissed.Text);
+            if ((teleMissed.Text).ToString().Length == 1)
+            {
+                writeToFile(team.Text, "Tele Missed: 0" + teleMissed.Text);
+            }
+            else
+            {
+                writeToFile(team.Text, "Tele Missed: " + teleMissed.Text);
+            }
 
 
-            writeToFile(team.Text, "Start: " + climbStart.Text);
-            writeToFile(team.Text, "End: " + climbEnd.Text);
+            //writeToFile(team.Text, "Start: " + climbStart.Text);
+            if ((climbStart.Text).ToString().Length == 1)
+            {
+                writeToFile(team.Text, "Start: 0" + climbStart.Text);
+            }
+            else
+            {
+                writeToFile(team.Text, "Start: " + climbStart.Text);
+            }
+            //writeToFile(team.Text, "End: " + climbEnd.Text);
+            if ((climbEnd.Text).ToString().Length == 1)
+            {
+                writeToFile(team.Text, "End: 0" + climbEnd.Text);
+            }
+            else
+            {
+                writeToFile(team.Text, "End: " + climbEnd.Text);
+            }
+
             if ((climbTime).ToString().Length == 1)
             {
                 writeToFile(team.Text, "Total Climb Time: 0" + climbTime);
