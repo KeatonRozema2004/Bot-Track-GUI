@@ -60,6 +60,7 @@ namespace Bot_Scout_RAPID_REACT
             this.climbType = new System.Windows.Forms.TextBox();
             this.climbEnd = new System.Windows.Forms.TextBox();
             this.climbEnter = new System.Windows.Forms.TextBox();
+            this.button4 = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // button3
@@ -315,9 +316,25 @@ namespace Bot_Scout_RAPID_REACT
             this.climbEnter.Size = new System.Drawing.Size(100, 20);
             this.climbEnter.TabIndex = 13;
             // 
+            // button4
+            // 
+            this.button4.BackColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.button4.Cursor = System.Windows.Forms.Cursors.Default;
+            this.button4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button4.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.button4.Location = new System.Drawing.Point(37, 13);
+            this.button4.Name = "button4";
+            this.button4.Size = new System.Drawing.Size(112, 23);
+            this.button4.TabIndex = 26;
+            this.button4.Text = "Driver Sheet";
+            this.button4.UseVisualStyleBackColor = false;
+            this.button4.Click += new System.EventHandler(this.button4_Click);
+            // 
             // Form1
             // 
+            this.BackColor = System.Drawing.SystemColors.MenuBar;
             this.ClientSize = new System.Drawing.Size(820, 566);
+            this.Controls.Add(this.button4);
             this.Controls.Add(this.climbEnter);
             this.Controls.Add(this.climbEnd);
             this.Controls.Add(this.climbType);
@@ -396,6 +413,7 @@ namespace Bot_Scout_RAPID_REACT
         private System.Windows.Forms.TextBox climbType;
         private System.Windows.Forms.TextBox climbEnd;
         private System.Windows.Forms.TextBox climbEnter;
+        private System.Windows.Forms.Button button4;
     }
 }
 

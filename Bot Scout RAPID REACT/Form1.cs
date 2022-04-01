@@ -209,5 +209,11 @@ namespace Bot_Scout_RAPID_REACT
         {
 
         }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            Data data = new Data();
+            data.ShowDialog();
+        }
     }
 }
