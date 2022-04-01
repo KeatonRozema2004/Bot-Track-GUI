@@ -19,8 +19,15 @@ namespace Bot_Scout_RAPID_REACT
 
         private void button1_Click(object sender, EventArgs e)
         {
+            try
+            {
+                bestScore(team.Text);
+            }
+            catch
+            {
+                loadText.Text = "Whoops, team does not exist!";
+            }
             
-            bestScore(team.Text);
         }
         public void bestScore(string team)
         {
@@ -150,6 +157,7 @@ namespace Bot_Scout_RAPID_REACT
             time.Text = "" + time1;
             climbType.Text = "" + climbType1;
             defense.Text = "" + defense1;
+            loadText.Text = "Data Loaded!";
             Console.ForegroundColor = ConsoleColor.DarkGreen;
             Console.WriteLine("-Best Scores-");
             Console.ForegroundColor = ConsoleColor.DarkCyan;

@@ -29,6 +29,7 @@ namespace Bot_Scout_RAPID_REACT
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.button3 = new System.Windows.Forms.Button();
             this.label4 = new System.Windows.Forms.Label();
             this.team = new System.Windows.Forms.TextBox();
@@ -61,16 +62,26 @@ namespace Bot_Scout_RAPID_REACT
             this.climbEnd = new System.Windows.Forms.TextBox();
             this.climbEnter = new System.Windows.Forms.TextBox();
             this.button4 = new System.Windows.Forms.Button();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.statusText = new System.Windows.Forms.Label();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // button3
             // 
-            this.button3.Location = new System.Drawing.Point(368, 504);
+            this.button3.BackColor = System.Drawing.SystemColors.GrayText;
+            this.button3.FlatAppearance.BorderColor = System.Drawing.Color.Black;
+            this.button3.FlatAppearance.BorderSize = 5;
+            this.button3.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Gray;
+            this.button3.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Black;
+            this.button3.Font = new System.Drawing.Font("Microsoft YaHei UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button3.ForeColor = System.Drawing.SystemColors.HighlightText;
+            this.button3.Location = new System.Drawing.Point(368, 449);
             this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(75, 23);
+            this.button3.Size = new System.Drawing.Size(119, 78);
             this.button3.TabIndex = 14;
             this.button3.Text = "Submit";
-            this.button3.UseVisualStyleBackColor = true;
+            this.button3.UseVisualStyleBackColor = false;
             this.button3.Click += new System.EventHandler(this.button3_Click_1);
             // 
             // label4
@@ -330,10 +341,33 @@ namespace Bot_Scout_RAPID_REACT
             this.button4.UseVisualStyleBackColor = false;
             this.button4.Click += new System.EventHandler(this.button4_Click);
             // 
+            // pictureBox1
+            // 
+            this.pictureBox1.AccessibleName = "";
+            this.pictureBox1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox1.BackgroundImage")));
+            this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pictureBox1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.pictureBox1.Location = new System.Drawing.Point(474, 1);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(60, 57);
+            this.pictureBox1.TabIndex = 27;
+            this.pictureBox1.TabStop = false;
+            // 
+            // statusText
+            // 
+            this.statusText.AutoSize = true;
+            this.statusText.Location = new System.Drawing.Point(37, 513);
+            this.statusText.Name = "statusText";
+            this.statusText.Size = new System.Drawing.Size(58, 13);
+            this.statusText.TabIndex = 28;
+            this.statusText.Text = "Enter Data";
+            // 
             // Form1
             // 
             this.BackColor = System.Drawing.SystemColors.MenuBar;
             this.ClientSize = new System.Drawing.Size(820, 566);
+            this.Controls.Add(this.statusText);
+            this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.button4);
             this.Controls.Add(this.climbEnter);
             this.Controls.Add(this.climbEnd);
@@ -367,6 +401,8 @@ namespace Bot_Scout_RAPID_REACT
             this.Controls.Add(this.label4);
             this.Controls.Add(this.button3);
             this.Name = "Form1";
+            this.Text = "Scouting Data Entry";
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -414,6 +450,8 @@ namespace Bot_Scout_RAPID_REACT
         private System.Windows.Forms.TextBox climbEnd;
         private System.Windows.Forms.TextBox climbEnter;
         private System.Windows.Forms.Button button4;
+        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.Label statusText;
     }
 }
 

@@ -29,6 +29,7 @@ namespace Bot_Scout_RAPID_REACT
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Data));
             this.button1 = new System.Windows.Forms.Button();
             this.team = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
@@ -44,6 +45,9 @@ namespace Bot_Scout_RAPID_REACT
             this.time = new System.Windows.Forms.Label();
             this.autoTotal = new System.Windows.Forms.Label();
             this.teleHigh = new System.Windows.Forms.Label();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.loadText = new System.Windows.Forms.Label();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // button1
@@ -130,62 +134,91 @@ namespace Bot_Scout_RAPID_REACT
             // teleLow
             // 
             this.teleLow.AutoSize = true;
+            this.teleLow.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.teleLow.Location = new System.Drawing.Point(138, 109);
             this.teleLow.Name = "teleLow";
-            this.teleLow.Size = new System.Drawing.Size(36, 13);
+            this.teleLow.Size = new System.Drawing.Size(51, 16);
             this.teleLow.TabIndex = 9;
             this.teleLow.Text = "Empty";
             // 
             // defense
             // 
             this.defense.AutoSize = true;
+            this.defense.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.defense.Location = new System.Drawing.Point(138, 289);
             this.defense.Name = "defense";
-            this.defense.Size = new System.Drawing.Size(36, 13);
+            this.defense.Size = new System.Drawing.Size(51, 16);
             this.defense.TabIndex = 10;
             this.defense.Text = "Empty";
             // 
             // climbType
             // 
             this.climbType.AutoSize = true;
+            this.climbType.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.climbType.Location = new System.Drawing.Point(138, 253);
             this.climbType.Name = "climbType";
-            this.climbType.Size = new System.Drawing.Size(36, 13);
+            this.climbType.Size = new System.Drawing.Size(51, 16);
             this.climbType.TabIndex = 11;
             this.climbType.Text = "Empty";
             // 
             // time
             // 
             this.time.AutoSize = true;
+            this.time.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.time.Location = new System.Drawing.Point(138, 219);
             this.time.Name = "time";
-            this.time.Size = new System.Drawing.Size(36, 13);
+            this.time.Size = new System.Drawing.Size(51, 16);
             this.time.TabIndex = 12;
             this.time.Text = "Empty";
             // 
             // autoTotal
             // 
             this.autoTotal.AutoSize = true;
+            this.autoTotal.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.autoTotal.Location = new System.Drawing.Point(138, 177);
             this.autoTotal.Name = "autoTotal";
-            this.autoTotal.Size = new System.Drawing.Size(36, 13);
+            this.autoTotal.Size = new System.Drawing.Size(51, 16);
             this.autoTotal.TabIndex = 13;
             this.autoTotal.Text = "Empty";
             // 
             // teleHigh
             // 
             this.teleHigh.AutoSize = true;
+            this.teleHigh.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.teleHigh.Location = new System.Drawing.Point(138, 143);
             this.teleHigh.Name = "teleHigh";
-            this.teleHigh.Size = new System.Drawing.Size(36, 13);
+            this.teleHigh.Size = new System.Drawing.Size(51, 16);
             this.teleHigh.TabIndex = 14;
             this.teleHigh.Text = "Empty";
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox1.BackgroundImage")));
+            this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pictureBox1.Location = new System.Drawing.Point(476, 1);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(60, 57);
+            this.pictureBox1.TabIndex = 15;
+            this.pictureBox1.TabStop = false;
+            // 
+            // loadText
+            // 
+            this.loadText.AutoSize = true;
+            this.loadText.Font = new System.Drawing.Font("Microsoft YaHei UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.loadText.ForeColor = System.Drawing.SystemColors.MenuHighlight;
+            this.loadText.Location = new System.Drawing.Point(231, 61);
+            this.loadText.Name = "loadText";
+            this.loadText.Size = new System.Drawing.Size(168, 17);
+            this.loadText.TabIndex = 16;
+            this.loadText.Text = "Enter Valid Team Number";
             // 
             // Data
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.loadText);
+            this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.teleHigh);
             this.Controls.Add(this.autoTotal);
             this.Controls.Add(this.time);
@@ -202,7 +235,8 @@ namespace Bot_Scout_RAPID_REACT
             this.Controls.Add(this.team);
             this.Controls.Add(this.button1);
             this.Name = "Data";
-            this.Text = "Data";
+            this.Text = "Driver Sheet";
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -225,5 +259,7 @@ namespace Bot_Scout_RAPID_REACT
         private System.Windows.Forms.Label time;
         private System.Windows.Forms.Label autoTotal;
         private System.Windows.Forms.Label teleHigh;
+        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.Label loadText;
     }
 }
