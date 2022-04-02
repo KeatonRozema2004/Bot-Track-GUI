@@ -79,7 +79,7 @@ namespace Bot_Scout_RAPID_REACT
             this.button3.ForeColor = System.Drawing.SystemColors.HighlightText;
             this.button3.Location = new System.Drawing.Point(368, 449);
             this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(119, 78);
+            this.button3.Size = new System.Drawing.Size(155, 52);
             this.button3.TabIndex = 14;
             this.button3.Text = "Submit";
             this.button3.UseVisualStyleBackColor = false;

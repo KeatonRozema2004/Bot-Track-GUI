@@ -659,11 +659,67 @@ namespace Bot_Scout_RAPID_REACT
 
             Console.WriteLine("1. Team " + teleHighTeam1 + " " + name + ": " + teleHigh1);
             bestName.Text = name;
+
             team1.Text = "Team " + teleHighTeam1;
             team1Data.Text = "" + teleHigh1;
 
             team2.Text = "Team " + teleHighTeam2;
             team2Data.Text = "" + teleHigh2;
+
+            team3.Text = "Team " + teleHighTeam3;
+            team3Data.Text = "" + teleHigh3;
+
+            team4.Text = "Team " + teleHighTeam4;
+            team4Data.Text = "" + teleHigh4;
+
+            team5.Text = "Team " + teleHighTeam5;
+            team5Data.Text = "" + teleHigh5;
+
+            team6.Text = "Team " + teleHighTeam6;
+            team6Data.Text = "" + teleHigh6;
+
+            team7.Text = "Team " + teleHighTeam7;
+            team7Data.Text = "" + teleHigh7;
+
+            team8.Text = "Team " + teleHighTeam8;
+            team8Data.Text = "" + teleHigh8;
+
+            team9.Text = "Team " + teleHighTeam9;
+            team9Data.Text = "" + teleHigh9;
+
+            team10.Text = "Team " + teleHighTeam10;
+            team10Data.Text = "" + teleHigh10;
+
+            team11.Text = "Team " + teleHighTeam11;
+            team11Data.Text = "" + teleHigh11;
+            
+            team12.Text = "Team " + teleHighTeam12;
+            team12Data.Text = "" + teleHigh12;
+
+            team13.Text = "Team " + teleHighTeam13;
+            team13Data.Text = "" + teleHigh13;
+
+            team14.Text = "Team " + teleHighTeam14;
+            team14Data.Text = "" + teleHigh14;
+
+            team15.Text = "Team " + teleHighTeam15;
+            team15Data.Text = "" + teleHigh15;
+
+            team16.Text = "Team " + teleHighTeam16;
+            team16Data.Text = "" + teleHigh16;
+
+            team17.Text = "Team " + teleHighTeam17;
+            team17Data.Text = "" + teleHigh17;
+
+            team18.Text = "Team " + teleHighTeam18;
+            team18Data.Text = "" + teleHigh18;
+
+            team19.Text = "Team " + teleHighTeam19;
+            team19Data.Text = "" + teleHigh19;
+
+            team20.Text = "Team " + teleHighTeam20;
+            team20Data.Text = "" + teleHigh20;
+            
             Console.WriteLine("2. Team " + teleHighTeam2 + " " + name + ": " + teleHigh2);
             Console.WriteLine("3. Team " + teleHighTeam3 + " " + name + ": " + teleHigh3);
             Console.WriteLine("4. Team " + teleHighTeam4 + " " + name + ": " + teleHigh4);

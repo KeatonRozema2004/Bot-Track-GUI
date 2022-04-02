@@ -286,5 +286,10 @@ namespace Bot_Scout_RAPID_REACT
                 }
             }
         }
+
+        private void lineMatch_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

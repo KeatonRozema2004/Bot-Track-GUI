@@ -60,36 +60,36 @@
             this.label11 = new System.Windows.Forms.Label();
             this.team9Data = new System.Windows.Forms.Label();
             this.team9 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
+            this.team20Data = new System.Windows.Forms.Label();
+            this.team20 = new System.Windows.Forms.Label();
             this.label12 = new System.Windows.Forms.Label();
             this.label13 = new System.Windows.Forms.Label();
-            this.label16 = new System.Windows.Forms.Label();
-            this.label17 = new System.Windows.Forms.Label();
-            this.label18 = new System.Windows.Forms.Label();
-            this.label19 = new System.Windows.Forms.Label();
+            this.team19Data = new System.Windows.Forms.Label();
+            this.team19 = new System.Windows.Forms.Label();
+            this.team18Data = new System.Windows.Forms.Label();
+            this.team18 = new System.Windows.Forms.Label();
             this.label20 = new System.Windows.Forms.Label();
             this.label21 = new System.Windows.Forms.Label();
-            this.label22 = new System.Windows.Forms.Label();
-            this.label23 = new System.Windows.Forms.Label();
-            this.label24 = new System.Windows.Forms.Label();
-            this.label25 = new System.Windows.Forms.Label();
+            this.team17Data = new System.Windows.Forms.Label();
+            this.team17 = new System.Windows.Forms.Label();
+            this.team16Data = new System.Windows.Forms.Label();
+            this.team16 = new System.Windows.Forms.Label();
             this.label26 = new System.Windows.Forms.Label();
             this.label27 = new System.Windows.Forms.Label();
-            this.label28 = new System.Windows.Forms.Label();
-            this.label29 = new System.Windows.Forms.Label();
-            this.label30 = new System.Windows.Forms.Label();
-            this.label31 = new System.Windows.Forms.Label();
+            this.team15Data = new System.Windows.Forms.Label();
+            this.team15 = new System.Windows.Forms.Label();
+            this.team14Data = new System.Windows.Forms.Label();
+            this.team14 = new System.Windows.Forms.Label();
             this.label32 = new System.Windows.Forms.Label();
             this.label33 = new System.Windows.Forms.Label();
-            this.label34 = new System.Windows.Forms.Label();
-            this.label35 = new System.Windows.Forms.Label();
-            this.label36 = new System.Windows.Forms.Label();
-            this.label37 = new System.Windows.Forms.Label();
+            this.team13Data = new System.Windows.Forms.Label();
+            this.team13 = new System.Windows.Forms.Label();
+            this.team12Data = new System.Windows.Forms.Label();
+            this.team12 = new System.Windows.Forms.Label();
             this.label38 = new System.Windows.Forms.Label();
             this.label39 = new System.Windows.Forms.Label();
-            this.label40 = new System.Windows.Forms.Label();
-            this.label41 = new System.Windows.Forms.Label();
+            this.team11Data = new System.Windows.Forms.Label();
+            this.team11 = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
@@ -425,26 +425,26 @@
             this.team9.Text = "team";
             this.team9.Click += new System.EventHandler(this.label13_Click);
             // 
-            // label4
+            // team20Data
             // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(626, 306);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(41, 20);
-            this.label4.TabIndex = 64;
-            this.label4.Text = "data";
+            this.team20Data.AutoSize = true;
+            this.team20Data.Location = new System.Drawing.Point(626, 306);
+            this.team20Data.Name = "team20Data";
+            this.team20Data.Size = new System.Drawing.Size(41, 20);
+            this.team20Data.TabIndex = 64;
+            this.team20Data.Text = "data";
             // 
-            // label5
+            // team20
             // 
-            this.label5.AccessibleDescription = "";
-            this.label5.AccessibleName = "";
-            this.label5.AccessibleRole = System.Windows.Forms.AccessibleRole.Text;
-            this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(547, 306);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(45, 20);
-            this.label5.TabIndex = 63;
-            this.label5.Text = "team";
+            this.team20.AccessibleDescription = "";
+            this.team20.AccessibleName = "";
+            this.team20.AccessibleRole = System.Windows.Forms.AccessibleRole.Text;
+            this.team20.AutoSize = true;
+            this.team20.Location = new System.Drawing.Point(547, 306);
+            this.team20.Name = "team20";
+            this.team20.Size = new System.Drawing.Size(45, 20);
+            this.team20.TabIndex = 63;
+            this.team20.Text = "team";
             // 
             // label12
             // 
@@ -464,47 +464,47 @@
             this.label13.TabIndex = 61;
             this.label13.Text = "19:";
             // 
-            // label16
+            // team19Data
             // 
-            this.label16.AutoSize = true;
-            this.label16.Location = new System.Drawing.Point(626, 286);
-            this.label16.Name = "label16";
-            this.label16.Size = new System.Drawing.Size(41, 20);
-            this.label16.TabIndex = 60;
-            this.label16.Text = "data";
+            this.team19Data.AutoSize = true;
+            this.team19Data.Location = new System.Drawing.Point(626, 286);
+            this.team19Data.Name = "team19Data";
+            this.team19Data.Size = new System.Drawing.Size(41, 20);
+            this.team19Data.TabIndex = 60;
+            this.team19Data.Text = "data";
             // 
-            // label17
+            // team19
             // 
-            this.label17.AccessibleDescription = "";
-            this.label17.AccessibleName = "";
-            this.label17.AccessibleRole = System.Windows.Forms.AccessibleRole.Text;
-            this.label17.AutoSize = true;
-            this.label17.Location = new System.Drawing.Point(547, 286);
-            this.label17.Name = "label17";
-            this.label17.Size = new System.Drawing.Size(45, 20);
-            this.label17.TabIndex = 59;
-            this.label17.Text = "team";
+            this.team19.AccessibleDescription = "";
+            this.team19.AccessibleName = "";
+            this.team19.AccessibleRole = System.Windows.Forms.AccessibleRole.Text;
+            this.team19.AutoSize = true;
+            this.team19.Location = new System.Drawing.Point(547, 286);
+            this.team19.Name = "team19";
+            this.team19.Size = new System.Drawing.Size(45, 20);
+            this.team19.TabIndex = 59;
+            this.team19.Text = "team";
             // 
-            // label18
+            // team18Data
             // 
-            this.label18.AutoSize = true;
-            this.label18.Location = new System.Drawing.Point(626, 266);
-            this.label18.Name = "label18";
-            this.label18.Size = new System.Drawing.Size(41, 20);
-            this.label18.TabIndex = 58;
-            this.label18.Text = "data";
+            this.team18Data.AutoSize = true;
+            this.team18Data.Location = new System.Drawing.Point(626, 266);
+            this.team18Data.Name = "team18Data";
+            this.team18Data.Size = new System.Drawing.Size(41, 20);
+            this.team18Data.TabIndex = 58;
+            this.team18Data.Text = "data";
             // 
-            // label19
+            // team18
             // 
-            this.label19.AccessibleDescription = "";
-            this.label19.AccessibleName = "";
-            this.label19.AccessibleRole = System.Windows.Forms.AccessibleRole.Text;
-            this.label19.AutoSize = true;
-            this.label19.Location = new System.Drawing.Point(547, 266);
-            this.label19.Name = "label19";
-            this.label19.Size = new System.Drawing.Size(45, 20);
-            this.label19.TabIndex = 57;
-            this.label19.Text = "team";
+            this.team18.AccessibleDescription = "";
+            this.team18.AccessibleName = "";
+            this.team18.AccessibleRole = System.Windows.Forms.AccessibleRole.Text;
+            this.team18.AutoSize = true;
+            this.team18.Location = new System.Drawing.Point(547, 266);
+            this.team18.Name = "team18";
+            this.team18.Size = new System.Drawing.Size(45, 20);
+            this.team18.TabIndex = 57;
+            this.team18.Text = "team";
             // 
             // label20
             // 
@@ -524,47 +524,47 @@
             this.label21.TabIndex = 55;
             this.label21.Text = "17:";
             // 
-            // label22
+            // team17Data
             // 
-            this.label22.AutoSize = true;
-            this.label22.Location = new System.Drawing.Point(626, 246);
-            this.label22.Name = "label22";
-            this.label22.Size = new System.Drawing.Size(41, 20);
-            this.label22.TabIndex = 54;
-            this.label22.Text = "data";
+            this.team17Data.AutoSize = true;
+            this.team17Data.Location = new System.Drawing.Point(626, 246);
+            this.team17Data.Name = "team17Data";
+            this.team17Data.Size = new System.Drawing.Size(41, 20);
+            this.team17Data.TabIndex = 54;
+            this.team17Data.Text = "data";
             // 
-            // label23
+            // team17
             // 
-            this.label23.AccessibleDescription = "";
-            this.label23.AccessibleName = "";
-            this.label23.AccessibleRole = System.Windows.Forms.AccessibleRole.Text;
-            this.label23.AutoSize = true;
-            this.label23.Location = new System.Drawing.Point(547, 246);
-            this.label23.Name = "label23";
-            this.label23.Size = new System.Drawing.Size(45, 20);
-            this.label23.TabIndex = 53;
-            this.label23.Text = "team";
+            this.team17.AccessibleDescription = "";
+            this.team17.AccessibleName = "";
+            this.team17.AccessibleRole = System.Windows.Forms.AccessibleRole.Text;
+            this.team17.AutoSize = true;
+            this.team17.Location = new System.Drawing.Point(547, 246);
+            this.team17.Name = "team17";
+            this.team17.Size = new System.Drawing.Size(45, 20);
+            this.team17.TabIndex = 53;
+            this.team17.Text = "team";
             // 
-            // label24
+            // team16Data
             // 
-            this.label24.AutoSize = true;
-            this.label24.Location = new System.Drawing.Point(626, 226);
-            this.label24.Name = "label24";
-            this.label24.Size = new System.Drawing.Size(41, 20);
-            this.label24.TabIndex = 52;
-            this.label24.Text = "data";
+            this.team16Data.AutoSize = true;
+            this.team16Data.Location = new System.Drawing.Point(626, 226);
+            this.team16Data.Name = "team16Data";
+            this.team16Data.Size = new System.Drawing.Size(41, 20);
+            this.team16Data.TabIndex = 52;
+            this.team16Data.Text = "data";
             // 
-            // label25
+            // team16
             // 
-            this.label25.AccessibleDescription = "";
-            this.label25.AccessibleName = "";
-            this.label25.AccessibleRole = System.Windows.Forms.AccessibleRole.Text;
-            this.label25.AutoSize = true;
-            this.label25.Location = new System.Drawing.Point(547, 226);
-            this.label25.Name = "label25";
-            this.label25.Size = new System.Drawing.Size(45, 20);
-            this.label25.TabIndex = 51;
-            this.label25.Text = "team";
+            this.team16.AccessibleDescription = "";
+            this.team16.AccessibleName = "";
+            this.team16.AccessibleRole = System.Windows.Forms.AccessibleRole.Text;
+            this.team16.AutoSize = true;
+            this.team16.Location = new System.Drawing.Point(547, 226);
+            this.team16.Name = "team16";
+            this.team16.Size = new System.Drawing.Size(45, 20);
+            this.team16.TabIndex = 51;
+            this.team16.Text = "team";
             // 
             // label26
             // 
@@ -584,47 +584,47 @@
             this.label27.TabIndex = 49;
             this.label27.Text = "15:";
             // 
-            // label28
+            // team15Data
             // 
-            this.label28.AutoSize = true;
-            this.label28.Location = new System.Drawing.Point(626, 206);
-            this.label28.Name = "label28";
-            this.label28.Size = new System.Drawing.Size(41, 20);
-            this.label28.TabIndex = 48;
-            this.label28.Text = "data";
+            this.team15Data.AutoSize = true;
+            this.team15Data.Location = new System.Drawing.Point(626, 206);
+            this.team15Data.Name = "team15Data";
+            this.team15Data.Size = new System.Drawing.Size(41, 20);
+            this.team15Data.TabIndex = 48;
+            this.team15Data.Text = "data";
             // 
-            // label29
+            // team15
             // 
-            this.label29.AccessibleDescription = "";
-            this.label29.AccessibleName = "";
-            this.label29.AccessibleRole = System.Windows.Forms.AccessibleRole.Text;
-            this.label29.AutoSize = true;
-            this.label29.Location = new System.Drawing.Point(547, 206);
-            this.label29.Name = "label29";
-            this.label29.Size = new System.Drawing.Size(45, 20);
-            this.label29.TabIndex = 47;
-            this.label29.Text = "team";
+            this.team15.AccessibleDescription = "";
+            this.team15.AccessibleName = "";
+            this.team15.AccessibleRole = System.Windows.Forms.AccessibleRole.Text;
+            this.team15.AutoSize = true;
+            this.team15.Location = new System.Drawing.Point(547, 206);
+            this.team15.Name = "team15";
+            this.team15.Size = new System.Drawing.Size(45, 20);
+            this.team15.TabIndex = 47;
+            this.team15.Text = "team";
             // 
-            // label30
+            // team14Data
             // 
-            this.label30.AutoSize = true;
-            this.label30.Location = new System.Drawing.Point(627, 186);
-            this.label30.Name = "label30";
-            this.label30.Size = new System.Drawing.Size(41, 20);
-            this.label30.TabIndex = 46;
-            this.label30.Text = "data";
+            this.team14Data.AutoSize = true;
+            this.team14Data.Location = new System.Drawing.Point(627, 186);
+            this.team14Data.Name = "team14Data";
+            this.team14Data.Size = new System.Drawing.Size(41, 20);
+            this.team14Data.TabIndex = 46;
+            this.team14Data.Text = "data";
             // 
-            // label31
+            // team14
             // 
-            this.label31.AccessibleDescription = "";
-            this.label31.AccessibleName = "";
-            this.label31.AccessibleRole = System.Windows.Forms.AccessibleRole.Text;
-            this.label31.AutoSize = true;
-            this.label31.Location = new System.Drawing.Point(548, 186);
-            this.label31.Name = "label31";
-            this.label31.Size = new System.Drawing.Size(45, 20);
-            this.label31.TabIndex = 45;
-            this.label31.Text = "team";
+            this.team14.AccessibleDescription = "";
+            this.team14.AccessibleName = "";
+            this.team14.AccessibleRole = System.Windows.Forms.AccessibleRole.Text;
+            this.team14.AutoSize = true;
+            this.team14.Location = new System.Drawing.Point(548, 186);
+            this.team14.Name = "team14";
+            this.team14.Size = new System.Drawing.Size(45, 20);
+            this.team14.TabIndex = 45;
+            this.team14.Text = "team";
             // 
             // label32
             // 
@@ -644,47 +644,47 @@
             this.label33.TabIndex = 43;
             this.label33.Text = "13:";
             // 
-            // label34
+            // team13Data
             // 
-            this.label34.AutoSize = true;
-            this.label34.Location = new System.Drawing.Point(627, 166);
-            this.label34.Name = "label34";
-            this.label34.Size = new System.Drawing.Size(41, 20);
-            this.label34.TabIndex = 42;
-            this.label34.Text = "data";
+            this.team13Data.AutoSize = true;
+            this.team13Data.Location = new System.Drawing.Point(627, 166);
+            this.team13Data.Name = "team13Data";
+            this.team13Data.Size = new System.Drawing.Size(41, 20);
+            this.team13Data.TabIndex = 42;
+            this.team13Data.Text = "data";
             // 
-            // label35
+            // team13
             // 
-            this.label35.AccessibleDescription = "";
-            this.label35.AccessibleName = "";
-            this.label35.AccessibleRole = System.Windows.Forms.AccessibleRole.Text;
-            this.label35.AutoSize = true;
-            this.label35.Location = new System.Drawing.Point(548, 166);
-            this.label35.Name = "label35";
-            this.label35.Size = new System.Drawing.Size(45, 20);
-            this.label35.TabIndex = 41;
-            this.label35.Text = "team";
+            this.team13.AccessibleDescription = "";
+            this.team13.AccessibleName = "";
+            this.team13.AccessibleRole = System.Windows.Forms.AccessibleRole.Text;
+            this.team13.AutoSize = true;
+            this.team13.Location = new System.Drawing.Point(548, 166);
+            this.team13.Name = "team13";
+            this.team13.Size = new System.Drawing.Size(45, 20);
+            this.team13.TabIndex = 41;
+            this.team13.Text = "team";
             // 
-            // label36
+            // team12Data
             // 
-            this.label36.AutoSize = true;
-            this.label36.Location = new System.Drawing.Point(627, 146);
-            this.label36.Name = "label36";
-            this.label36.Size = new System.Drawing.Size(41, 20);
-            this.label36.TabIndex = 40;
-            this.label36.Text = "data";
+            this.team12Data.AutoSize = true;
+            this.team12Data.Location = new System.Drawing.Point(627, 146);
+            this.team12Data.Name = "team12Data";
+            this.team12Data.Size = new System.Drawing.Size(41, 20);
+            this.team12Data.TabIndex = 40;
+            this.team12Data.Text = "data";
             // 
-            // label37
+            // team12
             // 
-            this.label37.AccessibleDescription = "";
-            this.label37.AccessibleName = "";
-            this.label37.AccessibleRole = System.Windows.Forms.AccessibleRole.Text;
-            this.label37.AutoSize = true;
-            this.label37.Location = new System.Drawing.Point(548, 146);
-            this.label37.Name = "label37";
-            this.label37.Size = new System.Drawing.Size(45, 20);
-            this.label37.TabIndex = 39;
-            this.label37.Text = "team";
+            this.team12.AccessibleDescription = "";
+            this.team12.AccessibleName = "";
+            this.team12.AccessibleRole = System.Windows.Forms.AccessibleRole.Text;
+            this.team12.AutoSize = true;
+            this.team12.Location = new System.Drawing.Point(548, 146);
+            this.team12.Name = "team12";
+            this.team12.Size = new System.Drawing.Size(45, 20);
+            this.team12.TabIndex = 39;
+            this.team12.Text = "team";
             // 
             // label38
             // 
@@ -704,26 +704,26 @@
             this.label39.TabIndex = 37;
             this.label39.Text = "11:";
             // 
-            // label40
+            // team11Data
             // 
-            this.label40.AutoSize = true;
-            this.label40.Location = new System.Drawing.Point(627, 126);
-            this.label40.Name = "label40";
-            this.label40.Size = new System.Drawing.Size(41, 20);
-            this.label40.TabIndex = 36;
-            this.label40.Text = "data";
+            this.team11Data.AutoSize = true;
+            this.team11Data.Location = new System.Drawing.Point(627, 126);
+            this.team11Data.Name = "team11Data";
+            this.team11Data.Size = new System.Drawing.Size(41, 20);
+            this.team11Data.TabIndex = 36;
+            this.team11Data.Text = "data";
             // 
-            // label41
+            // team11
             // 
-            this.label41.AccessibleDescription = "";
-            this.label41.AccessibleName = "";
-            this.label41.AccessibleRole = System.Windows.Forms.AccessibleRole.Text;
-            this.label41.AutoSize = true;
-            this.label41.Location = new System.Drawing.Point(548, 126);
-            this.label41.Name = "label41";
-            this.label41.Size = new System.Drawing.Size(45, 20);
-            this.label41.TabIndex = 35;
-            this.label41.Text = "team";
+            this.team11.AccessibleDescription = "";
+            this.team11.AccessibleName = "";
+            this.team11.AccessibleRole = System.Windows.Forms.AccessibleRole.Text;
+            this.team11.AutoSize = true;
+            this.team11.Location = new System.Drawing.Point(548, 126);
+            this.team11.Name = "team11";
+            this.team11.Size = new System.Drawing.Size(45, 20);
+            this.team11.TabIndex = 35;
+            this.team11.Text = "team";
             // 
             // button1
             // 
@@ -801,36 +801,36 @@
             this.Controls.Add(this.button3);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);
-            this.Controls.Add(this.label4);
-            this.Controls.Add(this.label5);
+            this.Controls.Add(this.team20Data);
+            this.Controls.Add(this.team20);
             this.Controls.Add(this.label12);
             this.Controls.Add(this.label13);
-            this.Controls.Add(this.label16);
-            this.Controls.Add(this.label17);
-            this.Controls.Add(this.label18);
-            this.Controls.Add(this.label19);
+            this.Controls.Add(this.team19Data);
+            this.Controls.Add(this.team19);
+            this.Controls.Add(this.team18Data);
+            this.Controls.Add(this.team18);
             this.Controls.Add(this.label20);
             this.Controls.Add(this.label21);
-            this.Controls.Add(this.label22);
-            this.Controls.Add(this.label23);
-            this.Controls.Add(this.label24);
-            this.Controls.Add(this.label25);
+            this.Controls.Add(this.team17Data);
+            this.Controls.Add(this.team17);
+            this.Controls.Add(this.team16Data);
+            this.Controls.Add(this.team16);
             this.Controls.Add(this.label26);
             this.Controls.Add(this.label27);
-            this.Controls.Add(this.label28);
-            this.Controls.Add(this.label29);
-            this.Controls.Add(this.label30);
-            this.Controls.Add(this.label31);
+            this.Controls.Add(this.team15Data);
+            this.Controls.Add(this.team15);
+            this.Controls.Add(this.team14Data);
+            this.Controls.Add(this.team14);
             this.Controls.Add(this.label32);
             this.Controls.Add(this.label33);
-            this.Controls.Add(this.label34);
-            this.Controls.Add(this.label35);
-            this.Controls.Add(this.label36);
-            this.Controls.Add(this.label37);
+            this.Controls.Add(this.team13Data);
+            this.Controls.Add(this.team13);
+            this.Controls.Add(this.team12Data);
+            this.Controls.Add(this.team12);
             this.Controls.Add(this.label38);
             this.Controls.Add(this.label39);
-            this.Controls.Add(this.label40);
-            this.Controls.Add(this.label41);
+            this.Controls.Add(this.team11Data);
+            this.Controls.Add(this.team11);
             this.Controls.Add(this.team10Data);
             this.Controls.Add(this.team10);
             this.Controls.Add(this.label10);
@@ -907,36 +907,36 @@
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.Label team9Data;
         public System.Windows.Forms.Label team9;
-        private System.Windows.Forms.Label label4;
-        public System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Label team20Data;
+        public System.Windows.Forms.Label team20;
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.Label label13;
-        private System.Windows.Forms.Label label16;
-        public System.Windows.Forms.Label label17;
-        private System.Windows.Forms.Label label18;
-        public System.Windows.Forms.Label label19;
+        private System.Windows.Forms.Label team19Data;
+        public System.Windows.Forms.Label team19;
+        private System.Windows.Forms.Label team18Data;
+        public System.Windows.Forms.Label team18;
         private System.Windows.Forms.Label label20;
         private System.Windows.Forms.Label label21;
-        private System.Windows.Forms.Label label22;
-        public System.Windows.Forms.Label label23;
-        private System.Windows.Forms.Label label24;
-        public System.Windows.Forms.Label label25;
+        private System.Windows.Forms.Label team17Data;
+        public System.Windows.Forms.Label team17;
+        private System.Windows.Forms.Label team16Data;
+        public System.Windows.Forms.Label team16;
         private System.Windows.Forms.Label label26;
         private System.Windows.Forms.Label label27;
-        private System.Windows.Forms.Label label28;
-        public System.Windows.Forms.Label label29;
-        private System.Windows.Forms.Label label30;
-        public System.Windows.Forms.Label label31;
+        private System.Windows.Forms.Label team15Data;
+        public System.Windows.Forms.Label team15;
+        private System.Windows.Forms.Label team14Data;
+        public System.Windows.Forms.Label team14;
         private System.Windows.Forms.Label label32;
         private System.Windows.Forms.Label label33;
-        private System.Windows.Forms.Label label34;
-        public System.Windows.Forms.Label label35;
-        private System.Windows.Forms.Label label36;
-        public System.Windows.Forms.Label label37;
+        private System.Windows.Forms.Label team13Data;
+        public System.Windows.Forms.Label team13;
+        private System.Windows.Forms.Label team12Data;
+        public System.Windows.Forms.Label team12;
         private System.Windows.Forms.Label label38;
         private System.Windows.Forms.Label label39;
-        private System.Windows.Forms.Label label40;
-        public System.Windows.Forms.Label label41;
+        private System.Windows.Forms.Label team11Data;
+        public System.Windows.Forms.Label team11;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button button3;

@@ -227,7 +227,7 @@ namespace Bot_Scout_RAPID_REACT
             // 
             this.loadText.AutoSize = true;
             this.loadText.Font = new System.Drawing.Font("Microsoft YaHei UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.loadText.ForeColor = System.Drawing.SystemColors.MenuHighlight;
+            this.loadText.ForeColor = System.Drawing.SystemColors.HighlightText;
             this.loadText.Location = new System.Drawing.Point(318, 14);
             this.loadText.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.loadText.Name = "loadText";
@@ -237,10 +237,10 @@ namespace Bot_Scout_RAPID_REACT
             // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(556, 52);
+            this.button2.Location = new System.Drawing.Point(381, 52);
             this.button2.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(138, 71);
+            this.button2.Size = new System.Drawing.Size(99, 71);
             this.button2.TabIndex = 17;
             this.button2.Text = "Next Match";
             this.button2.UseVisualStyleBackColor = true;
@@ -249,11 +249,12 @@ namespace Bot_Scout_RAPID_REACT
             // lineMatch
             // 
             this.lineMatch.AutoSize = true;
-            this.lineMatch.Location = new System.Drawing.Point(756, 168);
+            this.lineMatch.Location = new System.Drawing.Point(14, 133);
             this.lineMatch.Name = "lineMatch";
             this.lineMatch.Size = new System.Drawing.Size(18, 20);
             this.lineMatch.TabIndex = 18;
             this.lineMatch.Text = "0";
+            this.lineMatch.Click += new System.EventHandler(this.lineMatch_Click);
             // 
             // dataSet1
             // 
@@ -272,10 +273,10 @@ namespace Bot_Scout_RAPID_REACT
             // 
             // button3
             // 
-            this.button3.Location = new System.Drawing.Point(342, 52);
+            this.button3.Location = new System.Drawing.Point(274, 52);
             this.button3.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(138, 71);
+            this.button3.Size = new System.Drawing.Size(99, 71);
             this.button3.TabIndex = 20;
             this.button3.Text = "Previous Match";
             this.button3.UseVisualStyleBackColor = true;
@@ -285,6 +286,7 @@ namespace Bot_Scout_RAPID_REACT
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.CadetBlue;
             this.ClientSize = new System.Drawing.Size(1200, 692);
             this.Controls.Add(this.button3);
             this.Controls.Add(this.matchText);
