@@ -31,6 +31,7 @@ namespace Bot_Scout_RAPID_REACT
         }
         public void bestScore(string team)
         {
+            bool matchEnd = false;
             Form1 match = new Form1();
             int autoTotal1 = 0;
             int autoLow1 = 0;
@@ -182,25 +183,39 @@ namespace Bot_Scout_RAPID_REACT
 
         private void button2_Click(object sender, EventArgs e)
         {
-            driveData();
+            string team1 = team.Text;
+            Form1 match = new Form1();
+            int i = Int32.Parse(lineMatch.Text);
+            if (match.GetLine(team1 + ".txt", i+1).Contains("Match Number")) {
+                try
+                {
+                    driveData(1);
+                }
+                catch (Exception l)
+                {
+
+                }
+            }
         }
 
 
-        public void driveData()
+        public void driveData(int matchInc)
         {
+            bool matchEnd = false;
             Form1 match = new Form1();
-            int i = 0;
+            int i = Int32.Parse(lineMatch.Text);
             string team1 = team.Text;
             Console.WriteLine("Getting team data........");
             Console.WriteLine("--------------------");
-            while (match.GetLine(team1 + ".txt", i) != match.GetLine("blank.txt", 1))
+            while (matchEnd == false)
             {
-                i++;
+                i += matchInc;
                 Console.WriteLine(match.GetLine(team1 + ".txt", i));
                 Console.ForegroundColor = ConsoleColor.DarkGreen;
                 if (match.GetLine(team1 + ".txt", i).Contains("Match Number"))
                 {
-                    Console.WriteLine(match.GetLine(team1 + ".txt", i));
+                    matchText.Text = match.GetLine(team1 + ".txt", i);
+                    
                 }
                 if (match.GetLine(team1 + ".txt", i).Contains("Tele Lower"))
                 {
@@ -241,12 +256,35 @@ namespace Bot_Scout_RAPID_REACT
                 Console.ForegroundColor = ConsoleColor.DarkCyan;
                 if (match.GetLine(team1 + ".txt", i).Contains("Defense"))
                 {
-                    string num1 = match.GetLine(team1 + ".txt", i)[9].ToString();
+                    string num1 = match.GetLine(team1 + ".txt", i)[10].ToString();
                     defense.Text = num1;
+                }
+                if (match.GetLine(team1 + ".txt", i).Contains("-----"))
+                {
+                    matchEnd = true;
+                    lineMatch.Text = "" + i;
                 }
 
             }
             Console.WriteLine("Done");
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            string team1 = team.Text;
+            Form1 match = new Form1();
+            int i = Int32.Parse(lineMatch.Text);
+            if (match.GetLine(team1 + ".txt", i - 22).Contains("-----"))
+            {
+                try
+                {
+                    driveData(-1);
+                }
+                catch(Exception l)
+                {
+                    Console.WriteLine("Whoops");
+                }
+            }
         }
     }
 }
