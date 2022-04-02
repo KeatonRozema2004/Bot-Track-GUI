@@ -52,16 +52,22 @@
     <ApplicationIcon>bob_zpx_icon.ico</ApplicationIcon>
   </PropertyGroup>
   <PropertyGroup>
-    <ManifestCertificateThumbprint>5950598438B2FA41EBD4DF9DD20D35D39EC1FF26</ManifestCertificateThumbprint>
+    <ManifestCertificateThumbprint>292B56F85DE99A4153BE3B827630DE01AACB4E82</ManifestCertificateThumbprint>
   </PropertyGroup>
   <PropertyGroup>
-    <ManifestKeyFile>Bot Scout RAPID REACT_TemporaryKey.pfx</ManifestKeyFile>
+    <ManifestKeyFile>Bot Scout RAPID REACT_1_TemporaryKey.pfx</ManifestKeyFile>
   </PropertyGroup>
   <PropertyGroup>
     <GenerateManifests>true</GenerateManifests>
   </PropertyGroup>
   <PropertyGroup>
     <SignManifests>true</SignManifests>
+  </PropertyGroup>
+  <PropertyGroup>
+    <TargetZone>LocalIntranet</TargetZone>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationManifest>Properties\app.manifest</ApplicationManifest>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
@@ -106,7 +112,9 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <None Include="Bot Scout RAPID REACT_1_TemporaryKey.pfx" />
     <None Include="Bot Scout RAPID REACT_TemporaryKey.pfx" />
+    <None Include="Properties\app.manifest" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>

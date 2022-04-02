@@ -220,6 +220,20 @@ namespace Bot_Scout_RAPID_REACT
                 statusText.Text = "Match Data Saved!";
                 Thread.Sleep(2000);
                 statusText.Text = "Enter Data";
+                team.Text = "";
+                match.Text = "";
+                teleLower.Text = "";
+                teleUpper.Text = "";
+                teleMissed.Text = "";
+                autoLower.Text = "";
+                autoUpper.Text = "";
+                autoMissed.Text = "";
+                climbEnd.Text = "";
+                climbStart.Text = "";
+                climbType.Text = "";
+                defense.Text = "";
+                position.Text = "";
+                taxi.Text = "";
             }
             catch
             {
