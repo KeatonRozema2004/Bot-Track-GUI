@@ -41,6 +41,7 @@ namespace Bot_Scout_RAPID_REACT
         {
             try
             {
+                statusText.Text = "Loading...";
                 string current = Directory.GetCurrentDirectory() + "\\";
                 int autoCargo;
 
@@ -218,8 +219,7 @@ namespace Bot_Scout_RAPID_REACT
 
                 writeToFile(team.Text, "------------------------");
                 statusText.Text = "Match Data Saved!";
-                Thread.Sleep(2000);
-                statusText.Text = "Enter Data";
+                //Thread.Sleep(2000);
                 team.Text = "";
                 match.Text = "";
                 teleLower.Text = "";
@@ -231,6 +231,7 @@ namespace Bot_Scout_RAPID_REACT
                 climbEnd.Text = "";
                 climbStart.Text = "";
                 climbType.Text = "";
+                climbEnter.Text = "";
                 defense.Text = "";
                 position.Text = "";
                 taxi.Text = "";
@@ -311,6 +312,12 @@ namespace Bot_Scout_RAPID_REACT
         {
             Data data = new Data();
             data.ShowDialog();
+        }
+
+        private void button5_Click(object sender, EventArgs e)
+        {
+            BestTeams best = new BestTeams();
+            best.ShowDialog();
         }
     }
 }
