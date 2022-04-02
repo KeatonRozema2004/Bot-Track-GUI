@@ -183,18 +183,26 @@ namespace Bot_Scout_RAPID_REACT
 
         private void button2_Click(object sender, EventArgs e)
         {
-            string team1 = team.Text;
-            Form1 match = new Form1();
-            int i = Int32.Parse(lineMatch.Text);
-            if (match.GetLine(team1 + ".txt", i+1).Contains("Match Number")) {
-                try
+            try
+            {
+                string team1 = team.Text;
+                Form1 match = new Form1();
+                int i = Int32.Parse(lineMatch.Text);
+                if (match.GetLine(team1 + ".txt", i + 1).Contains("Match Number"))
                 {
-                    driveData(1);
-                }
-                catch (Exception l)
-                {
+                    try
+                    {
+                        driveData(1);
+                    }
+                    catch (Exception l)
+                    {
 
+                    }
                 }
+            }
+            catch (Exception l)
+            {
+                loadText.Text = "Can't find team";
             }
         }
 
@@ -271,19 +279,26 @@ namespace Bot_Scout_RAPID_REACT
 
         private void button3_Click(object sender, EventArgs e)
         {
-            string team1 = team.Text;
-            Form1 match = new Form1();
-            int i = Int32.Parse(lineMatch.Text);
-            if (match.GetLine(team1 + ".txt", i - 22).Contains("-----"))
+            try
             {
-                try
+                string team1 = team.Text;
+                Form1 match = new Form1();
+                int i = Int32.Parse(lineMatch.Text);
+                if (match.GetLine(team1 + ".txt", i - 22).Contains("-----"))
                 {
-                    driveData(-1);
+                    try
+                    {
+                        driveData(-1);
+                    }
+                    catch (Exception l)
+                    {
+                        Console.WriteLine("Whoops");
+                    }
                 }
-                catch(Exception l)
-                {
-                    Console.WriteLine("Whoops");
-                }
+            }
+            catch(Exception l)
+            {
+                loadText.Text = "Can't find team";
             }
         }
 

@@ -52,10 +52,11 @@
     <ApplicationIcon>bob_zpx_icon.ico</ApplicationIcon>
   </PropertyGroup>
   <PropertyGroup>
-    <ManifestCertificateThumbprint>292B56F85DE99A4153BE3B827630DE01AACB4E82</ManifestCertificateThumbprint>
+    <ManifestCertificateThumbprint>5950598438B2FA41EBD4DF9DD20D35D39EC1FF26</ManifestCertificateThumbprint>
   </PropertyGroup>
   <PropertyGroup>
-    <ManifestKeyFile>Bot Scout RAPID REACT_1_TemporaryKey.pfx</ManifestKeyFile>
+    <ManifestKeyFile>
+    </ManifestKeyFile>
   </PropertyGroup>
   <PropertyGroup>
     <GenerateManifests>true</GenerateManifests>
@@ -83,6 +84,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Average.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Average.Designer.cs">
+      <DependentUpon>Average.cs</DependentUpon>
+    </Compile>
     <Compile Include="Data.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -103,6 +110,9 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Average.resx">
+      <DependentUpon>Average.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Data.resx">
       <DependentUpon>Data.cs</DependentUpon>
     </EmbeddedResource>

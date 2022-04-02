@@ -319,5 +319,11 @@ namespace Bot_Scout_RAPID_REACT
             BestTeams best = new BestTeams();
             best.ShowDialog();
         }
+
+        private void button6_Click(object sender, EventArgs e)
+        {
+            Average ave = new Average();
+            ave.ShowDialog();
+        }
     }
 }

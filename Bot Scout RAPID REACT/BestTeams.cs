@@ -814,5 +814,280 @@ namespace Bot_Scout_RAPID_REACT
         {
             bestTeamsStats("Auto Cargo Score", 18, 19, 0, 0, false, "Cargo Points Auto");
         }
+
+        private void bestName_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void team20_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label12_Click_1(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label13_Click_1(object sender, EventArgs e)
+        {
+
+        }
+
+        private void team19Data_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void team19_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void team18Data_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void team18_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label20_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label21_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void team17Data_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void team17_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void team16Data_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void team16_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label26_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label27_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void team15Data_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void team15_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void team14Data_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void team14_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label32_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label33_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void team13Data_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void team13_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void team12Data_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void team12_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label38_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label39_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void team11Data_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void team11_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void team20Data_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void team8Data_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void team8_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label8_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label9_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void team7Data_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void team7_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void team6Data_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void team6_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label15_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void team5Data_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void team5_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void team4Data_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void team4_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label6_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label7_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void team3Data_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void team3_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void team2Data_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void team2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label3_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label1_Click_1(object sender, EventArgs e)
+        {
+
+        }
+
+        private void team1Data_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void team1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button7_Click(object sender, EventArgs e)
+        {
+            bestTeamsStats("Total Climb Time", 18, 19, 0, 10000, true, "Climb Time");
+        }
     }
 }
