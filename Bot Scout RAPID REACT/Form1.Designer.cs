@@ -78,7 +78,7 @@ namespace Bot_Scout_RAPID_REACT
             this.button3.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Black;
             this.button3.Font = new System.Drawing.Font("Microsoft YaHei UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button3.ForeColor = System.Drawing.SystemColors.HighlightText;
-            this.button3.Location = new System.Drawing.Point(368, 449);
+            this.button3.Location = new System.Drawing.Point(136, 453);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(155, 52);
             this.button3.TabIndex = 14;
@@ -395,7 +395,7 @@ namespace Bot_Scout_RAPID_REACT
             // Form1
             // 
             this.BackColor = System.Drawing.SystemColors.MenuBar;
-            this.ClientSize = new System.Drawing.Size(930, 566);
+            this.ClientSize = new System.Drawing.Size(930, 661);
             this.Controls.Add(this.button6);
             this.Controls.Add(this.button5);
             this.Controls.Add(this.statusText);
@@ -433,6 +433,7 @@ namespace Bot_Scout_RAPID_REACT
             this.Controls.Add(this.label4);
             this.Controls.Add(this.button3);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.MinimumSize = new System.Drawing.Size(550, 700);
             this.Name = "Form1";
             this.Text = "Scouting Data Entry";
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
