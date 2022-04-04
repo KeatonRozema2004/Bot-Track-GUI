@@ -78,7 +78,7 @@ namespace Bot_Scout_RAPID_REACT
             this.button3.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Black;
             this.button3.Font = new System.Drawing.Font("Microsoft YaHei UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button3.ForeColor = System.Drawing.SystemColors.HighlightText;
-            this.button3.Location = new System.Drawing.Point(136, 453);
+            this.button3.Location = new System.Drawing.Point(203, 365);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(155, 52);
             this.button3.TabIndex = 14;
@@ -252,7 +252,7 @@ namespace Bot_Scout_RAPID_REACT
             // label14
             // 
             this.label14.AutoSize = true;
-            this.label14.Location = new System.Drawing.Point(60, 409);
+            this.label14.Location = new System.Drawing.Point(290, 277);
             this.label14.Name = "label14";
             this.label14.Size = new System.Drawing.Size(59, 13);
             this.label14.TabIndex = 21;
@@ -261,7 +261,7 @@ namespace Bot_Scout_RAPID_REACT
             // label15
             // 
             this.label15.AutoSize = true;
-            this.label15.Location = new System.Drawing.Point(60, 367);
+            this.label15.Location = new System.Drawing.Point(287, 325);
             this.label15.Name = "label15";
             this.label15.Size = new System.Drawing.Size(62, 13);
             this.label15.TabIndex = 22;
@@ -317,14 +317,14 @@ namespace Bot_Scout_RAPID_REACT
             // 
             // climbEnd
             // 
-            this.climbEnd.Location = new System.Drawing.Point(154, 367);
+            this.climbEnd.Location = new System.Drawing.Point(368, 325);
             this.climbEnd.Name = "climbEnd";
             this.climbEnd.Size = new System.Drawing.Size(100, 20);
             this.climbEnd.TabIndex = 12;
             // 
             // climbEnter
             // 
-            this.climbEnter.Location = new System.Drawing.Point(154, 409);
+            this.climbEnter.Location = new System.Drawing.Point(368, 274);
             this.climbEnter.Name = "climbEnter";
             this.climbEnter.Size = new System.Drawing.Size(100, 20);
             this.climbEnter.TabIndex = 13;
@@ -358,7 +358,7 @@ namespace Bot_Scout_RAPID_REACT
             // statusText
             // 
             this.statusText.AutoSize = true;
-            this.statusText.Location = new System.Drawing.Point(37, 513);
+            this.statusText.Location = new System.Drawing.Point(257, 420);
             this.statusText.Name = "statusText";
             this.statusText.Size = new System.Drawing.Size(58, 13);
             this.statusText.TabIndex = 28;
@@ -394,8 +394,8 @@ namespace Bot_Scout_RAPID_REACT
             // 
             // Form1
             // 
-            this.BackColor = System.Drawing.SystemColors.MenuBar;
-            this.ClientSize = new System.Drawing.Size(930, 661);
+            this.BackColor = System.Drawing.Color.LightSkyBlue;
+            this.ClientSize = new System.Drawing.Size(559, 476);
             this.Controls.Add(this.button6);
             this.Controls.Add(this.button5);
             this.Controls.Add(this.statusText);
@@ -432,8 +432,8 @@ namespace Bot_Scout_RAPID_REACT
             this.Controls.Add(this.team);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.button3);
+            this.HelpButton = true;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.MinimumSize = new System.Drawing.Size(550, 700);
             this.Name = "Form1";
             this.Text = "Scouting Data Entry";
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
