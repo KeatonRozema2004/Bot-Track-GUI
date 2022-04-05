@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -30,10 +31,31 @@ namespace Bot_Scout_Data_Interperter
                 directory = folderBrowserDialog.SelectedPath;
                 dataDirectoryLabel.Text = directory;
 
-                string tempDirectory = @"D:\GitHub\Bot-Track-GUI\Bot Scout Data Interperter\Bot Scout Data Interperter\demo_data\85.txt";
+                string[] allTeamFiles = functions.zzGetDataFilesFromDirectory(directory);
 
-                string[] test = functions.zzGetMatchDataForTeam(directory, "85");
+                for (int z = 0; allTeamFiles.Length > z; z++)
+                {
+                    List<string> tableDataList = new List<string>();
+
+                    string teamName = Path.GetFileName(allTeamFiles[z]).Split()[0];
+
+                    tableDataList.Add(teamName);
+
+                    string[] lines = File.ReadAllLines(allTeamFiles[z]);
+
+                    int auto = functions.zzReturnModePointsFromDataSheet(lines, auto: true);
+                    int tele = functions.zzReturnModePointsFromDataSheet(lines, tele: true);
+                    int endgame = functions.zzReturnModePointsFromDataSheet(lines, end: true); //I know endgame and tele op arnt different but ya know im from ftc so sue me plz 
+                }
+
+                // string tempDirectory = @"D:\GitHub\Bot-Track-GUI\Bot Scout Data Interperter\Bot Scout Data Interperter\demo_data\85.txt";
+                // string[] test = functions.zzGetMatchDataForTeam(directory, "85");
             }
+        }
+
+        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
         }
     }
 }

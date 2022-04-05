@@ -1,0 +1,14 @@
+auto
+taxi = 2
+cargo L = 2
+cargo U = 4
+
+tele
+cargo L = 1
+cargo U = 2
+
+end
+low = 4
+mid = 6
+high = 10
+traversal = 15
