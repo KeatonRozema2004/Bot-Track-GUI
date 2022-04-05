@@ -154,10 +154,16 @@ namespace Bot_Scout_RAPID_REACT
             this.nextMatchToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.lineMatch = new System.Windows.Forms.Label();
             this.loadText = new System.Windows.Forms.Label();
+            this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
+            this.averageTele = new System.Windows.Forms.Label();
+            this.averageTeleAcc = new System.Windows.Forms.Label();
+            this.label47 = new System.Windows.Forms.Label();
+            this.label48 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.menuStrip1.SuspendLayout();
             this.bestTeamsTableLayout.SuspendLayout();
             this.tableLayoutPanel1.SuspendLayout();
+            this.tableLayoutPanel2.SuspendLayout();
             this.SuspendLayout();
             // 
             // button3
@@ -1443,10 +1449,64 @@ namespace Bot_Scout_RAPID_REACT
             this.loadText.TabIndex = 77;
             this.loadText.Text = "Enter Valid Team Number";
             // 
+            // tableLayoutPanel2
+            // 
+            this.tableLayoutPanel2.ColumnCount = 2;
+            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel2.Controls.Add(this.averageTele, 1, 0);
+            this.tableLayoutPanel2.Controls.Add(this.averageTeleAcc, 1, 1);
+            this.tableLayoutPanel2.Controls.Add(this.label47, 0, 0);
+            this.tableLayoutPanel2.Controls.Add(this.label48, 0, 1);
+            this.tableLayoutPanel2.Location = new System.Drawing.Point(884, 154);
+            this.tableLayoutPanel2.Name = "tableLayoutPanel2";
+            this.tableLayoutPanel2.RowCount = 2;
+            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel2.Size = new System.Drawing.Size(200, 100);
+            this.tableLayoutPanel2.TabIndex = 78;
+            // 
+            // averageTele
+            // 
+            this.averageTele.AutoSize = true;
+            this.averageTele.Location = new System.Drawing.Point(103, 0);
+            this.averageTele.Name = "averageTele";
+            this.averageTele.Size = new System.Drawing.Size(33, 13);
+            this.averageTele.TabIndex = 22;
+            this.averageTele.Text = "None";
+            // 
+            // averageTeleAcc
+            // 
+            this.averageTeleAcc.AutoSize = true;
+            this.averageTeleAcc.Location = new System.Drawing.Point(103, 50);
+            this.averageTeleAcc.Name = "averageTeleAcc";
+            this.averageTeleAcc.Size = new System.Drawing.Size(33, 13);
+            this.averageTeleAcc.TabIndex = 23;
+            this.averageTeleAcc.Text = "None";
+            // 
+            // label47
+            // 
+            this.label47.AutoSize = true;
+            this.label47.Location = new System.Drawing.Point(3, 0);
+            this.label47.Name = "label47";
+            this.label47.Size = new System.Drawing.Size(81, 26);
+            this.label47.TabIndex = 24;
+            this.label47.Text = "Average Score Tele";
+            // 
+            // label48
+            // 
+            this.label48.AutoSize = true;
+            this.label48.Location = new System.Drawing.Point(3, 50);
+            this.label48.Name = "label48";
+            this.label48.Size = new System.Drawing.Size(76, 26);
+            this.label48.TabIndex = 25;
+            this.label48.Text = "Average Accuracy Tele\r\n";
+            // 
             // Form1
             // 
             this.BackColor = System.Drawing.Color.LightSkyBlue;
             this.ClientSize = new System.Drawing.Size(1084, 561);
+            this.Controls.Add(this.tableLayoutPanel2);
             this.Controls.Add(this.loadText);
             this.Controls.Add(this.lineMatch);
             this.Controls.Add(this.matchText);
@@ -1502,6 +1562,8 @@ namespace Bot_Scout_RAPID_REACT
             this.bestTeamsTableLayout.PerformLayout();
             this.tableLayoutPanel1.ResumeLayout(false);
             this.tableLayoutPanel1.PerformLayout();
+            this.tableLayoutPanel2.ResumeLayout(false);
+            this.tableLayoutPanel2.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -1641,6 +1703,11 @@ namespace Bot_Scout_RAPID_REACT
         private System.Windows.Forms.ToolStripMenuItem nextMatchToolStripMenuItem;
         private System.Windows.Forms.Label lineMatch;
         private System.Windows.Forms.Label loadText;
+        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel2;
+        private System.Windows.Forms.Label averageTele;
+        private System.Windows.Forms.Label averageTeleAcc;
+        private System.Windows.Forms.Label label47;
+        private System.Windows.Forms.Label label48;
     }
 }
 
