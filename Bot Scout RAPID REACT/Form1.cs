@@ -19,6 +19,8 @@ namespace Bot_Scout_RAPID_REACT
 
             InitializeComponent();
             bestTeamsTableLayout.Visible = false;
+            averageTeamTable.Visible = false;
+            driverSheetTable.Visible = false;
         }
 
         private void Form1_Load(object sender, EventArgs e)
@@ -343,6 +345,8 @@ namespace Bot_Scout_RAPID_REACT
         private void bestTeamsMenu_Click(object sender, EventArgs e)
         {
             bestTeamsTableLayout.Visible = true;
+            averageTeamTable.Visible = false;
+            driverSheetTable.Visible = false;
         }
 
         private void tableLayoutPanel1_Paint(object sender, PaintEventArgs e)
@@ -353,11 +357,15 @@ namespace Bot_Scout_RAPID_REACT
         private void driverSheetMenu_Click(object sender, EventArgs e)
         {
             bestTeamsTableLayout.Visible = false;
+            driverSheetTable.Visible = true;
+            averageTeamTable.Visible = false;
         }
 
         private void averageScoresMenu_Click(object sender, EventArgs e)
         {
             bestTeamsTableLayout.Visible = false;
+            averageTeamTable.Visible = true;
+            driverSheetTable.Visible = false;
             averageCargo();
         }
 
@@ -493,8 +501,8 @@ namespace Bot_Scout_RAPID_REACT
             teleHigh.Text = "" + teleHigh1;
             autoTotal.Text = "" + autoTotal1;
             time.Text = "" + time1;
-            climbType.Text = "" + climbType1;
-            defense.Text = "" + defense1;
+            climbType2.Text = "" + climbType1;
+            defense2.Text = "" + defense1;
             loadText.Text = "Data Loaded!";
             Console.ForegroundColor = ConsoleColor.DarkGreen;
             Console.WriteLine("-Best Scores-");
@@ -596,13 +604,13 @@ namespace Bot_Scout_RAPID_REACT
                 if (match.GetLine(team1 + ".txt", i).Contains("Climb Type"))
                 {
                     string climb = match.GetLine(team1 + ".txt", i)[12].ToString();
-                    climbType.Text = climb;
+                    climbType2.Text = climb;
                 }
                 Console.ForegroundColor = ConsoleColor.DarkCyan;
                 if (match.GetLine(team1 + ".txt", i).Contains("Defense"))
                 {
                     string num1 = match.GetLine(team1 + ".txt", i)[10].ToString();
-                    defense.Text = num1;
+                    defense2.Text = num1;
                 }
                 if (match.GetLine(team1 + ".txt", i).Contains("-----"))
                 {
@@ -1444,6 +1452,11 @@ namespace Bot_Scout_RAPID_REACT
             {
 
             }
+        }
+
+        private void loadText_Click(object sender, EventArgs e)
+        {
+
         }
     }
 
