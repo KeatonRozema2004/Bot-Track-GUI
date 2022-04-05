@@ -66,6 +66,7 @@ namespace Bot_Scout_RAPID_REACT
             this.statusText = new System.Windows.Forms.Label();
             this.button5 = new System.Windows.Forms.Button();
             this.button6 = new System.Windows.Forms.Button();
+            this.shutdownBot = new System.Windows.Forms.CheckBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -122,7 +123,7 @@ namespace Bot_Scout_RAPID_REACT
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(276, 139);
+            this.label6.Location = new System.Drawing.Point(267, 177);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(91, 13);
             this.label6.TabIndex = 5;
@@ -130,14 +131,14 @@ namespace Bot_Scout_RAPID_REACT
             // 
             // teleUpper
             // 
-            this.teleUpper.Location = new System.Drawing.Point(368, 139);
+            this.teleUpper.Location = new System.Drawing.Point(368, 174);
             this.teleUpper.Name = "teleUpper";
             this.teleUpper.Size = new System.Drawing.Size(100, 20);
             this.teleUpper.TabIndex = 6;
             // 
             // teleLower
             // 
-            this.teleLower.Location = new System.Drawing.Point(368, 170);
+            this.teleLower.Location = new System.Drawing.Point(368, 136);
             this.teleLower.Name = "teleLower";
             this.teleLower.Size = new System.Drawing.Size(100, 20);
             this.teleLower.TabIndex = 7;
@@ -145,7 +146,7 @@ namespace Bot_Scout_RAPID_REACT
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(276, 174);
+            this.label7.Location = new System.Drawing.Point(271, 139);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(91, 13);
             this.label7.TabIndex = 8;
@@ -392,10 +393,21 @@ namespace Bot_Scout_RAPID_REACT
             this.button6.UseVisualStyleBackColor = false;
             this.button6.Click += new System.EventHandler(this.button6_Click);
             // 
+            // shutdownBot
+            // 
+            this.shutdownBot.AutoSize = true;
+            this.shutdownBot.Location = new System.Drawing.Point(160, 348);
+            this.shutdownBot.Name = "shutdownBot";
+            this.shutdownBot.Size = new System.Drawing.Size(202, 17);
+            this.shutdownBot.TabIndex = 31;
+            this.shutdownBot.Text = "Match shutdown/nothing happened?";
+            this.shutdownBot.UseVisualStyleBackColor = true;
+            // 
             // Form1
             // 
             this.BackColor = System.Drawing.Color.LightSkyBlue;
             this.ClientSize = new System.Drawing.Size(559, 476);
+            this.Controls.Add(this.shutdownBot);
             this.Controls.Add(this.button6);
             this.Controls.Add(this.button5);
             this.Controls.Add(this.statusText);
@@ -488,6 +500,7 @@ namespace Bot_Scout_RAPID_REACT
         private System.Windows.Forms.Label statusText;
         private System.Windows.Forms.Button button5;
         private System.Windows.Forms.Button button6;
+        private System.Windows.Forms.CheckBox shutdownBot;
     }
 }
 
