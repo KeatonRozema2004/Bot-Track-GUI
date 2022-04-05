@@ -541,6 +541,8 @@ namespace Bot_Scout_RAPID_REACT
             // 
             // bestTeamsTableLayout
             // 
+            this.bestTeamsTableLayout.BackColor = System.Drawing.Color.SkyBlue;
+            this.bestTeamsTableLayout.CellBorderStyle = System.Windows.Forms.TableLayoutPanelCellBorderStyle.InsetDouble;
             this.bestTeamsTableLayout.ColumnCount = 6;
             this.bestTeamsTableLayout.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 43.47826F));
             this.bestTeamsTableLayout.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 56.52174F));
@@ -608,7 +610,7 @@ namespace Bot_Scout_RAPID_REACT
             this.bestTeamsTableLayout.Controls.Add(this.team6, 1, 5);
             this.bestTeamsTableLayout.Controls.Add(this.team8, 1, 7);
             this.bestTeamsTableLayout.Controls.Add(this.team7, 1, 6);
-            this.bestTeamsTableLayout.Location = new System.Drawing.Point(489, 175);
+            this.bestTeamsTableLayout.Location = new System.Drawing.Point(635, 66);
             this.bestTeamsTableLayout.Name = "bestTeamsTableLayout";
             this.bestTeamsTableLayout.RowCount = 10;
             this.bestTeamsTableLayout.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
@@ -622,13 +624,13 @@ namespace Bot_Scout_RAPID_REACT
             this.bestTeamsTableLayout.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
             this.bestTeamsTableLayout.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
             this.bestTeamsTableLayout.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-            this.bestTeamsTableLayout.Size = new System.Drawing.Size(393, 223);
+            this.bestTeamsTableLayout.Size = new System.Drawing.Size(456, 223);
             this.bestTeamsTableLayout.TabIndex = 73;
             // 
             // label36
             // 
             this.label36.AutoSize = true;
-            this.label36.Location = new System.Drawing.Point(3, 0);
+            this.label36.Location = new System.Drawing.Point(6, 3);
             this.label36.Name = "label36";
             this.label36.Size = new System.Drawing.Size(16, 13);
             this.label36.TabIndex = 74;
@@ -637,7 +639,7 @@ namespace Bot_Scout_RAPID_REACT
             // label35
             // 
             this.label35.AutoSize = true;
-            this.label35.Location = new System.Drawing.Point(3, 31);
+            this.label35.Location = new System.Drawing.Point(6, 21);
             this.label35.Name = "label35";
             this.label35.Size = new System.Drawing.Size(16, 13);
             this.label35.TabIndex = 74;
@@ -649,7 +651,7 @@ namespace Bot_Scout_RAPID_REACT
             this.team1.AccessibleName = "";
             this.team1.AccessibleRole = System.Windows.Forms.AccessibleRole.Text;
             this.team1.AutoSize = true;
-            this.team1.Location = new System.Drawing.Point(53, 0);
+            this.team1.Location = new System.Drawing.Point(77, 3);
             this.team1.Name = "team1";
             this.team1.Size = new System.Drawing.Size(30, 13);
             this.team1.TabIndex = 4;
@@ -658,7 +660,7 @@ namespace Bot_Scout_RAPID_REACT
             // team1Data
             // 
             this.team1Data.AutoSize = true;
-            this.team1Data.Location = new System.Drawing.Point(118, 0);
+            this.team1Data.Location = new System.Drawing.Point(169, 3);
             this.team1Data.Name = "team1Data";
             this.team1Data.Size = new System.Drawing.Size(28, 13);
             this.team1Data.TabIndex = 5;
@@ -667,7 +669,7 @@ namespace Bot_Scout_RAPID_REACT
             // label39
             // 
             this.label39.AutoSize = true;
-            this.label39.Location = new System.Drawing.Point(183, 0);
+            this.label39.Location = new System.Drawing.Point(237, 3);
             this.label39.Name = "label39";
             this.label39.Size = new System.Drawing.Size(22, 13);
             this.label39.TabIndex = 37;
@@ -679,7 +681,7 @@ namespace Bot_Scout_RAPID_REACT
             this.team11.AccessibleName = "";
             this.team11.AccessibleRole = System.Windows.Forms.AccessibleRole.Text;
             this.team11.AutoSize = true;
-            this.team11.Location = new System.Drawing.Point(228, 0);
+            this.team11.Location = new System.Drawing.Point(285, 3);
             this.team11.Name = "team11";
             this.team11.Size = new System.Drawing.Size(30, 13);
             this.team11.TabIndex = 35;
@@ -688,7 +690,7 @@ namespace Bot_Scout_RAPID_REACT
             // team11Data
             // 
             this.team11Data.AutoSize = true;
-            this.team11Data.Location = new System.Drawing.Point(317, 0);
+            this.team11Data.Location = new System.Drawing.Point(377, 3);
             this.team11Data.Name = "team11Data";
             this.team11Data.Size = new System.Drawing.Size(28, 13);
             this.team11Data.TabIndex = 36;
@@ -700,7 +702,7 @@ namespace Bot_Scout_RAPID_REACT
             this.team2.AccessibleName = "";
             this.team2.AccessibleRole = System.Windows.Forms.AccessibleRole.Text;
             this.team2.AutoSize = true;
-            this.team2.Location = new System.Drawing.Point(53, 31);
+            this.team2.Location = new System.Drawing.Point(77, 21);
             this.team2.Name = "team2";
             this.team2.Size = new System.Drawing.Size(30, 13);
             this.team2.TabIndex = 8;
@@ -709,7 +711,7 @@ namespace Bot_Scout_RAPID_REACT
             // team20Data
             // 
             this.team20Data.AutoSize = true;
-            this.team20Data.Location = new System.Drawing.Point(317, 202);
+            this.team20Data.Location = new System.Drawing.Point(377, 200);
             this.team20Data.Name = "team20Data";
             this.team20Data.Size = new System.Drawing.Size(28, 13);
             this.team20Data.TabIndex = 64;
@@ -718,7 +720,7 @@ namespace Bot_Scout_RAPID_REACT
             // team2Data
             // 
             this.team2Data.AutoSize = true;
-            this.team2Data.Location = new System.Drawing.Point(118, 31);
+            this.team2Data.Location = new System.Drawing.Point(169, 21);
             this.team2Data.Name = "team2Data";
             this.team2Data.Size = new System.Drawing.Size(28, 13);
             this.team2Data.TabIndex = 9;
@@ -727,7 +729,7 @@ namespace Bot_Scout_RAPID_REACT
             // team19Data
             // 
             this.team19Data.AutoSize = true;
-            this.team19Data.Location = new System.Drawing.Point(317, 182);
+            this.team19Data.Location = new System.Drawing.Point(377, 177);
             this.team19Data.Name = "team19Data";
             this.team19Data.Size = new System.Drawing.Size(28, 13);
             this.team19Data.TabIndex = 60;
@@ -739,7 +741,7 @@ namespace Bot_Scout_RAPID_REACT
             this.team20.AccessibleName = "";
             this.team20.AccessibleRole = System.Windows.Forms.AccessibleRole.Text;
             this.team20.AutoSize = true;
-            this.team20.Location = new System.Drawing.Point(228, 202);
+            this.team20.Location = new System.Drawing.Point(285, 200);
             this.team20.Name = "team20";
             this.team20.Size = new System.Drawing.Size(30, 13);
             this.team20.TabIndex = 63;
@@ -748,7 +750,7 @@ namespace Bot_Scout_RAPID_REACT
             // team18Data
             // 
             this.team18Data.AutoSize = true;
-            this.team18Data.Location = new System.Drawing.Point(317, 162);
+            this.team18Data.Location = new System.Drawing.Point(377, 154);
             this.team18Data.Name = "team18Data";
             this.team18Data.Size = new System.Drawing.Size(28, 13);
             this.team18Data.TabIndex = 58;
@@ -757,7 +759,7 @@ namespace Bot_Scout_RAPID_REACT
             // label38
             // 
             this.label38.AutoSize = true;
-            this.label38.Location = new System.Drawing.Point(183, 31);
+            this.label38.Location = new System.Drawing.Point(237, 21);
             this.label38.Name = "label38";
             this.label38.Size = new System.Drawing.Size(22, 13);
             this.label38.TabIndex = 38;
@@ -766,7 +768,7 @@ namespace Bot_Scout_RAPID_REACT
             // team17Data
             // 
             this.team17Data.AutoSize = true;
-            this.team17Data.Location = new System.Drawing.Point(317, 142);
+            this.team17Data.Location = new System.Drawing.Point(377, 131);
             this.team17Data.Name = "team17Data";
             this.team17Data.Size = new System.Drawing.Size(28, 13);
             this.team17Data.TabIndex = 54;
@@ -775,7 +777,7 @@ namespace Bot_Scout_RAPID_REACT
             // label19
             // 
             this.label19.AutoSize = true;
-            this.label19.Location = new System.Drawing.Point(183, 202);
+            this.label19.Location = new System.Drawing.Point(237, 200);
             this.label19.Name = "label19";
             this.label19.Size = new System.Drawing.Size(22, 13);
             this.label19.TabIndex = 62;
@@ -784,7 +786,7 @@ namespace Bot_Scout_RAPID_REACT
             // team16Data
             // 
             this.team16Data.AutoSize = true;
-            this.team16Data.Location = new System.Drawing.Point(317, 122);
+            this.team16Data.Location = new System.Drawing.Point(377, 108);
             this.team16Data.Name = "team16Data";
             this.team16Data.Size = new System.Drawing.Size(28, 13);
             this.team16Data.TabIndex = 52;
@@ -796,7 +798,7 @@ namespace Bot_Scout_RAPID_REACT
             this.team19.AccessibleName = "";
             this.team19.AccessibleRole = System.Windows.Forms.AccessibleRole.Text;
             this.team19.AutoSize = true;
-            this.team19.Location = new System.Drawing.Point(228, 182);
+            this.team19.Location = new System.Drawing.Point(285, 177);
             this.team19.Name = "team19";
             this.team19.Size = new System.Drawing.Size(30, 13);
             this.team19.TabIndex = 59;
@@ -805,7 +807,7 @@ namespace Bot_Scout_RAPID_REACT
             // team15Data
             // 
             this.team15Data.AutoSize = true;
-            this.team15Data.Location = new System.Drawing.Point(317, 102);
+            this.team15Data.Location = new System.Drawing.Point(377, 85);
             this.team15Data.Name = "team15Data";
             this.team15Data.Size = new System.Drawing.Size(28, 13);
             this.team15Data.TabIndex = 48;
@@ -817,7 +819,7 @@ namespace Bot_Scout_RAPID_REACT
             this.team12.AccessibleName = "";
             this.team12.AccessibleRole = System.Windows.Forms.AccessibleRole.Text;
             this.team12.AutoSize = true;
-            this.team12.Location = new System.Drawing.Point(228, 31);
+            this.team12.Location = new System.Drawing.Point(285, 21);
             this.team12.Name = "team12";
             this.team12.Size = new System.Drawing.Size(30, 13);
             this.team12.TabIndex = 39;
@@ -826,7 +828,7 @@ namespace Bot_Scout_RAPID_REACT
             // label20
             // 
             this.label20.AutoSize = true;
-            this.label20.Location = new System.Drawing.Point(183, 182);
+            this.label20.Location = new System.Drawing.Point(237, 177);
             this.label20.Name = "label20";
             this.label20.Size = new System.Drawing.Size(22, 13);
             this.label20.TabIndex = 61;
@@ -838,7 +840,7 @@ namespace Bot_Scout_RAPID_REACT
             this.team18.AccessibleName = "";
             this.team18.AccessibleRole = System.Windows.Forms.AccessibleRole.Text;
             this.team18.AutoSize = true;
-            this.team18.Location = new System.Drawing.Point(228, 162);
+            this.team18.Location = new System.Drawing.Point(285, 154);
             this.team18.Name = "team18";
             this.team18.Size = new System.Drawing.Size(30, 13);
             this.team18.TabIndex = 57;
@@ -847,7 +849,7 @@ namespace Bot_Scout_RAPID_REACT
             // team12Data
             // 
             this.team12Data.AutoSize = true;
-            this.team12Data.Location = new System.Drawing.Point(317, 31);
+            this.team12Data.Location = new System.Drawing.Point(377, 21);
             this.team12Data.Name = "team12Data";
             this.team12Data.Size = new System.Drawing.Size(28, 13);
             this.team12Data.TabIndex = 40;
@@ -856,7 +858,7 @@ namespace Bot_Scout_RAPID_REACT
             // label21
             // 
             this.label21.AutoSize = true;
-            this.label21.Location = new System.Drawing.Point(3, 62);
+            this.label21.Location = new System.Drawing.Point(6, 39);
             this.label21.Name = "label21";
             this.label21.Size = new System.Drawing.Size(16, 13);
             this.label21.TabIndex = 12;
@@ -868,7 +870,7 @@ namespace Bot_Scout_RAPID_REACT
             this.team17.AccessibleName = "";
             this.team17.AccessibleRole = System.Windows.Forms.AccessibleRole.Text;
             this.team17.AutoSize = true;
-            this.team17.Location = new System.Drawing.Point(228, 142);
+            this.team17.Location = new System.Drawing.Point(285, 131);
             this.team17.Name = "team17";
             this.team17.Size = new System.Drawing.Size(30, 13);
             this.team17.TabIndex = 53;
@@ -877,7 +879,7 @@ namespace Bot_Scout_RAPID_REACT
             // label22
             // 
             this.label22.AutoSize = true;
-            this.label22.Location = new System.Drawing.Point(3, 82);
+            this.label22.Location = new System.Drawing.Point(6, 62);
             this.label22.Name = "label22";
             this.label22.Size = new System.Drawing.Size(16, 13);
             this.label22.TabIndex = 13;
@@ -889,7 +891,7 @@ namespace Bot_Scout_RAPID_REACT
             this.team3.AccessibleName = "";
             this.team3.AccessibleRole = System.Windows.Forms.AccessibleRole.Text;
             this.team3.AutoSize = true;
-            this.team3.Location = new System.Drawing.Point(53, 62);
+            this.team3.Location = new System.Drawing.Point(77, 39);
             this.team3.Name = "team3";
             this.team3.Size = new System.Drawing.Size(30, 13);
             this.team3.TabIndex = 10;
@@ -901,7 +903,7 @@ namespace Bot_Scout_RAPID_REACT
             this.team16.AccessibleName = "";
             this.team16.AccessibleRole = System.Windows.Forms.AccessibleRole.Text;
             this.team16.AutoSize = true;
-            this.team16.Location = new System.Drawing.Point(228, 122);
+            this.team16.Location = new System.Drawing.Point(285, 108);
             this.team16.Name = "team16";
             this.team16.Size = new System.Drawing.Size(30, 13);
             this.team16.TabIndex = 51;
@@ -913,7 +915,7 @@ namespace Bot_Scout_RAPID_REACT
             this.team4.AccessibleName = "";
             this.team4.AccessibleRole = System.Windows.Forms.AccessibleRole.Text;
             this.team4.AutoSize = true;
-            this.team4.Location = new System.Drawing.Point(53, 82);
+            this.team4.Location = new System.Drawing.Point(77, 62);
             this.team4.Name = "team4";
             this.team4.Size = new System.Drawing.Size(30, 13);
             this.team4.TabIndex = 14;
@@ -922,7 +924,7 @@ namespace Bot_Scout_RAPID_REACT
             // label23
             // 
             this.label23.AutoSize = true;
-            this.label23.Location = new System.Drawing.Point(183, 162);
+            this.label23.Location = new System.Drawing.Point(237, 154);
             this.label23.Name = "label23";
             this.label23.Size = new System.Drawing.Size(22, 13);
             this.label23.TabIndex = 56;
@@ -934,7 +936,7 @@ namespace Bot_Scout_RAPID_REACT
             this.team15.AccessibleName = "";
             this.team15.AccessibleRole = System.Windows.Forms.AccessibleRole.Text;
             this.team15.AutoSize = true;
-            this.team15.Location = new System.Drawing.Point(228, 102);
+            this.team15.Location = new System.Drawing.Point(285, 85);
             this.team15.Name = "team15";
             this.team15.Size = new System.Drawing.Size(30, 13);
             this.team15.TabIndex = 47;
@@ -943,7 +945,7 @@ namespace Bot_Scout_RAPID_REACT
             // team3Data
             // 
             this.team3Data.AutoSize = true;
-            this.team3Data.Location = new System.Drawing.Point(118, 62);
+            this.team3Data.Location = new System.Drawing.Point(169, 39);
             this.team3Data.Name = "team3Data";
             this.team3Data.Size = new System.Drawing.Size(28, 13);
             this.team3Data.TabIndex = 11;
@@ -952,7 +954,7 @@ namespace Bot_Scout_RAPID_REACT
             // label24
             // 
             this.label24.AutoSize = true;
-            this.label24.Location = new System.Drawing.Point(183, 142);
+            this.label24.Location = new System.Drawing.Point(237, 131);
             this.label24.Name = "label24";
             this.label24.Size = new System.Drawing.Size(22, 13);
             this.label24.TabIndex = 55;
@@ -961,7 +963,7 @@ namespace Bot_Scout_RAPID_REACT
             // team4Data
             // 
             this.team4Data.AutoSize = true;
-            this.team4Data.Location = new System.Drawing.Point(118, 82);
+            this.team4Data.Location = new System.Drawing.Point(169, 62);
             this.team4Data.Name = "team4Data";
             this.team4Data.Size = new System.Drawing.Size(28, 13);
             this.team4Data.TabIndex = 15;
@@ -970,7 +972,7 @@ namespace Bot_Scout_RAPID_REACT
             // label33
             // 
             this.label33.AutoSize = true;
-            this.label33.Location = new System.Drawing.Point(183, 62);
+            this.label33.Location = new System.Drawing.Point(237, 39);
             this.label33.Name = "label33";
             this.label33.Size = new System.Drawing.Size(22, 13);
             this.label33.TabIndex = 43;
@@ -979,7 +981,7 @@ namespace Bot_Scout_RAPID_REACT
             // label32
             // 
             this.label32.AutoSize = true;
-            this.label32.Location = new System.Drawing.Point(183, 82);
+            this.label32.Location = new System.Drawing.Point(237, 62);
             this.label32.Name = "label32";
             this.label32.Size = new System.Drawing.Size(22, 13);
             this.label32.TabIndex = 44;
@@ -991,7 +993,7 @@ namespace Bot_Scout_RAPID_REACT
             this.team13.AccessibleName = "";
             this.team13.AccessibleRole = System.Windows.Forms.AccessibleRole.Text;
             this.team13.AutoSize = true;
-            this.team13.Location = new System.Drawing.Point(228, 62);
+            this.team13.Location = new System.Drawing.Point(285, 39);
             this.team13.Name = "team13";
             this.team13.Size = new System.Drawing.Size(30, 13);
             this.team13.TabIndex = 41;
@@ -1000,7 +1002,7 @@ namespace Bot_Scout_RAPID_REACT
             // team13Data
             // 
             this.team13Data.AutoSize = true;
-            this.team13Data.Location = new System.Drawing.Point(317, 62);
+            this.team13Data.Location = new System.Drawing.Point(377, 39);
             this.team13Data.Name = "team13Data";
             this.team13Data.Size = new System.Drawing.Size(28, 13);
             this.team13Data.TabIndex = 42;
@@ -1009,7 +1011,7 @@ namespace Bot_Scout_RAPID_REACT
             // label26
             // 
             this.label26.AutoSize = true;
-            this.label26.Location = new System.Drawing.Point(183, 122);
+            this.label26.Location = new System.Drawing.Point(237, 108);
             this.label26.Name = "label26";
             this.label26.Size = new System.Drawing.Size(22, 13);
             this.label26.TabIndex = 50;
@@ -1021,7 +1023,7 @@ namespace Bot_Scout_RAPID_REACT
             this.team14.AccessibleName = "";
             this.team14.AccessibleRole = System.Windows.Forms.AccessibleRole.Text;
             this.team14.AutoSize = true;
-            this.team14.Location = new System.Drawing.Point(228, 82);
+            this.team14.Location = new System.Drawing.Point(285, 62);
             this.team14.Name = "team14";
             this.team14.Size = new System.Drawing.Size(30, 13);
             this.team14.TabIndex = 45;
@@ -1030,7 +1032,7 @@ namespace Bot_Scout_RAPID_REACT
             // label27
             // 
             this.label27.AutoSize = true;
-            this.label27.Location = new System.Drawing.Point(183, 102);
+            this.label27.Location = new System.Drawing.Point(237, 85);
             this.label27.Name = "label27";
             this.label27.Size = new System.Drawing.Size(22, 13);
             this.label27.TabIndex = 49;
@@ -1039,7 +1041,7 @@ namespace Bot_Scout_RAPID_REACT
             // team14Data
             // 
             this.team14Data.AutoSize = true;
-            this.team14Data.Location = new System.Drawing.Point(317, 82);
+            this.team14Data.Location = new System.Drawing.Point(377, 62);
             this.team14Data.Name = "team14Data";
             this.team14Data.Size = new System.Drawing.Size(28, 13);
             this.team14Data.TabIndex = 46;
@@ -1048,7 +1050,7 @@ namespace Bot_Scout_RAPID_REACT
             // label25
             // 
             this.label25.AutoSize = true;
-            this.label25.Location = new System.Drawing.Point(3, 102);
+            this.label25.Location = new System.Drawing.Point(6, 85);
             this.label25.Name = "label25";
             this.label25.Size = new System.Drawing.Size(16, 13);
             this.label25.TabIndex = 18;
@@ -1057,7 +1059,7 @@ namespace Bot_Scout_RAPID_REACT
             // label28
             // 
             this.label28.AutoSize = true;
-            this.label28.Location = new System.Drawing.Point(3, 122);
+            this.label28.Location = new System.Drawing.Point(6, 108);
             this.label28.Name = "label28";
             this.label28.Size = new System.Drawing.Size(16, 13);
             this.label28.TabIndex = 19;
@@ -1066,7 +1068,7 @@ namespace Bot_Scout_RAPID_REACT
             // team10Data
             // 
             this.team10Data.AutoSize = true;
-            this.team10Data.Location = new System.Drawing.Point(118, 202);
+            this.team10Data.Location = new System.Drawing.Point(169, 200);
             this.team10Data.Name = "team10Data";
             this.team10Data.Size = new System.Drawing.Size(28, 13);
             this.team10Data.TabIndex = 34;
@@ -1075,7 +1077,7 @@ namespace Bot_Scout_RAPID_REACT
             // label29
             // 
             this.label29.AutoSize = true;
-            this.label29.Location = new System.Drawing.Point(3, 142);
+            this.label29.Location = new System.Drawing.Point(6, 131);
             this.label29.Name = "label29";
             this.label29.Size = new System.Drawing.Size(16, 13);
             this.label29.TabIndex = 24;
@@ -1084,7 +1086,7 @@ namespace Bot_Scout_RAPID_REACT
             // team9Data
             // 
             this.team9Data.AutoSize = true;
-            this.team9Data.Location = new System.Drawing.Point(118, 182);
+            this.team9Data.Location = new System.Drawing.Point(169, 177);
             this.team9Data.Name = "team9Data";
             this.team9Data.Size = new System.Drawing.Size(28, 13);
             this.team9Data.TabIndex = 30;
@@ -1096,7 +1098,7 @@ namespace Bot_Scout_RAPID_REACT
             this.team10.AccessibleName = "";
             this.team10.AccessibleRole = System.Windows.Forms.AccessibleRole.Text;
             this.team10.AutoSize = true;
-            this.team10.Location = new System.Drawing.Point(53, 202);
+            this.team10.Location = new System.Drawing.Point(77, 200);
             this.team10.Name = "team10";
             this.team10.Size = new System.Drawing.Size(30, 13);
             this.team10.TabIndex = 33;
@@ -1105,7 +1107,7 @@ namespace Bot_Scout_RAPID_REACT
             // label30
             // 
             this.label30.AutoSize = true;
-            this.label30.Location = new System.Drawing.Point(3, 162);
+            this.label30.Location = new System.Drawing.Point(6, 154);
             this.label30.Name = "label30";
             this.label30.Size = new System.Drawing.Size(16, 13);
             this.label30.TabIndex = 25;
@@ -1114,7 +1116,7 @@ namespace Bot_Scout_RAPID_REACT
             // team8Data
             // 
             this.team8Data.AutoSize = true;
-            this.team8Data.Location = new System.Drawing.Point(118, 162);
+            this.team8Data.Location = new System.Drawing.Point(169, 154);
             this.team8Data.Name = "team8Data";
             this.team8Data.Size = new System.Drawing.Size(28, 13);
             this.team8Data.TabIndex = 27;
@@ -1123,7 +1125,7 @@ namespace Bot_Scout_RAPID_REACT
             // label31
             // 
             this.label31.AutoSize = true;
-            this.label31.Location = new System.Drawing.Point(3, 202);
+            this.label31.Location = new System.Drawing.Point(6, 200);
             this.label31.Name = "label31";
             this.label31.Size = new System.Drawing.Size(22, 13);
             this.label31.TabIndex = 32;
@@ -1132,7 +1134,7 @@ namespace Bot_Scout_RAPID_REACT
             // team7Data
             // 
             this.team7Data.AutoSize = true;
-            this.team7Data.Location = new System.Drawing.Point(118, 142);
+            this.team7Data.Location = new System.Drawing.Point(169, 131);
             this.team7Data.Name = "team7Data";
             this.team7Data.Size = new System.Drawing.Size(28, 13);
             this.team7Data.TabIndex = 23;
@@ -1144,7 +1146,7 @@ namespace Bot_Scout_RAPID_REACT
             this.team9.AccessibleName = "";
             this.team9.AccessibleRole = System.Windows.Forms.AccessibleRole.Text;
             this.team9.AutoSize = true;
-            this.team9.Location = new System.Drawing.Point(53, 182);
+            this.team9.Location = new System.Drawing.Point(77, 177);
             this.team9.Name = "team9";
             this.team9.Size = new System.Drawing.Size(30, 13);
             this.team9.TabIndex = 29;
@@ -1153,7 +1155,7 @@ namespace Bot_Scout_RAPID_REACT
             // team6Data
             // 
             this.team6Data.AutoSize = true;
-            this.team6Data.Location = new System.Drawing.Point(118, 122);
+            this.team6Data.Location = new System.Drawing.Point(169, 108);
             this.team6Data.Name = "team6Data";
             this.team6Data.Size = new System.Drawing.Size(28, 13);
             this.team6Data.TabIndex = 21;
@@ -1162,7 +1164,7 @@ namespace Bot_Scout_RAPID_REACT
             // label34
             // 
             this.label34.AutoSize = true;
-            this.label34.Location = new System.Drawing.Point(3, 182);
+            this.label34.Location = new System.Drawing.Point(6, 177);
             this.label34.Name = "label34";
             this.label34.Size = new System.Drawing.Size(16, 13);
             this.label34.TabIndex = 31;
@@ -1171,7 +1173,7 @@ namespace Bot_Scout_RAPID_REACT
             // team5Data
             // 
             this.team5Data.AutoSize = true;
-            this.team5Data.Location = new System.Drawing.Point(118, 102);
+            this.team5Data.Location = new System.Drawing.Point(169, 85);
             this.team5Data.Name = "team5Data";
             this.team5Data.Size = new System.Drawing.Size(28, 13);
             this.team5Data.TabIndex = 17;
@@ -1183,7 +1185,7 @@ namespace Bot_Scout_RAPID_REACT
             this.team5.AccessibleName = "";
             this.team5.AccessibleRole = System.Windows.Forms.AccessibleRole.Text;
             this.team5.AutoSize = true;
-            this.team5.Location = new System.Drawing.Point(53, 102);
+            this.team5.Location = new System.Drawing.Point(77, 85);
             this.team5.Name = "team5";
             this.team5.Size = new System.Drawing.Size(30, 13);
             this.team5.TabIndex = 16;
@@ -1195,7 +1197,7 @@ namespace Bot_Scout_RAPID_REACT
             this.team6.AccessibleName = "";
             this.team6.AccessibleRole = System.Windows.Forms.AccessibleRole.Text;
             this.team6.AutoSize = true;
-            this.team6.Location = new System.Drawing.Point(53, 122);
+            this.team6.Location = new System.Drawing.Point(77, 108);
             this.team6.Name = "team6";
             this.team6.Size = new System.Drawing.Size(30, 13);
             this.team6.TabIndex = 20;
@@ -1207,7 +1209,7 @@ namespace Bot_Scout_RAPID_REACT
             this.team8.AccessibleName = "";
             this.team8.AccessibleRole = System.Windows.Forms.AccessibleRole.Text;
             this.team8.AutoSize = true;
-            this.team8.Location = new System.Drawing.Point(53, 162);
+            this.team8.Location = new System.Drawing.Point(77, 154);
             this.team8.Name = "team8";
             this.team8.Size = new System.Drawing.Size(30, 13);
             this.team8.TabIndex = 26;
@@ -1219,7 +1221,7 @@ namespace Bot_Scout_RAPID_REACT
             this.team7.AccessibleName = "";
             this.team7.AccessibleRole = System.Windows.Forms.AccessibleRole.Text;
             this.team7.AutoSize = true;
-            this.team7.Location = new System.Drawing.Point(53, 142);
+            this.team7.Location = new System.Drawing.Point(77, 131);
             this.team7.Name = "team7";
             this.team7.Size = new System.Drawing.Size(30, 13);
             this.team7.TabIndex = 22;
@@ -1227,6 +1229,7 @@ namespace Bot_Scout_RAPID_REACT
             // 
             // driverSheetTable
             // 
+            this.driverSheetTable.BackColor = System.Drawing.Color.SkyBlue;
             this.driverSheetTable.CellBorderStyle = System.Windows.Forms.TableLayoutPanelCellBorderStyle.InsetDouble;
             this.driverSheetTable.ColumnCount = 2;
             this.driverSheetTable.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
@@ -1243,7 +1246,7 @@ namespace Bot_Scout_RAPID_REACT
             this.driverSheetTable.Controls.Add(this.autoTotal, 1, 2);
             this.driverSheetTable.Controls.Add(this.teleHigh, 1, 1);
             this.driverSheetTable.Controls.Add(this.label46, 0, 0);
-            this.driverSheetTable.Location = new System.Drawing.Point(884, 88);
+            this.driverSheetTable.Location = new System.Drawing.Point(492, 168);
             this.driverSheetTable.Name = "driverSheetTable";
             this.driverSheetTable.RowCount = 6;
             this.driverSheetTable.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 48.03922F));
@@ -1380,7 +1383,7 @@ namespace Bot_Scout_RAPID_REACT
             // 
             this.matchText.AutoSize = true;
             this.matchText.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.matchText.Location = new System.Drawing.Point(956, 54);
+            this.matchText.Location = new System.Drawing.Point(559, 434);
             this.matchText.Name = "matchText";
             this.matchText.Size = new System.Drawing.Size(51, 16);
             this.matchText.TabIndex = 75;
@@ -1401,7 +1404,7 @@ namespace Bot_Scout_RAPID_REACT
             this.loadText.AutoSize = true;
             this.loadText.Font = new System.Drawing.Font("Microsoft YaHei UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.loadText.ForeColor = System.Drawing.SystemColors.HighlightText;
-            this.loadText.Location = new System.Drawing.Point(904, 28);
+            this.loadText.Location = new System.Drawing.Point(499, 413);
             this.loadText.Name = "loadText";
             this.loadText.Size = new System.Drawing.Size(168, 17);
             this.loadText.TabIndex = 77;
@@ -1410,6 +1413,8 @@ namespace Bot_Scout_RAPID_REACT
             // 
             // averageTeamTable
             // 
+            this.averageTeamTable.BackColor = System.Drawing.Color.SkyBlue;
+            this.averageTeamTable.CellBorderStyle = System.Windows.Forms.TableLayoutPanelCellBorderStyle.InsetDouble;
             this.averageTeamTable.ColumnCount = 2;
             this.averageTeamTable.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.averageTeamTable.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
@@ -1428,7 +1433,7 @@ namespace Bot_Scout_RAPID_REACT
             // averageTele
             // 
             this.averageTele.AutoSize = true;
-            this.averageTele.Location = new System.Drawing.Point(103, 0);
+            this.averageTele.Location = new System.Drawing.Point(104, 3);
             this.averageTele.Name = "averageTele";
             this.averageTele.Size = new System.Drawing.Size(33, 13);
             this.averageTele.TabIndex = 22;
@@ -1437,7 +1442,7 @@ namespace Bot_Scout_RAPID_REACT
             // averageTeleAcc
             // 
             this.averageTeleAcc.AutoSize = true;
-            this.averageTeleAcc.Location = new System.Drawing.Point(103, 50);
+            this.averageTeleAcc.Location = new System.Drawing.Point(104, 51);
             this.averageTeleAcc.Name = "averageTeleAcc";
             this.averageTeleAcc.Size = new System.Drawing.Size(33, 13);
             this.averageTeleAcc.TabIndex = 23;
@@ -1446,7 +1451,7 @@ namespace Bot_Scout_RAPID_REACT
             // label47
             // 
             this.label47.AutoSize = true;
-            this.label47.Location = new System.Drawing.Point(3, 0);
+            this.label47.Location = new System.Drawing.Point(6, 3);
             this.label47.Name = "label47";
             this.label47.Size = new System.Drawing.Size(81, 26);
             this.label47.TabIndex = 24;
@@ -1455,7 +1460,7 @@ namespace Bot_Scout_RAPID_REACT
             // label48
             // 
             this.label48.AutoSize = true;
-            this.label48.Location = new System.Drawing.Point(3, 50);
+            this.label48.Location = new System.Drawing.Point(6, 51);
             this.label48.Name = "label48";
             this.label48.Size = new System.Drawing.Size(76, 26);
             this.label48.TabIndex = 25;

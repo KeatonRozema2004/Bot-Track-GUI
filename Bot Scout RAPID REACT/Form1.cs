@@ -1,14 +1,6 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Forms;
 using System.IO;
-using System.Threading;
+using System.Windows.Forms;
 
 namespace Bot_Scout_RAPID_REACT
 {
@@ -50,7 +42,7 @@ namespace Bot_Scout_RAPID_REACT
                 if (!shutdownBot.Checked)
                 {
                     statusText.Text = "Loading...";
-                    
+
                     int autoCargo;
 
                     int teleCargo;
@@ -231,26 +223,26 @@ namespace Bot_Scout_RAPID_REACT
                 else
                 {
                     string tempShut = GetLine(team.Text + ".txt", 1)[11] + "";
-                    int shutdowns = Int32.Parse(tempShut)+1;
-                    lineChanger("Shutdowns: " + shutdowns, current + team.Text + ".txt",1);
+                    int shutdowns = Int32.Parse(tempShut) + 1;
+                    lineChanger("Shutdowns: " + shutdowns, current + team.Text + ".txt", 1);
                 }
-                    //Thread.Sleep(2000);
-                    team.Text = "";
-                    match.Text = "";
-                    teleLower.Text = "";
-                    teleUpper.Text = "";
-                    teleMissed.Text = "";
-                    autoLower.Text = "";
-                    autoUpper.Text = "";
-                    autoMissed.Text = "";
-                    climbEnd.Text = "";
-                    climbStart.Text = "";
-                    climbType.Text = "";
-                    climbEnter.Text = "";
-                    defense.Text = "";
-                    position.Text = "";
-                    taxi.Text = "";
-            
+                //Thread.Sleep(2000);
+                team.Text = "";
+                match.Text = "";
+                teleLower.Text = "";
+                teleUpper.Text = "";
+                teleMissed.Text = "";
+                autoLower.Text = "";
+                autoUpper.Text = "";
+                autoMissed.Text = "";
+                climbEnd.Text = "";
+                climbStart.Text = "";
+                climbType.Text = "";
+                climbEnter.Text = "";
+                defense.Text = "";
+                position.Text = "";
+                taxi.Text = "";
+
             }
             catch
             {
