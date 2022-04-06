@@ -336,8 +336,8 @@ namespace Bot_Scout_RAPID_REACT
 
         private void button6_Click(object sender, EventArgs e)
         {
-            Average ave = new Average();
-            ave.ShowDialog();
+            //Average ave = new Average();
+            //ave.ShowDialog();
         }
 
         private void bestTeamsMenu_Click(object sender, EventArgs e)
@@ -358,6 +358,7 @@ namespace Bot_Scout_RAPID_REACT
         private void averageScoresMenu_Click(object sender, EventArgs e)
         {
             bestTeamsTableLayout.Visible = false;
+            averageCargo();
         }
 
         private void autoLowerMenu_Click(object sender, EventArgs e)
@@ -1394,6 +1395,54 @@ namespace Bot_Scout_RAPID_REACT
             catch (Exception l)
             {
                 loadText.Text = "Can't find team";
+            }
+        }
+        public void averageCargo()
+        {
+            try
+            {
+                Form1 match = new Form1();
+                int averageScoreTele = 0;
+                int averageScoreAccTele = 0;
+                int i = 1;
+                int j = 0;
+                Console.Write("Team #: ");
+                while (match.GetLine(team.Text + ".txt", i) != match.GetLine("blank.txt", 1))
+                {
+                    //Console.WriteLine(GetLine(team+".txt",i));
+                    i++;
+                    if (match.GetLine(team.Text + ".txt", i).Contains("Tele Cargo Score"))
+                    {
+                        string num1 = match.GetLine(team.Text + ".txt", i)[18].ToString();
+                        string num2 = match.GetLine(team.Text + ".txt", i)[19].ToString();
+                        averageScoreTele += Int32.Parse(num1 + num2);
+                        j++;
+                    }
+                }
+                i = 0;
+                j = 0;
+                while (match.GetLine(team.Text + ".txt", i) != match.GetLine("blank.txt", 1))
+                {
+                    //Console.WriteLine(GetLine(team+".txt",i));
+                    i++;
+                    if (match.GetLine(team.Text + ".txt", i).Contains("Tele Accuracy"))
+                    {
+                        string num1 = match.GetLine(team.Text + ".txt", i)[15].ToString();
+                        string num2 = match.GetLine(team.Text + ".txt", i)[16].ToString();
+                        averageScoreAccTele += Int32.Parse(num1 + num2);
+                        j++;
+                    }
+                }
+
+                averageTele.Text = "" + averageScoreTele / j;
+                averageTeleAcc.Text = averageScoreAccTele / j + "%";
+                loadText.Text = "Data Loaded";
+
+                //return 1;
+            }
+            catch (Exception l)
+            {
+
             }
         }
     }
