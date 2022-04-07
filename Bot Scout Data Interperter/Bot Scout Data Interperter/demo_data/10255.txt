@@ -38,6 +38,26 @@ Auto Cargo Score: 22
 Auto Accuracy: 80%
 Tele Accuracy: 94.28571428571428%
 ------------------------
+Match Number: 3
+Taxi: y
+Auto Upper: 15
+Auto Lower: 0
+Auto Missed: 0
+Tele Upper: 45
+Tele Lower: 0
+Tele Missed: 0
+Position: t
+Defense: 0
+Climb Type: t
+Start: 50
+End: 6
+Entry: f
+Total Climb Time: 44
+Tele Cargo Score: 56
+Auto Cargo Score: 22
+Auto Accuracy: 80%
+Tele Accuracy: 94.28571428571428%
+------------------------
 0
 0
 0

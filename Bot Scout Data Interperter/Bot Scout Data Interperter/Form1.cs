@@ -11,6 +11,14 @@ using System.Windows.Forms;
 using Bot_Scout_Data_Interperter.scripts;
 
 
+//TODO: work on the master reset when changing the competition directory
+//TODO: work on filling in the team data and building the user interface for the editing portion
+//TODO: comments
+//RESEARCH: winform graph tool
+
+//COMPLETE: overview tab
+//COMPLETE: base layout for application
+
 namespace Bot_Scout_Data_Interperter
 {
     public partial class Main_page : Form
