@@ -22,6 +22,12 @@ namespace Bot_Scout_Data_Interperter
             InitializeComponent();
         }
 
+        private void zzResetData()
+        {
+            overview_table.Rows.Clear();
+            dataDirectoryLabel.Text = "None";
+        }
+
         private void getDataDirectoryButton_Click(object sender, EventArgs e)
         {
             string directory;
@@ -43,9 +49,13 @@ namespace Bot_Scout_Data_Interperter
 
                     string[] lines = File.ReadAllLines(allTeamFiles[z]);
 
+
+                    int matches_played = functions.zzGetTeamMatchesPlayed(lines);
                     int auto = functions.zzReturnModePointsFromDataSheet(lines, auto: true);
                     int tele = functions.zzReturnModePointsFromDataSheet(lines, tele: true);
                     int endgame = functions.zzReturnModePointsFromDataSheet(lines, end: true); //I know endgame and tele op arnt different but ya know im from ftc so sue me plz 
+
+                    overview_table.Rows.Add(teamName, matches_played, auto, tele, endgame, auto + tele + endgame);
                 }
 
                 // string tempDirectory = @"D:\GitHub\Bot-Track-GUI\Bot Scout Data Interperter\Bot Scout Data Interperter\demo_data\85.txt";
@@ -54,6 +64,11 @@ namespace Bot_Scout_Data_Interperter
         }
 
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void teamDataTeamSelect_SelectedIndexChanged(object sender, EventArgs e)
         {
 
         }
