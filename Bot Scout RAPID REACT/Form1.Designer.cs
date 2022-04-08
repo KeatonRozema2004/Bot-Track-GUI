@@ -29,6 +29,7 @@ namespace Bot_Scout_RAPID_REACT
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.button3 = new System.Windows.Forms.Button();
             this.label4 = new System.Windows.Forms.Label();
@@ -66,14 +67,12 @@ namespace Bot_Scout_RAPID_REACT
             this.shutdownBot = new System.Windows.Forms.CheckBox();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.bestTeamsMenu = new System.Windows.Forms.ToolStripMenuItem();
-            this.autoLowerMenu = new System.Windows.Forms.ToolStripMenuItem();
-            this.autoUpperMenu = new System.Windows.Forms.ToolStripMenuItem();
-            this.autoTotalMenu = new System.Windows.Forms.ToolStripMenuItem();
             this.driverSheetMenu = new System.Windows.Forms.ToolStripMenuItem();
             this.bestStatsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.previousMatchToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.nextMatchToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.averageScoresMenu = new System.Windows.Forms.ToolStripMenuItem();
+            this.teamTrendsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.bestTeamsTableLayout = new System.Windows.Forms.TableLayoutPanel();
             this.label36 = new System.Windows.Forms.Label();
             this.label35 = new System.Windows.Forms.Label();
@@ -156,12 +155,31 @@ namespace Bot_Scout_RAPID_REACT
             this.averageTeleAcc = new System.Windows.Forms.Label();
             this.label47 = new System.Windows.Forms.Label();
             this.label48 = new System.Windows.Forms.Label();
-            this.teamTrendsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
+            this.teamTrendLayout = new System.Windows.Forms.TableLayoutPanel();
+            this.teamTrend = new System.Windows.Forms.Label();
+            this.label49 = new System.Windows.Forms.Label();
+            this.refreshPageToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.label43 = new System.Windows.Forms.Label();
+            this.totalScore2 = new System.Windows.Forms.Label();
+            this.teleTotalToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.autoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.defenseToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.climbToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.overallScoreToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.teleLowerButton = new System.Windows.Forms.ToolStripMenuItem();
+            this.teleUpperButton = new System.Windows.Forms.ToolStripMenuItem();
+            this.teleTotalButton = new System.Windows.Forms.ToolStripMenuItem();
+            this.autoLowerButton = new System.Windows.Forms.ToolStripMenuItem();
+            this.autoUpperButton = new System.Windows.Forms.ToolStripMenuItem();
+            this.autoTotalButton = new System.Windows.Forms.ToolStripMenuItem();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.menuStrip1.SuspendLayout();
             this.bestTeamsTableLayout.SuspendLayout();
             this.driverSheetTable.SuspendLayout();
             this.averageTeamTable.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
+            this.teamTrendLayout.SuspendLayout();
             this.SuspendLayout();
             // 
             // button3
@@ -228,14 +246,14 @@ namespace Bot_Scout_RAPID_REACT
             this.teleUpper.Location = new System.Drawing.Point(349, 191);
             this.teleUpper.Name = "teleUpper";
             this.teleUpper.Size = new System.Drawing.Size(100, 20);
-            this.teleUpper.TabIndex = 6;
+            this.teleUpper.TabIndex = 7;
             // 
             // teleLower
             // 
             this.teleLower.Location = new System.Drawing.Point(349, 153);
             this.teleLower.Name = "teleLower";
             this.teleLower.Size = new System.Drawing.Size(100, 20);
-            this.teleLower.TabIndex = 7;
+            this.teleLower.TabIndex = 6;
             // 
             // label7
             // 
@@ -463,7 +481,8 @@ namespace Bot_Scout_RAPID_REACT
             this.bestTeamsMenu,
             this.driverSheetMenu,
             this.averageScoresMenu,
-            this.teamTrendsToolStripMenuItem});
+            this.teamTrendsToolStripMenuItem,
+            this.refreshPageToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Size = new System.Drawing.Size(1084, 28);
@@ -473,32 +492,15 @@ namespace Bot_Scout_RAPID_REACT
             // bestTeamsMenu
             // 
             this.bestTeamsMenu.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.autoLowerMenu,
-            this.autoUpperMenu,
-            this.autoTotalMenu});
+            this.teleTotalToolStripMenuItem,
+            this.autoToolStripMenuItem,
+            this.defenseToolStripMenuItem,
+            this.climbToolStripMenuItem,
+            this.overallScoreToolStripMenuItem});
             this.bestTeamsMenu.Name = "bestTeamsMenu";
             this.bestTeamsMenu.Size = new System.Drawing.Size(100, 24);
             this.bestTeamsMenu.Text = "Best Teams";
             this.bestTeamsMenu.Click += new System.EventHandler(this.bestTeamsMenu_Click);
-            // 
-            // autoLowerMenu
-            // 
-            this.autoLowerMenu.Name = "autoLowerMenu";
-            this.autoLowerMenu.Size = new System.Drawing.Size(159, 24);
-            this.autoLowerMenu.Text = "Auto Lower";
-            this.autoLowerMenu.Click += new System.EventHandler(this.autoLowerMenu_Click);
-            // 
-            // autoUpperMenu
-            // 
-            this.autoUpperMenu.Name = "autoUpperMenu";
-            this.autoUpperMenu.Size = new System.Drawing.Size(159, 24);
-            this.autoUpperMenu.Text = "Auto Upper";
-            // 
-            // autoTotalMenu
-            // 
-            this.autoTotalMenu.Name = "autoTotalMenu";
-            this.autoTotalMenu.Size = new System.Drawing.Size(159, 24);
-            this.autoTotalMenu.Text = "Auto Total";
             // 
             // driverSheetMenu
             // 
@@ -514,21 +516,24 @@ namespace Bot_Scout_RAPID_REACT
             // bestStatsToolStripMenuItem
             // 
             this.bestStatsToolStripMenuItem.Name = "bestStatsToolStripMenuItem";
-            this.bestStatsToolStripMenuItem.Size = new System.Drawing.Size(187, 24);
+            this.bestStatsToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.B)));
+            this.bestStatsToolStripMenuItem.Size = new System.Drawing.Size(242, 24);
             this.bestStatsToolStripMenuItem.Text = "Best Stats";
             this.bestStatsToolStripMenuItem.Click += new System.EventHandler(this.bestStatsToolStripMenuItem_Click);
             // 
             // previousMatchToolStripMenuItem
             // 
             this.previousMatchToolStripMenuItem.Name = "previousMatchToolStripMenuItem";
-            this.previousMatchToolStripMenuItem.Size = new System.Drawing.Size(187, 24);
+            this.previousMatchToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.P)));
+            this.previousMatchToolStripMenuItem.Size = new System.Drawing.Size(242, 24);
             this.previousMatchToolStripMenuItem.Text = "Previous Match";
             this.previousMatchToolStripMenuItem.Click += new System.EventHandler(this.previousMatchToolStripMenuItem_Click);
             // 
             // nextMatchToolStripMenuItem
             // 
             this.nextMatchToolStripMenuItem.Name = "nextMatchToolStripMenuItem";
-            this.nextMatchToolStripMenuItem.Size = new System.Drawing.Size(187, 24);
+            this.nextMatchToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.N)));
+            this.nextMatchToolStripMenuItem.Size = new System.Drawing.Size(242, 24);
             this.nextMatchToolStripMenuItem.Text = "Next Match";
             this.nextMatchToolStripMenuItem.Click += new System.EventHandler(this.nextMatchToolStripMenuItem_Click);
             // 
@@ -538,6 +543,13 @@ namespace Bot_Scout_RAPID_REACT
             this.averageScoresMenu.Size = new System.Drawing.Size(129, 24);
             this.averageScoresMenu.Text = "Average Scores";
             this.averageScoresMenu.Click += new System.EventHandler(this.averageScoresMenu_Click);
+            // 
+            // teamTrendsToolStripMenuItem
+            // 
+            this.teamTrendsToolStripMenuItem.Name = "teamTrendsToolStripMenuItem";
+            this.teamTrendsToolStripMenuItem.Size = new System.Drawing.Size(110, 24);
+            this.teamTrendsToolStripMenuItem.Text = "Team Trends";
+            this.teamTrendsToolStripMenuItem.Click += new System.EventHandler(this.teamTrendsToolStripMenuItem_Click);
             // 
             // bestTeamsTableLayout
             // 
@@ -610,7 +622,7 @@ namespace Bot_Scout_RAPID_REACT
             this.bestTeamsTableLayout.Controls.Add(this.team6, 1, 5);
             this.bestTeamsTableLayout.Controls.Add(this.team8, 1, 7);
             this.bestTeamsTableLayout.Controls.Add(this.team7, 1, 6);
-            this.bestTeamsTableLayout.Location = new System.Drawing.Point(635, 66);
+            this.bestTeamsTableLayout.Location = new System.Drawing.Point(660, 492);
             this.bestTeamsTableLayout.Name = "bestTeamsTableLayout";
             this.bestTeamsTableLayout.RowCount = 10;
             this.bestTeamsTableLayout.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
@@ -1235,20 +1247,22 @@ namespace Bot_Scout_RAPID_REACT
             this.driverSheetTable.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.driverSheetTable.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.driverSheetTable.Controls.Add(this.label45, 0, 1);
+            this.driverSheetTable.Controls.Add(this.label43, 0, 6);
             this.driverSheetTable.Controls.Add(this.label37, 0, 2);
             this.driverSheetTable.Controls.Add(this.label40, 0, 3);
             this.driverSheetTable.Controls.Add(this.label41, 0, 4);
             this.driverSheetTable.Controls.Add(this.label42, 0, 5);
-            this.driverSheetTable.Controls.Add(this.teleLow, 1, 0);
             this.driverSheetTable.Controls.Add(this.defense2, 1, 5);
             this.driverSheetTable.Controls.Add(this.climbType2, 1, 4);
             this.driverSheetTable.Controls.Add(this.time, 1, 3);
             this.driverSheetTable.Controls.Add(this.autoTotal, 1, 2);
             this.driverSheetTable.Controls.Add(this.teleHigh, 1, 1);
             this.driverSheetTable.Controls.Add(this.label46, 0, 0);
-            this.driverSheetTable.Location = new System.Drawing.Point(492, 168);
+            this.driverSheetTable.Controls.Add(this.teleLow, 1, 0);
+            this.driverSheetTable.Controls.Add(this.totalScore2, 1, 6);
+            this.driverSheetTable.Location = new System.Drawing.Point(762, 284);
             this.driverSheetTable.Name = "driverSheetTable";
-            this.driverSheetTable.RowCount = 6;
+            this.driverSheetTable.RowCount = 7;
             this.driverSheetTable.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 48.03922F));
             this.driverSheetTable.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 51.96078F));
             this.driverSheetTable.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 30F));
@@ -1256,16 +1270,17 @@ namespace Bot_Scout_RAPID_REACT
             this.driverSheetTable.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 41F));
             this.driverSheetTable.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 27F));
             this.driverSheetTable.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-            this.driverSheetTable.Size = new System.Drawing.Size(200, 242);
+            this.driverSheetTable.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
+            this.driverSheetTable.Size = new System.Drawing.Size(211, 242);
             this.driverSheetTable.TabIndex = 74;
             // 
             // label45
             // 
             this.label45.AutoSize = true;
             this.label45.Font = new System.Drawing.Font("Microsoft YaHei UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label45.Location = new System.Drawing.Point(6, 46);
+            this.label45.Location = new System.Drawing.Point(6, 35);
             this.label45.Name = "label45";
-            this.label45.Size = new System.Drawing.Size(56, 38);
+            this.label45.Size = new System.Drawing.Size(91, 19);
             this.label45.TabIndex = 75;
             this.label45.Text = "Tele Upper";
             // 
@@ -1273,7 +1288,7 @@ namespace Bot_Scout_RAPID_REACT
             // 
             this.label37.AutoSize = true;
             this.label37.Font = new System.Drawing.Font("Microsoft YaHei UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label37.Location = new System.Drawing.Point(6, 92);
+            this.label37.Location = new System.Drawing.Point(6, 69);
             this.label37.Name = "label37";
             this.label37.Size = new System.Drawing.Size(88, 19);
             this.label37.TabIndex = 8;
@@ -1283,9 +1298,9 @@ namespace Bot_Scout_RAPID_REACT
             // 
             this.label40.AutoSize = true;
             this.label40.Font = new System.Drawing.Font("Microsoft YaHei UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label40.Location = new System.Drawing.Point(6, 125);
+            this.label40.Location = new System.Drawing.Point(6, 102);
             this.label40.Name = "label40";
-            this.label40.Size = new System.Drawing.Size(56, 38);
+            this.label40.Size = new System.Drawing.Size(93, 19);
             this.label40.TabIndex = 7;
             this.label40.Text = "Climb Time";
             // 
@@ -1293,9 +1308,9 @@ namespace Bot_Scout_RAPID_REACT
             // 
             this.label41.AutoSize = true;
             this.label41.Font = new System.Drawing.Font("Microsoft YaHei UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label41.Location = new System.Drawing.Point(6, 167);
+            this.label41.Location = new System.Drawing.Point(6, 144);
             this.label41.Name = "label41";
-            this.label41.Size = new System.Drawing.Size(56, 38);
+            this.label41.Size = new System.Drawing.Size(93, 19);
             this.label41.TabIndex = 6;
             this.label41.Text = "Climb Type";
             // 
@@ -1303,7 +1318,7 @@ namespace Bot_Scout_RAPID_REACT
             // 
             this.label42.AutoSize = true;
             this.label42.Font = new System.Drawing.Font("Microsoft YaHei UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label42.Location = new System.Drawing.Point(6, 211);
+            this.label42.Location = new System.Drawing.Point(6, 188);
             this.label42.Name = "label42";
             this.label42.Size = new System.Drawing.Size(71, 19);
             this.label42.TabIndex = 5;
@@ -1313,7 +1328,7 @@ namespace Bot_Scout_RAPID_REACT
             // 
             this.teleLow.AutoSize = true;
             this.teleLow.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.teleLow.Location = new System.Drawing.Point(104, 3);
+            this.teleLow.Location = new System.Drawing.Point(110, 3);
             this.teleLow.Name = "teleLow";
             this.teleLow.Size = new System.Drawing.Size(51, 16);
             this.teleLow.TabIndex = 9;
@@ -1323,7 +1338,7 @@ namespace Bot_Scout_RAPID_REACT
             // 
             this.defense2.AutoSize = true;
             this.defense2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.defense2.Location = new System.Drawing.Point(104, 211);
+            this.defense2.Location = new System.Drawing.Point(110, 188);
             this.defense2.Name = "defense2";
             this.defense2.Size = new System.Drawing.Size(51, 16);
             this.defense2.TabIndex = 10;
@@ -1333,7 +1348,7 @@ namespace Bot_Scout_RAPID_REACT
             // 
             this.climbType2.AutoSize = true;
             this.climbType2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.climbType2.Location = new System.Drawing.Point(104, 167);
+            this.climbType2.Location = new System.Drawing.Point(110, 144);
             this.climbType2.Name = "climbType2";
             this.climbType2.Size = new System.Drawing.Size(51, 16);
             this.climbType2.TabIndex = 11;
@@ -1343,7 +1358,7 @@ namespace Bot_Scout_RAPID_REACT
             // 
             this.time.AutoSize = true;
             this.time.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.time.Location = new System.Drawing.Point(104, 125);
+            this.time.Location = new System.Drawing.Point(110, 102);
             this.time.Name = "time";
             this.time.Size = new System.Drawing.Size(51, 16);
             this.time.TabIndex = 12;
@@ -1353,7 +1368,7 @@ namespace Bot_Scout_RAPID_REACT
             // 
             this.autoTotal.AutoSize = true;
             this.autoTotal.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.autoTotal.Location = new System.Drawing.Point(104, 92);
+            this.autoTotal.Location = new System.Drawing.Point(110, 69);
             this.autoTotal.Name = "autoTotal";
             this.autoTotal.Size = new System.Drawing.Size(51, 16);
             this.autoTotal.TabIndex = 13;
@@ -1363,7 +1378,7 @@ namespace Bot_Scout_RAPID_REACT
             // 
             this.teleHigh.AutoSize = true;
             this.teleHigh.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.teleHigh.Location = new System.Drawing.Point(104, 46);
+            this.teleHigh.Location = new System.Drawing.Point(110, 35);
             this.teleHigh.Name = "teleHigh";
             this.teleHigh.Size = new System.Drawing.Size(51, 16);
             this.teleHigh.TabIndex = 14;
@@ -1383,7 +1398,7 @@ namespace Bot_Scout_RAPID_REACT
             // 
             this.matchText.AutoSize = true;
             this.matchText.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.matchText.Location = new System.Drawing.Point(559, 434);
+            this.matchText.Location = new System.Drawing.Point(772, 28);
             this.matchText.Name = "matchText";
             this.matchText.Size = new System.Drawing.Size(51, 16);
             this.matchText.TabIndex = 75;
@@ -1404,7 +1419,7 @@ namespace Bot_Scout_RAPID_REACT
             this.loadText.AutoSize = true;
             this.loadText.Font = new System.Drawing.Font("Microsoft YaHei UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.loadText.ForeColor = System.Drawing.SystemColors.HighlightText;
-            this.loadText.Location = new System.Drawing.Point(499, 413);
+            this.loadText.Location = new System.Drawing.Point(520, 28);
             this.loadText.Name = "loadText";
             this.loadText.Size = new System.Drawing.Size(168, 17);
             this.loadText.TabIndex = 77;
@@ -1422,11 +1437,12 @@ namespace Bot_Scout_RAPID_REACT
             this.averageTeamTable.Controls.Add(this.averageTeleAcc, 1, 1);
             this.averageTeamTable.Controls.Add(this.label47, 0, 0);
             this.averageTeamTable.Controls.Add(this.label48, 0, 1);
-            this.averageTeamTable.Location = new System.Drawing.Point(492, 66);
+            this.averageTeamTable.Location = new System.Drawing.Point(545, 426);
             this.averageTeamTable.Name = "averageTeamTable";
-            this.averageTeamTable.RowCount = 2;
+            this.averageTeamTable.RowCount = 3;
             this.averageTeamTable.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.averageTeamTable.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.averageTeamTable.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
             this.averageTeamTable.Size = new System.Drawing.Size(200, 100);
             this.averageTeamTable.TabIndex = 78;
             // 
@@ -1442,7 +1458,7 @@ namespace Bot_Scout_RAPID_REACT
             // averageTeleAcc
             // 
             this.averageTeleAcc.AutoSize = true;
-            this.averageTeleAcc.Location = new System.Drawing.Point(104, 51);
+            this.averageTeleAcc.Location = new System.Drawing.Point(104, 40);
             this.averageTeleAcc.Name = "averageTeleAcc";
             this.averageTeleAcc.Size = new System.Drawing.Size(33, 13);
             this.averageTeleAcc.TabIndex = 23;
@@ -1460,22 +1476,164 @@ namespace Bot_Scout_RAPID_REACT
             // label48
             // 
             this.label48.AutoSize = true;
-            this.label48.Location = new System.Drawing.Point(6, 51);
+            this.label48.Location = new System.Drawing.Point(6, 40);
             this.label48.Name = "label48";
             this.label48.Size = new System.Drawing.Size(76, 26);
             this.label48.TabIndex = 25;
             this.label48.Text = "Average Accuracy Tele\r\n";
             // 
-            // teamTrendsToolStripMenuItem
+            // errorProvider1
             // 
-            this.teamTrendsToolStripMenuItem.Name = "teamTrendsToolStripMenuItem";
-            this.teamTrendsToolStripMenuItem.Size = new System.Drawing.Size(110, 24);
-            this.teamTrendsToolStripMenuItem.Text = "Team Trends";
+            this.errorProvider1.ContainerControl = this;
+            // 
+            // teamTrendLayout
+            // 
+            this.teamTrendLayout.BackColor = System.Drawing.Color.SkyBlue;
+            this.teamTrendLayout.CellBorderStyle = System.Windows.Forms.TableLayoutPanelCellBorderStyle.InsetDouble;
+            this.teamTrendLayout.ColumnCount = 2;
+            this.teamTrendLayout.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.teamTrendLayout.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.teamTrendLayout.Controls.Add(this.teamTrend, 1, 0);
+            this.teamTrendLayout.Controls.Add(this.label49, 0, 0);
+            this.teamTrendLayout.Location = new System.Drawing.Point(407, 499);
+            this.teamTrendLayout.Name = "teamTrendLayout";
+            this.teamTrendLayout.RowCount = 1;
+            this.teamTrendLayout.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.teamTrendLayout.Size = new System.Drawing.Size(223, 68);
+            this.teamTrendLayout.TabIndex = 79;
+            // 
+            // teamTrend
+            // 
+            this.teamTrend.AutoSize = true;
+            this.teamTrend.Location = new System.Drawing.Point(116, 3);
+            this.teamTrend.Name = "teamTrend";
+            this.teamTrend.Size = new System.Drawing.Size(33, 13);
+            this.teamTrend.TabIndex = 22;
+            this.teamTrend.Text = "None";
+            // 
+            // label49
+            // 
+            this.label49.AutoSize = true;
+            this.label49.Font = new System.Drawing.Font("Microsoft YaHei UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label49.Location = new System.Drawing.Point(6, 3);
+            this.label49.Name = "label49";
+            this.label49.Size = new System.Drawing.Size(99, 38);
+            this.label49.TabIndex = 24;
+            this.label49.Text = "Team Trend\r\n\r\n";
+            this.label49.Click += new System.EventHandler(this.label49_Click);
+            // 
+            // refreshPageToolStripMenuItem
+            // 
+            this.refreshPageToolStripMenuItem.Name = "refreshPageToolStripMenuItem";
+            this.refreshPageToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.R)));
+            this.refreshPageToolStripMenuItem.Size = new System.Drawing.Size(112, 24);
+            this.refreshPageToolStripMenuItem.Text = "Refresh Page";
+            // 
+            // label43
+            // 
+            this.label43.AutoSize = true;
+            this.label43.Font = new System.Drawing.Font("Microsoft YaHei UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label43.Location = new System.Drawing.Point(6, 218);
+            this.label43.Name = "label43";
+            this.label43.Size = new System.Drawing.Size(93, 19);
+            this.label43.TabIndex = 77;
+            this.label43.Text = "Total Score";
+            // 
+            // totalScore2
+            // 
+            this.totalScore2.AutoSize = true;
+            this.totalScore2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.totalScore2.Location = new System.Drawing.Point(110, 218);
+            this.totalScore2.Name = "totalScore2";
+            this.totalScore2.Size = new System.Drawing.Size(51, 16);
+            this.totalScore2.TabIndex = 78;
+            this.totalScore2.Text = "Empty";
+            // 
+            // teleTotalToolStripMenuItem
+            // 
+            this.teleTotalToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.teleLowerButton,
+            this.teleUpperButton,
+            this.teleTotalButton});
+            this.teleTotalToolStripMenuItem.Name = "teleTotalToolStripMenuItem";
+            this.teleTotalToolStripMenuItem.Size = new System.Drawing.Size(180, 24);
+            this.teleTotalToolStripMenuItem.Text = "Tele";
+            // 
+            // autoToolStripMenuItem
+            // 
+            this.autoToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.autoLowerButton,
+            this.autoUpperButton,
+            this.autoTotalButton});
+            this.autoToolStripMenuItem.Name = "autoToolStripMenuItem";
+            this.autoToolStripMenuItem.Size = new System.Drawing.Size(180, 24);
+            this.autoToolStripMenuItem.Text = "Auto";
+            // 
+            // defenseToolStripMenuItem
+            // 
+            this.defenseToolStripMenuItem.Name = "defenseToolStripMenuItem";
+            this.defenseToolStripMenuItem.Size = new System.Drawing.Size(180, 24);
+            this.defenseToolStripMenuItem.Text = "Defense";
+            // 
+            // climbToolStripMenuItem
+            // 
+            this.climbToolStripMenuItem.Name = "climbToolStripMenuItem";
+            this.climbToolStripMenuItem.Size = new System.Drawing.Size(180, 24);
+            this.climbToolStripMenuItem.Text = "Climb";
+            // 
+            // overallScoreToolStripMenuItem
+            // 
+            this.overallScoreToolStripMenuItem.Name = "overallScoreToolStripMenuItem";
+            this.overallScoreToolStripMenuItem.Size = new System.Drawing.Size(180, 24);
+            this.overallScoreToolStripMenuItem.Text = "Overall Score";
+            // 
+            // teleLowerButton
+            // 
+            this.teleLowerButton.Name = "teleLowerButton";
+            this.teleLowerButton.Size = new System.Drawing.Size(180, 24);
+            this.teleLowerButton.Text = "Lower";
+            this.teleLowerButton.Click += new System.EventHandler(this.teleLowerButton_Click);
+            // 
+            // teleUpperButton
+            // 
+            this.teleUpperButton.Name = "teleUpperButton";
+            this.teleUpperButton.Size = new System.Drawing.Size(180, 24);
+            this.teleUpperButton.Text = "Upper";
+            this.teleUpperButton.Click += new System.EventHandler(this.teleUpperButton_Click);
+            // 
+            // teleTotalButton
+            // 
+            this.teleTotalButton.Name = "teleTotalButton";
+            this.teleTotalButton.Size = new System.Drawing.Size(180, 24);
+            this.teleTotalButton.Text = "Total";
+            this.teleTotalButton.Click += new System.EventHandler(this.teleTotalButton_Click);
+            // 
+            // autoLowerButton
+            // 
+            this.autoLowerButton.Name = "autoLowerButton";
+            this.autoLowerButton.Size = new System.Drawing.Size(180, 24);
+            this.autoLowerButton.Text = "Lower";
+            this.autoLowerButton.Click += new System.EventHandler(this.lowerToolStripMenuItem1_Click);
+            // 
+            // autoUpperButton
+            // 
+            this.autoUpperButton.Name = "autoUpperButton";
+            this.autoUpperButton.Size = new System.Drawing.Size(180, 24);
+            this.autoUpperButton.Text = "Upper";
+            this.autoUpperButton.Click += new System.EventHandler(this.autoUpperButton_Click);
+            // 
+            // autoTotalButton
+            // 
+            this.autoTotalButton.Name = "autoTotalButton";
+            this.autoTotalButton.Size = new System.Drawing.Size(180, 24);
+            this.autoTotalButton.Text = "Total";
+            this.autoTotalButton.Click += new System.EventHandler(this.autoTotalButton_Click);
             // 
             // Form1
             // 
             this.BackColor = System.Drawing.Color.LightSkyBlue;
             this.ClientSize = new System.Drawing.Size(1084, 561);
+            this.Controls.Add(this.teamTrendLayout);
             this.Controls.Add(this.averageTeamTable);
             this.Controls.Add(this.loadText);
             this.Controls.Add(this.lineMatch);
@@ -1531,6 +1689,9 @@ namespace Bot_Scout_RAPID_REACT
             this.driverSheetTable.PerformLayout();
             this.averageTeamTable.ResumeLayout(false);
             this.averageTeamTable.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).EndInit();
+            this.teamTrendLayout.ResumeLayout(false);
+            this.teamTrendLayout.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -1582,9 +1743,6 @@ namespace Bot_Scout_RAPID_REACT
         private System.Windows.Forms.CheckBox shutdownBot;
         private System.Windows.Forms.MenuStrip menuStrip1;
         private System.Windows.Forms.ToolStripMenuItem bestTeamsMenu;
-        private System.Windows.Forms.ToolStripMenuItem autoLowerMenu;
-        private System.Windows.Forms.ToolStripMenuItem autoUpperMenu;
-        private System.Windows.Forms.ToolStripMenuItem autoTotalMenu;
         private System.Windows.Forms.ToolStripMenuItem driverSheetMenu;
         private System.Windows.Forms.ToolStripMenuItem averageScoresMenu;
         private System.Windows.Forms.TableLayoutPanel bestTeamsTableLayout;
@@ -1673,6 +1831,24 @@ namespace Bot_Scout_RAPID_REACT
         private System.Windows.Forms.Label label47;
         private System.Windows.Forms.Label label48;
         private System.Windows.Forms.ToolStripMenuItem teamTrendsToolStripMenuItem;
+        private System.Windows.Forms.ErrorProvider errorProvider1;
+        private System.Windows.Forms.TableLayoutPanel teamTrendLayout;
+        private System.Windows.Forms.Label teamTrend;
+        private System.Windows.Forms.Label label49;
+        private System.Windows.Forms.ToolStripMenuItem refreshPageToolStripMenuItem;
+        private System.Windows.Forms.Label label43;
+        private System.Windows.Forms.Label totalScore2;
+        private System.Windows.Forms.ToolStripMenuItem teleTotalToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem teleLowerButton;
+        private System.Windows.Forms.ToolStripMenuItem teleUpperButton;
+        private System.Windows.Forms.ToolStripMenuItem teleTotalButton;
+        private System.Windows.Forms.ToolStripMenuItem autoToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem autoLowerButton;
+        private System.Windows.Forms.ToolStripMenuItem autoUpperButton;
+        private System.Windows.Forms.ToolStripMenuItem autoTotalButton;
+        private System.Windows.Forms.ToolStripMenuItem defenseToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem climbToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem overallScoreToolStripMenuItem;
     }
 }
 

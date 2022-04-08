@@ -1,18 +1,35 @@
 ﻿using System;
 using System.IO;
 using System.Windows.Forms;
+using System.Collections.Generic;
 
+
+
+//TODO: Best scores, add tele low, high, and total, climb time, defense, and overall score
+//TODO: Average auto Low, high, and total, Tele low and upper, auto accuracy, total score, climb time, and climb type
+//TODO: Team Trends
+//TODO: Recent Match Button
+
+//COMPLETE: Data Entry
+//COMPLETE: See match data
 namespace Bot_Scout_RAPID_REACT
 {
     public partial class Form1 : Form
     {
         public Form1()
         {
-
+            int pX = 500;
+            int pY = 170;
             InitializeComponent();
             bestTeamsTableLayout.Visible = false;
             averageTeamTable.Visible = false;
             driverSheetTable.Visible = false;
+            teamTrendLayout.Visible = false;
+            //Sets the location of the table
+            bestTeamsTableLayout.Location = new System.Drawing.Point(pX, pY);
+            averageTeamTable.Location = new System.Drawing.Point(pX, pY);
+            driverSheetTable.Location = new System.Drawing.Point(pX, pY);
+            teamTrendLayout.Location = new System.Drawing.Point(pX, pY);
         }
 
         private void Form1_Load(object sender, EventArgs e)
@@ -216,6 +233,37 @@ namespace Bot_Scout_RAPID_REACT
 
                     writeToFile(team.Text, "Auto Accuracy: " + autoAccuracy);
                     writeToFile(team.Text, "Tele Accuracy: " + teleAccuracy);
+                    int climbPoints;
+                    if(climbType.Text == "l")
+                    {
+                        climbPoints = 4;
+                    }
+                    else if (climbType.Text == "m")
+                    {
+                        climbPoints = 6;
+                    }
+                    else if (climbType.Text == "h")
+                    {
+                        climbPoints = 10;
+                    }
+                    else if (climbType.Text == "t")
+                    {
+                        climbPoints = 15;
+                    }
+                    else
+                    {
+                        climbPoints = 0;
+                    }
+                    int taxiPoints = 0;
+                    if (taxi.Text == "y")
+                    {
+                        taxiPoints = 2;
+                    }
+
+                    int totalPoints = (teleCargo + autoCargo) + climbPoints+taxiPoints;
+                    writeToFile(team.Text, "Total Score: " + totalPoints);
+
+
 
                     writeToFile(team.Text, "------------------------");
                     statusText.Text = "Match Data Saved!";
@@ -339,6 +387,7 @@ namespace Bot_Scout_RAPID_REACT
             bestTeamsTableLayout.Visible = true;
             averageTeamTable.Visible = false;
             driverSheetTable.Visible = false;
+            teamTrendLayout.Visible = false;
         }
 
         private void tableLayoutPanel1_Paint(object sender, PaintEventArgs e)
@@ -351,6 +400,7 @@ namespace Bot_Scout_RAPID_REACT
             bestTeamsTableLayout.Visible = false;
             driverSheetTable.Visible = true;
             averageTeamTable.Visible = false;
+            teamTrendLayout.Visible = false;
         }
 
         private void averageScoresMenu_Click(object sender, EventArgs e)
@@ -358,6 +408,7 @@ namespace Bot_Scout_RAPID_REACT
             bestTeamsTableLayout.Visible = false;
             averageTeamTable.Visible = true;
             driverSheetTable.Visible = false;
+            teamTrendLayout.Visible = false;
             averageCargo();
         }
 
@@ -375,6 +426,7 @@ namespace Bot_Scout_RAPID_REACT
             int teleHigh1 = 0;
             int teleLow1 = 0;
             int time1 = 500;
+            int totalScore = 0;
             //int leastAutoMissed = 500;
             //int leastTeleMissed = 500;
             int defense1 = 0;
@@ -427,6 +479,7 @@ namespace Bot_Scout_RAPID_REACT
                         defense1 = tempNum;
                     }
                 }
+
                 /*
              if(match.GetLine(team+".txt", i).Contains("Total Climb Time")){
                string num1 = match.GetLine(team+".txt", i)[18].ToString();
@@ -467,6 +520,17 @@ namespace Bot_Scout_RAPID_REACT
                     }
 
                 }
+
+                if (match.GetLine(team + ".txt", i).Contains("Total Score"))
+                {
+                    string num1 = match.GetLine(team + ".txt", i)[13].ToString();
+                    string num2 = match.GetLine(team + ".txt", i)[14].ToString();
+                    tempNum = Int32.Parse(num1 + num2);
+                    if (tempNum > totalScore)
+                    {
+                        totalScore = tempNum;
+                    }
+                }
             }
 
             i = 0;
@@ -495,6 +559,7 @@ namespace Bot_Scout_RAPID_REACT
             time.Text = "" + time1;
             climbType2.Text = "" + climbType1;
             defense2.Text = "" + defense1;
+            totalScore2.Text = "" + totalScore;
             loadText.Text = "Data Loaded!";
             Console.ForegroundColor = ConsoleColor.DarkGreen;
             Console.WriteLine("-Best Scores-");
@@ -1449,6 +1514,56 @@ namespace Bot_Scout_RAPID_REACT
         private void loadText_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void label49_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        public void TrendTeam()
+        {
+            int totalPoints;
+            List<int> points = new List<int>();
+            //points.Add()
+        }
+
+        private void teamTrendsToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            bestTeamsTableLayout.Visible = false;
+            averageTeamTable.Visible = false;
+            driverSheetTable.Visible = false;
+            teamTrendLayout.Visible = true;
+        }
+
+        private void lowerToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            bestTeamsStats("Auto Lower", 12, 13, 0, 0, false, "Lower Auto");
+        }
+
+        private void autoUpperButton_Click(object sender, EventArgs e)
+        {
+            bestTeamsStats("Auto Upper", 12, 13, 0, 0, false, "Upper Auto");
+        }
+
+        private void autoTotalButton_Click(object sender, EventArgs e)
+        {
+            bestTeamsStats("Auto Cargo Score", 18, 19, 0, 0, false, "Total Auto");
+        }
+
+        private void teleLowerButton_Click(object sender, EventArgs e)
+        {
+            bestTeamsStats("Tele Lower", 12, 13, 0, 0, false, "Lower Tele");
+        }
+
+        private void teleUpperButton_Click(object sender, EventArgs e)
+        {
+            bestTeamsStats("Tele Upper", 12, 13, 0, 0, false, "Upper Tele");
+        }
+
+        private void teleTotalButton_Click(object sender, EventArgs e)
+        {
+            bestTeamsStats("Tele Cargo Score", 18, 19, 0, 0, false, "Total Tele");
         }
     }
 
