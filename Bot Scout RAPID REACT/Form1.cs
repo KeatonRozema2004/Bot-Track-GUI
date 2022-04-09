@@ -8,8 +8,11 @@ using System.Collections.Generic;
 //TODO:  4/9 Best scores, add tele low, high, and total, climb time, defense, and overall score
 //TODO: 4/9 Average auto Low, high, and total, Tele low and upper, auto accuracy, total score, climb time, and climb type
 //TODO: 4/9-10 Team Trends (looks at most recent match score, and compares it with the average total score
+//TODO: Drive type for data entry and drive sheet
 //TODO: 4/9 Recent Match Button
 //TODO: 4/10 Refresh Button
+//TODO: Store data in different folders
+//TODO: Alliance selection tab?
 //TODO: 4/10 Make look nice
 //TODO: 4/11 Test program when everything above is finished
 
@@ -1569,6 +1572,16 @@ namespace Bot_Scout_RAPID_REACT
         private void teleTotalButton_Click(object sender, EventArgs e)
         {
             bestTeamsStats("Tele Cargo Score", 18, 19, 0, 0, false, "Total Tele");
+        }
+
+        private void defenseToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void climbToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            bestTeamsStats("Total Climb Time", 18, 19, 0, 10000, true, "Climb Time");
         }
     }
 
