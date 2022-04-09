@@ -5,16 +5,17 @@ using System.Collections.Generic;
 
 
 
-//TODO: Best scores, add tele low, high, and total, climb time, defense, and overall score
-//TODO: Average auto Low, high, and total, Tele low and upper, auto accuracy, total score, climb time, and climb type
-//TODO: Team Trends (looks at most recent match score, and compares it with the average total score
-//TODO: Recent Match Button
-//TODO: Refresh Button
-//TODO: Make look nice
-//TODO: Test program when everything above is finished
+//TODO:  4/9 Best scores, add tele low, high, and total, climb time, defense, and overall score
+//TODO: 4/9 Average auto Low, high, and total, Tele low and upper, auto accuracy, total score, climb time, and climb type
+//TODO: 4/9-10 Team Trends (looks at most recent match score, and compares it with the average total score
+//TODO: 4/9 Recent Match Button
+//TODO: 4/10 Refresh Button
+//TODO: 4/10 Make look nice
+//TODO: 4/11 Test program when everything above is finished
 
 //COMPLETE: Data Entry
 //COMPLETE: See match data
+//COMPLETE: Average tab, driver sheet tab, best scores tab, trends tab
 namespace Bot_Scout_RAPID_REACT
 {
     public partial class Form1 : Form
