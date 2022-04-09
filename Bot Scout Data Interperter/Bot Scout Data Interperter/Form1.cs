@@ -34,6 +34,8 @@ namespace Bot_Scout_Data_Interperter
         {
             overview_table.Rows.Clear();
             dataDirectoryLabel.Text = "None";
+            teamDataMatchSelect.Items.Clear();
+            teamDataTeamSelect.Items.Clear();
         }
 
         private void getDataDirectoryButton_Click(object sender, EventArgs e)
@@ -51,7 +53,7 @@ namespace Bot_Scout_Data_Interperter
                 {
                     List<string> tableDataList = new List<string>();
 
-                    string teamName = Path.GetFileName(allTeamFiles[z]).Split()[0];
+                    string teamName = Path.GetFileName(allTeamFiles[z]).Split('.')[0];
 
                     tableDataList.Add(teamName);
 
@@ -64,6 +66,10 @@ namespace Bot_Scout_Data_Interperter
                     int endgame = functions.zzReturnModePointsFromDataSheet(lines, end: true); //I know endgame and tele op arnt different but ya know im from ftc so sue me plz 
 
                     overview_table.Rows.Add(teamName, matches_played, auto, tele, endgame, auto + tele + endgame);
+
+                    teamDataTeamSelect.Items.Add(teamName);
+
+                    // teamDataMatchSelect.Items.Add(teamName);
                 }
 
                 // string tempDirectory = @"D:\GitHub\Bot-Track-GUI\Bot Scout Data Interperter\Bot Scout Data Interperter\demo_data\85.txt";
@@ -79,6 +85,29 @@ namespace Bot_Scout_Data_Interperter
         private void teamDataTeamSelect_SelectedIndexChanged(object sender, EventArgs e)
         {
 
+            teamDataMatchSelect.Items.Clear();
+            string file = functions.zzGetFileDirectoryFromTeamName(dataDirectoryLabel.Text, teamDataTeamSelect.Text);
+            string[] matches = functions.zzGetMatchesPlayedByTeam(teamDataTeamSelect.Text, file);
+            
+            foreach (string match in matches)
+            {
+                teamDataMatchSelect.Items.Add(match);
+            }
         }
+    
+        private string[] zzGetRecordedTeamNumbers()
+        {
+            string[] files = functions.zzGetDataFilesFromDirectory(dataDirectoryLabel.Text);
+            List<string> teamNames = new List<string>();
+            
+            for (int z = 0; files.Length > z; z++)
+            {
+                string fileName = Path.GetFileName(teamNames[z]).Split('.')[0];
+                teamNames.Add(fileName);
+            }
+
+            return teamNames.ToArray();
+        }
+
     }
 }

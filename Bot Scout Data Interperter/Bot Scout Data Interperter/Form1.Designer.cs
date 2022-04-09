@@ -45,23 +45,24 @@ namespace Bot_Scout_Data_Interperter
             this.EndGame = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Total = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tabPage2 = new System.Windows.Forms.TabPage();
+            this.teamDataSpliter = new System.Windows.Forms.SplitContainer();
+            this.teamDataTeamSelect = new System.Windows.Forms.ComboBox();
             this.teamDataTabs = new System.Windows.Forms.TabControl();
             this.tabPage3 = new System.Windows.Forms.TabPage();
-            this.tabPage4 = new System.Windows.Forms.TabPage();
-            this.teamDataTeamSelect = new System.Windows.Forms.ComboBox();
-            this.teamDataSpliter = new System.Windows.Forms.SplitContainer();
-            this.teamChartData = new System.Windows.Forms.DataVisualization.Charting.Chart();
             this.teamDataMatchSelect = new System.Windows.Forms.ListBox();
+            this.tabPage4 = new System.Windows.Forms.TabPage();
+            this.teamChartData = new System.Windows.Forms.DataVisualization.Charting.Chart();
+            this.tabPage5 = new System.Windows.Forms.TabPage();
             this.tab_body.SuspendLayout();
             this.tabPage1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.overview_table)).BeginInit();
             this.tabPage2.SuspendLayout();
-            this.teamDataTabs.SuspendLayout();
-            this.tabPage3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.teamDataSpliter)).BeginInit();
             this.teamDataSpliter.Panel1.SuspendLayout();
             this.teamDataSpliter.Panel2.SuspendLayout();
             this.teamDataSpliter.SuspendLayout();
+            this.teamDataTabs.SuspendLayout();
+            this.tabPage3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.teamChartData)).BeginInit();
             this.SuspendLayout();
             // 
@@ -100,6 +101,7 @@ namespace Bot_Scout_Data_Interperter
             | System.Windows.Forms.AnchorStyles.Right)));
             this.tab_body.Controls.Add(this.tabPage1);
             this.tab_body.Controls.Add(this.tabPage2);
+            this.tab_body.Controls.Add(this.tabPage5);
             this.tab_body.Location = new System.Drawing.Point(12, 59);
             this.tab_body.Name = "tab_body";
             this.tab_body.SelectedIndex = 0;
@@ -180,6 +182,37 @@ namespace Bot_Scout_Data_Interperter
             this.tabPage2.Text = "Team Data";
             this.tabPage2.UseVisualStyleBackColor = true;
             // 
+            // teamDataSpliter
+            // 
+            this.teamDataSpliter.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.teamDataSpliter.Location = new System.Drawing.Point(-1, 3);
+            this.teamDataSpliter.Name = "teamDataSpliter";
+            // 
+            // teamDataSpliter.Panel1
+            // 
+            this.teamDataSpliter.Panel1.Controls.Add(this.teamDataTeamSelect);
+            this.teamDataSpliter.Panel1.Controls.Add(this.teamDataTabs);
+            // 
+            // teamDataSpliter.Panel2
+            // 
+            this.teamDataSpliter.Panel2.Controls.Add(this.teamChartData);
+            this.teamDataSpliter.Size = new System.Drawing.Size(766, 344);
+            this.teamDataSpliter.SplitterDistance = 255;
+            this.teamDataSpliter.TabIndex = 3;
+            // 
+            // teamDataTeamSelect
+            // 
+            this.teamDataTeamSelect.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.teamDataTeamSelect.FormattingEnabled = true;
+            this.teamDataTeamSelect.Location = new System.Drawing.Point(4, 3);
+            this.teamDataTeamSelect.Name = "teamDataTeamSelect";
+            this.teamDataTeamSelect.Size = new System.Drawing.Size(244, 21);
+            this.teamDataTeamSelect.TabIndex = 2;
+            this.teamDataTeamSelect.SelectedIndexChanged += new System.EventHandler(this.teamDataTeamSelect_SelectedIndexChanged);
+            // 
             // teamDataTabs
             // 
             this.teamDataTabs.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
@@ -204,6 +237,14 @@ namespace Bot_Scout_Data_Interperter
             this.tabPage3.Text = "Matches";
             this.tabPage3.UseVisualStyleBackColor = true;
             // 
+            // teamDataMatchSelect
+            // 
+            this.teamDataMatchSelect.FormattingEnabled = true;
+            this.teamDataMatchSelect.Location = new System.Drawing.Point(6, 6);
+            this.teamDataMatchSelect.Name = "teamDataMatchSelect";
+            this.teamDataMatchSelect.Size = new System.Drawing.Size(225, 277);
+            this.teamDataMatchSelect.TabIndex = 0;
+            // 
             // tabPage4
             // 
             this.tabPage4.Location = new System.Drawing.Point(4, 22);
@@ -213,37 +254,6 @@ namespace Bot_Scout_Data_Interperter
             this.tabPage4.TabIndex = 1;
             this.tabPage4.Text = "Edit";
             this.tabPage4.UseVisualStyleBackColor = true;
-            // 
-            // teamDataTeamSelect
-            // 
-            this.teamDataTeamSelect.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.teamDataTeamSelect.FormattingEnabled = true;
-            this.teamDataTeamSelect.Location = new System.Drawing.Point(4, 3);
-            this.teamDataTeamSelect.Name = "teamDataTeamSelect";
-            this.teamDataTeamSelect.Size = new System.Drawing.Size(244, 21);
-            this.teamDataTeamSelect.TabIndex = 2;
-            this.teamDataTeamSelect.SelectedIndexChanged += new System.EventHandler(this.teamDataTeamSelect_SelectedIndexChanged);
-            // 
-            // teamDataSpliter
-            // 
-            this.teamDataSpliter.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.teamDataSpliter.Location = new System.Drawing.Point(-1, 3);
-            this.teamDataSpliter.Name = "teamDataSpliter";
-            // 
-            // teamDataSpliter.Panel1
-            // 
-            this.teamDataSpliter.Panel1.Controls.Add(this.teamDataTeamSelect);
-            this.teamDataSpliter.Panel1.Controls.Add(this.teamDataTabs);
-            // 
-            // teamDataSpliter.Panel2
-            // 
-            this.teamDataSpliter.Panel2.Controls.Add(this.teamChartData);
-            this.teamDataSpliter.Size = new System.Drawing.Size(766, 344);
-            this.teamDataSpliter.SplitterDistance = 255;
-            this.teamDataSpliter.TabIndex = 3;
             // 
             // teamChartData
             // 
@@ -264,13 +274,15 @@ namespace Bot_Scout_Data_Interperter
             this.teamChartData.TabIndex = 0;
             this.teamChartData.Text = "chart1";
             // 
-            // teamDataMatchSelect
+            // tabPage5
             // 
-            this.teamDataMatchSelect.FormattingEnabled = true;
-            this.teamDataMatchSelect.Location = new System.Drawing.Point(6, 6);
-            this.teamDataMatchSelect.Name = "teamDataMatchSelect";
-            this.teamDataMatchSelect.Size = new System.Drawing.Size(225, 277);
-            this.teamDataMatchSelect.TabIndex = 0;
+            this.tabPage5.Location = new System.Drawing.Point(4, 22);
+            this.tabPage5.Name = "tabPage5";
+            this.tabPage5.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage5.Size = new System.Drawing.Size(768, 353);
+            this.tabPage5.TabIndex = 2;
+            this.tabPage5.Text = "Create Team";
+            this.tabPage5.UseVisualStyleBackColor = true;
             // 
             // Main_page
             // 
@@ -287,12 +299,12 @@ namespace Bot_Scout_Data_Interperter
             this.tabPage1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.overview_table)).EndInit();
             this.tabPage2.ResumeLayout(false);
-            this.teamDataTabs.ResumeLayout(false);
-            this.tabPage3.ResumeLayout(false);
             this.teamDataSpliter.Panel1.ResumeLayout(false);
             this.teamDataSpliter.Panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.teamDataSpliter)).EndInit();
             this.teamDataSpliter.ResumeLayout(false);
+            this.teamDataTabs.ResumeLayout(false);
+            this.tabPage3.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.teamChartData)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -321,6 +333,7 @@ namespace Bot_Scout_Data_Interperter
         private System.Windows.Forms.SplitContainer teamDataSpliter;
         private System.Windows.Forms.DataVisualization.Charting.Chart teamChartData;
         private System.Windows.Forms.ListBox teamDataMatchSelect;
+        private System.Windows.Forms.TabPage tabPage5;
     }
 }
 

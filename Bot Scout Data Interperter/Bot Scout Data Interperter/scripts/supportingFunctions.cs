@@ -15,6 +15,22 @@ namespace Bot_Scout_Data_Interperter.scripts
             return files;
         }
 
+        public string zzGetFileDirectoryFromTeamName(string selectedPath, string teamName)
+        {
+            string[] files = Directory.GetFiles(selectedPath, "*.txt");
+
+            for (int z = 0; files.Length > z; z++)
+            {
+                string fileName = Path.GetFileName(files[z]).Split('.')[0];
+
+                if (fileName == teamName)
+                {
+                    return files[z];
+                }
+            }
+            return null;
+        }
+
         public string[] zzGetMatchDataForTeam(string selectPath, string teamNumber)
         {
             string[] files = zzGetDataFilesFromDirectory(selectPath);
@@ -131,6 +147,24 @@ namespace Bot_Scout_Data_Interperter.scripts
                 }
             }
             return matchesPlayed;
+        }
+        
+        public string[] zzGetMatchesPlayedByTeam(string team, string filePath)
+        {
+            string[] lines = File.ReadAllLines(filePath);
+
+            List<string> matches = new List<string>();
+
+            foreach (string line in lines)
+            {
+                string[] lineData = line.Split(':');
+                if (lineData.Length > 1 &&  lineData[0] == "Match Number")
+                {
+                    matches.Add(line);
+                }
+            }
+
+            return matches.ToArray();
         }
 
         private string zzParseTextDocumentData(string data)
