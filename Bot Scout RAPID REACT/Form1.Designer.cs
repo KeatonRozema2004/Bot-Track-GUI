@@ -488,7 +488,7 @@ namespace Bot_Scout_RAPID_REACT
             // 
             // menuStrip1
             // 
-            this.menuStrip1.BackColor = System.Drawing.Color.DeepSkyBlue;
+            this.menuStrip1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(100)))), ((int)(((byte)(150)))));
             this.menuStrip1.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.menuStrip1.ImageScalingSize = new System.Drawing.Size(24, 24);
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
@@ -511,6 +511,7 @@ namespace Bot_Scout_RAPID_REACT
             this.defenseToolStripMenuItem,
             this.climbToolStripMenuItem,
             this.overallScoreToolStripMenuItem});
+            this.bestTeamsMenu.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.bestTeamsMenu.Name = "bestTeamsMenu";
             this.bestTeamsMenu.Size = new System.Drawing.Size(110, 22);
             this.bestTeamsMenu.Text = "Best Teams";
@@ -605,6 +606,7 @@ namespace Bot_Scout_RAPID_REACT
             this.previousMatchToolStripMenuItem,
             this.nextMatchToolStripMenuItem,
             this.recentMatchToolStripMenuItem});
+            this.driverSheetMenu.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.driverSheetMenu.Name = "driverSheetMenu";
             this.driverSheetMenu.Size = new System.Drawing.Size(113, 22);
             this.driverSheetMenu.Text = "Driver Sheet";
@@ -636,6 +638,7 @@ namespace Bot_Scout_RAPID_REACT
             // 
             // averageScoresMenu
             // 
+            this.averageScoresMenu.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.averageScoresMenu.Name = "averageScoresMenu";
             this.averageScoresMenu.Size = new System.Drawing.Size(139, 22);
             this.averageScoresMenu.Text = "Average Scores";
@@ -643,6 +646,7 @@ namespace Bot_Scout_RAPID_REACT
             // 
             // teamTrendsToolStripMenuItem
             // 
+            this.teamTrendsToolStripMenuItem.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.teamTrendsToolStripMenuItem.Name = "teamTrendsToolStripMenuItem";
             this.teamTrendsToolStripMenuItem.Size = new System.Drawing.Size(119, 22);
             this.teamTrendsToolStripMenuItem.Text = "Team Trends";
@@ -650,6 +654,7 @@ namespace Bot_Scout_RAPID_REACT
             // 
             // refreshPageToolStripMenuItem
             // 
+            this.refreshPageToolStripMenuItem.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.refreshPageToolStripMenuItem.Name = "refreshPageToolStripMenuItem";
             this.refreshPageToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.R)));
             this.refreshPageToolStripMenuItem.Size = new System.Drawing.Size(122, 22);
@@ -657,7 +662,7 @@ namespace Bot_Scout_RAPID_REACT
             // 
             // bestTeamsTableLayout
             // 
-            this.bestTeamsTableLayout.BackColor = System.Drawing.Color.SkyBlue;
+            this.bestTeamsTableLayout.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(135)))), ((int)(((byte)(171)))));
             this.bestTeamsTableLayout.CellBorderStyle = System.Windows.Forms.TableLayoutPanelCellBorderStyle.InsetDouble;
             this.bestTeamsTableLayout.ColumnCount = 6;
             this.bestTeamsTableLayout.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 43.47826F));
@@ -1345,7 +1350,7 @@ namespace Bot_Scout_RAPID_REACT
             // 
             // driverSheetTable
             // 
-            this.driverSheetTable.BackColor = System.Drawing.Color.SkyBlue;
+            this.driverSheetTable.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(135)))), ((int)(((byte)(171)))));
             this.driverSheetTable.CellBorderStyle = System.Windows.Forms.TableLayoutPanelCellBorderStyle.InsetDouble;
             this.driverSheetTable.ColumnCount = 2;
             this.driverSheetTable.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
@@ -1552,7 +1557,7 @@ namespace Bot_Scout_RAPID_REACT
             // 
             // averageTeamTable
             // 
-            this.averageTeamTable.BackColor = System.Drawing.Color.SkyBlue;
+            this.averageTeamTable.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(135)))), ((int)(((byte)(171)))));
             this.averageTeamTable.CellBorderStyle = System.Windows.Forms.TableLayoutPanelCellBorderStyle.InsetDouble;
             this.averageTeamTable.ColumnCount = 2;
             this.averageTeamTable.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
@@ -1573,7 +1578,7 @@ namespace Bot_Scout_RAPID_REACT
             this.averageTeamTable.Controls.Add(this.label47, 0, 7);
             this.averageTeamTable.Controls.Add(this.averageTele, 1, 7);
             this.averageTeamTable.Controls.Add(this.averageTeleAcc, 1, 6);
-            this.averageTeamTable.Location = new System.Drawing.Point(525, 132);
+            this.averageTeamTable.Location = new System.Drawing.Point(884, 167);
             this.averageTeamTable.Name = "averageTeamTable";
             this.averageTeamTable.RowCount = 9;
             this.averageTeamTable.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 47.61905F));
@@ -1631,7 +1636,7 @@ namespace Bot_Scout_RAPID_REACT
             // 
             // teamTrendLayout
             // 
-            this.teamTrendLayout.BackColor = System.Drawing.Color.SkyBlue;
+            this.teamTrendLayout.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(135)))), ((int)(((byte)(171)))));
             this.teamTrendLayout.CellBorderStyle = System.Windows.Forms.TableLayoutPanelCellBorderStyle.InsetDouble;
             this.teamTrendLayout.ColumnCount = 2;
             this.teamTrendLayout.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
@@ -1783,7 +1788,7 @@ namespace Bot_Scout_RAPID_REACT
             // 
             // Form1
             // 
-            this.BackColor = System.Drawing.Color.LightSkyBlue;
+            this.BackColor = System.Drawing.Color.SteelBlue;
             this.ClientSize = new System.Drawing.Size(1084, 561);
             this.Controls.Add(this.teamTrendLayout);
             this.Controls.Add(this.averageTeamTable);
