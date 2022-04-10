@@ -4,18 +4,19 @@ using System.Windows.Forms;
 using System.Collections.Generic;
 
 
-
-//TODO:  4/9 Best scores, add tele low, high, and total, climb time, defense, and overall score
-//TODO: 4/9 Average auto Low, high, and total, Tele low and upper, auto accuracy, total score, climb time, and climb type
-//TODO: 4/9-10 Team Trends (looks at most recent match score, and compares it with the average total score
+//Days to work: Monday, Tuesday Wednesday
+//TODO: Best scores, add tele low, high, and total, climb time, defense, and overall score
+//TODO: Average auto Low, high, and total, Tele low and upper, auto accuracy, total score, climb time, and climb type
+//TODO: Team Trends (looks at most recent match score, and compares it with the average total score
 //TODO: Drive type for data entry and drive sheet
-//TODO: 4/9 Recent Match Button
+
 //TODO: 4/10 Refresh Button
 //TODO: Store data in different folders
 //TODO: Alliance selection tab?
 //TODO: 4/10 Make look nice
 //TODO: 4/11 Test program when everything above is finished
 
+//COMPLETE: 4/9 Recent Match Button
 //COMPLETE: Data Entry
 //COMPLETE: See match data
 //COMPLETE: Average tab, driver sheet tab, best scores tab, trends tab
@@ -57,7 +58,6 @@ namespace Bot_Scout_RAPID_REACT
             {
                 File.AppendAllText(team + ".txt", "0" + Environment.NewLine);
             }
-            Console.WriteLine("Added team!");
         }
         private void button3_Click_1(object sender, EventArgs e)
         {
@@ -100,13 +100,29 @@ namespace Bot_Scout_RAPID_REACT
                     double autoUpperInt = Double.Parse(autoUpper.Text);
                     double autoLowerInt = Double.Parse(autoLower.Text);
                     double autoMissedInt = Double.Parse(autoMissed.Text);
-                    autoAccuracy = (autoUpperInt + autoLowerInt) / (autoUpperInt + autoLowerInt + autoMissedInt) * 100 + "%";
+                    if((autoUpperInt + autoLowerInt) / (autoUpperInt + autoLowerInt + autoMissedInt) * 100 + "" == "NaN")
+                    {
+                        autoAccuracy = "00";
+                    }
+                    else
+                    {
+                        autoAccuracy = (autoUpperInt + autoLowerInt) / (autoUpperInt + autoLowerInt + autoMissedInt) * 100 + "";
+                    }
+                    
 
                     double teleUpperInt = Double.Parse(teleUpper.Text);
                     double teleLowerInt = Double.Parse(teleLower.Text);
                     double teleMissedInt = Double.Parse(teleMissed.Text);
-                    teleAccuracy = (teleUpperInt + teleLowerInt) / (teleUpperInt + teleLowerInt + teleMissedInt) * 100 + "%";
+                    if ((teleUpperInt + teleLowerInt) / (teleUpperInt + teleLowerInt + teleMissedInt) * 100 + "" == "NaN")
+                    {
 
+                        teleAccuracy = "00";
+                    }
+                    else
+                    {
+                        teleAccuracy = (teleUpperInt + teleLowerInt) / (teleUpperInt + teleLowerInt + teleMissedInt) * 100 + "";
+                    }
+                    
                     //User match data
                     writeToFile(team.Text, "Match Number: " + match.Text);
                     writeToFile(team.Text, "Taxi: " + taxi.Text);
@@ -238,9 +254,27 @@ namespace Bot_Scout_RAPID_REACT
                         writeToFile(team.Text, "Auto Cargo Score: " + autoCargo);
                     }
 
+                    if ((autoAccuracy).ToString().Length == 1)
+                    {
+                        writeToFile(team.Text, "Auto Accuracy: 0" + autoAccuracy + "%");
+                    }
+                    else
+                    {
+                        writeToFile(team.Text, "Auto Accuracy: " + autoAccuracy + "%");
+                    }
 
-                    writeToFile(team.Text, "Auto Accuracy: " + autoAccuracy);
-                    writeToFile(team.Text, "Tele Accuracy: " + teleAccuracy);
+                    if ((teleAccuracy).ToString().Length == 1)
+                    {
+                        writeToFile(team.Text, "Tele Accuracy: 0" + teleAccuracy + "%");
+                    }
+                    else
+                    {
+                        writeToFile(team.Text, "Tele Accuracy: " + teleAccuracy + "%");
+                    }
+
+
+                    
+                    
                     int climbPoints;
                     if(climbType.Text == "l")
                     {
@@ -345,11 +379,11 @@ namespace Bot_Scout_RAPID_REACT
                 //Thread.Sleep(10);
                 if (GetLine(current + team + ".txt", i) != GetLine(current + "blank.txt", 1))
                 {
-                    //Console.WriteLine(GetLine(team+".txt", i));
+
                 }
                 else
                 {
-                    //Console.WriteLine("Wrote to line "+ i);
+
                     lineChanger(text, current + team + ".txt", i);
                     emptyLine = true;
                 }
@@ -435,17 +469,16 @@ namespace Bot_Scout_RAPID_REACT
             int teleLow1 = 0;
             int time1 = 500;
             int totalScore = 0;
-            //int leastAutoMissed = 500;
-            //int leastTeleMissed = 500;
+
             int defense1 = 0;
             int tempNum = 0;
-            //string tempString;
+
             string climbType1 = "n";
             int i = 1;
-            //Console.WriteLine("Getting team data...");
+
             while (match.GetLine(team + ".txt", i) != match.GetLine("blank.txt", 1))
             {
-                //Console.WriteLine(match.GetLine(team+".txt",i));
+
                 i++;
                 if (match.GetLine(team + ".txt", i).Contains("Auto Cargo Total"))
                 {
@@ -544,7 +577,7 @@ namespace Bot_Scout_RAPID_REACT
             i = 0;
             while (match.GetLine(team + ".txt", i) != match.GetLine("blank.txt", 1))
             {
-                //Console.WriteLine(match.GetLine(team+".txt",i));
+
                 i++;
 
                 if (match.GetLine(team + ".txt", i).Contains("Total Climb Time"))
@@ -569,25 +602,7 @@ namespace Bot_Scout_RAPID_REACT
             defense2.Text = "" + defense1;
             totalScore2.Text = "" + totalScore;
             loadText.Text = "Data Loaded!";
-            Console.ForegroundColor = ConsoleColor.DarkGreen;
-            Console.WriteLine("-Best Scores-");
-            Console.ForegroundColor = ConsoleColor.DarkCyan;
-            Console.WriteLine("Best Low Goal Tele: " + teleLow);
-            Console.ForegroundColor = ConsoleColor.Cyan;
-            Console.WriteLine("Best High Goal Tele: " + teleHigh);
-            Console.WriteLine();
 
-            Console.ForegroundColor = ConsoleColor.DarkCyan;
-            Console.WriteLine("Best Auto Cargo Scored: " + autoTotal);
-            Console.WriteLine();
-
-            Console.ForegroundColor = ConsoleColor.Cyan;
-            Console.WriteLine("Best Climb Time: " + time);
-            Console.ForegroundColor = ConsoleColor.DarkCyan;
-            Console.WriteLine("Best Climb Type: " + climbType);
-            Console.ForegroundColor = ConsoleColor.Cyan;
-            Console.WriteLine("Best Defense: " + defense);
-            Console.WriteLine();
 
         }
 
@@ -623,13 +638,12 @@ namespace Bot_Scout_RAPID_REACT
             Form1 match = new Form1();
             int i = Int32.Parse(lineMatch.Text);
             string team1 = team.Text;
-            Console.WriteLine("Getting team data........");
-            Console.WriteLine("--------------------");
+
             while (matchEnd == false)
             {
                 i += matchInc;
-                Console.WriteLine(match.GetLine(team1 + ".txt", i));
-                Console.ForegroundColor = ConsoleColor.DarkGreen;
+
+
                 if (match.GetLine(team1 + ".txt", i).Contains("Match Number"))
                 {
                     matchText.Text = match.GetLine(team1 + ".txt", i);
@@ -640,38 +654,37 @@ namespace Bot_Scout_RAPID_REACT
                     string num1 = match.GetLine(team1 + ".txt", i)[12].ToString();
                     string num2 = match.GetLine(team1 + ".txt", i)[13].ToString();
                     teleLow.Text = num1 + num2;
-                    Console.WriteLine(match.GetLine(team1 + ".txt", i));
+
                 }
-                Console.ForegroundColor = ConsoleColor.DarkCyan;
+
                 if (match.GetLine(team1 + ".txt", i).Contains("Tele Upper"))
                 {
                     string num1 = match.GetLine(team1 + ".txt", i)[12].ToString();
                     string num2 = match.GetLine(team1 + ".txt", i)[13].ToString();
                     teleHigh.Text = num1 + num2;
-                    Console.WriteLine(match.GetLine(team1 + ".txt", i));
+
                 }
-                Console.ForegroundColor = ConsoleColor.Cyan;
+
                 if (match.GetLine(team1 + ".txt", i).Contains("Auto Cargo Total"))
                 {
                     string num1 = match.GetLine(team1 + ".txt", i)[18].ToString();
                     string num2 = match.GetLine(team1 + ".txt", i)[19].ToString();
                     autoTotal.Text = num1 + num2;
-                    Console.WriteLine(match.GetLine(team1 + ".txt", i));
                 }
-                Console.ForegroundColor = ConsoleColor.DarkCyan;
+
                 if (match.GetLine(team1 + ".txt", i).Contains("Climb Time"))
                 {
                     string num1 = match.GetLine(team1 + ".txt", i)[18].ToString();
                     string num2 = match.GetLine(team1 + ".txt", i)[19].ToString();
                     time.Text = num1 + num2;
                 }
-                Console.ForegroundColor = ConsoleColor.Cyan;
+
                 if (match.GetLine(team1 + ".txt", i).Contains("Climb Type"))
                 {
                     string climb = match.GetLine(team1 + ".txt", i)[12].ToString();
                     climbType2.Text = climb;
                 }
-                Console.ForegroundColor = ConsoleColor.DarkCyan;
+
                 if (match.GetLine(team1 + ".txt", i).Contains("Defense"))
                 {
                     string num1 = match.GetLine(team1 + ".txt", i)[10].ToString();
@@ -684,7 +697,7 @@ namespace Bot_Scout_RAPID_REACT
                 }
 
             }
-            Console.WriteLine("Done");
+
         }
         public void bestTeamsStats(string contains, int numb1, int numb2, int tempNumb, int startNum, bool hang, string name)
         {
@@ -742,7 +755,7 @@ namespace Bot_Scout_RAPID_REACT
 
                     while (GetLine(i + ".txt", j) != GetLine("blank.txt", 1))
                     {
-                        //Console.WriteLine(GetLine(team+".txt",i));
+
                         j++;
                         if (GetLine(i + ".txt", j).Contains(contains))
                         {
@@ -771,7 +784,7 @@ namespace Bot_Scout_RAPID_REACT
                     int j = 1;
                     while (GetLine(i + ".txt", j) != GetLine("blank.txt", 1))
                     {
-                        //Console.WriteLine(GetLine(team+".txt",i));
+
                         j++;
                         if (GetLine(i + ".txt", j).Contains(contains) && i + ".txt" != teleHighTeam1 + ".txt")
                         {
@@ -800,7 +813,7 @@ namespace Bot_Scout_RAPID_REACT
                     int j = 1;
                     while (GetLine(i + ".txt", j) != GetLine("blank.txt", 1))
                     {
-                        //Console.WriteLine(GetLine(team+".txt",i));
+
                         j++;
                         if (GetLine(i + ".txt", j).Contains(contains) && i + ".txt" != teleHighTeam1 + ".txt" && i + ".txt" != teleHighTeam2 + ".txt")
                         {
@@ -1470,45 +1483,47 @@ namespace Bot_Scout_RAPID_REACT
                 loadText.Text = "Can't find team";
             }
         }
+
+        //This method returns a value for an average (i being increment, score being the numerator, and j being the denomenator
+        public string getAverage(string contains, int numb1, int numb2)
+        {
+            int i = 0;
+            int j = 0;
+            int score = 0;
+            Console.Write("Team #: ");
+            while (GetLine(team.Text + ".txt", i) != GetLine("blank.txt", 1))
+            {
+                //Console.WriteLine(GetLine(team+".txt",i));
+                i++;
+                if (GetLine(team.Text + ".txt", i).Contains(contains))
+                {
+                    string num1 = GetLine(team.Text + ".txt", i)[numb1].ToString();
+                    string num2 = GetLine(team.Text + ".txt", i)[numb2].ToString();
+                    score += Int32.Parse(num1 + num2);
+                    j++;
+                }
+            }
+            Console.WriteLine(score / j);
+            return "" + (score/j);
+        }
         public void averageCargo()
         {
             try
             {
                 Form1 match = new Form1();
-                int averageScoreTele = 0;
-                int averageScoreAccTele = 0;
-                int i = 1;
-                int j = 0;
-                Console.Write("Team #: ");
-                while (match.GetLine(team.Text + ".txt", i) != match.GetLine("blank.txt", 1))
-                {
-                    //Console.WriteLine(GetLine(team+".txt",i));
-                    i++;
-                    if (match.GetLine(team.Text + ".txt", i).Contains("Tele Cargo Score"))
-                    {
-                        string num1 = match.GetLine(team.Text + ".txt", i)[18].ToString();
-                        string num2 = match.GetLine(team.Text + ".txt", i)[19].ToString();
-                        averageScoreTele += Int32.Parse(num1 + num2);
-                        j++;
-                    }
-                }
-                i = 0;
-                j = 0;
-                while (match.GetLine(team.Text + ".txt", i) != match.GetLine("blank.txt", 1))
-                {
-                    //Console.WriteLine(GetLine(team+".txt",i));
-                    i++;
-                    if (match.GetLine(team.Text + ".txt", i).Contains("Tele Accuracy"))
-                    {
-                        string num1 = match.GetLine(team.Text + ".txt", i)[15].ToString();
-                        string num2 = match.GetLine(team.Text + ".txt", i)[16].ToString();
-                        averageScoreAccTele += Int32.Parse(num1 + num2);
-                        j++;
-                    }
-                }
+                
+                
+                averageTeleLower.Text = getAverage("Tele Lower", 12, 13);
+                averageTeleUpper.Text = getAverage("Tele Upper", 12, 13);
+                averageAutoUpper.Text = getAverage("Auto Lower", 12, 13);
+                averageAutoLower.Text = getAverage("Auto Upper", 12, 13);
+                averageTele.Text = getAverage("Tele Cargo Score", 18, 19);
+                averageAuto.Text = getAverage("Auto Cargo Score", 18, 19);
+                averageAutoAcc.Text = getAverage("Auto Accuracy", 15, 16) + "%";
+                averageTeleAcc.Text = getAverage("Tele Accuracy", 15, 16) + "%";
+                
 
-                averageTele.Text = "" + averageScoreTele / j;
-                averageTeleAcc.Text = averageScoreAccTele / j + "%";
+
                 loadText.Text = "Data Loaded";
 
                 //return 1;
@@ -1582,6 +1597,19 @@ namespace Bot_Scout_RAPID_REACT
         private void climbToolStripMenuItem_Click(object sender, EventArgs e)
         {
             bestTeamsStats("Total Climb Time", 18, 19, 0, 10000, true, "Climb Time");
+        }
+
+        private void recentMatchToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            string team1 = team.Text;
+            Form1 match = new Form1();
+            int i = Int32.Parse(lineMatch.Text);
+            //int i = Int32.Parse(lineMatch.Text);
+            while (GetLine(team1 + ".txt", i + 1).Contains("Match Number"))
+            {
+                driveData(1);
+                i = Int32.Parse(lineMatch.Text);
+            }
         }
     }
 
