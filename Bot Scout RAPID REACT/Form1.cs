@@ -126,43 +126,43 @@ namespace Bot_Scout_RAPID_REACT
                     }
                     
                     //User match data
-                    writeToFile(team.Text, "Match Number: " + match.Text);
+                    writeToFile(comp.Text+"\\"+team.Text, "Match Number: " + match.Text);
                     if (taxiYes.Checked)
                     {
-                        writeToFile(team.Text, "Match Number: y");
+                        writeToFile(comp.Text+"\\"+team.Text, "Match Number: y");
                     }
                     else if (taxiNo.Checked)
                     {
-                        writeToFile(team.Text, "Match Number: n");
+                        writeToFile(comp.Text+"\\"+team.Text, "Match Number: n");
                     }
                     //writeToFile(team.Text, "Taxi: " + taxi.Text);
                     //writeToFile(team.Text, "Tele Lower: " + teleLower.Text);
                     if ((teleLower.Text).ToString().Length == 1)
                     {
-                        writeToFile(team.Text, "Tele Lower: 0" + teleLower.Text);
+                        writeToFile(comp.Text+"\\"+team.Text, "Tele Lower: 0" + teleLower.Text);
                     }
                     else
                     {
-                        writeToFile(team.Text, "Tele Lower: " + teleLower.Text);
+                        writeToFile(comp.Text+"\\"+team.Text, "Tele Lower: " + teleLower.Text);
                     }
                     //writeToFile(team.Text, "Tele Upper: " + teleUpper.Text);
                     if ((teleUpper.Text).ToString().Length == 1)
                     {
-                        writeToFile(team.Text, "Tele Upper: 0" + teleUpper.Text);
+                        writeToFile(comp.Text+"\\"+.Text, "Tele Upper: 0" + teleUpper.Text);
                     }
                     else
                     {
-                        writeToFile(team.Text, "Tele Upper: " + teleUpper.Text);
+                        writeToFile(comp.Text+"\\"+team.Text, "Tele Upper: " + teleUpper.Text);
                     }
                     int totalAuto = Int32.Parse(autoUpper.Text) + Int32.Parse(autoLower.Text);
 
                     if ((totalAuto).ToString().Length == 1)
                     {
-                        writeToFile(team.Text, "Auto Cargo Total: 0" + totalAuto);
+                        writeToFile(comp.Text+"\\"+team.Text, "Auto Cargo Total: 0" + totalAuto);
                     }
                     else
                     {
-                        writeToFile(team.Text, "Auto Cargo Total: " + totalAuto);
+                        writeToFile(comp.Text+"\\"+team.Text, "Auto Cargo Total: " + totalAuto);
                     }
 
 
@@ -172,123 +172,123 @@ namespace Bot_Scout_RAPID_REACT
                     //writeToFile(team.Text, "Auto Upper: " + autoUpper.Text);
                     if ((autoUpper.Text).ToString().Length == 1)
                     {
-                        writeToFile(team.Text, "Auto Upper: 0" + autoUpper.Text);
+                        writeToFile(comp.Text+"\\"+team.Text, "Auto Upper: 0" + autoUpper.Text);
                     }
                     else
                     {
-                        writeToFile(team.Text, "Auto Upper: " + autoUpper.Text);
+                        writeToFile(comp.Text+"\\"+team.Text, "Auto Upper: " + autoUpper.Text);
                     }
                     //writeToFile(team.Text, "Auto Lower: " + autoLower.Text);
                     if ((autoLower.Text).ToString().Length == 1)
                     {
-                        writeToFile(team.Text, "Auto Lower: 0" + autoLower.Text);
+                        writeToFile(comp.Text+"\\"+team.Text, "Auto Lower: 0" + autoLower.Text);
                     }
                     else
                     {
-                        writeToFile(team.Text, "Auto Lower: " + autoLower.Text);
+                        writeToFile(comp.Text+"\\"+team.Text, "Auto Lower: " + autoLower.Text);
                     }
 
 
                     //writeToFile(team.Text, "Auto Missed: " + autoMissed.Text);
                     if ((autoMissed.Text).ToString().Length == 1)
                     {
-                        writeToFile(team.Text, "Auto Missed: 0" + autoMissed.Text);
+                        writeToFile(comp.Text+"\\"+team.Text, "Auto Missed: 0" + autoMissed.Text);
                     }
                     else
                     {
-                        writeToFile(team.Text, "Auto Missed: " + autoMissed.Text);
+                        writeToFile(comp.Text+"\\"+team.Text, "Auto Missed: " + autoMissed.Text);
                     }
 
-                    writeToFile(team.Text, "Tele Missed: " + teleMissed.Text);
+                    writeToFile(comp.Text+"\\"+team.Text, "Tele Missed: " + teleMissed.Text);
                     if ((teleMissed.Text).ToString().Length == 1)
                     {
-                        writeToFile(team.Text, "Tele Missed: 0" + teleMissed.Text);
+                        writeToFile(comp.Text+"\\"+team.Text, "Tele Missed: 0" + teleMissed.Text);
                     }
                     else
                     {
-                        writeToFile(team.Text, "Tele Missed: " + teleMissed.Text);
+                        writeToFile(comp.Text+"\\"+team.Text, "Tele Missed: " + teleMissed.Text);
                     }
 
 
                     //writeToFile(team.Text, "Start: " + climbStart.Text);
                     if ((climbStart.Text).ToString().Length == 1)
                     {
-                        writeToFile(team.Text, "Start: 0" + climbStart.Text);
+                        writeToFile(comp.Text+"\\"+team.Text, "Start: 0" + climbStart.Text);
                     }
                     else
                     {
-                        writeToFile(team.Text, "Start: " + climbStart.Text);
+                        writeToFile(comp.Text+"\\"+team.Text, "Start: " + climbStart.Text);
                     }
                     //writeToFile(team.Text, "End: " + climbEnd.Text);
                     if ((climbEnd.Text).ToString().Length == 1)
                     {
-                        writeToFile(team.Text, "End: 0" + climbEnd.Text);
+                        writeToFile(comp.Text+"\\"+team.Text, "End: 0" + climbEnd.Text);
                     }
                     else
                     {
-                        writeToFile(team.Text, "End: " + climbEnd.Text);
+                        writeToFile(comp.Text+"\\"+team.Text, "End: " + climbEnd.Text);
                     }
 
                     if ((climbTime).ToString().Length == 1)
                     {
-                        writeToFile(team.Text, "Total Climb Time: 0" + climbTime);
+                        writeToFile(comp.Text+"\\"+team.Text, "Total Climb Time: 0" + climbTime);
                     }
                     else
                     {
-                        writeToFile(team.Text, "Total Climb Time: " + climbTime);
+                        writeToFile(comp.Text+"\\"+team.Text, "Total Climb Time: " + climbTime);
                     }
                     //writeToFile(team.Text, "Climb Type: " + climbType.Text);
                     if (lowClimb.Checked)
                     {
-                        writeToFile(team.Text, "Climb Type: l");
+                        writeToFile(comp.Text+"\\"+team.Text, "Climb Type: l");
                         climbType = "l";
                     }
                     else if (midClimb.Checked)
                     {
-                        writeToFile(team.Text, "Climb Type: m");
+                        writeToFile(comp.Text+"\\"+team.Text, "Climb Type: m");
                         climbType = "m";
                     }
                     else if (highClimb.Checked)
                     {
-                        writeToFile(team.Text, "Climb Type: h");
+                        writeToFile(comp.Text+"\\"+team.Text, "Climb Type: h");
                         climbType = "h";
                     }
                     else if (travClimb.Checked)
                     {
-                        writeToFile(team.Text, "Climb Type: t");
+                        writeToFile(comp.Text+"\\"+team.Text, "Climb Type: t");
                         climbType = "t";
                     }
                     else if (noClimb.Checked)
                     {
-                        writeToFile(team.Text, "Climb Type: n");
+                        writeToFile(comp.Text+"\\"+team.Text, "Climb Type: n");
                         climbType = "n";
                     }
-                    writeToFile(team.Text, "Defense: " + "0" + defense.Text);
+                    writeToFile(comp.Text+"\\"+team.Text, "Defense: " + "0" + defense.Text);
                     //writeToFile(team.Text, "Position: " + position.Text);
                     if (posHub.Checked)
                     {
-                        writeToFile(team.Text, "Position: h");
+                        writeToFile(comp.Text+"\\"+team.Text, "Position: h");
                     }
                     else if (posLaunch.Checked)
                     {
-                        writeToFile(team.Text, "Entry: l");
+                        writeToFile(comp.Text+"\\"+team.Text, "Entry: l");
                     }
                     else if (posTar.Checked)
                     {
-                        writeToFile(team.Text, "Entry: t");
+                        writeToFile(comp.Text+"\\"+team.Text, "Entry: t");
                     }
                     else if (posOther.Checked)
                     {
-                        writeToFile(team.Text, "Entry: o");
+                        writeToFile(comp.Text+"\\"+team.Text, "Entry: o");
                     }
                     //writeToFile(team.Text, "Entry: " + climbEnter.Text);
                     if (enterFront.Checked)
                     {
-                        writeToFile(team.Text, "Entry: f");
+                        writeToFile(comp.Text+"\\"+team.Text, "Entry: f");
                     }
                     else if (enterSide.Checked)
                     {
-                        writeToFile(team.Text, "Entry: s");
+                        writeToFile(comp.Text+"\\"+team.Text, "Entry: s");
                     }
 
                     teleCargo = (Int32.Parse(teleUpper.Text) * 2) + (Int32.Parse(teleLower.Text) * 1);
@@ -298,37 +298,37 @@ namespace Bot_Scout_RAPID_REACT
 
                     if ((teleCargo).ToString().Length == 1)
                     {
-                        writeToFile(team.Text, "Tele Cargo Score: 0" + teleCargo);
+                        writeToFile(comp.Text+"\\"+team.Text, "Tele Cargo Score: 0" + teleCargo);
                     }
                     else
                     {
-                        writeToFile(team.Text, "Tele Cargo Score: " + teleCargo);
+                        writeToFile(comp.Text+"\\"+team.Text, "Tele Cargo Score: " + teleCargo);
                     }
                     if ((autoCargo).ToString().Length == 1)
                     {
-                        writeToFile(team.Text, "Auto Cargo Score: 0" + autoCargo);
+                        writeToFile(comp.Text+"\\"+team.Text, "Auto Cargo Score: 0" + autoCargo);
                     }
                     else
                     {
-                        writeToFile(team.Text, "Auto Cargo Score: " + autoCargo);
+                        writeToFile(comp.Text+"\\"+team.Text, "Auto Cargo Score: " + autoCargo);
                     }
 
                     if ((autoAccuracy).ToString().Length == 1)
                     {
-                        writeToFile(team.Text, "Auto Accuracy: 0" + autoAccuracy + "%");
+                        writeToFile(comp.Text+"\\"+team.Text, "Auto Accuracy: 0" + autoAccuracy + "%");
                     }
                     else
                     {
-                        writeToFile(team.Text, "Auto Accuracy: " + autoAccuracy + "%");
+                        writeToFile(comp.Text+"\\"+team.Text, "Auto Accuracy: " + autoAccuracy + "%");
                     }
 
                     if ((teleAccuracy).ToString().Length == 1)
                     {
-                        writeToFile(team.Text, "Tele Accuracy: 0" + teleAccuracy + "%");
+                        writeToFile(comp.Text+"\\"+team.Text, "Tele Accuracy: 0" + teleAccuracy + "%");
                     }
                     else
                     {
-                        writeToFile(team.Text, "Tele Accuracy: " + teleAccuracy + "%");
+                        writeToFile(comp.Text+"\\"+team.Text, "Tele Accuracy: " + teleAccuracy + "%");
                     }
 
 
@@ -362,18 +362,18 @@ namespace Bot_Scout_RAPID_REACT
                     }
 
                     int totalPoints = (teleCargo + autoCargo) + climbPoints+taxiPoints;
-                    writeToFile(team.Text, "Total Score: " + totalPoints);
+                    writeToFile(comp.Text+"\\"+team.Text, "Total Score: " + totalPoints);
 
 
 
-                    writeToFile(team.Text, "------------------------");
+                    writeToFile(comp.Text+"\\"+team.Text, "------------------------");
                     statusText.Text = "Match Data Saved!";
                 }
                 else
                 {
-                    string tempShut = GetLine(team.Text + ".txt", 1)[11] + "";
+                    string tempShut = GetLine(comp.Text+"\\"+team.Text + ".txt", 1)[11] + "";
                     int shutdowns = Int32.Parse(tempShut) + 1;
-                    lineChanger("Shutdowns: " + shutdowns, current + team.Text + ".txt", 1);
+                    lineChanger("Shutdowns: " + shutdowns, current + comp.Text+"\\"+team.Text + ".txt", 1);
                 }
                 //Thread.Sleep(2000);
                 team.Text = "";
@@ -672,7 +672,7 @@ namespace Bot_Scout_RAPID_REACT
         {
             try
             {
-                string team1 = team.Text;
+                string team1 = comp.Text+"\\"+team.Text;
                 Form1 match = new Form1();
                 int i = Int32.Parse(lineMatch.Text);
                 if (match.GetLine(team1 + ".txt", i + 1).Contains("Match Number"))
@@ -699,7 +699,7 @@ namespace Bot_Scout_RAPID_REACT
             bool matchEnd = false;
             Form1 match = new Form1();
             int i = Int32.Parse(lineMatch.Text);
-            string team1 = team.Text;
+            string team1 = comp.Text+"\\"+team.Text;
 
             while (matchEnd == false)
             {
@@ -1488,7 +1488,7 @@ namespace Bot_Scout_RAPID_REACT
         {
             try
             {
-                bestScore(team.Text);
+                bestScore(comp.Text+"\\"+team.Text);
             }
             catch
             {
@@ -1500,7 +1500,7 @@ namespace Bot_Scout_RAPID_REACT
         {
             try
             {
-                string team1 = team.Text;
+                string team1 = comp.Text+"\\"+team.Text;
                 Form1 match = new Form1();
                 int i = Int32.Parse(lineMatch.Text);
                 if (match.GetLine(team1 + ".txt", i - 22).Contains("-----"))
@@ -1525,7 +1525,7 @@ namespace Bot_Scout_RAPID_REACT
         {
             try
             {
-                string team1 = team.Text;
+                string team1 = comp.Text+"\\"+team.Text;
                 Form1 match = new Form1();
                 int i = Int32.Parse(lineMatch.Text);
                 if (match.GetLine(team1 + ".txt", i + 1).Contains("Match Number"))
@@ -1553,14 +1553,14 @@ namespace Bot_Scout_RAPID_REACT
             int j = 0;
             int score = 0;
             Console.Write("Team #: ");
-            while (GetLine(team.Text + ".txt", i) != GetLine("blank.txt", 1))
+            while (GetLine(comp.Text+"\\"+team.Text + ".txt", i) != GetLine("blank.txt", 1))
             {
                 //Console.WriteLine(GetLine(team+".txt",i));
                 i++;
-                if (GetLine(team.Text + ".txt", i).Contains(contains))
+                if (GetLine(comp.Text+"\\"+team.Text + ".txt", i).Contains(contains))
                 {
-                    string num1 = GetLine(team.Text + ".txt", i)[numb1].ToString();
-                    string num2 = GetLine(team.Text + ".txt", i)[numb2].ToString();
+                    string num1 = GetLine(comp.Text+"\\"+team.Text + ".txt", i)[numb1].ToString();
+                    string num2 = GetLine(comp.Text+"\\"+team.Text + ".txt", i)[numb2].ToString();
                     score += Int32.Parse(num1 + num2);
                     j++;
                 }
@@ -1663,7 +1663,7 @@ namespace Bot_Scout_RAPID_REACT
 
         private void recentMatchToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            string team1 = team.Text;
+            string team1 = comp.Text+"\\"+team.Text;
             Form1 match = new Form1();
             int i = Int32.Parse(lineMatch.Text);
             //int i = Int32.Parse(lineMatch.Text);
