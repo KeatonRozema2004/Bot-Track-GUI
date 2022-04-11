@@ -57,7 +57,7 @@ namespace Bot_Scout_RAPID_REACT
             File.AppendAllText(comp.Text + "\\" + team + ".txt", "Shutdowns: 0" + Environment.NewLine);
             for (int i = 0; i < 5000; i++)
             {
-                File.AppendAllText(team + ".txt", "0" + Environment.NewLine);
+                File.AppendAllText(comp.Text + "\\" + team + ".txt", "0" + Environment.NewLine);
             }
         }
         private void button3_Click_1(object sender, EventArgs e)
@@ -439,14 +439,14 @@ namespace Bot_Scout_RAPID_REACT
             while (emptyLine == false)
             {
                 //Thread.Sleep(10);
-                if (GetLine(current + team + ".txt", i) != GetLine(current + "blank.txt", 1))
+                if (GetLine(current +comp.Text+"\\"+ team + ".txt", i) != GetLine(current + "blank.txt", 1))
                 {
 
                 }
                 else
                 {
 
-                    lineChanger(text, current + team + ".txt", i);
+                    lineChanger(text, current + comp.Text+"\\"+team + ".txt", i);
                     emptyLine = true;
                 }
                 i++;
