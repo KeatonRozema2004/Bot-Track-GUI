@@ -63,7 +63,7 @@ namespace Bot_Scout_RAPID_REACT
         private void button3_Click_1(object sender, EventArgs e)
         {
             string current = Directory.GetCurrentDirectory() + "\\" ;
-            current = current + comp.Text + "\\";
+            
             try
             {
                 if (!shutdownBot.Checked)
@@ -148,7 +148,7 @@ namespace Bot_Scout_RAPID_REACT
                     //writeToFile(team.Text, "Tele Upper: " + teleUpper.Text);
                     if ((teleUpper.Text).ToString().Length == 1)
                     {
-                        writeToFile(comp.Text+"\\"+.Text, "Tele Upper: 0" + teleUpper.Text);
+                        writeToFile(comp.Text+"\\"+team.Text, "Tele Upper: 0" + teleUpper.Text);
                     }
                     else
                     {
