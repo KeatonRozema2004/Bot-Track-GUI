@@ -48,12 +48,12 @@ namespace Bot_Scout_RAPID_REACT
 
         public void addTeam(string team)
         {
-            File.Create(team + ".txt").Close();
+            File.Create(comp.Text+"\\"+team + ".txt").Close();
 
         }
         public void addLines(string team)
         {
-            File.AppendAllText(team + ".txt", "Shutdowns: 0" + Environment.NewLine);
+            File.AppendAllText(comp.Text + "\\" + team + ".txt", "Shutdowns: 0" + Environment.NewLine);
             for (int i = 0; i < 5000; i++)
             {
                 File.AppendAllText(team + ".txt", "0" + Environment.NewLine);
@@ -61,7 +61,8 @@ namespace Bot_Scout_RAPID_REACT
         }
         private void button3_Click_1(object sender, EventArgs e)
         {
-            string current = Directory.GetCurrentDirectory() + "\\";
+            string current = Directory.GetCurrentDirectory() + "\\" ;
+            current = current + comp.Text + "\\";
             try
             {
                 if (!shutdownBot.Checked)
@@ -400,7 +401,8 @@ namespace Bot_Scout_RAPID_REACT
 
         public string GetLine(string fileName, int line)
         {
-            string current = Directory.GetCurrentDirectory() + "//";
+            string current = Directory.GetCurrentDirectory() + "\\";
+            current = current + comp.Text + "\\";
             using (var sr = new StreamReader(fileName))
             {
                 for (int i = 1; i < line; i++)
@@ -412,6 +414,7 @@ namespace Bot_Scout_RAPID_REACT
         public void WriteLine(string fileName, int line)
         {
             string current = Directory.GetCurrentDirectory() + "\\";
+            current = current + comp.Text + "\\";
             using (var sr = new StreamWriter(fileName))
             {
                 for (int i = 1; i < line; i++)
@@ -428,7 +431,8 @@ namespace Bot_Scout_RAPID_REACT
         }
         public void writeToFile(string team, string text)
         {
-            string current = Directory.GetCurrentDirectory() + "/";
+            string current = Directory.GetCurrentDirectory() + "\\";
+            current = current + comp.Text + "\\";
             int i = 1;
             bool emptyLine = false;
             while (emptyLine == false)
