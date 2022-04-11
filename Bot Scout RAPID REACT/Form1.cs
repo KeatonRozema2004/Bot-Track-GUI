@@ -69,7 +69,7 @@ namespace Bot_Scout_RAPID_REACT
                     statusText.Text = "Loading...";
 
                     int autoCargo;
-
+                    string climbType = "";
                     int teleCargo;
 
                     int climbTime;
@@ -125,7 +125,15 @@ namespace Bot_Scout_RAPID_REACT
                     
                     //User match data
                     writeToFile(team.Text, "Match Number: " + match.Text);
-                    writeToFile(team.Text, "Taxi: " + taxi.Text);
+                    if (taxiYes.Checked)
+                    {
+                        writeToFile(team.Text, "Match Number: y");
+                    }
+                    else if (taxiNo.Checked)
+                    {
+                        writeToFile(team.Text, "Match Number: n");
+                    }
+                    //writeToFile(team.Text, "Taxi: " + taxi.Text);
                     //writeToFile(team.Text, "Tele Lower: " + teleLower.Text);
                     if ((teleLower.Text).ToString().Length == 1)
                     {
@@ -227,10 +235,59 @@ namespace Bot_Scout_RAPID_REACT
                     {
                         writeToFile(team.Text, "Total Climb Time: " + climbTime);
                     }
-                    writeToFile(team.Text, "Climb Type: " + climbType.Text);
+                    //writeToFile(team.Text, "Climb Type: " + climbType.Text);
+                    if (lowClimb.Checked)
+                    {
+                        writeToFile(team.Text, "Climb Type: l");
+                        climbType = "l";
+                    }
+                    else if (midClimb.Checked)
+                    {
+                        writeToFile(team.Text, "Climb Type: m");
+                        climbType = "m";
+                    }
+                    else if (highClimb.Checked)
+                    {
+                        writeToFile(team.Text, "Climb Type: h");
+                        climbType = "h";
+                    }
+                    else if (travClimb.Checked)
+                    {
+                        writeToFile(team.Text, "Climb Type: t");
+                        climbType = "t";
+                    }
+                    else if (noClimb.Checked)
+                    {
+                        writeToFile(team.Text, "Climb Type: n");
+                        climbType = "n";
+                    }
                     writeToFile(team.Text, "Defense: " + "0" + defense.Text);
-                    writeToFile(team.Text, "Position: " + position.Text);
-                    writeToFile(team.Text, "Entry: " + climbEnter.Text);
+                    //writeToFile(team.Text, "Position: " + position.Text);
+                    if (posHub.Checked)
+                    {
+                        writeToFile(team.Text, "Position: h");
+                    }
+                    else if (posLaunch.Checked)
+                    {
+                        writeToFile(team.Text, "Entry: l");
+                    }
+                    else if (posTar.Checked)
+                    {
+                        writeToFile(team.Text, "Entry: t");
+                    }
+                    else if (posOther.Checked)
+                    {
+                        writeToFile(team.Text, "Entry: o");
+                    }
+                    //writeToFile(team.Text, "Entry: " + climbEnter.Text);
+                    if (enterFront.Checked)
+                    {
+                        writeToFile(team.Text, "Entry: f");
+                    }
+                    else if (enterSide.Checked)
+                    {
+                        writeToFile(team.Text, "Entry: s");
+                    }
 
                     teleCargo = (Int32.Parse(teleUpper.Text) * 2) + (Int32.Parse(teleLower.Text) * 1);
                     autoCargo = (Int32.Parse(autoUpper.Text) * 4) + (Int32.Parse(autoLower.Text) * 2);
@@ -273,22 +330,22 @@ namespace Bot_Scout_RAPID_REACT
                     }
 
 
-                    
+
                     
                     int climbPoints;
-                    if(climbType.Text == "l")
+                    if (climbType == "l")
                     {
                         climbPoints = 4;
                     }
-                    else if (climbType.Text == "m")
+                    else if (climbType == "m")
                     {
                         climbPoints = 6;
                     }
-                    else if (climbType.Text == "h")
+                    else if (climbType == "h")
                     {
                         climbPoints = 10;
                     }
-                    else if (climbType.Text == "t")
+                    else if (climbType == "t")
                     {
                         climbPoints = 15;
                     }
@@ -297,7 +354,7 @@ namespace Bot_Scout_RAPID_REACT
                         climbPoints = 0;
                     }
                     int taxiPoints = 0;
-                    if (taxi.Text == "y")
+                    if (taxiYes.Checked)
                     {
                         taxiPoints = 2;
                     }
@@ -327,11 +384,11 @@ namespace Bot_Scout_RAPID_REACT
                 autoMissed.Text = "";
                 climbEnd.Text = "";
                 climbStart.Text = "";
-                climbType.Text = "";
-                climbEnter.Text = "";
+                //climbType.Text = "";
+                //climbEnter.Text = "";
                 defense.Text = "";
-                position.Text = "";
-                taxi.Text = "";
+                //position.Text = "";
+                //taxi.Text = "";
 
             }
             catch
