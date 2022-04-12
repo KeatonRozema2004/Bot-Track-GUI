@@ -184,10 +184,10 @@ namespace Bot_Scout_RAPID_REACT
             this.label49 = new System.Windows.Forms.Label();
             this.lowClimb = new System.Windows.Forms.RadioButton();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.midClimb = new System.Windows.Forms.RadioButton();
-            this.highClimb = new System.Windows.Forms.RadioButton();
-            this.travClimb = new System.Windows.Forms.RadioButton();
             this.noClimb = new System.Windows.Forms.RadioButton();
+            this.travClimb = new System.Windows.Forms.RadioButton();
+            this.highClimb = new System.Windows.Forms.RadioButton();
+            this.midClimb = new System.Windows.Forms.RadioButton();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.enterSide = new System.Windows.Forms.RadioButton();
             this.enterFront = new System.Windows.Forms.RadioButton();
@@ -1800,27 +1800,16 @@ namespace Bot_Scout_RAPID_REACT
             this.groupBox1.TabIndex = 11;
             this.groupBox1.TabStop = false;
             // 
-            // midClimb
+            // noClimb
             // 
-            this.midClimb.AutoSize = true;
-            this.midClimb.Location = new System.Drawing.Point(51, 5);
-            this.midClimb.Name = "midClimb";
-            this.midClimb.Size = new System.Drawing.Size(42, 17);
-            this.midClimb.TabIndex = 16;
-            this.midClimb.TabStop = true;
-            this.midClimb.Text = "Mid";
-            this.midClimb.UseVisualStyleBackColor = true;
-            // 
-            // highClimb
-            // 
-            this.highClimb.AutoSize = true;
-            this.highClimb.Location = new System.Drawing.Point(111, 5);
-            this.highClimb.Name = "highClimb";
-            this.highClimb.Size = new System.Drawing.Size(47, 17);
-            this.highClimb.TabIndex = 17;
-            this.highClimb.TabStop = true;
-            this.highClimb.Text = "High";
-            this.highClimb.UseVisualStyleBackColor = true;
+            this.noClimb.AutoSize = true;
+            this.noClimb.Location = new System.Drawing.Point(111, 28);
+            this.noClimb.Name = "noClimb";
+            this.noClimb.Size = new System.Drawing.Size(51, 17);
+            this.noClimb.TabIndex = 19;
+            this.noClimb.TabStop = true;
+            this.noClimb.Text = "None";
+            this.noClimb.UseVisualStyleBackColor = true;
             // 
             // travClimb
             // 
@@ -1833,16 +1822,27 @@ namespace Bot_Scout_RAPID_REACT
             this.travClimb.Text = "Traversal";
             this.travClimb.UseVisualStyleBackColor = true;
             // 
-            // noClimb
+            // highClimb
             // 
-            this.noClimb.AutoSize = true;
-            this.noClimb.Location = new System.Drawing.Point(111, 28);
-            this.noClimb.Name = "noClimb";
-            this.noClimb.Size = new System.Drawing.Size(51, 17);
-            this.noClimb.TabIndex = 19;
-            this.noClimb.TabStop = true;
-            this.noClimb.Text = "None";
-            this.noClimb.UseVisualStyleBackColor = true;
+            this.highClimb.AutoSize = true;
+            this.highClimb.Location = new System.Drawing.Point(111, 5);
+            this.highClimb.Name = "highClimb";
+            this.highClimb.Size = new System.Drawing.Size(47, 17);
+            this.highClimb.TabIndex = 17;
+            this.highClimb.TabStop = true;
+            this.highClimb.Text = "High";
+            this.highClimb.UseVisualStyleBackColor = true;
+            // 
+            // midClimb
+            // 
+            this.midClimb.AutoSize = true;
+            this.midClimb.Location = new System.Drawing.Point(51, 5);
+            this.midClimb.Name = "midClimb";
+            this.midClimb.Size = new System.Drawing.Size(42, 17);
+            this.midClimb.TabIndex = 16;
+            this.midClimb.TabStop = true;
+            this.midClimb.Text = "Mid";
+            this.midClimb.UseVisualStyleBackColor = true;
             // 
             // groupBox2
             // 
@@ -1851,7 +1851,7 @@ namespace Bot_Scout_RAPID_REACT
             this.groupBox2.Location = new System.Drawing.Point(350, 284);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.Size = new System.Drawing.Size(99, 35);
-            this.groupBox2.TabIndex = 85;
+            this.groupBox2.TabIndex = 15;
             this.groupBox2.TabStop = false;
             // 
             // enterSide
@@ -1860,7 +1860,7 @@ namespace Bot_Scout_RAPID_REACT
             this.enterSide.Location = new System.Drawing.Point(55, 9);
             this.enterSide.Name = "enterSide";
             this.enterSide.Size = new System.Drawing.Size(46, 17);
-            this.enterSide.TabIndex = 23;
+            this.enterSide.TabIndex = 14;
             this.enterSide.TabStop = true;
             this.enterSide.Text = "Side";
             this.enterSide.UseVisualStyleBackColor = true;
