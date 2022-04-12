@@ -28,6 +28,7 @@ namespace Bot_Scout_RAPID_REACT
             averageTeamTable.Location = new System.Drawing.Point(pX, pY);
             driverSheetTable.Location = new System.Drawing.Point(pX, pY);
             teamTrendLayout.Location = new System.Drawing.Point(pX, pY);
+            getMatchDataBut.Visible = false;
         }
 
         private void Form1_Load(object sender, EventArgs e)
@@ -53,7 +54,7 @@ namespace Bot_Scout_RAPID_REACT
             string current = Directory.GetCurrentDirectory() + "\\";
             try
             {
-                if (!shutdownBot.Checked)
+                if (!shutdownBot.Checked && matchName.Text == "Make Match")
                 {
                     statusText.Text = "Loading...";
 
@@ -113,14 +114,22 @@ namespace Bot_Scout_RAPID_REACT
                     }
                     
                     //User match data
-                    writeToFile(team.Text, "Match Number: " + match.Text);
+                    //writeToFile(team.Text, "Match Number: " + match.Text);
+                    if ((match.Text).ToString().Length == 1)
+                    {
+                        writeToFile(team.Text, "Match Number: 0" + match.Text);
+                    }
+                    else
+                    {
+                        writeToFile(team.Text, "Match Number: " + match.Text);
+                    }
                     if (taxiYes.Checked)
                     {
-                        writeToFile(team.Text, "Match Number: y");
+                        writeToFile(team.Text, "Taxi: y");
                     }
                     else if (taxiNo.Checked)
                     {
-                        writeToFile(team.Text, "Match Number: n");
+                        writeToFile(team.Text, "Taxi: n");
                     }
                     //writeToFile(team.Text, "Taxi: " + taxi.Text);
                     //writeToFile(team.Text, "Tele Lower: " + teleLower.Text);
@@ -358,9 +367,12 @@ namespace Bot_Scout_RAPID_REACT
                 }
                 else
                 {
-                    string tempShut = GetLine(team.Text + ".txt", 1)[11] + "";
-                    int shutdowns = Int32.Parse(tempShut) + 1;
-                    lineChanger("Shutdowns: " + shutdowns, current + team.Text + ".txt", 1);
+                    if (matchName.Text == "Make Match")
+                    {
+                        string tempShut = GetLine(team.Text + ".txt", 1)[11] + "";
+                        int shutdowns = Int32.Parse(tempShut) + 1;
+                        lineChanger("Shutdowns: " + shutdowns, current + team.Text + ".txt", 1);
+                    }
                 }
                 //Thread.Sleep(2000);
                 team.Text = "";
@@ -1656,6 +1668,43 @@ namespace Bot_Scout_RAPID_REACT
             {
                 driveData(1);
                 i = Int32.Parse(lineMatch.Text);
+            }
+        }
+
+        private void makeToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            matchName.Text = "Make Match";
+            getMatchDataBut.Visible = false;
+        }
+
+        private void editToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            matchName.Text ="Edit Match";
+            getMatchDataBut.Visible = true;
+        }
+
+        private void button4_Click_1(object sender, EventArgs e)
+        {
+            try {
+                int i = 1;
+                while (GetLine(team.Text + ".txt", i) != GetLine("blank.txt", 1))
+                {
+                    if (GetLine(team.Text + ".txt", i).Contains("Match Number"))
+                    {
+                        string num1 = GetLine(team.Text + ".txt", i)[14].ToString();
+                        string num2 = GetLine(team.Text + ".txt", i)[15].ToString();
+                        string matchNum = num1 + num2;
+                        matchName.Text = "" + matchNum;
+
+                    }
+
+
+                    i++;
+                }
+            }
+            catch(Exception l)
+            {
+                matchName.Text = "Nope " + l;
             }
         }
     }
