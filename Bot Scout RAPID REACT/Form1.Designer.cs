@@ -81,7 +81,6 @@ namespace Bot_Scout_RAPID_REACT
             this.recentMatchToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.averageScoresMenu = new System.Windows.Forms.ToolStripMenuItem();
             this.teamTrendsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.refreshPageToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.bestTeamsTableLayout = new System.Windows.Forms.TableLayoutPanel();
             this.label36 = new System.Windows.Forms.Label();
             this.label35 = new System.Windows.Forms.Label();
@@ -485,8 +484,7 @@ namespace Bot_Scout_RAPID_REACT
             this.bestTeamsMenu,
             this.driverSheetMenu,
             this.averageScoresMenu,
-            this.teamTrendsToolStripMenuItem,
-            this.refreshPageToolStripMenuItem});
+            this.teamTrendsToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Size = new System.Drawing.Size(1084, 26);
@@ -649,14 +647,6 @@ namespace Bot_Scout_RAPID_REACT
             this.teamTrendsToolStripMenuItem.Size = new System.Drawing.Size(119, 22);
             this.teamTrendsToolStripMenuItem.Text = "Team Trends";
             this.teamTrendsToolStripMenuItem.Click += new System.EventHandler(this.teamTrendsToolStripMenuItem_Click);
-            // 
-            // refreshPageToolStripMenuItem
-            // 
-            this.refreshPageToolStripMenuItem.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.refreshPageToolStripMenuItem.Name = "refreshPageToolStripMenuItem";
-            this.refreshPageToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.R)));
-            this.refreshPageToolStripMenuItem.Size = new System.Drawing.Size(122, 22);
-            this.refreshPageToolStripMenuItem.Text = "Refresh Page";
             // 
             // bestTeamsTableLayout
             // 
@@ -2188,7 +2178,6 @@ namespace Bot_Scout_RAPID_REACT
         private System.Windows.Forms.TableLayoutPanel teamTrendLayout;
         private System.Windows.Forms.Label teamTrend;
         private System.Windows.Forms.Label label49;
-        private System.Windows.Forms.ToolStripMenuItem refreshPageToolStripMenuItem;
         private System.Windows.Forms.Label label43;
         private System.Windows.Forms.Label totalScore2;
         private System.Windows.Forms.ToolStripMenuItem teleTotalToolStripMenuItem;

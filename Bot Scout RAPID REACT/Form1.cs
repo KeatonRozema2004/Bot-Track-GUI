@@ -6,16 +6,13 @@ using System.Collections.Generic;
 
 //Days to work: Monday, Tuesday Wednesday
 //TODO: Best scores, add tele low, high, and total, climb time, defense, and overall score
-//TODO: Average auto Low, high, and total, Tele low and upper, auto accuracy, total score, climb time, and climb type
+//TODO: Average climb time, and climb type and total score
 //TODO: Team Trends (looks at most recent match score, and compares it with the average total score
 //TODO: Drive type for data entry and drive sheet
+//TODO: Make look nice
+//TODO: Test program when everything above is finished
 
-//TODO: 4/10 Refresh Button
-//TODO: Store data in different folders
-//TODO: Alliance selection tab?
-//TODO: 4/10 Make look nice
-//TODO: 4/11 Test program when everything above is finished
-
+//COMPLETE: Average auto Low, high, and total, Tele low and upper, auto accuracy
 //COMPLETE: 4/9 Recent Match Button
 //COMPLETE: Data Entry
 //COMPLETE: See match data
