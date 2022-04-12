@@ -148,7 +148,90 @@ namespace Bot_Scout_Data_Interperter.scripts
             }
             return matchesPlayed;
         }
-        
+ 
+        public dynamic[] zzGetMatchDataFromTeamByMatchNumber(string selectedPath, string teamNumber, string matchNumber)
+        {
+            string teamFile = zzGetFileDirectoryFromTeamName(selectedPath, teamNumber);
+            string[] fileLines = File.ReadAllLines(teamFile);
+
+            bool matchPassOff = false;
+
+            List<int> matchData      = new List<int>();
+            List<string> matchLabels = new List<string>();
+
+            for (int z = 0; fileLines.Length > z; z++)
+            {
+                string currentLine = fileLines[z];
+                string[] currentArray = currentLine.Split(':');
+
+                if (currentArray.Length > 1)
+                {
+                    if (currentArray[0] == "Match Number" && currentArray[1] == matchNumber)
+                    {
+                        matchPassOff = true;
+                    }
+                    if (matchPassOff)
+                    {
+                        if (currentArray[0] == "Taxi" && currentArray[1] == "y")
+                        {
+                            matchData.Add(2);
+                            matchLabels.Add("Taxi");
+                        }
+
+                        if (currentArray[0] == "Auto Upper")
+                        {
+                            matchData.Add(2 * Int32.Parse(currentArray[1]));
+                            matchLabels.Add("Auto Upper");
+                        }
+                        if (currentArray[0] == "Auto Lower") 
+                        {
+                            matchData.Add(Int32.Parse(currentArray[1]));
+                            matchLabels.Add("Auto Lower");
+                        }
+                        if (currentArray[0] == "Auto Missed") 
+                        {
+                            matchData.Add(Int32.Parse(currentArray[1]));
+                            matchLabels.Add("Auto Missed");
+                        }
+                        if (currentArray[0] == "Tele Upper") 
+                        {
+                            matchData.Add(Int32.Parse(currentArray[1]));
+                            matchLabels.Add("Tele Upper");
+                        }
+                        if (currentArray[0] == "Tele Lower") 
+                        {
+                            matchData.Add(Int32.Parse(currentArray[1]));
+                            matchLabels.Add("Tele Lower");
+                        }
+                        if (currentArray[0] == "Position")
+                        {
+                            if (currentArray[1] == " l")
+                            {
+                                matchData.Add(4);
+                                matchLabels.Add("Low");
+                            } else if (currentArray[1] == " m")
+                            {
+                                matchData.Add(6);
+                                matchLabels.Add("Mid");
+                            } else if (currentArray[1] == " h")
+                            {
+                                matchData.Add(10);
+                                matchLabels.Add("High");
+                            } else if (currentArray[1] == " t")
+                            {
+                                matchData.Add(15);
+                                matchLabels.Add("Traversal");
+                            }
+                        }
+                    }
+                }
+            }
+            List<dynamic> returnList = new List<dynamic>();
+            returnList.Add(matchData.ToArray());
+            returnList.Add(matchLabels.ToArray());
+            return returnList.ToArray();
+        }
+
         public string[] zzGetMatchesPlayedByTeam(string team, string filePath)
         {
             string[] lines = File.ReadAllLines(filePath);

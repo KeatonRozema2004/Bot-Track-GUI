@@ -28,6 +28,12 @@ namespace Bot_Scout_Data_Interperter
         public Main_page()
         {
             InitializeComponent();
+            teamChartData.Series.Add("Match");
+            teamChartData.Series.Add("Average");
+            teamChartData.Series.Remove(teamChartData.Series[0]);
+            teamChartData.ChartAreas[0].AxisX.LabelStyle.Angle = -90;
+            teamChartData.ChartAreas[0].AxisX.LabelStyle.Interval = 1;
+            teamChartData.ChartAreas[0].AxisY.LabelStyle.Interval = 2;
         }
 
         private void zzResetData()
@@ -94,12 +100,27 @@ namespace Bot_Scout_Data_Interperter
                 teamDataMatchSelect.Items.Add(match);
             }
         }
-    
+
+        private void teamDataMatchSelect_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            teamChartData.Series["Match"].Points.Clear();
+            string matchNumber = teamDataMatchSelect.SelectedItem.ToString().Split(':')[1];
+            dynamic[] matchData = functions.zzGetMatchDataFromTeamByMatchNumber(dataDirectoryLabel.Text, teamDataTeamSelect.Text, matchNumber);
+            int[] matchPoints = matchData[0];
+            string[] matchLabels = matchData[1];
+            
+
+            for (var z = 0; matchLabels.Length > z; z++)
+            {
+                teamChartData.Series["Match"].Points.AddXY(matchLabels[z], matchPoints[z]);
+            }
+        }
+
         private string[] zzGetRecordedTeamNumbers()
         {
             string[] files = functions.zzGetDataFilesFromDirectory(dataDirectoryLabel.Text);
             List<string> teamNames = new List<string>();
-            
+
             for (int z = 0; files.Length > z; z++)
             {
                 string fileName = Path.GetFileName(teamNames[z]).Split('.')[0];
@@ -108,6 +129,5 @@ namespace Bot_Scout_Data_Interperter
 
             return teamNames.ToArray();
         }
-
     }
 }

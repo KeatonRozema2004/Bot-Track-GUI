@@ -29,9 +29,9 @@ namespace Bot_Scout_Data_Interperter
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea1 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend1 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series1 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea2 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend2 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series2 = new System.Windows.Forms.DataVisualization.Charting.Series();
             this.getDataDirectoryButton = new System.Windows.Forms.Button();
             this.dataFolderDirectoryLabel = new System.Windows.Forms.Label();
             this.dataDirectoryLabel = new System.Windows.Forms.Label();
@@ -239,11 +239,15 @@ namespace Bot_Scout_Data_Interperter
             // 
             // teamDataMatchSelect
             // 
+            this.teamDataMatchSelect.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.teamDataMatchSelect.FormattingEnabled = true;
             this.teamDataMatchSelect.Location = new System.Drawing.Point(6, 6);
             this.teamDataMatchSelect.Name = "teamDataMatchSelect";
             this.teamDataMatchSelect.Size = new System.Drawing.Size(225, 277);
             this.teamDataMatchSelect.TabIndex = 0;
+            this.teamDataMatchSelect.SelectedIndexChanged += new System.EventHandler(this.teamDataMatchSelect_SelectedIndexChanged);
             // 
             // tabPage4
             // 
@@ -260,16 +264,16 @@ namespace Bot_Scout_Data_Interperter
             this.teamChartData.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            chartArea1.Name = "ChartArea1";
-            this.teamChartData.ChartAreas.Add(chartArea1);
-            legend1.Name = "Legend1";
-            this.teamChartData.Legends.Add(legend1);
+            chartArea2.Name = "ChartArea1";
+            this.teamChartData.ChartAreas.Add(chartArea2);
+            legend2.Name = "Legend1";
+            this.teamChartData.Legends.Add(legend2);
             this.teamChartData.Location = new System.Drawing.Point(3, 3);
             this.teamChartData.Name = "teamChartData";
-            series1.ChartArea = "ChartArea1";
-            series1.Legend = "Legend1";
-            series1.Name = "Series1";
-            this.teamChartData.Series.Add(series1);
+            series2.ChartArea = "ChartArea1";
+            series2.Legend = "Legend1";
+            series2.Name = "Series1";
+            this.teamChartData.Series.Add(series2);
             this.teamChartData.Size = new System.Drawing.Size(501, 334);
             this.teamChartData.TabIndex = 0;
             this.teamChartData.Text = "chart1";
