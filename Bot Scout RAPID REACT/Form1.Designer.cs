@@ -234,7 +234,7 @@ namespace Bot_Scout_RAPID_REACT
             this.label4.AutoSize = true;
             this.label4.Location = new System.Drawing.Point(68, 72);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(34, 13);
+            this.label4.Size = new System.Drawing.Size(49, 20);
             this.label4.TabIndex = 1;
             this.label4.Text = "Team";
             // 
@@ -242,7 +242,7 @@ namespace Bot_Scout_RAPID_REACT
             // 
             this.team.Location = new System.Drawing.Point(135, 69);
             this.team.Name = "team";
-            this.team.Size = new System.Drawing.Size(100, 20);
+            this.team.Size = new System.Drawing.Size(100, 26);
             this.team.TabIndex = 0;
             this.team.TextChanged += new System.EventHandler(this.team_TextChanged);
             // 
@@ -250,7 +250,7 @@ namespace Bot_Scout_RAPID_REACT
             // 
             this.match.Location = new System.Drawing.Point(349, 69);
             this.match.Name = "match";
-            this.match.Size = new System.Drawing.Size(100, 20);
+            this.match.Size = new System.Drawing.Size(100, 26);
             this.match.TabIndex = 1;
             // 
             // label5
@@ -258,7 +258,7 @@ namespace Bot_Scout_RAPID_REACT
             this.label5.AutoSize = true;
             this.label5.Location = new System.Drawing.Point(288, 72);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(37, 13);
+            this.label5.Size = new System.Drawing.Size(53, 20);
             this.label5.TabIndex = 4;
             this.label5.Text = "Match";
             // 
@@ -267,7 +267,7 @@ namespace Bot_Scout_RAPID_REACT
             this.label6.AutoSize = true;
             this.label6.Location = new System.Drawing.Point(248, 194);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(91, 13);
+            this.label6.Size = new System.Drawing.Size(134, 20);
             this.label6.TabIndex = 5;
             this.label6.Text = "Tele Upper Cargo";
             // 
@@ -275,14 +275,14 @@ namespace Bot_Scout_RAPID_REACT
             // 
             this.teleUpper.Location = new System.Drawing.Point(349, 191);
             this.teleUpper.Name = "teleUpper";
-            this.teleUpper.Size = new System.Drawing.Size(100, 20);
+            this.teleUpper.Size = new System.Drawing.Size(100, 26);
             this.teleUpper.TabIndex = 8;
             // 
             // teleLower
             // 
             this.teleLower.Location = new System.Drawing.Point(349, 153);
             this.teleLower.Name = "teleLower";
-            this.teleLower.Size = new System.Drawing.Size(100, 20);
+            this.teleLower.Size = new System.Drawing.Size(100, 26);
             this.teleLower.TabIndex = 7;
             // 
             // label7
@@ -290,7 +290,7 @@ namespace Bot_Scout_RAPID_REACT
             this.label7.AutoSize = true;
             this.label7.Location = new System.Drawing.Point(252, 156);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(91, 13);
+            this.label7.Size = new System.Drawing.Size(133, 20);
             this.label7.TabIndex = 8;
             this.label7.Text = "Tele Lower Cargo";
             // 
@@ -299,7 +299,7 @@ namespace Bot_Scout_RAPID_REACT
             this.label8.AutoSize = true;
             this.label8.Location = new System.Drawing.Point(41, 153);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(92, 13);
+            this.label8.Size = new System.Drawing.Size(137, 20);
             this.label8.TabIndex = 9;
             this.label8.Text = "Auto Lower Cargo";
             // 
@@ -308,7 +308,7 @@ namespace Bot_Scout_RAPID_REACT
             this.label9.AutoSize = true;
             this.label9.Location = new System.Drawing.Point(38, 194);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(92, 13);
+            this.label9.Size = new System.Drawing.Size(138, 20);
             this.label9.TabIndex = 10;
             this.label9.Text = "Auto Upper Cargo";
             this.label9.Click += new System.EventHandler(this.label9_Click);
@@ -317,14 +317,14 @@ namespace Bot_Scout_RAPID_REACT
             // 
             this.autoLower.Location = new System.Drawing.Point(135, 153);
             this.autoLower.Name = "autoLower";
-            this.autoLower.Size = new System.Drawing.Size(100, 20);
+            this.autoLower.Size = new System.Drawing.Size(100, 26);
             this.autoLower.TabIndex = 3;
             // 
             // autoUpper
             // 
             this.autoUpper.Location = new System.Drawing.Point(135, 191);
             this.autoUpper.Name = "autoUpper";
-            this.autoUpper.Size = new System.Drawing.Size(100, 20);
+            this.autoUpper.Size = new System.Drawing.Size(100, 26);
             this.autoUpper.TabIndex = 4;
             // 
             // label10
@@ -332,7 +332,7 @@ namespace Bot_Scout_RAPID_REACT
             this.label10.AutoSize = true;
             this.label10.Location = new System.Drawing.Point(41, 217);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(65, 13);
+            this.label10.Size = new System.Drawing.Size(97, 20);
             this.label10.TabIndex = 13;
             this.label10.Text = "Auto Missed";
             // 
@@ -340,7 +340,7 @@ namespace Bot_Scout_RAPID_REACT
             // 
             this.autoMissed.Location = new System.Drawing.Point(135, 217);
             this.autoMissed.Name = "autoMissed";
-            this.autoMissed.Size = new System.Drawing.Size(100, 20);
+            this.autoMissed.Size = new System.Drawing.Size(100, 26);
             this.autoMissed.TabIndex = 5;
             // 
             // label11
@@ -348,7 +348,7 @@ namespace Bot_Scout_RAPID_REACT
             this.label11.AutoSize = true;
             this.label11.Location = new System.Drawing.Point(261, 217);
             this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(64, 13);
+            this.label11.Size = new System.Drawing.Size(93, 20);
             this.label11.TabIndex = 15;
             this.label11.Text = "Tele Missed";
             // 
@@ -356,7 +356,7 @@ namespace Bot_Scout_RAPID_REACT
             // 
             this.teleMissed.Location = new System.Drawing.Point(349, 217);
             this.teleMissed.Name = "teleMissed";
-            this.teleMissed.Size = new System.Drawing.Size(100, 20);
+            this.teleMissed.Size = new System.Drawing.Size(100, 26);
             this.teleMissed.TabIndex = 9;
             // 
             // label12
@@ -364,7 +364,7 @@ namespace Bot_Scout_RAPID_REACT
             this.label12.AutoSize = true;
             this.label12.Location = new System.Drawing.Point(72, 101);
             this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(27, 13);
+            this.label12.Size = new System.Drawing.Size(37, 20);
             this.label12.TabIndex = 17;
             this.label12.Text = "Taxi";
             // 
@@ -373,7 +373,7 @@ namespace Bot_Scout_RAPID_REACT
             this.label13.AutoSize = true;
             this.label13.Location = new System.Drawing.Point(271, 104);
             this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(54, 13);
+            this.label13.Size = new System.Drawing.Size(81, 20);
             this.label13.TabIndex = 20;
             this.label13.Text = "Shot Spot";
             this.label13.Click += new System.EventHandler(this.label13_Click);
@@ -383,7 +383,7 @@ namespace Bot_Scout_RAPID_REACT
             this.label14.AutoSize = true;
             this.label14.Location = new System.Drawing.Point(271, 294);
             this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(59, 13);
+            this.label14.Size = new System.Drawing.Size(89, 20);
             this.label14.TabIndex = 21;
             this.label14.Text = "Climb Entry";
             // 
@@ -392,7 +392,7 @@ namespace Bot_Scout_RAPID_REACT
             this.label15.AutoSize = true;
             this.label15.Location = new System.Drawing.Point(268, 342);
             this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(62, 13);
+            this.label15.Size = new System.Drawing.Size(94, 20);
             this.label15.TabIndex = 22;
             this.label15.Text = "Climb Finish";
             // 
@@ -401,7 +401,7 @@ namespace Bot_Scout_RAPID_REACT
             this.label16.AutoSize = true;
             this.label16.Location = new System.Drawing.Point(41, 342);
             this.label16.Name = "label16";
-            this.label16.Size = new System.Drawing.Size(57, 13);
+            this.label16.Size = new System.Drawing.Size(87, 20);
             this.label16.TabIndex = 23;
             this.label16.Text = "Climb Start";
             // 
@@ -410,7 +410,7 @@ namespace Bot_Scout_RAPID_REACT
             this.label17.AutoSize = true;
             this.label17.Location = new System.Drawing.Point(41, 294);
             this.label17.Name = "label17";
-            this.label17.Size = new System.Drawing.Size(59, 13);
+            this.label17.Size = new System.Drawing.Size(86, 20);
             this.label17.TabIndex = 24;
             this.label17.Text = "Climb Type";
             // 
@@ -419,7 +419,7 @@ namespace Bot_Scout_RAPID_REACT
             this.label18.AutoSize = true;
             this.label18.Location = new System.Drawing.Point(41, 247);
             this.label18.Name = "label18";
-            this.label18.Size = new System.Drawing.Size(47, 13);
+            this.label18.Size = new System.Drawing.Size(70, 20);
             this.label18.TabIndex = 25;
             this.label18.Text = "Defense";
             // 
@@ -427,21 +427,21 @@ namespace Bot_Scout_RAPID_REACT
             // 
             this.defense.Location = new System.Drawing.Point(135, 243);
             this.defense.Name = "defense";
-            this.defense.Size = new System.Drawing.Size(100, 20);
+            this.defense.Size = new System.Drawing.Size(100, 26);
             this.defense.TabIndex = 10;
             // 
             // climbStart
             // 
             this.climbStart.Location = new System.Drawing.Point(135, 339);
             this.climbStart.Name = "climbStart";
-            this.climbStart.Size = new System.Drawing.Size(100, 20);
+            this.climbStart.Size = new System.Drawing.Size(100, 26);
             this.climbStart.TabIndex = 12;
             // 
             // climbEnd
             // 
             this.climbEnd.Location = new System.Drawing.Point(349, 342);
             this.climbEnd.Name = "climbEnd";
-            this.climbEnd.Size = new System.Drawing.Size(100, 20);
+            this.climbEnd.Size = new System.Drawing.Size(100, 26);
             this.climbEnd.TabIndex = 13;
             // 
             // pictureBox1
@@ -461,7 +461,7 @@ namespace Bot_Scout_RAPID_REACT
             this.statusText.AutoSize = true;
             this.statusText.Location = new System.Drawing.Point(238, 437);
             this.statusText.Name = "statusText";
-            this.statusText.Size = new System.Drawing.Size(58, 13);
+            this.statusText.Size = new System.Drawing.Size(87, 20);
             this.statusText.TabIndex = 28;
             this.statusText.Text = "Enter Data";
             // 
@@ -470,7 +470,7 @@ namespace Bot_Scout_RAPID_REACT
             this.shutdownBot.AutoSize = true;
             this.shutdownBot.Location = new System.Drawing.Point(141, 365);
             this.shutdownBot.Name = "shutdownBot";
-            this.shutdownBot.Size = new System.Drawing.Size(202, 17);
+            this.shutdownBot.Size = new System.Drawing.Size(294, 24);
             this.shutdownBot.TabIndex = 16;
             this.shutdownBot.Text = "Match shutdown/nothing happened?";
             this.shutdownBot.UseVisualStyleBackColor = true;
@@ -479,6 +479,7 @@ namespace Bot_Scout_RAPID_REACT
             // 
             this.menuStrip1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(100)))), ((int)(((byte)(150)))));
             this.menuStrip1.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.menuStrip1.GripMargin = new System.Windows.Forms.Padding(2, 2, 0, 2);
             this.menuStrip1.ImageScalingSize = new System.Drawing.Size(24, 24);
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.bestTeamsMenu,
@@ -487,7 +488,7 @@ namespace Bot_Scout_RAPID_REACT
             this.teamTrendsToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(1084, 26);
+            this.menuStrip1.Size = new System.Drawing.Size(1084, 37);
             this.menuStrip1.TabIndex = 34;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -501,7 +502,7 @@ namespace Bot_Scout_RAPID_REACT
             this.overallScoreToolStripMenuItem});
             this.bestTeamsMenu.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.bestTeamsMenu.Name = "bestTeamsMenu";
-            this.bestTeamsMenu.Size = new System.Drawing.Size(110, 22);
+            this.bestTeamsMenu.Size = new System.Drawing.Size(168, 33);
             this.bestTeamsMenu.Text = "Best Teams";
             this.bestTeamsMenu.Click += new System.EventHandler(this.bestTeamsMenu_Click);
             // 
@@ -512,27 +513,27 @@ namespace Bot_Scout_RAPID_REACT
             this.teleUpperButton,
             this.teleTotalButton});
             this.teleTotalToolStripMenuItem.Name = "teleTotalToolStripMenuItem";
-            this.teleTotalToolStripMenuItem.Size = new System.Drawing.Size(179, 22);
+            this.teleTotalToolStripMenuItem.Size = new System.Drawing.Size(276, 38);
             this.teleTotalToolStripMenuItem.Text = "Tele";
             // 
             // teleLowerButton
             // 
             this.teleLowerButton.Name = "teleLowerButton";
-            this.teleLowerButton.Size = new System.Drawing.Size(122, 22);
+            this.teleLowerButton.Size = new System.Drawing.Size(188, 38);
             this.teleLowerButton.Text = "Lower";
             this.teleLowerButton.Click += new System.EventHandler(this.teleLowerButton_Click);
             // 
             // teleUpperButton
             // 
             this.teleUpperButton.Name = "teleUpperButton";
-            this.teleUpperButton.Size = new System.Drawing.Size(122, 22);
+            this.teleUpperButton.Size = new System.Drawing.Size(188, 38);
             this.teleUpperButton.Text = "Upper";
             this.teleUpperButton.Click += new System.EventHandler(this.teleUpperButton_Click);
             // 
             // teleTotalButton
             // 
             this.teleTotalButton.Name = "teleTotalButton";
-            this.teleTotalButton.Size = new System.Drawing.Size(122, 22);
+            this.teleTotalButton.Size = new System.Drawing.Size(188, 38);
             this.teleTotalButton.Text = "Total";
             this.teleTotalButton.Click += new System.EventHandler(this.teleTotalButton_Click);
             // 
@@ -543,48 +544,48 @@ namespace Bot_Scout_RAPID_REACT
             this.autoUpperButton,
             this.autoTotalButton});
             this.autoToolStripMenuItem.Name = "autoToolStripMenuItem";
-            this.autoToolStripMenuItem.Size = new System.Drawing.Size(179, 22);
+            this.autoToolStripMenuItem.Size = new System.Drawing.Size(276, 38);
             this.autoToolStripMenuItem.Text = "Auto";
             // 
             // autoLowerButton
             // 
             this.autoLowerButton.Name = "autoLowerButton";
-            this.autoLowerButton.Size = new System.Drawing.Size(122, 22);
+            this.autoLowerButton.Size = new System.Drawing.Size(188, 38);
             this.autoLowerButton.Text = "Lower";
             this.autoLowerButton.Click += new System.EventHandler(this.lowerToolStripMenuItem1_Click);
             // 
             // autoUpperButton
             // 
             this.autoUpperButton.Name = "autoUpperButton";
-            this.autoUpperButton.Size = new System.Drawing.Size(122, 22);
+            this.autoUpperButton.Size = new System.Drawing.Size(188, 38);
             this.autoUpperButton.Text = "Upper";
             this.autoUpperButton.Click += new System.EventHandler(this.autoUpperButton_Click);
             // 
             // autoTotalButton
             // 
             this.autoTotalButton.Name = "autoTotalButton";
-            this.autoTotalButton.Size = new System.Drawing.Size(122, 22);
+            this.autoTotalButton.Size = new System.Drawing.Size(188, 38);
             this.autoTotalButton.Text = "Total";
             this.autoTotalButton.Click += new System.EventHandler(this.autoTotalButton_Click);
             // 
             // defenseToolStripMenuItem
             // 
             this.defenseToolStripMenuItem.Name = "defenseToolStripMenuItem";
-            this.defenseToolStripMenuItem.Size = new System.Drawing.Size(179, 22);
+            this.defenseToolStripMenuItem.Size = new System.Drawing.Size(276, 38);
             this.defenseToolStripMenuItem.Text = "Defense";
             this.defenseToolStripMenuItem.Click += new System.EventHandler(this.defenseToolStripMenuItem_Click);
             // 
             // climbToolStripMenuItem
             // 
             this.climbToolStripMenuItem.Name = "climbToolStripMenuItem";
-            this.climbToolStripMenuItem.Size = new System.Drawing.Size(179, 22);
+            this.climbToolStripMenuItem.Size = new System.Drawing.Size(276, 38);
             this.climbToolStripMenuItem.Text = "Climb";
             this.climbToolStripMenuItem.Click += new System.EventHandler(this.climbToolStripMenuItem_Click);
             // 
             // overallScoreToolStripMenuItem
             // 
             this.overallScoreToolStripMenuItem.Name = "overallScoreToolStripMenuItem";
-            this.overallScoreToolStripMenuItem.Size = new System.Drawing.Size(179, 22);
+            this.overallScoreToolStripMenuItem.Size = new System.Drawing.Size(276, 38);
             this.overallScoreToolStripMenuItem.Text = "Overall Score";
             // 
             // driverSheetMenu
@@ -596,7 +597,8 @@ namespace Bot_Scout_RAPID_REACT
             this.recentMatchToolStripMenuItem});
             this.driverSheetMenu.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.driverSheetMenu.Name = "driverSheetMenu";
-            this.driverSheetMenu.Size = new System.Drawing.Size(113, 22);
+            this.driverSheetMenu.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.D)));
+            this.driverSheetMenu.Size = new System.Drawing.Size(174, 33);
             this.driverSheetMenu.Text = "Driver Sheet";
             this.driverSheetMenu.Click += new System.EventHandler(this.driverSheetMenu_Click);
             // 
@@ -604,7 +606,7 @@ namespace Bot_Scout_RAPID_REACT
             // 
             this.bestStatsToolStripMenuItem.Name = "bestStatsToolStripMenuItem";
             this.bestStatsToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.B)));
-            this.bestStatsToolStripMenuItem.Size = new System.Drawing.Size(249, 22);
+            this.bestStatsToolStripMenuItem.Size = new System.Drawing.Size(380, 38);
             this.bestStatsToolStripMenuItem.Text = "Best Stats";
             this.bestStatsToolStripMenuItem.Click += new System.EventHandler(this.bestStatsToolStripMenuItem_Click);
             // 
@@ -612,7 +614,7 @@ namespace Bot_Scout_RAPID_REACT
             // 
             this.previousMatchToolStripMenuItem.Name = "previousMatchToolStripMenuItem";
             this.previousMatchToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.P)));
-            this.previousMatchToolStripMenuItem.Size = new System.Drawing.Size(249, 22);
+            this.previousMatchToolStripMenuItem.Size = new System.Drawing.Size(380, 38);
             this.previousMatchToolStripMenuItem.Text = "Previous Match";
             this.previousMatchToolStripMenuItem.Click += new System.EventHandler(this.previousMatchToolStripMenuItem_Click);
             // 
@@ -620,7 +622,7 @@ namespace Bot_Scout_RAPID_REACT
             // 
             this.nextMatchToolStripMenuItem.Name = "nextMatchToolStripMenuItem";
             this.nextMatchToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.N)));
-            this.nextMatchToolStripMenuItem.Size = new System.Drawing.Size(249, 22);
+            this.nextMatchToolStripMenuItem.Size = new System.Drawing.Size(380, 38);
             this.nextMatchToolStripMenuItem.Text = "Next Match";
             this.nextMatchToolStripMenuItem.Click += new System.EventHandler(this.nextMatchToolStripMenuItem_Click);
             // 
@@ -628,7 +630,7 @@ namespace Bot_Scout_RAPID_REACT
             // 
             this.recentMatchToolStripMenuItem.Name = "recentMatchToolStripMenuItem";
             this.recentMatchToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.R)));
-            this.recentMatchToolStripMenuItem.Size = new System.Drawing.Size(249, 22);
+            this.recentMatchToolStripMenuItem.Size = new System.Drawing.Size(380, 38);
             this.recentMatchToolStripMenuItem.Text = "Recent Match";
             this.recentMatchToolStripMenuItem.Click += new System.EventHandler(this.recentMatchToolStripMenuItem_Click);
             // 
@@ -636,7 +638,7 @@ namespace Bot_Scout_RAPID_REACT
             // 
             this.averageScoresMenu.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.averageScoresMenu.Name = "averageScoresMenu";
-            this.averageScoresMenu.Size = new System.Drawing.Size(139, 22);
+            this.averageScoresMenu.Size = new System.Drawing.Size(214, 33);
             this.averageScoresMenu.Text = "Average Scores";
             this.averageScoresMenu.Click += new System.EventHandler(this.averageScoresMenu_Click);
             // 
@@ -644,7 +646,7 @@ namespace Bot_Scout_RAPID_REACT
             // 
             this.teamTrendsToolStripMenuItem.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.teamTrendsToolStripMenuItem.Name = "teamTrendsToolStripMenuItem";
-            this.teamTrendsToolStripMenuItem.Size = new System.Drawing.Size(119, 22);
+            this.teamTrendsToolStripMenuItem.Size = new System.Drawing.Size(186, 33);
             this.teamTrendsToolStripMenuItem.Text = "Team Trends";
             this.teamTrendsToolStripMenuItem.Click += new System.EventHandler(this.teamTrendsToolStripMenuItem_Click);
             // 
@@ -741,7 +743,7 @@ namespace Bot_Scout_RAPID_REACT
             this.label36.AutoSize = true;
             this.label36.Location = new System.Drawing.Point(6, 3);
             this.label36.Name = "label36";
-            this.label36.Size = new System.Drawing.Size(16, 13);
+            this.label36.Size = new System.Drawing.Size(22, 15);
             this.label36.TabIndex = 74;
             this.label36.Text = "1:";
             // 
@@ -750,7 +752,7 @@ namespace Bot_Scout_RAPID_REACT
             this.label35.AutoSize = true;
             this.label35.Location = new System.Drawing.Point(6, 21);
             this.label35.Name = "label35";
-            this.label35.Size = new System.Drawing.Size(16, 13);
+            this.label35.Size = new System.Drawing.Size(22, 15);
             this.label35.TabIndex = 74;
             this.label35.Text = "2:";
             // 
@@ -762,7 +764,7 @@ namespace Bot_Scout_RAPID_REACT
             this.team1.AutoSize = true;
             this.team1.Location = new System.Drawing.Point(77, 3);
             this.team1.Name = "team1";
-            this.team1.Size = new System.Drawing.Size(30, 13);
+            this.team1.Size = new System.Drawing.Size(45, 15);
             this.team1.TabIndex = 4;
             this.team1.Text = "team";
             // 
@@ -771,7 +773,7 @@ namespace Bot_Scout_RAPID_REACT
             this.team1Data.AutoSize = true;
             this.team1Data.Location = new System.Drawing.Point(169, 3);
             this.team1Data.Name = "team1Data";
-            this.team1Data.Size = new System.Drawing.Size(28, 13);
+            this.team1Data.Size = new System.Drawing.Size(41, 15);
             this.team1Data.TabIndex = 5;
             this.team1Data.Text = "data";
             // 
@@ -780,7 +782,7 @@ namespace Bot_Scout_RAPID_REACT
             this.label39.AutoSize = true;
             this.label39.Location = new System.Drawing.Point(237, 3);
             this.label39.Name = "label39";
-            this.label39.Size = new System.Drawing.Size(22, 13);
+            this.label39.Size = new System.Drawing.Size(31, 15);
             this.label39.TabIndex = 37;
             this.label39.Text = "11:";
             // 
@@ -792,7 +794,7 @@ namespace Bot_Scout_RAPID_REACT
             this.team11.AutoSize = true;
             this.team11.Location = new System.Drawing.Point(285, 3);
             this.team11.Name = "team11";
-            this.team11.Size = new System.Drawing.Size(30, 13);
+            this.team11.Size = new System.Drawing.Size(45, 15);
             this.team11.TabIndex = 35;
             this.team11.Text = "team";
             // 
@@ -801,7 +803,7 @@ namespace Bot_Scout_RAPID_REACT
             this.team11Data.AutoSize = true;
             this.team11Data.Location = new System.Drawing.Point(377, 3);
             this.team11Data.Name = "team11Data";
-            this.team11Data.Size = new System.Drawing.Size(28, 13);
+            this.team11Data.Size = new System.Drawing.Size(41, 15);
             this.team11Data.TabIndex = 36;
             this.team11Data.Text = "data";
             // 
@@ -813,7 +815,7 @@ namespace Bot_Scout_RAPID_REACT
             this.team2.AutoSize = true;
             this.team2.Location = new System.Drawing.Point(77, 21);
             this.team2.Name = "team2";
-            this.team2.Size = new System.Drawing.Size(30, 13);
+            this.team2.Size = new System.Drawing.Size(45, 15);
             this.team2.TabIndex = 8;
             this.team2.Text = "team";
             // 
@@ -822,7 +824,7 @@ namespace Bot_Scout_RAPID_REACT
             this.team20Data.AutoSize = true;
             this.team20Data.Location = new System.Drawing.Point(377, 200);
             this.team20Data.Name = "team20Data";
-            this.team20Data.Size = new System.Drawing.Size(28, 13);
+            this.team20Data.Size = new System.Drawing.Size(41, 20);
             this.team20Data.TabIndex = 64;
             this.team20Data.Text = "data";
             // 
@@ -831,7 +833,7 @@ namespace Bot_Scout_RAPID_REACT
             this.team2Data.AutoSize = true;
             this.team2Data.Location = new System.Drawing.Point(169, 21);
             this.team2Data.Name = "team2Data";
-            this.team2Data.Size = new System.Drawing.Size(28, 13);
+            this.team2Data.Size = new System.Drawing.Size(41, 15);
             this.team2Data.TabIndex = 9;
             this.team2Data.Text = "data";
             // 
@@ -840,7 +842,7 @@ namespace Bot_Scout_RAPID_REACT
             this.team19Data.AutoSize = true;
             this.team19Data.Location = new System.Drawing.Point(377, 177);
             this.team19Data.Name = "team19Data";
-            this.team19Data.Size = new System.Drawing.Size(28, 13);
+            this.team19Data.Size = new System.Drawing.Size(41, 20);
             this.team19Data.TabIndex = 60;
             this.team19Data.Text = "data";
             // 
@@ -852,7 +854,7 @@ namespace Bot_Scout_RAPID_REACT
             this.team20.AutoSize = true;
             this.team20.Location = new System.Drawing.Point(285, 200);
             this.team20.Name = "team20";
-            this.team20.Size = new System.Drawing.Size(30, 13);
+            this.team20.Size = new System.Drawing.Size(45, 20);
             this.team20.TabIndex = 63;
             this.team20.Text = "team";
             // 
@@ -861,7 +863,7 @@ namespace Bot_Scout_RAPID_REACT
             this.team18Data.AutoSize = true;
             this.team18Data.Location = new System.Drawing.Point(377, 154);
             this.team18Data.Name = "team18Data";
-            this.team18Data.Size = new System.Drawing.Size(28, 13);
+            this.team18Data.Size = new System.Drawing.Size(41, 20);
             this.team18Data.TabIndex = 58;
             this.team18Data.Text = "data";
             // 
@@ -870,7 +872,7 @@ namespace Bot_Scout_RAPID_REACT
             this.label38.AutoSize = true;
             this.label38.Location = new System.Drawing.Point(237, 21);
             this.label38.Name = "label38";
-            this.label38.Size = new System.Drawing.Size(22, 13);
+            this.label38.Size = new System.Drawing.Size(31, 15);
             this.label38.TabIndex = 38;
             this.label38.Text = "12:";
             // 
@@ -879,7 +881,7 @@ namespace Bot_Scout_RAPID_REACT
             this.team17Data.AutoSize = true;
             this.team17Data.Location = new System.Drawing.Point(377, 131);
             this.team17Data.Name = "team17Data";
-            this.team17Data.Size = new System.Drawing.Size(28, 13);
+            this.team17Data.Size = new System.Drawing.Size(41, 20);
             this.team17Data.TabIndex = 54;
             this.team17Data.Text = "data";
             // 
@@ -888,7 +890,7 @@ namespace Bot_Scout_RAPID_REACT
             this.label19.AutoSize = true;
             this.label19.Location = new System.Drawing.Point(237, 200);
             this.label19.Name = "label19";
-            this.label19.Size = new System.Drawing.Size(22, 13);
+            this.label19.Size = new System.Drawing.Size(31, 20);
             this.label19.TabIndex = 62;
             this.label19.Text = "20:";
             // 
@@ -897,7 +899,7 @@ namespace Bot_Scout_RAPID_REACT
             this.team16Data.AutoSize = true;
             this.team16Data.Location = new System.Drawing.Point(377, 108);
             this.team16Data.Name = "team16Data";
-            this.team16Data.Size = new System.Drawing.Size(28, 13);
+            this.team16Data.Size = new System.Drawing.Size(41, 20);
             this.team16Data.TabIndex = 52;
             this.team16Data.Text = "data";
             // 
@@ -909,7 +911,7 @@ namespace Bot_Scout_RAPID_REACT
             this.team19.AutoSize = true;
             this.team19.Location = new System.Drawing.Point(285, 177);
             this.team19.Name = "team19";
-            this.team19.Size = new System.Drawing.Size(30, 13);
+            this.team19.Size = new System.Drawing.Size(45, 20);
             this.team19.TabIndex = 59;
             this.team19.Text = "team";
             // 
@@ -918,7 +920,7 @@ namespace Bot_Scout_RAPID_REACT
             this.team15Data.AutoSize = true;
             this.team15Data.Location = new System.Drawing.Point(377, 85);
             this.team15Data.Name = "team15Data";
-            this.team15Data.Size = new System.Drawing.Size(28, 13);
+            this.team15Data.Size = new System.Drawing.Size(41, 20);
             this.team15Data.TabIndex = 48;
             this.team15Data.Text = "data";
             // 
@@ -930,7 +932,7 @@ namespace Bot_Scout_RAPID_REACT
             this.team12.AutoSize = true;
             this.team12.Location = new System.Drawing.Point(285, 21);
             this.team12.Name = "team12";
-            this.team12.Size = new System.Drawing.Size(30, 13);
+            this.team12.Size = new System.Drawing.Size(45, 15);
             this.team12.TabIndex = 39;
             this.team12.Text = "team";
             // 
@@ -939,7 +941,7 @@ namespace Bot_Scout_RAPID_REACT
             this.label20.AutoSize = true;
             this.label20.Location = new System.Drawing.Point(237, 177);
             this.label20.Name = "label20";
-            this.label20.Size = new System.Drawing.Size(22, 13);
+            this.label20.Size = new System.Drawing.Size(31, 20);
             this.label20.TabIndex = 61;
             this.label20.Text = "19:";
             // 
@@ -951,7 +953,7 @@ namespace Bot_Scout_RAPID_REACT
             this.team18.AutoSize = true;
             this.team18.Location = new System.Drawing.Point(285, 154);
             this.team18.Name = "team18";
-            this.team18.Size = new System.Drawing.Size(30, 13);
+            this.team18.Size = new System.Drawing.Size(45, 20);
             this.team18.TabIndex = 57;
             this.team18.Text = "team";
             // 
@@ -960,7 +962,7 @@ namespace Bot_Scout_RAPID_REACT
             this.team12Data.AutoSize = true;
             this.team12Data.Location = new System.Drawing.Point(377, 21);
             this.team12Data.Name = "team12Data";
-            this.team12Data.Size = new System.Drawing.Size(28, 13);
+            this.team12Data.Size = new System.Drawing.Size(41, 15);
             this.team12Data.TabIndex = 40;
             this.team12Data.Text = "data";
             // 
@@ -969,7 +971,7 @@ namespace Bot_Scout_RAPID_REACT
             this.label21.AutoSize = true;
             this.label21.Location = new System.Drawing.Point(6, 39);
             this.label21.Name = "label21";
-            this.label21.Size = new System.Drawing.Size(16, 13);
+            this.label21.Size = new System.Drawing.Size(22, 20);
             this.label21.TabIndex = 12;
             this.label21.Text = "3:";
             // 
@@ -981,7 +983,7 @@ namespace Bot_Scout_RAPID_REACT
             this.team17.AutoSize = true;
             this.team17.Location = new System.Drawing.Point(285, 131);
             this.team17.Name = "team17";
-            this.team17.Size = new System.Drawing.Size(30, 13);
+            this.team17.Size = new System.Drawing.Size(45, 20);
             this.team17.TabIndex = 53;
             this.team17.Text = "team";
             // 
@@ -990,7 +992,7 @@ namespace Bot_Scout_RAPID_REACT
             this.label22.AutoSize = true;
             this.label22.Location = new System.Drawing.Point(6, 62);
             this.label22.Name = "label22";
-            this.label22.Size = new System.Drawing.Size(16, 13);
+            this.label22.Size = new System.Drawing.Size(22, 20);
             this.label22.TabIndex = 13;
             this.label22.Text = "4:";
             // 
@@ -1002,7 +1004,7 @@ namespace Bot_Scout_RAPID_REACT
             this.team3.AutoSize = true;
             this.team3.Location = new System.Drawing.Point(77, 39);
             this.team3.Name = "team3";
-            this.team3.Size = new System.Drawing.Size(30, 13);
+            this.team3.Size = new System.Drawing.Size(45, 20);
             this.team3.TabIndex = 10;
             this.team3.Text = "team";
             // 
@@ -1014,7 +1016,7 @@ namespace Bot_Scout_RAPID_REACT
             this.team16.AutoSize = true;
             this.team16.Location = new System.Drawing.Point(285, 108);
             this.team16.Name = "team16";
-            this.team16.Size = new System.Drawing.Size(30, 13);
+            this.team16.Size = new System.Drawing.Size(45, 20);
             this.team16.TabIndex = 51;
             this.team16.Text = "team";
             // 
@@ -1026,7 +1028,7 @@ namespace Bot_Scout_RAPID_REACT
             this.team4.AutoSize = true;
             this.team4.Location = new System.Drawing.Point(77, 62);
             this.team4.Name = "team4";
-            this.team4.Size = new System.Drawing.Size(30, 13);
+            this.team4.Size = new System.Drawing.Size(45, 20);
             this.team4.TabIndex = 14;
             this.team4.Text = "team";
             // 
@@ -1035,7 +1037,7 @@ namespace Bot_Scout_RAPID_REACT
             this.label23.AutoSize = true;
             this.label23.Location = new System.Drawing.Point(237, 154);
             this.label23.Name = "label23";
-            this.label23.Size = new System.Drawing.Size(22, 13);
+            this.label23.Size = new System.Drawing.Size(31, 20);
             this.label23.TabIndex = 56;
             this.label23.Text = "18:";
             // 
@@ -1047,7 +1049,7 @@ namespace Bot_Scout_RAPID_REACT
             this.team15.AutoSize = true;
             this.team15.Location = new System.Drawing.Point(285, 85);
             this.team15.Name = "team15";
-            this.team15.Size = new System.Drawing.Size(30, 13);
+            this.team15.Size = new System.Drawing.Size(45, 20);
             this.team15.TabIndex = 47;
             this.team15.Text = "team";
             // 
@@ -1056,7 +1058,7 @@ namespace Bot_Scout_RAPID_REACT
             this.team3Data.AutoSize = true;
             this.team3Data.Location = new System.Drawing.Point(169, 39);
             this.team3Data.Name = "team3Data";
-            this.team3Data.Size = new System.Drawing.Size(28, 13);
+            this.team3Data.Size = new System.Drawing.Size(41, 20);
             this.team3Data.TabIndex = 11;
             this.team3Data.Text = "data";
             // 
@@ -1065,7 +1067,7 @@ namespace Bot_Scout_RAPID_REACT
             this.label24.AutoSize = true;
             this.label24.Location = new System.Drawing.Point(237, 131);
             this.label24.Name = "label24";
-            this.label24.Size = new System.Drawing.Size(22, 13);
+            this.label24.Size = new System.Drawing.Size(31, 20);
             this.label24.TabIndex = 55;
             this.label24.Text = "17:";
             // 
@@ -1074,7 +1076,7 @@ namespace Bot_Scout_RAPID_REACT
             this.team4Data.AutoSize = true;
             this.team4Data.Location = new System.Drawing.Point(169, 62);
             this.team4Data.Name = "team4Data";
-            this.team4Data.Size = new System.Drawing.Size(28, 13);
+            this.team4Data.Size = new System.Drawing.Size(41, 20);
             this.team4Data.TabIndex = 15;
             this.team4Data.Text = "data";
             // 
@@ -1083,7 +1085,7 @@ namespace Bot_Scout_RAPID_REACT
             this.label33.AutoSize = true;
             this.label33.Location = new System.Drawing.Point(237, 39);
             this.label33.Name = "label33";
-            this.label33.Size = new System.Drawing.Size(22, 13);
+            this.label33.Size = new System.Drawing.Size(31, 20);
             this.label33.TabIndex = 43;
             this.label33.Text = "13:";
             // 
@@ -1092,7 +1094,7 @@ namespace Bot_Scout_RAPID_REACT
             this.label32.AutoSize = true;
             this.label32.Location = new System.Drawing.Point(237, 62);
             this.label32.Name = "label32";
-            this.label32.Size = new System.Drawing.Size(22, 13);
+            this.label32.Size = new System.Drawing.Size(31, 20);
             this.label32.TabIndex = 44;
             this.label32.Text = "14:";
             // 
@@ -1104,7 +1106,7 @@ namespace Bot_Scout_RAPID_REACT
             this.team13.AutoSize = true;
             this.team13.Location = new System.Drawing.Point(285, 39);
             this.team13.Name = "team13";
-            this.team13.Size = new System.Drawing.Size(30, 13);
+            this.team13.Size = new System.Drawing.Size(45, 20);
             this.team13.TabIndex = 41;
             this.team13.Text = "team";
             // 
@@ -1113,7 +1115,7 @@ namespace Bot_Scout_RAPID_REACT
             this.team13Data.AutoSize = true;
             this.team13Data.Location = new System.Drawing.Point(377, 39);
             this.team13Data.Name = "team13Data";
-            this.team13Data.Size = new System.Drawing.Size(28, 13);
+            this.team13Data.Size = new System.Drawing.Size(41, 20);
             this.team13Data.TabIndex = 42;
             this.team13Data.Text = "data";
             // 
@@ -1122,7 +1124,7 @@ namespace Bot_Scout_RAPID_REACT
             this.label26.AutoSize = true;
             this.label26.Location = new System.Drawing.Point(237, 108);
             this.label26.Name = "label26";
-            this.label26.Size = new System.Drawing.Size(22, 13);
+            this.label26.Size = new System.Drawing.Size(31, 20);
             this.label26.TabIndex = 50;
             this.label26.Text = "16:";
             // 
@@ -1134,7 +1136,7 @@ namespace Bot_Scout_RAPID_REACT
             this.team14.AutoSize = true;
             this.team14.Location = new System.Drawing.Point(285, 62);
             this.team14.Name = "team14";
-            this.team14.Size = new System.Drawing.Size(30, 13);
+            this.team14.Size = new System.Drawing.Size(45, 20);
             this.team14.TabIndex = 45;
             this.team14.Text = "team";
             // 
@@ -1143,7 +1145,7 @@ namespace Bot_Scout_RAPID_REACT
             this.label27.AutoSize = true;
             this.label27.Location = new System.Drawing.Point(237, 85);
             this.label27.Name = "label27";
-            this.label27.Size = new System.Drawing.Size(22, 13);
+            this.label27.Size = new System.Drawing.Size(31, 20);
             this.label27.TabIndex = 49;
             this.label27.Text = "15:";
             // 
@@ -1152,7 +1154,7 @@ namespace Bot_Scout_RAPID_REACT
             this.team14Data.AutoSize = true;
             this.team14Data.Location = new System.Drawing.Point(377, 62);
             this.team14Data.Name = "team14Data";
-            this.team14Data.Size = new System.Drawing.Size(28, 13);
+            this.team14Data.Size = new System.Drawing.Size(41, 20);
             this.team14Data.TabIndex = 46;
             this.team14Data.Text = "data";
             // 
@@ -1161,7 +1163,7 @@ namespace Bot_Scout_RAPID_REACT
             this.label25.AutoSize = true;
             this.label25.Location = new System.Drawing.Point(6, 85);
             this.label25.Name = "label25";
-            this.label25.Size = new System.Drawing.Size(16, 13);
+            this.label25.Size = new System.Drawing.Size(22, 20);
             this.label25.TabIndex = 18;
             this.label25.Text = "5:";
             // 
@@ -1170,7 +1172,7 @@ namespace Bot_Scout_RAPID_REACT
             this.label28.AutoSize = true;
             this.label28.Location = new System.Drawing.Point(6, 108);
             this.label28.Name = "label28";
-            this.label28.Size = new System.Drawing.Size(16, 13);
+            this.label28.Size = new System.Drawing.Size(22, 20);
             this.label28.TabIndex = 19;
             this.label28.Text = "6:";
             // 
@@ -1179,7 +1181,7 @@ namespace Bot_Scout_RAPID_REACT
             this.team10Data.AutoSize = true;
             this.team10Data.Location = new System.Drawing.Point(169, 200);
             this.team10Data.Name = "team10Data";
-            this.team10Data.Size = new System.Drawing.Size(28, 13);
+            this.team10Data.Size = new System.Drawing.Size(41, 20);
             this.team10Data.TabIndex = 34;
             this.team10Data.Text = "data";
             // 
@@ -1188,7 +1190,7 @@ namespace Bot_Scout_RAPID_REACT
             this.label29.AutoSize = true;
             this.label29.Location = new System.Drawing.Point(6, 131);
             this.label29.Name = "label29";
-            this.label29.Size = new System.Drawing.Size(16, 13);
+            this.label29.Size = new System.Drawing.Size(22, 20);
             this.label29.TabIndex = 24;
             this.label29.Text = "7:";
             // 
@@ -1197,7 +1199,7 @@ namespace Bot_Scout_RAPID_REACT
             this.team9Data.AutoSize = true;
             this.team9Data.Location = new System.Drawing.Point(169, 177);
             this.team9Data.Name = "team9Data";
-            this.team9Data.Size = new System.Drawing.Size(28, 13);
+            this.team9Data.Size = new System.Drawing.Size(41, 20);
             this.team9Data.TabIndex = 30;
             this.team9Data.Text = "data";
             // 
@@ -1209,7 +1211,7 @@ namespace Bot_Scout_RAPID_REACT
             this.team10.AutoSize = true;
             this.team10.Location = new System.Drawing.Point(77, 200);
             this.team10.Name = "team10";
-            this.team10.Size = new System.Drawing.Size(30, 13);
+            this.team10.Size = new System.Drawing.Size(45, 20);
             this.team10.TabIndex = 33;
             this.team10.Text = "team";
             // 
@@ -1218,7 +1220,7 @@ namespace Bot_Scout_RAPID_REACT
             this.label30.AutoSize = true;
             this.label30.Location = new System.Drawing.Point(6, 154);
             this.label30.Name = "label30";
-            this.label30.Size = new System.Drawing.Size(16, 13);
+            this.label30.Size = new System.Drawing.Size(22, 20);
             this.label30.TabIndex = 25;
             this.label30.Text = "8:";
             // 
@@ -1227,7 +1229,7 @@ namespace Bot_Scout_RAPID_REACT
             this.team8Data.AutoSize = true;
             this.team8Data.Location = new System.Drawing.Point(169, 154);
             this.team8Data.Name = "team8Data";
-            this.team8Data.Size = new System.Drawing.Size(28, 13);
+            this.team8Data.Size = new System.Drawing.Size(41, 20);
             this.team8Data.TabIndex = 27;
             this.team8Data.Text = "data";
             // 
@@ -1236,7 +1238,7 @@ namespace Bot_Scout_RAPID_REACT
             this.label31.AutoSize = true;
             this.label31.Location = new System.Drawing.Point(6, 200);
             this.label31.Name = "label31";
-            this.label31.Size = new System.Drawing.Size(22, 13);
+            this.label31.Size = new System.Drawing.Size(31, 20);
             this.label31.TabIndex = 32;
             this.label31.Text = "10:";
             // 
@@ -1245,7 +1247,7 @@ namespace Bot_Scout_RAPID_REACT
             this.team7Data.AutoSize = true;
             this.team7Data.Location = new System.Drawing.Point(169, 131);
             this.team7Data.Name = "team7Data";
-            this.team7Data.Size = new System.Drawing.Size(28, 13);
+            this.team7Data.Size = new System.Drawing.Size(41, 20);
             this.team7Data.TabIndex = 23;
             this.team7Data.Text = "data";
             // 
@@ -1257,7 +1259,7 @@ namespace Bot_Scout_RAPID_REACT
             this.team9.AutoSize = true;
             this.team9.Location = new System.Drawing.Point(77, 177);
             this.team9.Name = "team9";
-            this.team9.Size = new System.Drawing.Size(30, 13);
+            this.team9.Size = new System.Drawing.Size(45, 20);
             this.team9.TabIndex = 29;
             this.team9.Text = "team";
             // 
@@ -1266,7 +1268,7 @@ namespace Bot_Scout_RAPID_REACT
             this.team6Data.AutoSize = true;
             this.team6Data.Location = new System.Drawing.Point(169, 108);
             this.team6Data.Name = "team6Data";
-            this.team6Data.Size = new System.Drawing.Size(28, 13);
+            this.team6Data.Size = new System.Drawing.Size(41, 20);
             this.team6Data.TabIndex = 21;
             this.team6Data.Text = "data";
             // 
@@ -1275,7 +1277,7 @@ namespace Bot_Scout_RAPID_REACT
             this.label34.AutoSize = true;
             this.label34.Location = new System.Drawing.Point(6, 177);
             this.label34.Name = "label34";
-            this.label34.Size = new System.Drawing.Size(16, 13);
+            this.label34.Size = new System.Drawing.Size(22, 20);
             this.label34.TabIndex = 31;
             this.label34.Text = "9:";
             // 
@@ -1284,7 +1286,7 @@ namespace Bot_Scout_RAPID_REACT
             this.team5Data.AutoSize = true;
             this.team5Data.Location = new System.Drawing.Point(169, 85);
             this.team5Data.Name = "team5Data";
-            this.team5Data.Size = new System.Drawing.Size(28, 13);
+            this.team5Data.Size = new System.Drawing.Size(41, 20);
             this.team5Data.TabIndex = 17;
             this.team5Data.Text = "data";
             // 
@@ -1296,7 +1298,7 @@ namespace Bot_Scout_RAPID_REACT
             this.team5.AutoSize = true;
             this.team5.Location = new System.Drawing.Point(77, 85);
             this.team5.Name = "team5";
-            this.team5.Size = new System.Drawing.Size(30, 13);
+            this.team5.Size = new System.Drawing.Size(45, 20);
             this.team5.TabIndex = 16;
             this.team5.Text = "team";
             // 
@@ -1308,7 +1310,7 @@ namespace Bot_Scout_RAPID_REACT
             this.team6.AutoSize = true;
             this.team6.Location = new System.Drawing.Point(77, 108);
             this.team6.Name = "team6";
-            this.team6.Size = new System.Drawing.Size(30, 13);
+            this.team6.Size = new System.Drawing.Size(45, 20);
             this.team6.TabIndex = 20;
             this.team6.Text = "team";
             // 
@@ -1320,7 +1322,7 @@ namespace Bot_Scout_RAPID_REACT
             this.team8.AutoSize = true;
             this.team8.Location = new System.Drawing.Point(77, 154);
             this.team8.Name = "team8";
-            this.team8.Size = new System.Drawing.Size(30, 13);
+            this.team8.Size = new System.Drawing.Size(45, 20);
             this.team8.TabIndex = 26;
             this.team8.Text = "team";
             // 
@@ -1332,7 +1334,7 @@ namespace Bot_Scout_RAPID_REACT
             this.team7.AutoSize = true;
             this.team7.Location = new System.Drawing.Point(77, 131);
             this.team7.Name = "team7";
-            this.team7.Size = new System.Drawing.Size(30, 13);
+            this.team7.Size = new System.Drawing.Size(45, 20);
             this.team7.TabIndex = 22;
             this.team7.Text = "team";
             // 
@@ -1377,7 +1379,7 @@ namespace Bot_Scout_RAPID_REACT
             this.label45.Font = new System.Drawing.Font("Microsoft YaHei UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label45.Location = new System.Drawing.Point(6, 35);
             this.label45.Name = "label45";
-            this.label45.Size = new System.Drawing.Size(91, 19);
+            this.label45.Size = new System.Drawing.Size(85, 31);
             this.label45.TabIndex = 75;
             this.label45.Text = "Tele Upper";
             // 
@@ -1387,7 +1389,7 @@ namespace Bot_Scout_RAPID_REACT
             this.label43.Font = new System.Drawing.Font("Microsoft YaHei UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label43.Location = new System.Drawing.Point(6, 218);
             this.label43.Name = "label43";
-            this.label43.Size = new System.Drawing.Size(93, 19);
+            this.label43.Size = new System.Drawing.Size(80, 21);
             this.label43.TabIndex = 77;
             this.label43.Text = "Total Score";
             // 
@@ -1397,7 +1399,7 @@ namespace Bot_Scout_RAPID_REACT
             this.label37.Font = new System.Drawing.Font("Microsoft YaHei UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label37.Location = new System.Drawing.Point(6, 69);
             this.label37.Name = "label37";
-            this.label37.Size = new System.Drawing.Size(88, 19);
+            this.label37.Size = new System.Drawing.Size(78, 30);
             this.label37.TabIndex = 8;
             this.label37.Text = "Auto Total";
             // 
@@ -1407,7 +1409,7 @@ namespace Bot_Scout_RAPID_REACT
             this.label40.Font = new System.Drawing.Font("Microsoft YaHei UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label40.Location = new System.Drawing.Point(6, 102);
             this.label40.Name = "label40";
-            this.label40.Size = new System.Drawing.Size(93, 19);
+            this.label40.Size = new System.Drawing.Size(88, 39);
             this.label40.TabIndex = 7;
             this.label40.Text = "Climb Time";
             // 
@@ -1417,7 +1419,7 @@ namespace Bot_Scout_RAPID_REACT
             this.label41.Font = new System.Drawing.Font("Microsoft YaHei UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label41.Location = new System.Drawing.Point(6, 144);
             this.label41.Name = "label41";
-            this.label41.Size = new System.Drawing.Size(93, 19);
+            this.label41.Size = new System.Drawing.Size(88, 41);
             this.label41.TabIndex = 6;
             this.label41.Text = "Climb Type";
             // 
@@ -1427,7 +1429,7 @@ namespace Bot_Scout_RAPID_REACT
             this.label42.Font = new System.Drawing.Font("Microsoft YaHei UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label42.Location = new System.Drawing.Point(6, 188);
             this.label42.Name = "label42";
-            this.label42.Size = new System.Drawing.Size(71, 19);
+            this.label42.Size = new System.Drawing.Size(93, 27);
             this.label42.TabIndex = 5;
             this.label42.Text = "Defense";
             // 
@@ -1437,7 +1439,7 @@ namespace Bot_Scout_RAPID_REACT
             this.defense2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.defense2.Location = new System.Drawing.Point(110, 188);
             this.defense2.Name = "defense2";
-            this.defense2.Size = new System.Drawing.Size(51, 16);
+            this.defense2.Size = new System.Drawing.Size(72, 25);
             this.defense2.TabIndex = 10;
             this.defense2.Text = "Empty";
             // 
@@ -1447,7 +1449,7 @@ namespace Bot_Scout_RAPID_REACT
             this.climbType2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.climbType2.Location = new System.Drawing.Point(110, 144);
             this.climbType2.Name = "climbType2";
-            this.climbType2.Size = new System.Drawing.Size(51, 16);
+            this.climbType2.Size = new System.Drawing.Size(72, 25);
             this.climbType2.TabIndex = 11;
             this.climbType2.Text = "Empty";
             // 
@@ -1457,7 +1459,7 @@ namespace Bot_Scout_RAPID_REACT
             this.time.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.time.Location = new System.Drawing.Point(110, 102);
             this.time.Name = "time";
-            this.time.Size = new System.Drawing.Size(51, 16);
+            this.time.Size = new System.Drawing.Size(72, 25);
             this.time.TabIndex = 12;
             this.time.Text = "Empty";
             // 
@@ -1467,7 +1469,7 @@ namespace Bot_Scout_RAPID_REACT
             this.autoTotal.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.autoTotal.Location = new System.Drawing.Point(110, 69);
             this.autoTotal.Name = "autoTotal";
-            this.autoTotal.Size = new System.Drawing.Size(51, 16);
+            this.autoTotal.Size = new System.Drawing.Size(72, 25);
             this.autoTotal.TabIndex = 13;
             this.autoTotal.Text = "Empty";
             // 
@@ -1477,7 +1479,7 @@ namespace Bot_Scout_RAPID_REACT
             this.teleHigh.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.teleHigh.Location = new System.Drawing.Point(110, 35);
             this.teleHigh.Name = "teleHigh";
-            this.teleHigh.Size = new System.Drawing.Size(51, 16);
+            this.teleHigh.Size = new System.Drawing.Size(72, 25);
             this.teleHigh.TabIndex = 14;
             this.teleHigh.Text = "Empty";
             // 
@@ -1487,7 +1489,7 @@ namespace Bot_Scout_RAPID_REACT
             this.label46.Font = new System.Drawing.Font("Microsoft YaHei UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label46.Location = new System.Drawing.Point(6, 3);
             this.label46.Name = "label46";
-            this.label46.Size = new System.Drawing.Size(75, 19);
+            this.label46.Size = new System.Drawing.Size(68, 29);
             this.label46.TabIndex = 76;
             this.label46.Text = "Tele Low";
             // 
@@ -1497,7 +1499,7 @@ namespace Bot_Scout_RAPID_REACT
             this.teleLow.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.teleLow.Location = new System.Drawing.Point(110, 3);
             this.teleLow.Name = "teleLow";
-            this.teleLow.Size = new System.Drawing.Size(51, 16);
+            this.teleLow.Size = new System.Drawing.Size(72, 25);
             this.teleLow.TabIndex = 9;
             this.teleLow.Text = "Empty";
             // 
@@ -1507,7 +1509,7 @@ namespace Bot_Scout_RAPID_REACT
             this.totalScore2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.totalScore2.Location = new System.Drawing.Point(110, 218);
             this.totalScore2.Name = "totalScore2";
-            this.totalScore2.Size = new System.Drawing.Size(51, 16);
+            this.totalScore2.Size = new System.Drawing.Size(72, 21);
             this.totalScore2.TabIndex = 78;
             this.totalScore2.Text = "Empty";
             // 
@@ -1517,7 +1519,7 @@ namespace Bot_Scout_RAPID_REACT
             this.matchText.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.matchText.Location = new System.Drawing.Point(828, 37);
             this.matchText.Name = "matchText";
-            this.matchText.Size = new System.Drawing.Size(51, 16);
+            this.matchText.Size = new System.Drawing.Size(72, 25);
             this.matchText.TabIndex = 75;
             this.matchText.Text = "Empty";
             // 
@@ -1527,7 +1529,7 @@ namespace Bot_Scout_RAPID_REACT
             this.lineMatch.Location = new System.Drawing.Point(1071, 28);
             this.lineMatch.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lineMatch.Name = "lineMatch";
-            this.lineMatch.Size = new System.Drawing.Size(13, 13);
+            this.lineMatch.Size = new System.Drawing.Size(18, 20);
             this.lineMatch.TabIndex = 76;
             this.lineMatch.Text = "1";
             // 
@@ -1538,7 +1540,7 @@ namespace Bot_Scout_RAPID_REACT
             this.loadText.ForeColor = System.Drawing.SystemColors.HighlightText;
             this.loadText.Location = new System.Drawing.Point(522, 37);
             this.loadText.Name = "loadText";
-            this.loadText.Size = new System.Drawing.Size(168, 17);
+            this.loadText.Size = new System.Drawing.Size(243, 25);
             this.loadText.TabIndex = 77;
             this.loadText.Text = "Enter Valid Team Number";
             this.loadText.Click += new System.EventHandler(this.loadText_Click);
@@ -1587,7 +1589,7 @@ namespace Bot_Scout_RAPID_REACT
             this.label55.AutoSize = true;
             this.label55.Location = new System.Drawing.Point(6, 136);
             this.label55.Name = "label55";
-            this.label55.Size = new System.Drawing.Size(82, 26);
+            this.label55.Size = new System.Drawing.Size(86, 30);
             this.label55.TabIndex = 80;
             this.label55.Text = "Average Lower Tele";
             // 
@@ -1596,7 +1598,7 @@ namespace Bot_Scout_RAPID_REACT
             this.label56.AutoSize = true;
             this.label56.Location = new System.Drawing.Point(6, 169);
             this.label56.Name = "label56";
-            this.label56.Size = new System.Drawing.Size(82, 26);
+            this.label56.Size = new System.Drawing.Size(87, 28);
             this.label56.TabIndex = 81;
             this.label56.Text = "Average Upper Tele";
             // 
@@ -1605,7 +1607,7 @@ namespace Bot_Scout_RAPID_REACT
             this.averageTeleUpper.AutoSize = true;
             this.averageTeleUpper.Location = new System.Drawing.Point(104, 169);
             this.averageTeleUpper.Name = "averageTeleUpper";
-            this.averageTeleUpper.Size = new System.Drawing.Size(33, 13);
+            this.averageTeleUpper.Size = new System.Drawing.Size(47, 20);
             this.averageTeleUpper.TabIndex = 80;
             this.averageTeleUpper.Text = "None";
             // 
@@ -1614,7 +1616,7 @@ namespace Bot_Scout_RAPID_REACT
             this.averageTeleLower.AutoSize = true;
             this.averageTeleLower.Location = new System.Drawing.Point(104, 136);
             this.averageTeleLower.Name = "averageTeleLower";
-            this.averageTeleLower.Size = new System.Drawing.Size(33, 13);
+            this.averageTeleLower.Size = new System.Drawing.Size(47, 20);
             this.averageTeleLower.TabIndex = 81;
             this.averageTeleLower.Text = "None";
             // 
@@ -1623,7 +1625,7 @@ namespace Bot_Scout_RAPID_REACT
             this.label52.AutoSize = true;
             this.label52.Location = new System.Drawing.Point(6, 33);
             this.label52.Name = "label52";
-            this.label52.Size = new System.Drawing.Size(82, 26);
+            this.label52.Size = new System.Drawing.Size(72, 30);
             this.label52.TabIndex = 81;
             this.label52.Text = "Average Upper Auto";
             // 
@@ -1632,7 +1634,7 @@ namespace Bot_Scout_RAPID_REACT
             this.averageAutoUpper.AutoSize = true;
             this.averageAutoUpper.Location = new System.Drawing.Point(104, 33);
             this.averageAutoUpper.Name = "averageAutoUpper";
-            this.averageAutoUpper.Size = new System.Drawing.Size(33, 13);
+            this.averageAutoUpper.Size = new System.Drawing.Size(47, 20);
             this.averageAutoUpper.TabIndex = 80;
             this.averageAutoUpper.Text = "None";
             // 
@@ -1641,7 +1643,7 @@ namespace Bot_Scout_RAPID_REACT
             this.averageAutoLower.AutoSize = true;
             this.averageAutoLower.Location = new System.Drawing.Point(104, 3);
             this.averageAutoLower.Name = "averageAutoLower";
-            this.averageAutoLower.Size = new System.Drawing.Size(33, 13);
+            this.averageAutoLower.Size = new System.Drawing.Size(47, 20);
             this.averageAutoLower.TabIndex = 80;
             this.averageAutoLower.Text = "None";
             // 
@@ -1650,7 +1652,7 @@ namespace Bot_Scout_RAPID_REACT
             this.label51.AutoSize = true;
             this.label51.Location = new System.Drawing.Point(6, 3);
             this.label51.Name = "label51";
-            this.label51.Size = new System.Drawing.Size(82, 26);
+            this.label51.Size = new System.Drawing.Size(72, 27);
             this.label51.TabIndex = 80;
             this.label51.Text = "Average Lower Auto";
             // 
@@ -1659,7 +1661,7 @@ namespace Bot_Scout_RAPID_REACT
             this.label50.AutoSize = true;
             this.label50.Location = new System.Drawing.Point(6, 66);
             this.label50.Name = "label50";
-            this.label50.Size = new System.Drawing.Size(81, 26);
+            this.label50.Size = new System.Drawing.Size(89, 29);
             this.label50.TabIndex = 27;
             this.label50.Text = "Average Score Auto";
             // 
@@ -1668,7 +1670,7 @@ namespace Bot_Scout_RAPID_REACT
             this.averageAuto.AutoSize = true;
             this.averageAuto.Location = new System.Drawing.Point(104, 66);
             this.averageAuto.Name = "averageAuto";
-            this.averageAuto.Size = new System.Drawing.Size(33, 13);
+            this.averageAuto.Size = new System.Drawing.Size(47, 20);
             this.averageAuto.TabIndex = 28;
             this.averageAuto.Text = "None";
             // 
@@ -1677,7 +1679,7 @@ namespace Bot_Scout_RAPID_REACT
             this.label44.AutoSize = true;
             this.label44.Location = new System.Drawing.Point(6, 98);
             this.label44.Name = "label44";
-            this.label44.Size = new System.Drawing.Size(77, 26);
+            this.label44.Size = new System.Drawing.Size(78, 35);
             this.label44.TabIndex = 26;
             this.label44.Text = "Average Accuracy Auto";
             // 
@@ -1686,7 +1688,7 @@ namespace Bot_Scout_RAPID_REACT
             this.averageAutoAcc.AutoSize = true;
             this.averageAutoAcc.Location = new System.Drawing.Point(104, 98);
             this.averageAutoAcc.Name = "averageAutoAcc";
-            this.averageAutoAcc.Size = new System.Drawing.Size(33, 13);
+            this.averageAutoAcc.Size = new System.Drawing.Size(47, 20);
             this.averageAutoAcc.TabIndex = 29;
             this.averageAutoAcc.Text = "None";
             // 
@@ -1695,7 +1697,7 @@ namespace Bot_Scout_RAPID_REACT
             this.label48.AutoSize = true;
             this.label48.Location = new System.Drawing.Point(6, 200);
             this.label48.Name = "label48";
-            this.label48.Size = new System.Drawing.Size(76, 26);
+            this.label48.Size = new System.Drawing.Size(78, 28);
             this.label48.TabIndex = 25;
             this.label48.Text = "Average Accuracy Tele\r\n";
             // 
@@ -1704,7 +1706,7 @@ namespace Bot_Scout_RAPID_REACT
             this.label47.AutoSize = true;
             this.label47.Location = new System.Drawing.Point(6, 231);
             this.label47.Name = "label47";
-            this.label47.Size = new System.Drawing.Size(81, 26);
+            this.label47.Size = new System.Drawing.Size(85, 32);
             this.label47.TabIndex = 24;
             this.label47.Text = "Average Score Tele";
             // 
@@ -1713,7 +1715,7 @@ namespace Bot_Scout_RAPID_REACT
             this.averageTele.AutoSize = true;
             this.averageTele.Location = new System.Drawing.Point(104, 231);
             this.averageTele.Name = "averageTele";
-            this.averageTele.Size = new System.Drawing.Size(33, 13);
+            this.averageTele.Size = new System.Drawing.Size(47, 20);
             this.averageTele.TabIndex = 22;
             this.averageTele.Text = "None";
             // 
@@ -1722,7 +1724,7 @@ namespace Bot_Scout_RAPID_REACT
             this.averageTeleAcc.AutoSize = true;
             this.averageTeleAcc.Location = new System.Drawing.Point(104, 200);
             this.averageTeleAcc.Name = "averageTeleAcc";
-            this.averageTeleAcc.Size = new System.Drawing.Size(33, 13);
+            this.averageTeleAcc.Size = new System.Drawing.Size(47, 20);
             this.averageTeleAcc.TabIndex = 23;
             this.averageTeleAcc.Text = "None";
             // 
@@ -1751,7 +1753,7 @@ namespace Bot_Scout_RAPID_REACT
             this.teamTrend.AutoSize = true;
             this.teamTrend.Location = new System.Drawing.Point(116, 3);
             this.teamTrend.Name = "teamTrend";
-            this.teamTrend.Size = new System.Drawing.Size(33, 13);
+            this.teamTrend.Size = new System.Drawing.Size(47, 20);
             this.teamTrend.TabIndex = 22;
             this.teamTrend.Text = "None";
             // 
@@ -1761,7 +1763,7 @@ namespace Bot_Scout_RAPID_REACT
             this.label49.Font = new System.Drawing.Font("Microsoft YaHei UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label49.Location = new System.Drawing.Point(6, 3);
             this.label49.Name = "label49";
-            this.label49.Size = new System.Drawing.Size(99, 38);
+            this.label49.Size = new System.Drawing.Size(84, 62);
             this.label49.TabIndex = 24;
             this.label49.Text = "Team Trend\r\n\r\n";
             this.label49.Click += new System.EventHandler(this.label49_Click);
@@ -1771,7 +1773,7 @@ namespace Bot_Scout_RAPID_REACT
             this.lowClimb.AutoSize = true;
             this.lowClimb.Location = new System.Drawing.Point(0, 5);
             this.lowClimb.Name = "lowClimb";
-            this.lowClimb.Size = new System.Drawing.Size(45, 17);
+            this.lowClimb.Size = new System.Drawing.Size(63, 24);
             this.lowClimb.TabIndex = 15;
             this.lowClimb.TabStop = true;
             this.lowClimb.Text = "Low";
@@ -1795,7 +1797,7 @@ namespace Bot_Scout_RAPID_REACT
             this.noClimb.AutoSize = true;
             this.noClimb.Location = new System.Drawing.Point(111, 28);
             this.noClimb.Name = "noClimb";
-            this.noClimb.Size = new System.Drawing.Size(51, 17);
+            this.noClimb.Size = new System.Drawing.Size(72, 24);
             this.noClimb.TabIndex = 19;
             this.noClimb.TabStop = true;
             this.noClimb.Text = "None";
@@ -1806,7 +1808,7 @@ namespace Bot_Scout_RAPID_REACT
             this.travClimb.AutoSize = true;
             this.travClimb.Location = new System.Drawing.Point(0, 28);
             this.travClimb.Name = "travClimb";
-            this.travClimb.Size = new System.Drawing.Size(69, 17);
+            this.travClimb.Size = new System.Drawing.Size(98, 24);
             this.travClimb.TabIndex = 18;
             this.travClimb.TabStop = true;
             this.travClimb.Text = "Traversal";
@@ -1817,7 +1819,7 @@ namespace Bot_Scout_RAPID_REACT
             this.highClimb.AutoSize = true;
             this.highClimb.Location = new System.Drawing.Point(111, 5);
             this.highClimb.Name = "highClimb";
-            this.highClimb.Size = new System.Drawing.Size(47, 17);
+            this.highClimb.Size = new System.Drawing.Size(67, 24);
             this.highClimb.TabIndex = 17;
             this.highClimb.TabStop = true;
             this.highClimb.Text = "High";
@@ -1828,7 +1830,7 @@ namespace Bot_Scout_RAPID_REACT
             this.midClimb.AutoSize = true;
             this.midClimb.Location = new System.Drawing.Point(51, 5);
             this.midClimb.Name = "midClimb";
-            this.midClimb.Size = new System.Drawing.Size(42, 17);
+            this.midClimb.Size = new System.Drawing.Size(59, 24);
             this.midClimb.TabIndex = 16;
             this.midClimb.TabStop = true;
             this.midClimb.Text = "Mid";
@@ -1849,7 +1851,7 @@ namespace Bot_Scout_RAPID_REACT
             this.enterSide.AutoSize = true;
             this.enterSide.Location = new System.Drawing.Point(55, 9);
             this.enterSide.Name = "enterSide";
-            this.enterSide.Size = new System.Drawing.Size(46, 17);
+            this.enterSide.Size = new System.Drawing.Size(66, 24);
             this.enterSide.TabIndex = 14;
             this.enterSide.TabStop = true;
             this.enterSide.Text = "Side";
@@ -1860,7 +1862,7 @@ namespace Bot_Scout_RAPID_REACT
             this.enterFront.AutoSize = true;
             this.enterFront.Location = new System.Drawing.Point(0, 9);
             this.enterFront.Name = "enterFront";
-            this.enterFront.Size = new System.Drawing.Size(49, 17);
+            this.enterFront.Size = new System.Drawing.Size(72, 24);
             this.enterFront.TabIndex = 14;
             this.enterFront.TabStop = true;
             this.enterFront.Text = "Front";
@@ -1882,7 +1884,7 @@ namespace Bot_Scout_RAPID_REACT
             this.taxiNo.AutoSize = true;
             this.taxiNo.Location = new System.Drawing.Point(55, 9);
             this.taxiNo.Name = "taxiNo";
-            this.taxiNo.Size = new System.Drawing.Size(39, 17);
+            this.taxiNo.Size = new System.Drawing.Size(54, 24);
             this.taxiNo.TabIndex = 3;
             this.taxiNo.TabStop = true;
             this.taxiNo.Text = "No";
@@ -1893,7 +1895,7 @@ namespace Bot_Scout_RAPID_REACT
             this.taxiYes.AutoSize = true;
             this.taxiYes.Location = new System.Drawing.Point(0, 9);
             this.taxiYes.Name = "taxiYes";
-            this.taxiYes.Size = new System.Drawing.Size(43, 17);
+            this.taxiYes.Size = new System.Drawing.Size(62, 24);
             this.taxiYes.TabIndex = 0;
             this.taxiYes.TabStop = true;
             this.taxiYes.Text = "Yes";
@@ -1916,7 +1918,7 @@ namespace Bot_Scout_RAPID_REACT
             this.posOther.AutoSize = true;
             this.posOther.Location = new System.Drawing.Point(76, 28);
             this.posOther.Name = "posOther";
-            this.posOther.Size = new System.Drawing.Size(51, 17);
+            this.posOther.Size = new System.Drawing.Size(74, 24);
             this.posOther.TabIndex = 10;
             this.posOther.TabStop = true;
             this.posOther.Text = "Other";
@@ -1927,7 +1929,7 @@ namespace Bot_Scout_RAPID_REACT
             this.posLaunch.AutoSize = true;
             this.posLaunch.Location = new System.Drawing.Point(0, 28);
             this.posLaunch.Name = "posLaunch";
-            this.posLaunch.Size = new System.Drawing.Size(80, 17);
+            this.posLaunch.Size = new System.Drawing.Size(115, 24);
             this.posLaunch.TabIndex = 9;
             this.posLaunch.TabStop = true;
             this.posLaunch.Text = "LaunchPad";
@@ -1938,7 +1940,7 @@ namespace Bot_Scout_RAPID_REACT
             this.posTar.AutoSize = true;
             this.posTar.Location = new System.Drawing.Point(57, 5);
             this.posTar.Name = "posTar";
-            this.posTar.Size = new System.Drawing.Size(61, 17);
+            this.posTar.Size = new System.Drawing.Size(87, 24);
             this.posTar.TabIndex = 8;
             this.posTar.TabStop = true;
             this.posTar.Text = "Tarmac";
@@ -1949,7 +1951,7 @@ namespace Bot_Scout_RAPID_REACT
             this.posHub.AutoSize = true;
             this.posHub.Location = new System.Drawing.Point(0, 5);
             this.posHub.Name = "posHub";
-            this.posHub.Size = new System.Drawing.Size(45, 17);
+            this.posHub.Size = new System.Drawing.Size(64, 24);
             this.posHub.TabIndex = 7;
             this.posHub.TabStop = true;
             this.posHub.Text = "Hub";
@@ -1962,7 +1964,7 @@ namespace Bot_Scout_RAPID_REACT
             this.label53.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.label53.Location = new System.Drawing.Point(-3, 437);
             this.label53.Name = "label53";
-            this.label53.Size = new System.Drawing.Size(245, 125);
+            this.label53.Size = new System.Drawing.Size(361, 195);
             this.label53.TabIndex = 86;
             this.label53.Text = "Enter data, press tab, \r\ncontinue. When you \r\nget to a checkbox,\r\nuse the arrow k" +
     "eys \r\nto navigate\r\n";

@@ -3,20 +3,12 @@ using System.IO;
 using System.Windows.Forms;
 using System.Collections.Generic;
 
-
-//Days to work: Monday, Tuesday Wednesday
 //TODO: Best scores, add tele low, high, and total, climb time, defense, and overall score
 //TODO: Average climb time, and climb type and total score
+
 //TODO: Team Trends (looks at most recent match score, and compares it with the average total score
 //TODO: Drive type for data entry and drive sheet
-//TODO: Make look nice
-//TODO: Test program when everything above is finished
 
-//COMPLETE: Average auto Low, high, and total, Tele low and upper, auto accuracy
-//COMPLETE: 4/9 Recent Match Button
-//COMPLETE: Data Entry
-//COMPLETE: See match data
-//COMPLETE: Average tab, driver sheet tab, best scores tab, trends tab
 namespace Bot_Scout_RAPID_REACT
 {
     public partial class Form1 : Form
@@ -1481,10 +1473,11 @@ namespace Bot_Scout_RAPID_REACT
             try
             {
                 bestScore(team.Text);
+                loadText.Text = "Good job LAMBO";
             }
             catch
             {
-                loadText.Text = "Whoops, team does not exist!";
+                loadText.Text = "Bruh, this team do not exist";
             }
         }
 
