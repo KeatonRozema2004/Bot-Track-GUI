@@ -1685,22 +1685,39 @@ namespace Bot_Scout_RAPID_REACT
 
         private void button4_Click_1(object sender, EventArgs e)
         {
+            bool foundMatch = false;
+            int i = 1;
+            string team1 = team.Text;
+            string match1 = match.Text;
+            int lineMatch;
+            //Form1 match = new Form1();
             try {
-                int i = 1;
-                while (GetLine(team.Text + ".txt", i) != GetLine("blank.txt", 1))
+                
+                while (!foundMatch)
                 {
-                    if (GetLine(team.Text + ".txt", i).Contains("Match Number"))
+                    if (GetLine(team1 + ".txt", i).Contains("Match Number"))
                     {
-                        string num1 = GetLine(team.Text + ".txt", i)[14].ToString();
-                        string num2 = GetLine(team.Text + ".txt", i)[15].ToString();
-                        string matchNum = num1 + num2;
-                        matchName.Text = "" + matchNum;
+                        foundMatch = true;
+                        string num1 = GetLine(team1 + ".txt", i)[14].ToString();
+                        string num2 = GetLine(team1 + ".txt", i)[15].ToString();
+                        string matchNum = num1+num2;
+                        Console.WriteLine(matchNum);
+                        Console.WriteLine(match.Text);
+                        if (matchNum == match1)
+                        {
+                            lineMatch = i;
+                            //TODO: Finish match editing system (this is used to get the match number)
+                        }
 
                     }
 
-
+                    
                     i++;
                 }
+
+                //Here, it will take all the data from the sheet and put it in the inputs
+
+                //TODO: Make it so the submit button brings changes to specific line for editing
             }
             catch(Exception l)
             {
