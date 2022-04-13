@@ -172,9 +172,14 @@ namespace Bot_Scout_Data_Interperter.scripts
                     }
                     if (matchPassOff)
                     {
-                        if (currentArray[0] == "Taxi" && currentArray[1] == "y")
+                        if (currentArray[0] == "Taxi" && currentArray[1] == " y")
                         {
                             matchData.Add(2);
+                            matchLabels.Add("Taxi");
+                        }
+                        if (currentArray[0] == "Taxi" && currentArray[1] == " n")
+                        {
+                            matchData.Add(0);
                             matchLabels.Add("Taxi");
                         }
 
@@ -203,33 +208,164 @@ namespace Bot_Scout_Data_Interperter.scripts
                             matchData.Add(Int32.Parse(currentArray[1]));
                             matchLabels.Add("Tele Lower");
                         }
+                        if (currentArray[0] == "Tele Missed")
+                        {
+                            matchData.Add(Int32.Parse(currentArray[1]));
+                            matchLabels.Add("Tele Missed");
+                        }
                         if (currentArray[0] == "Position")
                         {
                             if (currentArray[1] == " l")
                             {
                                 matchData.Add(4);
-                                matchLabels.Add("Low");
+                                matchLabels.Add("Climb");
                             } else if (currentArray[1] == " m")
                             {
                                 matchData.Add(6);
-                                matchLabels.Add("Mid");
+                                matchLabels.Add("Climb");
                             } else if (currentArray[1] == " h")
                             {
                                 matchData.Add(10);
-                                matchLabels.Add("High");
+                                matchLabels.Add("Climb");
                             } else if (currentArray[1] == " t")
                             {
                                 matchData.Add(15);
-                                matchLabels.Add("Traversal");
+                                matchLabels.Add("Climb");
                             }
                         }
                     }
                 }
             }
             List<dynamic> returnList = new List<dynamic>();
+            List<string> matchLabelsNoDups = matchLabels.Distinct().ToList();
             returnList.Add(matchData.ToArray());
-            returnList.Add(matchLabels.ToArray());
+            returnList.Add(matchLabelsNoDups.ToArray());
             return returnList.ToArray();
+        }
+
+        public dynamic[] zzReturnMatchAveragePointsByTeamNumber(string fileDirectory, string teamNumber)
+        {
+            string teamFile = zzGetFileDirectoryFromTeamName(fileDirectory, teamNumber);
+            string[] fileLines = File.ReadAllLines(teamFile);
+
+            bool matchTrue = false;
+            List<int[]> totalsArray = new List<int[]>();
+            List<int> currentMatchNumbers = new List<int>();
+            List<string> matchLabels = new List<string>();
+            foreach (string line in fileLines)
+            {
+                string[] lineValues = line.Split(':');
+
+                if (lineValues.Length > 1)
+                {
+                    if (lineValues[0] == "Match Number")
+                    {
+                        matchTrue = true;
+                    }
+                } else
+                {
+                    matchTrue = false;
+                }
+                if (matchTrue == true)
+                {
+                    if (lineValues[0] == "Taxi" && lineValues[1] == " y")
+                    {
+                        currentMatchNumbers.Add(2);
+                        matchLabels.Add("Taxi");
+                    }
+                    else if (lineValues[0] == "Taxi" && lineValues[1] == " n")
+                    {
+                        currentMatchNumbers.Add(0);
+                        matchLabels.Add("Taxi");
+                    }
+                    else if (lineValues[0] == "Auto Upper")
+                    {
+                        currentMatchNumbers.Add(Int32.Parse(lineValues[1]) * 4);
+                        matchLabels.Add("Auto Upper");
+                    }
+                    else if (lineValues[0] == "Auto Lower")
+                    {
+                        currentMatchNumbers.Add(Int32.Parse(lineValues[1]) * 2);
+                        matchLabels.Add("Auto Lower");
+                    }
+                    else if (lineValues[0] == "Tele Upper")
+                    {
+                        currentMatchNumbers.Add(Int32.Parse(lineValues[1]) * 2);
+                        matchLabels.Add("Tele Upper");
+                    }
+                    else if (lineValues[0] == "Tele Lower")
+                    {
+                        currentMatchNumbers.Add(Int32.Parse(lineValues[1]));
+                        matchLabels.Add("Tele Lower");
+                    }
+                    else if (lineValues[0] == "Tele Missed")
+                    {
+                        currentMatchNumbers.Add(Int32.Parse(lineValues[1]));
+                        matchLabels.Add("Tele Missed");
+                    }
+                    else if (lineValues[0] == "Position")
+                    {
+                        if (lineValues[1] == " l")
+                        {
+                            currentMatchNumbers.Add(4);
+                            matchLabels.Add("Climb");
+                        }
+                        else if (lineValues[1] == " m")
+                        {
+                            currentMatchNumbers.Add(6);
+                            matchLabels.Add("Climb");
+                        }
+                        else if (lineValues[1] == " h")
+                        {
+                            currentMatchNumbers.Add(10);
+                            matchLabels.Add("Climb");
+                        }
+                        else if (lineValues[1] == " t")
+                        {
+                            currentMatchNumbers.Add(15);
+                            matchLabels.Add("Climb");
+                        }
+                        else
+                        {
+                            currentMatchNumbers.Add(0);
+                            matchLabels.Add("Climb");
+                        }
+                    }
+                } else if (currentMatchNumbers.Count != 0)
+                {
+                    totalsArray.Add(currentMatchNumbers.ToArray());
+                    currentMatchNumbers = new List<int>();
+                }
+            }
+            dynamic[] allMatches = totalsArray.ToArray();
+            List<int> averageList = new List<int>();
+            for (int z=0; allMatches.Length > z; z++)
+            {
+                int[] currentMatch = allMatches[z];
+
+                for (int y=0; currentMatch.Length > y; y++)
+                {
+                    if (z == 0)
+                        averageList.Add(currentMatch[y]);
+                    else
+                        averageList[y] += currentMatch[y];
+                }
+            }
+
+            int matchesPlayed = zzGetTeamMatchesPlayed(fileLines);
+
+            for (int x = 0; averageList.Count > x; x++)
+            {
+                averageList[x] = averageList[x] / matchesPlayed;
+            }
+
+            List<string> labels = matchLabels.Distinct().ToList();
+
+            List<dynamic> returns = new List<dynamic>();
+            returns.Add(averageList.ToArray());
+            returns.Add(labels.ToArray());
+
+            return returns.ToArray();
         }
 
         public string[] zzGetMatchesPlayedByTeam(string team, string filePath)

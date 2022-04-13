@@ -53,6 +53,18 @@ namespace Bot_Scout_Data_Interperter
             this.tabPage4 = new System.Windows.Forms.TabPage();
             this.teamChartData = new System.Windows.Forms.DataVisualization.Charting.Chart();
             this.tabPage5 = new System.Windows.Forms.TabPage();
+            this.graph_table_control = new System.Windows.Forms.TabControl();
+            this.tabPage6 = new System.Windows.Forms.TabPage();
+            this.tabPage7 = new System.Windows.Forms.TabPage();
+            this.match_table_view = new System.Windows.Forms.DataGridView();
+            this.taxi = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.auto_upper = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.auto_lower = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.auto_missed = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.tele_upper = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.tele_lower = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.tele_missed = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.climb = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tab_body.SuspendLayout();
             this.tabPage1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.overview_table)).BeginInit();
@@ -64,6 +76,10 @@ namespace Bot_Scout_Data_Interperter
             this.teamDataTabs.SuspendLayout();
             this.tabPage3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.teamChartData)).BeginInit();
+            this.graph_table_control.SuspendLayout();
+            this.tabPage6.SuspendLayout();
+            this.tabPage7.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.match_table_view)).BeginInit();
             this.SuspendLayout();
             // 
             // getDataDirectoryButton
@@ -137,6 +153,7 @@ namespace Bot_Scout_Data_Interperter
             this.Total});
             this.overview_table.Location = new System.Drawing.Point(3, 6);
             this.overview_table.Name = "overview_table";
+            this.overview_table.ReadOnly = true;
             this.overview_table.Size = new System.Drawing.Size(759, 341);
             this.overview_table.TabIndex = 0;
             this.overview_table.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
@@ -197,7 +214,7 @@ namespace Bot_Scout_Data_Interperter
             // 
             // teamDataSpliter.Panel2
             // 
-            this.teamDataSpliter.Panel2.Controls.Add(this.teamChartData);
+            this.teamDataSpliter.Panel2.Controls.Add(this.graph_table_control);
             this.teamDataSpliter.Size = new System.Drawing.Size(766, 344);
             this.teamDataSpliter.SplitterDistance = 255;
             this.teamDataSpliter.TabIndex = 3;
@@ -268,15 +285,17 @@ namespace Bot_Scout_Data_Interperter
             this.teamChartData.ChartAreas.Add(chartArea2);
             legend2.Name = "Legend1";
             this.teamChartData.Legends.Add(legend2);
-            this.teamChartData.Location = new System.Drawing.Point(3, 3);
+            this.teamChartData.Location = new System.Drawing.Point(6, 6);
             this.teamChartData.Name = "teamChartData";
             series2.ChartArea = "ChartArea1";
             series2.Legend = "Legend1";
             series2.Name = "Series1";
             this.teamChartData.Series.Add(series2);
-            this.teamChartData.Size = new System.Drawing.Size(501, 334);
+            this.teamChartData.Size = new System.Drawing.Size(481, 300);
             this.teamChartData.TabIndex = 0;
+            this.teamChartData.Tag = "";
             this.teamChartData.Text = "chart1";
+            this.teamChartData.Click += new System.EventHandler(this.teamChartData_Click);
             // 
             // tabPage5
             // 
@@ -287,6 +306,110 @@ namespace Bot_Scout_Data_Interperter
             this.tabPage5.TabIndex = 2;
             this.tabPage5.Text = "Create Team";
             this.tabPage5.UseVisualStyleBackColor = true;
+            // 
+            // graph_table_control
+            // 
+            this.graph_table_control.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.graph_table_control.Controls.Add(this.tabPage6);
+            this.graph_table_control.Controls.Add(this.tabPage7);
+            this.graph_table_control.Location = new System.Drawing.Point(3, 3);
+            this.graph_table_control.Name = "graph_table_control";
+            this.graph_table_control.SelectedIndex = 0;
+            this.graph_table_control.Size = new System.Drawing.Size(501, 338);
+            this.graph_table_control.TabIndex = 1;
+            // 
+            // tabPage6
+            // 
+            this.tabPage6.Controls.Add(this.teamChartData);
+            this.tabPage6.Location = new System.Drawing.Point(4, 22);
+            this.tabPage6.Name = "tabPage6";
+            this.tabPage6.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage6.Size = new System.Drawing.Size(493, 312);
+            this.tabPage6.TabIndex = 0;
+            this.tabPage6.Text = "Graph";
+            this.tabPage6.UseVisualStyleBackColor = true;
+            // 
+            // tabPage7
+            // 
+            this.tabPage7.Controls.Add(this.match_table_view);
+            this.tabPage7.Location = new System.Drawing.Point(4, 22);
+            this.tabPage7.Name = "tabPage7";
+            this.tabPage7.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage7.Size = new System.Drawing.Size(493, 312);
+            this.tabPage7.TabIndex = 1;
+            this.tabPage7.Text = "Table";
+            this.tabPage7.UseVisualStyleBackColor = true;
+            // 
+            // match_table_view
+            // 
+            this.match_table_view.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.match_table_view.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.match_table_view.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.match_table_view.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.taxi,
+            this.auto_upper,
+            this.auto_lower,
+            this.auto_missed,
+            this.tele_upper,
+            this.tele_lower,
+            this.tele_missed,
+            this.climb});
+            this.match_table_view.Location = new System.Drawing.Point(6, 3);
+            this.match_table_view.Name = "match_table_view";
+            this.match_table_view.Size = new System.Drawing.Size(481, 303);
+            this.match_table_view.TabIndex = 0;
+            // 
+            // taxi
+            // 
+            this.taxi.HeaderText = "Taxi";
+            this.taxi.Name = "taxi";
+            this.taxi.ReadOnly = true;
+            // 
+            // auto_upper
+            // 
+            this.auto_upper.HeaderText = "Auto Upper";
+            this.auto_upper.Name = "auto_upper";
+            this.auto_upper.ReadOnly = true;
+            // 
+            // auto_lower
+            // 
+            this.auto_lower.HeaderText = "Auto Lower";
+            this.auto_lower.Name = "auto_lower";
+            this.auto_lower.ReadOnly = true;
+            // 
+            // auto_missed
+            // 
+            this.auto_missed.HeaderText = "Auto Missed";
+            this.auto_missed.Name = "auto_missed";
+            this.auto_missed.ReadOnly = true;
+            // 
+            // tele_upper
+            // 
+            this.tele_upper.HeaderText = "Tele Upper";
+            this.tele_upper.Name = "tele_upper";
+            this.tele_upper.ReadOnly = true;
+            // 
+            // tele_lower
+            // 
+            this.tele_lower.HeaderText = "Tele Lower";
+            this.tele_lower.Name = "tele_lower";
+            this.tele_lower.ReadOnly = true;
+            // 
+            // tele_missed
+            // 
+            this.tele_missed.HeaderText = "Tele Missed";
+            this.tele_missed.Name = "tele_missed";
+            this.tele_missed.ReadOnly = true;
+            // 
+            // climb
+            // 
+            this.climb.HeaderText = "Climb";
+            this.climb.Name = "climb";
+            this.climb.ReadOnly = true;
             // 
             // Main_page
             // 
@@ -310,6 +433,10 @@ namespace Bot_Scout_Data_Interperter
             this.teamDataTabs.ResumeLayout(false);
             this.tabPage3.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.teamChartData)).EndInit();
+            this.graph_table_control.ResumeLayout(false);
+            this.tabPage6.ResumeLayout(false);
+            this.tabPage7.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.match_table_view)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -338,6 +465,18 @@ namespace Bot_Scout_Data_Interperter
         private System.Windows.Forms.DataVisualization.Charting.Chart teamChartData;
         private System.Windows.Forms.ListBox teamDataMatchSelect;
         private System.Windows.Forms.TabPage tabPage5;
+        private System.Windows.Forms.TabControl graph_table_control;
+        private System.Windows.Forms.TabPage tabPage6;
+        private System.Windows.Forms.TabPage tabPage7;
+        private System.Windows.Forms.DataGridView match_table_view;
+        private System.Windows.Forms.DataGridViewTextBoxColumn taxi;
+        private System.Windows.Forms.DataGridViewTextBoxColumn auto_upper;
+        private System.Windows.Forms.DataGridViewTextBoxColumn auto_lower;
+        private System.Windows.Forms.DataGridViewTextBoxColumn auto_missed;
+        private System.Windows.Forms.DataGridViewTextBoxColumn tele_upper;
+        private System.Windows.Forms.DataGridViewTextBoxColumn tele_lower;
+        private System.Windows.Forms.DataGridViewTextBoxColumn tele_missed;
+        private System.Windows.Forms.DataGridViewTextBoxColumn climb;
     }
 }
 
