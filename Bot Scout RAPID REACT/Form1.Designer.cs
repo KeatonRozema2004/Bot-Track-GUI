@@ -185,18 +185,14 @@ namespace Bot_Scout_RAPID_REACT
             this.teamTrend = new System.Windows.Forms.Label();
             this.label49 = new System.Windows.Forms.Label();
             this.lowClimb = new System.Windows.Forms.RadioButton();
-            this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.noClimb = new System.Windows.Forms.RadioButton();
             this.travClimb = new System.Windows.Forms.RadioButton();
             this.highClimb = new System.Windows.Forms.RadioButton();
             this.midClimb = new System.Windows.Forms.RadioButton();
-            this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.enterSide = new System.Windows.Forms.RadioButton();
             this.enterFront = new System.Windows.Forms.RadioButton();
-            this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.taxiNo = new System.Windows.Forms.RadioButton();
             this.taxiYes = new System.Windows.Forms.RadioButton();
-            this.groupBox4 = new System.Windows.Forms.GroupBox();
             this.posOther = new System.Windows.Forms.RadioButton();
             this.posLaunch = new System.Windows.Forms.RadioButton();
             this.posTar = new System.Windows.Forms.RadioButton();
@@ -204,6 +200,11 @@ namespace Bot_Scout_RAPID_REACT
             this.label53 = new System.Windows.Forms.Label();
             this.matchName = new System.Windows.Forms.Label();
             this.getMatchDataBut = new System.Windows.Forms.Button();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.panel3 = new System.Windows.Forms.Panel();
+            this.panel4 = new System.Windows.Forms.Panel();
+            this.notifyIcon1 = new System.Windows.Forms.NotifyIcon(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.menuStrip1.SuspendLayout();
             this.bestTeamsTableLayout.SuspendLayout();
@@ -211,10 +212,10 @@ namespace Bot_Scout_RAPID_REACT
             this.averageTeamTable.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
             this.teamTrendLayout.SuspendLayout();
-            this.groupBox1.SuspendLayout();
-            this.groupBox2.SuspendLayout();
-            this.groupBox3.SuspendLayout();
-            this.groupBox4.SuspendLayout();
+            this.panel1.SuspendLayout();
+            this.panel2.SuspendLayout();
+            this.panel3.SuspendLayout();
+            this.panel4.SuspendLayout();
             this.SuspendLayout();
             // 
             // button3
@@ -386,7 +387,7 @@ namespace Bot_Scout_RAPID_REACT
             // label14
             // 
             this.label14.AutoSize = true;
-            this.label14.Location = new System.Drawing.Point(271, 294);
+            this.label14.Location = new System.Drawing.Point(261, 246);
             this.label14.Name = "label14";
             this.label14.Size = new System.Drawing.Size(59, 13);
             this.label14.TabIndex = 21;
@@ -395,7 +396,7 @@ namespace Bot_Scout_RAPID_REACT
             // label15
             // 
             this.label15.AutoSize = true;
-            this.label15.Location = new System.Drawing.Point(268, 342);
+            this.label15.Location = new System.Drawing.Point(268, 278);
             this.label15.Name = "label15";
             this.label15.Size = new System.Drawing.Size(62, 13);
             this.label15.TabIndex = 22;
@@ -404,7 +405,7 @@ namespace Bot_Scout_RAPID_REACT
             // label16
             // 
             this.label16.AutoSize = true;
-            this.label16.Location = new System.Drawing.Point(41, 342);
+            this.label16.Location = new System.Drawing.Point(41, 278);
             this.label16.Name = "label16";
             this.label16.Size = new System.Drawing.Size(57, 13);
             this.label16.TabIndex = 23;
@@ -413,7 +414,7 @@ namespace Bot_Scout_RAPID_REACT
             // label17
             // 
             this.label17.AutoSize = true;
-            this.label17.Location = new System.Drawing.Point(41, 294);
+            this.label17.Location = new System.Drawing.Point(40, 309);
             this.label17.Name = "label17";
             this.label17.Size = new System.Drawing.Size(59, 13);
             this.label17.TabIndex = 24;
@@ -437,14 +438,14 @@ namespace Bot_Scout_RAPID_REACT
             // 
             // climbStart
             // 
-            this.climbStart.Location = new System.Drawing.Point(135, 339);
+            this.climbStart.Location = new System.Drawing.Point(135, 275);
             this.climbStart.Name = "climbStart";
             this.climbStart.Size = new System.Drawing.Size(100, 20);
             this.climbStart.TabIndex = 12;
             // 
             // climbEnd
             // 
-            this.climbEnd.Location = new System.Drawing.Point(349, 342);
+            this.climbEnd.Location = new System.Drawing.Point(349, 278);
             this.climbEnd.Name = "climbEnd";
             this.climbEnd.Size = new System.Drawing.Size(100, 20);
             this.climbEnd.TabIndex = 13;
@@ -485,7 +486,6 @@ namespace Bot_Scout_RAPID_REACT
             // 
             this.menuStrip1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(100)))), ((int)(((byte)(150)))));
             this.menuStrip1.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.menuStrip1.GripStyle = System.Windows.Forms.ToolStripGripStyle.Visible;
             this.menuStrip1.ImageScalingSize = new System.Drawing.Size(24, 24);
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.matchToolStripMenuItem,
@@ -1804,7 +1804,7 @@ namespace Bot_Scout_RAPID_REACT
             // lowClimb
             // 
             this.lowClimb.AutoSize = true;
-            this.lowClimb.Location = new System.Drawing.Point(0, 5);
+            this.lowClimb.Location = new System.Drawing.Point(4, 3);
             this.lowClimb.Name = "lowClimb";
             this.lowClimb.Size = new System.Drawing.Size(45, 17);
             this.lowClimb.TabIndex = 15;
@@ -1812,23 +1812,10 @@ namespace Bot_Scout_RAPID_REACT
             this.lowClimb.Text = "Low";
             this.lowClimb.UseVisualStyleBackColor = true;
             // 
-            // groupBox1
-            // 
-            this.groupBox1.Controls.Add(this.noClimb);
-            this.groupBox1.Controls.Add(this.travClimb);
-            this.groupBox1.Controls.Add(this.highClimb);
-            this.groupBox1.Controls.Add(this.midClimb);
-            this.groupBox1.Controls.Add(this.lowClimb);
-            this.groupBox1.Location = new System.Drawing.Point(106, 275);
-            this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(159, 60);
-            this.groupBox1.TabIndex = 11;
-            this.groupBox1.TabStop = false;
-            // 
             // noClimb
             // 
             this.noClimb.AutoSize = true;
-            this.noClimb.Location = new System.Drawing.Point(111, 28);
+            this.noClimb.Location = new System.Drawing.Point(102, 4);
             this.noClimb.Name = "noClimb";
             this.noClimb.Size = new System.Drawing.Size(51, 17);
             this.noClimb.TabIndex = 19;
@@ -1839,7 +1826,7 @@ namespace Bot_Scout_RAPID_REACT
             // travClimb
             // 
             this.travClimb.AutoSize = true;
-            this.travClimb.Location = new System.Drawing.Point(0, 28);
+            this.travClimb.Location = new System.Drawing.Point(49, 26);
             this.travClimb.Name = "travClimb";
             this.travClimb.Size = new System.Drawing.Size(69, 17);
             this.travClimb.TabIndex = 18;
@@ -1850,7 +1837,7 @@ namespace Bot_Scout_RAPID_REACT
             // highClimb
             // 
             this.highClimb.AutoSize = true;
-            this.highClimb.Location = new System.Drawing.Point(111, 5);
+            this.highClimb.Location = new System.Drawing.Point(49, 3);
             this.highClimb.Name = "highClimb";
             this.highClimb.Size = new System.Drawing.Size(47, 17);
             this.highClimb.TabIndex = 17;
@@ -1861,7 +1848,7 @@ namespace Bot_Scout_RAPID_REACT
             // midClimb
             // 
             this.midClimb.AutoSize = true;
-            this.midClimb.Location = new System.Drawing.Point(51, 5);
+            this.midClimb.Location = new System.Drawing.Point(6, 30);
             this.midClimb.Name = "midClimb";
             this.midClimb.Size = new System.Drawing.Size(42, 17);
             this.midClimb.TabIndex = 16;
@@ -1869,20 +1856,10 @@ namespace Bot_Scout_RAPID_REACT
             this.midClimb.Text = "Mid";
             this.midClimb.UseVisualStyleBackColor = true;
             // 
-            // groupBox2
-            // 
-            this.groupBox2.Controls.Add(this.enterSide);
-            this.groupBox2.Controls.Add(this.enterFront);
-            this.groupBox2.Location = new System.Drawing.Point(350, 284);
-            this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(99, 35);
-            this.groupBox2.TabIndex = 15;
-            this.groupBox2.TabStop = false;
-            // 
             // enterSide
             // 
             this.enterSide.AutoSize = true;
-            this.enterSide.Location = new System.Drawing.Point(55, 9);
+            this.enterSide.Location = new System.Drawing.Point(49, 4);
             this.enterSide.Name = "enterSide";
             this.enterSide.Size = new System.Drawing.Size(46, 17);
             this.enterSide.TabIndex = 14;
@@ -1893,7 +1870,7 @@ namespace Bot_Scout_RAPID_REACT
             // enterFront
             // 
             this.enterFront.AutoSize = true;
-            this.enterFront.Location = new System.Drawing.Point(0, 9);
+            this.enterFront.Location = new System.Drawing.Point(3, 4);
             this.enterFront.Name = "enterFront";
             this.enterFront.Size = new System.Drawing.Size(49, 17);
             this.enterFront.TabIndex = 14;
@@ -1901,32 +1878,22 @@ namespace Bot_Scout_RAPID_REACT
             this.enterFront.Text = "Front";
             this.enterFront.UseVisualStyleBackColor = true;
             // 
-            // groupBox3
-            // 
-            this.groupBox3.Controls.Add(this.taxiNo);
-            this.groupBox3.Controls.Add(this.taxiYes);
-            this.groupBox3.ImeMode = System.Windows.Forms.ImeMode.On;
-            this.groupBox3.Location = new System.Drawing.Point(135, 94);
-            this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Size = new System.Drawing.Size(99, 35);
-            this.groupBox3.TabIndex = 2;
-            this.groupBox3.TabStop = false;
-            // 
             // taxiNo
             // 
             this.taxiNo.AutoSize = true;
-            this.taxiNo.Location = new System.Drawing.Point(55, 9);
+            this.taxiNo.Location = new System.Drawing.Point(57, 3);
             this.taxiNo.Name = "taxiNo";
             this.taxiNo.Size = new System.Drawing.Size(39, 17);
             this.taxiNo.TabIndex = 3;
             this.taxiNo.TabStop = true;
             this.taxiNo.Text = "No";
             this.taxiNo.UseVisualStyleBackColor = true;
+            this.taxiNo.CheckedChanged += new System.EventHandler(this.taxiNo_CheckedChanged);
             // 
             // taxiYes
             // 
             this.taxiYes.AutoSize = true;
-            this.taxiYes.Location = new System.Drawing.Point(0, 9);
+            this.taxiYes.Location = new System.Drawing.Point(5, 3);
             this.taxiYes.Name = "taxiYes";
             this.taxiYes.Size = new System.Drawing.Size(43, 17);
             this.taxiYes.TabIndex = 0;
@@ -1934,22 +1901,10 @@ namespace Bot_Scout_RAPID_REACT
             this.taxiYes.Text = "Yes";
             this.taxiYes.UseVisualStyleBackColor = true;
             // 
-            // groupBox4
-            // 
-            this.groupBox4.Controls.Add(this.posOther);
-            this.groupBox4.Controls.Add(this.posLaunch);
-            this.groupBox4.Controls.Add(this.posTar);
-            this.groupBox4.Controls.Add(this.posHub);
-            this.groupBox4.Location = new System.Drawing.Point(349, 95);
-            this.groupBox4.Name = "groupBox4";
-            this.groupBox4.Size = new System.Drawing.Size(124, 54);
-            this.groupBox4.TabIndex = 6;
-            this.groupBox4.TabStop = false;
-            // 
             // posOther
             // 
             this.posOther.AutoSize = true;
-            this.posOther.Location = new System.Drawing.Point(76, 28);
+            this.posOther.Location = new System.Drawing.Point(86, 26);
             this.posOther.Name = "posOther";
             this.posOther.Size = new System.Drawing.Size(51, 17);
             this.posOther.TabIndex = 10;
@@ -1960,7 +1915,7 @@ namespace Bot_Scout_RAPID_REACT
             // posLaunch
             // 
             this.posLaunch.AutoSize = true;
-            this.posLaunch.Location = new System.Drawing.Point(0, 28);
+            this.posLaunch.Location = new System.Drawing.Point(3, 26);
             this.posLaunch.Name = "posLaunch";
             this.posLaunch.Size = new System.Drawing.Size(80, 17);
             this.posLaunch.TabIndex = 9;
@@ -1971,7 +1926,7 @@ namespace Bot_Scout_RAPID_REACT
             // posTar
             // 
             this.posTar.AutoSize = true;
-            this.posTar.Location = new System.Drawing.Point(57, 5);
+            this.posTar.Location = new System.Drawing.Point(86, 3);
             this.posTar.Name = "posTar";
             this.posTar.Size = new System.Drawing.Size(61, 17);
             this.posTar.TabIndex = 8;
@@ -1982,7 +1937,7 @@ namespace Bot_Scout_RAPID_REACT
             // posHub
             // 
             this.posHub.AutoSize = true;
-            this.posHub.Location = new System.Drawing.Point(0, 5);
+            this.posHub.Location = new System.Drawing.Point(3, 3);
             this.posHub.Name = "posHub";
             this.posHub.Size = new System.Drawing.Size(45, 17);
             this.posHub.TabIndex = 7;
@@ -2022,17 +1977,67 @@ namespace Bot_Scout_RAPID_REACT
             this.getMatchDataBut.UseVisualStyleBackColor = true;
             this.getMatchDataBut.Click += new System.EventHandler(this.button4_Click_1);
             // 
+            // panel1
+            // 
+            this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel1.Controls.Add(this.posOther);
+            this.panel1.Controls.Add(this.posHub);
+            this.panel1.Controls.Add(this.posLaunch);
+            this.panel1.Controls.Add(this.posTar);
+            this.panel1.Location = new System.Drawing.Point(349, 96);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(156, 46);
+            this.panel1.TabIndex = 89;
+            // 
+            // panel2
+            // 
+            this.panel2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel2.Controls.Add(this.noClimb);
+            this.panel2.Controls.Add(this.lowClimb);
+            this.panel2.Controls.Add(this.travClimb);
+            this.panel2.Controls.Add(this.midClimb);
+            this.panel2.Controls.Add(this.highClimb);
+            this.panel2.Location = new System.Drawing.Point(134, 297);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(161, 47);
+            this.panel2.TabIndex = 90;
+            // 
+            // panel3
+            // 
+            this.panel3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel3.Controls.Add(this.taxiNo);
+            this.panel3.Controls.Add(this.taxiYes);
+            this.panel3.Location = new System.Drawing.Point(135, 96);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(102, 26);
+            this.panel3.TabIndex = 91;
+            // 
+            // panel4
+            // 
+            this.panel4.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel4.Controls.Add(this.enterSide);
+            this.panel4.Controls.Add(this.enterFront);
+            this.panel4.Location = new System.Drawing.Point(349, 243);
+            this.panel4.Name = "panel4";
+            this.panel4.Size = new System.Drawing.Size(100, 29);
+            this.panel4.TabIndex = 92;
+            // 
+            // notifyIcon1
+            // 
+            this.notifyIcon1.Text = "notifyIcon1";
+            this.notifyIcon1.Visible = true;
+            // 
             // Form1
             // 
             this.BackColor = System.Drawing.Color.SteelBlue;
             this.ClientSize = new System.Drawing.Size(1084, 572);
+            this.Controls.Add(this.panel4);
+            this.Controls.Add(this.panel3);
+            this.Controls.Add(this.panel2);
+            this.Controls.Add(this.panel1);
             this.Controls.Add(this.getMatchDataBut);
             this.Controls.Add(this.matchName);
             this.Controls.Add(this.label53);
-            this.Controls.Add(this.groupBox4);
-            this.Controls.Add(this.groupBox3);
-            this.Controls.Add(this.groupBox2);
-            this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.teamTrendLayout);
             this.Controls.Add(this.averageTeamTable);
             this.Controls.Add(this.loadText);
@@ -2089,14 +2094,14 @@ namespace Bot_Scout_RAPID_REACT
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).EndInit();
             this.teamTrendLayout.ResumeLayout(false);
             this.teamTrendLayout.PerformLayout();
-            this.groupBox1.ResumeLayout(false);
-            this.groupBox1.PerformLayout();
-            this.groupBox2.ResumeLayout(false);
-            this.groupBox2.PerformLayout();
-            this.groupBox3.ResumeLayout(false);
-            this.groupBox3.PerformLayout();
-            this.groupBox4.ResumeLayout(false);
-            this.groupBox4.PerformLayout();
+            this.panel1.ResumeLayout(false);
+            this.panel1.PerformLayout();
+            this.panel2.ResumeLayout(false);
+            this.panel2.PerformLayout();
+            this.panel3.ResumeLayout(false);
+            this.panel3.PerformLayout();
+            this.panel4.ResumeLayout(false);
+            this.panel4.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -2262,19 +2267,15 @@ namespace Bot_Scout_RAPID_REACT
         private System.Windows.Forms.Label label56;
         private System.Windows.Forms.Label averageTeleUpper;
         private System.Windows.Forms.Label averageTeleLower;
-        private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.RadioButton midClimb;
         private System.Windows.Forms.RadioButton lowClimb;
-        private System.Windows.Forms.GroupBox groupBox2;
         private System.Windows.Forms.RadioButton enterSide;
         private System.Windows.Forms.RadioButton enterFront;
         private System.Windows.Forms.RadioButton noClimb;
         private System.Windows.Forms.RadioButton travClimb;
         private System.Windows.Forms.RadioButton highClimb;
-        private System.Windows.Forms.GroupBox groupBox3;
         private System.Windows.Forms.RadioButton taxiNo;
         private System.Windows.Forms.RadioButton taxiYes;
-        private System.Windows.Forms.GroupBox groupBox4;
         private System.Windows.Forms.RadioButton posOther;
         private System.Windows.Forms.RadioButton posLaunch;
         private System.Windows.Forms.RadioButton posTar;
@@ -2285,6 +2286,11 @@ namespace Bot_Scout_RAPID_REACT
         private System.Windows.Forms.ToolStripMenuItem editToolStripMenuItem;
         private System.Windows.Forms.Label matchName;
         private System.Windows.Forms.Button getMatchDataBut;
+        private System.Windows.Forms.Panel panel4;
+        private System.Windows.Forms.Panel panel3;
+        private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.NotifyIcon notifyIcon1;
     }
 }
 
