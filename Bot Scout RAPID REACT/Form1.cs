@@ -3,10 +3,6 @@ using System.Collections.Generic;
 using System.IO;
 using System.Windows.Forms;
 
-//COMPLETE: Make alt previous match command to fix it
-//COMPLETE: Edit matches
-//TODO: Best scores, climb time, defense
-//TODO: Average climb time, and climb type and total score
 //TODO: Drive type for data entry and drive sheet
 
 
@@ -1542,6 +1538,7 @@ namespace Bot_Scout_RAPID_REACT
                 averageAuto.Text = getAverage("Auto Cargo Score", 18, 19);
                 averageAutoAcc.Text = getAverage("Auto Accuracy", 15, 16) + "%";
                 averageTeleAcc.Text = getAverage("Tele Accuracy", 15, 16) + "%";
+                averageTotalScore.Text = getAverage("Total Score", 13, 14);
 
 
 
