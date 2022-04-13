@@ -55,7 +55,10 @@ namespace Bot_Scout_RAPID_REACT
             string current = Directory.GetCurrentDirectory() + "\\";
             try
             {
-                if (!shutdownBot.Checked && matchName.Text == "Make Match")
+                if(!shutdownBot.Checked && matchName.Text == "Edit Match"){
+                    editMatchData();
+                }
+                else if (!shutdownBot.Checked && matchName.Text == "Make Match")
                 {
                     statusText.Text = "Loading...";
 
@@ -196,7 +199,7 @@ namespace Bot_Scout_RAPID_REACT
                         writeToFile(team.Text, "Auto Missed: " + autoMissed.Text);
                     }
 
-                    writeToFile(team.Text, "Tele Missed: " + teleMissed.Text);
+                    writeToFile(team.Text, "Random text, just ignore");
                     if ((teleMissed.Text).ToString().Length == 1)
                     {
                         writeToFile(team.Text, "Tele Missed: 0" + teleMissed.Text);
@@ -268,15 +271,15 @@ namespace Bot_Scout_RAPID_REACT
                     }
                     else if (posLaunch.Checked)
                     {
-                        writeToFile(team.Text, "Entry: l");
+                        writeToFile(team.Text, "Position: l");
                     }
                     else if (posTar.Checked)
                     {
-                        writeToFile(team.Text, "Entry: t");
+                        writeToFile(team.Text, "Position: t");
                     }
                     else if (posOther.Checked)
                     {
-                        writeToFile(team.Text, "Entry: o");
+                        writeToFile(team.Text, "Position: o");
                     }
                     //writeToFile(team.Text, "Entry: " + climbEnter.Text);
                     if (enterFront.Checked)
@@ -1684,6 +1687,147 @@ namespace Bot_Scout_RAPID_REACT
             getMatchDataBut.Visible = true;
         }
 
+
+
+
+
+
+
+        //This is the method that is run when the submit button is clicked on match edit mode
+        public void editMatchData()
+        {
+            int lineMatch = findMatchNumber();
+
+            if (taxiYes.Checked)
+            {
+                lineChanger("Taxi: y", team.Text + ".txt", lineMatch+1);
+
+            }
+            else if (taxiNo.Checked)
+            {
+                lineChanger("Taxi: n", team.Text + ".txt", lineMatch + 1);
+            }
+
+            //Tele Cargo
+            if ((teleLower.Text).ToString().Length == 1)
+            {
+                lineChanger("Tele Lower: 0" + teleLower.Text, team.Text + ".txt", lineMatch + 2);
+             
+            }
+            else
+            {
+                lineChanger("Tele Lower: " + teleLower.Text, team.Text + ".txt", lineMatch + 2);
+            }
+
+            if ((teleUpper.Text).ToString().Length == 1)
+            {
+                lineChanger("Tele Upper: 0" + teleUpper.Text, team.Text + ".txt", lineMatch + 3);
+            }
+            else
+            {
+                lineChanger("Tele Upper: " + teleUpper.Text, team.Text + ".txt", lineMatch + 3);
+            }
+
+            //Autos
+            int totalAuto = Int32.Parse(autoUpper.Text) + Int32.Parse(autoLower.Text);
+
+            if ((totalAuto).ToString().Length == 1)
+            {
+                lineChanger("Auto Cargo Total: 0" + totalAuto, team.Text + ".txt", lineMatch + 4);
+                //writeToFile(team.Text, "Auto Cargo Total: 0" + totalAuto);
+            }
+            else
+            {
+                lineChanger("Auto Cargo Total: " + totalAuto, team.Text + ".txt", lineMatch + 4);
+                // writeToFile(team.Text, "Auto Cargo Total: " + totalAuto);
+            }
+
+
+
+
+
+            //writeToFile(team.Text, "Auto Upper: " + autoUpper.Text);
+            if ((autoUpper.Text).ToString().Length == 1)
+            {
+                lineChanger("Auto Upper: 0" + autoUpper.Text, team.Text + ".txt", lineMatch + 5);
+            }
+            else
+            {
+                lineChanger("Auto Upper: " + autoUpper.Text, team.Text + ".txt", lineMatch + 5);
+            }
+            //writeToFile(team.Text, "Auto Lower: " + autoLower.Text);
+            if ((autoLower.Text).ToString().Length == 1)
+            {
+                lineChanger("Auto Lower: 0" + autoLower.Text, team.Text + ".txt", lineMatch + 6);
+            }
+            else
+            {
+                lineChanger("Auto Lower: " + autoLower.Text, team.Text + ".txt", lineMatch + 6);
+            }
+
+            //Missed cargo
+            if ((autoMissed.Text).ToString().Length == 1)
+            {
+                lineChanger("Auto Missed: 0" + autoMissed.Text, team.Text + ".txt", lineMatch + 7);
+            }
+            else
+            {
+                lineChanger("Auto Missed: " + autoMissed.Text, team.Text + ".txt", lineMatch + 7);
+            }
+
+            lineChanger("Still random text, you just had to edit the file", team.Text + ".txt", lineMatch + 8);
+            if ((teleMissed.Text).ToString().Length == 1)
+            {
+                lineChanger("Tele Missed: 0" + teleMissed.Text, team.Text + ".txt", lineMatch + 9);
+            }
+            else
+            {
+                lineChanger("Tele Missed: " + teleMissed.Text, team.Text + ".txt", lineMatch + 9);
+            }
+
+
+
+        }
+
+
+
+
+
+
+
+
+        public int findMatchNumber()
+        {
+            bool foundMatch = false;
+            string match1 = match.Text;
+            string team1 = team.Text;
+            int i = 1;
+            int lineMatch = 0;
+            while (!foundMatch)
+            {
+                if (GetLine(team1 + ".txt", i).Contains("Match Number"))
+                {
+                    //foundMatch = true;
+                    string num1 = GetLine(team1 + ".txt", i)[14].ToString();
+                    string num2 = GetLine(team1 + ".txt", i)[15].ToString();
+                    string matchNum = num1 + num2;
+                    Console.WriteLine("Match calculated: "+ matchNum);
+                    Console.WriteLine("Match Wanted: " + match.Text);
+                    if (matchNum == match1)
+                    {
+                        Console.WriteLine("Match Wanted: " + match.Text);
+                        lineMatch = i;
+                        foundMatch = true;
+                        //TODO: Finish match editing system (this is used to get the match number)
+                    }
+
+                }
+
+
+                i++;
+            }
+            return lineMatch;
+        }
         private void button4_Click_1(object sender, EventArgs e)
         {
             bool foundMatch = false;
@@ -1693,28 +1837,8 @@ namespace Bot_Scout_RAPID_REACT
             int lineMatch = 0;
             //Form1 match = new Form1();
             try {
-                
-                while (!foundMatch)
-                {
-                    if (GetLine(team1 + ".txt", i).Contains("Match Number"))
-                    {
-                        foundMatch = true;
-                        string num1 = GetLine(team1 + ".txt", i)[14].ToString();
-                        string num2 = GetLine(team1 + ".txt", i)[15].ToString();
-                        string matchNum = num1+num2;
-                        Console.WriteLine(matchNum);
-                        Console.WriteLine(match.Text);
-                        if (matchNum == match1)
-                        {
-                            lineMatch = i;
-                            //TODO: Finish match editing system (this is used to get the match number)
-                        }
 
-                    }
-
-                    
-                    i++;
-                }
+                lineMatch = findMatchNumber();
 
                 //Here, it will take all the data from the sheet and put it in the inputs
                 //Taxi
