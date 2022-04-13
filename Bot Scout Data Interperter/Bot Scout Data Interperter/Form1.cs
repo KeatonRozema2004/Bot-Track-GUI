@@ -98,8 +98,10 @@ namespace Bot_Scout_Data_Interperter
         {
 
             teamDataMatchSelect.Items.Clear();
+            editMatchSelect.Items.Clear();
             teamChartData.Series["Average"].Points.Clear();
             teamChartData.Series["Match"].Points.Clear();
+            match_table_view.Rows.Clear();
             string file = functions.zzGetFileDirectoryFromTeamName(dataDirectoryLabel.Text, teamDataTeamSelect.Text);
             string[] matches = functions.zzGetMatchesPlayedByTeam(teamDataTeamSelect.Text, file);
 
@@ -110,6 +112,7 @@ namespace Bot_Scout_Data_Interperter
             foreach (string match in matches)
             {
                 teamDataMatchSelect.Items.Add(match);
+                editMatchSelect.Items.Add(match);
             }
 
             for (int z=0; labels.Length > z; z++)
@@ -128,14 +131,10 @@ namespace Bot_Scout_Data_Interperter
             int[] matchPoints = matchData[0];
             string[] matchLabels = matchData[1];
 
-            DataGridViewRow row = (DataGridViewRow)match_table_view.Rows[0].Clone();
-
             for (var z = 0; matchLabels.Length > z; z++)
             {
                 teamChartData.Series["Match"].Points.AddXY(matchLabels[z], matchPoints[z]);
-                // row.Cells[z].Value = matchPoints[z];
             }
-            // match_table_view.Rows.Add(row);
 
             dynamic[] averages = functions.zzReturnMatchAveragePointsByTeamNumber(dataDirectoryLabel.Text, teamDataTeamSelect.Text);
             string[] labels = averages[1];
@@ -145,6 +144,17 @@ namespace Bot_Scout_Data_Interperter
             {
                 teamChartData.Series["Average"].Points.AddXY(labels[z], average[z]);
             }
+
+            string mp = String.Join(",", matchPoints.Select(p => p.ToString()).ToArray());
+            string ma = String.Join(",", average.Select(p => p.ToString()).ToArray());
+            match_table_view.Rows.Add(mp.Split(','));
+            match_table_view.Rows.Add(ma.Split(','));
+            match_table_view.Rows[0].DefaultCellStyle.BackColor = Color.LightBlue;
+            match_table_view.Rows[1].DefaultCellStyle.BackColor = Color.OrangeRed;
+        }
+
+        private void editMatchSelect_SelectedIndexChanged(object sender, EventArgs e)
+        {
 
         }
 
@@ -166,5 +176,7 @@ namespace Bot_Scout_Data_Interperter
 
             return teamNames.ToArray();
         }
+
+
     }
 }

@@ -185,12 +185,12 @@ namespace Bot_Scout_Data_Interperter.scripts
 
                         if (currentArray[0] == "Auto Upper")
                         {
-                            matchData.Add(2 * Int32.Parse(currentArray[1]));
+                            matchData.Add(Int32.Parse(currentArray[1])*4);
                             matchLabels.Add("Auto Upper");
                         }
                         if (currentArray[0] == "Auto Lower") 
                         {
-                            matchData.Add(Int32.Parse(currentArray[1]));
+                            matchData.Add(Int32.Parse(currentArray[1])*2);
                             matchLabels.Add("Auto Lower");
                         }
                         if (currentArray[0] == "Auto Missed") 
@@ -200,7 +200,7 @@ namespace Bot_Scout_Data_Interperter.scripts
                         }
                         if (currentArray[0] == "Tele Upper") 
                         {
-                            matchData.Add(Int32.Parse(currentArray[1]));
+                            matchData.Add(Int32.Parse(currentArray[1])*2);
                             matchLabels.Add("Tele Upper");
                         }
                         if (currentArray[0] == "Tele Lower") 
@@ -287,6 +287,11 @@ namespace Bot_Scout_Data_Interperter.scripts
                     {
                         currentMatchNumbers.Add(Int32.Parse(lineValues[1]) * 2);
                         matchLabels.Add("Auto Lower");
+                    }
+                    else if (lineValues[0] == "Auto Missed")
+                    {
+                        currentMatchNumbers.Add(Int32.Parse(lineValues[1]));
+                        matchLabels.Add("Auto Missed");
                     }
                     else if (lineValues[0] == "Tele Upper")
                     {
