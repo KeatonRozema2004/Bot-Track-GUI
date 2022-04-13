@@ -1571,7 +1571,7 @@ namespace Bot_Scout_RAPID_REACT
             this.loadText.AutoSize = true;
             this.loadText.Font = new System.Drawing.Font("Microsoft YaHei UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.loadText.ForeColor = System.Drawing.SystemColors.HighlightText;
-            this.loadText.Location = new System.Drawing.Point(522, 37);
+            this.loadText.Location = new System.Drawing.Point(541, 38);
             this.loadText.Name = "loadText";
             this.loadText.Size = new System.Drawing.Size(168, 17);
             this.loadText.TabIndex = 77;
