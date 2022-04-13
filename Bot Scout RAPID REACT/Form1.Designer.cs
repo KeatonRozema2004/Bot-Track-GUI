@@ -83,7 +83,6 @@ namespace Bot_Scout_RAPID_REACT
             this.climbToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.overallScoreToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.averageScoresMenu = new System.Windows.Forms.ToolStripMenuItem();
-            this.teamTrendsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.bestTeamsTableLayout = new System.Windows.Forms.TableLayoutPanel();
             this.label36 = new System.Windows.Forms.Label();
             this.label35 = new System.Windows.Forms.Label();
@@ -491,8 +490,7 @@ namespace Bot_Scout_RAPID_REACT
             this.matchToolStripMenuItem,
             this.driverSheetMenu,
             this.bestTeamsMenu,
-            this.averageScoresMenu,
-            this.teamTrendsToolStripMenuItem});
+            this.averageScoresMenu});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Size = new System.Drawing.Size(1084, 26);
@@ -513,7 +511,7 @@ namespace Bot_Scout_RAPID_REACT
             // 
             this.makeToolStripMenuItem.Name = "makeToolStripMenuItem";
             this.makeToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.M)));
-            this.makeToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.makeToolStripMenuItem.Size = new System.Drawing.Size(176, 22);
             this.makeToolStripMenuItem.Text = "Make";
             this.makeToolStripMenuItem.Click += new System.EventHandler(this.makeToolStripMenuItem_Click);
             // 
@@ -521,7 +519,7 @@ namespace Bot_Scout_RAPID_REACT
             // 
             this.editToolStripMenuItem.Name = "editToolStripMenuItem";
             this.editToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.E)));
-            this.editToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.editToolStripMenuItem.Size = new System.Drawing.Size(176, 22);
             this.editToolStripMenuItem.Text = "Edit";
             this.editToolStripMenuItem.Click += new System.EventHandler(this.editToolStripMenuItem_Click);
             // 
@@ -664,8 +662,9 @@ namespace Bot_Scout_RAPID_REACT
             // overallScoreToolStripMenuItem
             // 
             this.overallScoreToolStripMenuItem.Name = "overallScoreToolStripMenuItem";
-            this.overallScoreToolStripMenuItem.Size = new System.Drawing.Size(179, 22);
+            this.overallScoreToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.overallScoreToolStripMenuItem.Text = "Overall Score";
+            this.overallScoreToolStripMenuItem.Click += new System.EventHandler(this.overallScoreToolStripMenuItem_Click);
             // 
             // averageScoresMenu
             // 
@@ -674,14 +673,6 @@ namespace Bot_Scout_RAPID_REACT
             this.averageScoresMenu.Size = new System.Drawing.Size(139, 22);
             this.averageScoresMenu.Text = "Average Scores";
             this.averageScoresMenu.Click += new System.EventHandler(this.averageScoresMenu_Click);
-            // 
-            // teamTrendsToolStripMenuItem
-            // 
-            this.teamTrendsToolStripMenuItem.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.teamTrendsToolStripMenuItem.Name = "teamTrendsToolStripMenuItem";
-            this.teamTrendsToolStripMenuItem.Size = new System.Drawing.Size(119, 22);
-            this.teamTrendsToolStripMenuItem.Text = "Team Trends";
-            this.teamTrendsToolStripMenuItem.Click += new System.EventHandler(this.teamTrendsToolStripMenuItem_Click);
             // 
             // bestTeamsTableLayout
             // 
@@ -2239,7 +2230,6 @@ namespace Bot_Scout_RAPID_REACT
         private System.Windows.Forms.Label averageTeleAcc;
         private System.Windows.Forms.Label label47;
         private System.Windows.Forms.Label label48;
-        private System.Windows.Forms.ToolStripMenuItem teamTrendsToolStripMenuItem;
         private System.Windows.Forms.ErrorProvider errorProvider1;
         private System.Windows.Forms.TableLayoutPanel teamTrendLayout;
         private System.Windows.Forms.Label teamTrend;

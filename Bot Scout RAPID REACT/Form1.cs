@@ -3,13 +3,12 @@ using System.Collections.Generic;
 using System.IO;
 using System.Windows.Forms;
 
-//TODO: Best scores, climb time, defense, and overall score
-//TODO: Average climb time, and climb type and total score
-//TODO: Make alt previous match command to fix it
-
-//TODO: Team Trends (looks at most recent match score, and compares it with the average total score
-//TODO: Drive type for data entry and drive sheet
+//COMPLETE: Make alt previous match command to fix it
 //COMPLETE: Edit matches
+//TODO: Best scores, climb time, defense
+//TODO: Average climb time, and climb type and total score
+//TODO: Drive type for data entry and drive sheet
+
 
 namespace Bot_Scout_RAPID_REACT
 {
@@ -729,6 +728,12 @@ namespace Bot_Scout_RAPID_REACT
                 {
                     string num1 = match.GetLine(team1 + ".txt", i)[10].ToString();
                     defense2.Text = num1;
+                }
+                if (match.GetLine(team1 + ".txt", i).Contains("Total Score"))
+                {
+                    string num1 = match.GetLine(team1 + ".txt", i)[13].ToString();
+                    string num2 = match.GetLine(team1 + ".txt", i)[14].ToString();
+                    totalScore2.Text = num1 + num2;
                 }
                 if (match.GetLine(team1 + ".txt", i).Contains("-----"))
                 {
@@ -2072,6 +2077,11 @@ namespace Bot_Scout_RAPID_REACT
         private void taxiNo_CheckedChanged(object sender, EventArgs e)
         {
 
+        }
+
+        private void overallScoreToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            bestTeamsStats("Total Score", 13, 14, 0, 0, false, "Total Scores");
         }
     }
 
