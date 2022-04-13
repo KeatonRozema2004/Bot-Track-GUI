@@ -389,21 +389,13 @@ namespace Bot_Scout_RAPID_REACT
                 posHub.Checked = false;
                 taxiNo.Checked = false;
                 taxiYes.Checked = false;
-                //notifyIcon1.Text = "Done";
-                notify("Finished");
-                //notifyIcon1.
 
             }
             catch
             {
-                notify("Looks like there's some issues");
+                statusText.Text = "Check again, didn't load...";
             }
 
-        }
-        public void notify(string text)
-        {
-            notifyIcon1.BalloonTipText = text;
-            notifyIcon1.ShowBalloonTip(1000);
         }
 
         public string GetLine(string fileName, int line)
@@ -656,7 +648,7 @@ namespace Bot_Scout_RAPID_REACT
                 {
                     try
                     {
-                        driveData(1, 0);
+                        driveData(1);
                     }
                     catch (Exception)
                     {
@@ -671,12 +663,11 @@ namespace Bot_Scout_RAPID_REACT
         }
 
 
-        public void driveData(int matchInc, int changeStart)
+        public void driveData(int matchInc)
         {
             bool matchEnd = false;
             Form1 match = new Form1();
-            int i = Int32.Parse(lineMatch.Text)-changeStart;
-            Console.WriteLine("It's " + i);
+            int i = Int32.Parse(lineMatch.Text);
             string team1 = team.Text;
 
             while (matchEnd == false)
@@ -1430,7 +1421,6 @@ namespace Bot_Scout_RAPID_REACT
 
             team20.Text = "Team " + teleHighTeam20;
             team20Data.Text = "" + teleHigh20;
-            notify("Your best teams for " + name + " are now loaded!");
         }
 
         private void bestStatsToolStripMenuItem_Click(object sender, EventArgs e)
@@ -1438,11 +1428,11 @@ namespace Bot_Scout_RAPID_REACT
             try
             {
                 bestScore(team.Text);
-                notify("Loaded best stats for team " + team.Text);
+                loadText.Text = "Loaded OK I guess...";
             }
             catch
             {
-                notify("Error... Check if the team exists");
+                loadText.Text = "Bruh, this team do not exist";
             }
         }
 
@@ -1453,24 +1443,21 @@ namespace Bot_Scout_RAPID_REACT
                 string team1 = team.Text;
                 Form1 match = new Form1();
                 int i = Int32.Parse(lineMatch.Text);
-                if (match.GetLine(team1 + ".txt", i - 45).Contains("Match Number"))
+                if (match.GetLine(team1 + ".txt", i - 22).Contains("-----"))
                 {
                     try
                     {
-                        driveData(1, 46);
-                        notify("Loaded the previous match for team " + team1);
+                        driveData(-1);
                     }
                     catch (Exception)
                     {
                         Console.WriteLine("Whoops");
                     }
                 }
-                
             }
             catch (Exception)
             {
-                
-                notify("Error... Check if the team exists");
+                loadText.Text = "Can't find team";
             }
         }
 
@@ -1485,8 +1472,7 @@ namespace Bot_Scout_RAPID_REACT
                 {
                     try
                     {
-                        driveData(1, 0);
-                        notify("Loaded the next match for team " + team1);
+                        driveData(1);
                     }
                     catch (Exception)
                     {
@@ -1496,7 +1482,7 @@ namespace Bot_Scout_RAPID_REACT
             }
             catch (Exception)
             {
-                notify("Error... Check if the team exists");
+                loadText.Text = "Can't find team";
             }
         }
 
@@ -1622,7 +1608,7 @@ namespace Bot_Scout_RAPID_REACT
             //int i = Int32.Parse(lineMatch.Text);
             while (GetLine(team1 + ".txt", i + 1).Contains("Match Number"))
             {
-                driveData(1, 0);
+                driveData(1);
                 i = Int32.Parse(lineMatch.Text);
             }
         }

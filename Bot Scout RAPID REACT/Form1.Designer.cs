@@ -1840,7 +1840,7 @@ namespace Bot_Scout_RAPID_REACT
             this.highClimb.Location = new System.Drawing.Point(49, 3);
             this.highClimb.Name = "highClimb";
             this.highClimb.Size = new System.Drawing.Size(47, 17);
-            this.highClimb.TabIndex = 11;
+            this.highClimb.TabIndex = 17;
             this.highClimb.TabStop = true;
             this.highClimb.Text = "High";
             this.highClimb.UseVisualStyleBackColor = true;
@@ -1896,7 +1896,7 @@ namespace Bot_Scout_RAPID_REACT
             this.taxiYes.Location = new System.Drawing.Point(5, 3);
             this.taxiYes.Name = "taxiYes";
             this.taxiYes.Size = new System.Drawing.Size(43, 17);
-            this.taxiYes.TabIndex = 2;
+            this.taxiYes.TabIndex = 0;
             this.taxiYes.TabStop = true;
             this.taxiYes.Text = "Yes";
             this.taxiYes.UseVisualStyleBackColor = true;
@@ -1987,7 +1987,7 @@ namespace Bot_Scout_RAPID_REACT
             this.panel1.Location = new System.Drawing.Point(349, 96);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(156, 46);
-            this.panel1.TabIndex = 6;
+            this.panel1.TabIndex = 89;
             // 
             // panel2
             // 
@@ -2000,7 +2000,7 @@ namespace Bot_Scout_RAPID_REACT
             this.panel2.Location = new System.Drawing.Point(134, 297);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(161, 47);
-            this.panel2.TabIndex = 11;
+            this.panel2.TabIndex = 90;
             // 
             // panel3
             // 
@@ -2010,7 +2010,7 @@ namespace Bot_Scout_RAPID_REACT
             this.panel3.Location = new System.Drawing.Point(135, 96);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(102, 26);
-            this.panel3.TabIndex = 2;
+            this.panel3.TabIndex = 91;
             // 
             // panel4
             // 
@@ -2020,13 +2020,10 @@ namespace Bot_Scout_RAPID_REACT
             this.panel4.Location = new System.Drawing.Point(349, 243);
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(100, 29);
-            this.panel4.TabIndex = 14;
+            this.panel4.TabIndex = 92;
             // 
             // notifyIcon1
             // 
-            this.notifyIcon1.BalloonTipIcon = System.Windows.Forms.ToolTipIcon.Info;
-            this.notifyIcon1.BalloonTipText = "Yep\r\n";
-            this.notifyIcon1.Icon = ((System.Drawing.Icon)(resources.GetObject("notifyIcon1.Icon")));
             this.notifyIcon1.Text = "notifyIcon1";
             this.notifyIcon1.Visible = true;
             // 
