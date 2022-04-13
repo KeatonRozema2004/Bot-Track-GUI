@@ -62,6 +62,14 @@ namespace Bot_Scout_RAPID_REACT
             this.statusText = new System.Windows.Forms.Label();
             this.shutdownBot = new System.Windows.Forms.CheckBox();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
+            this.matchToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.makeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.editToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.driverSheetMenu = new System.Windows.Forms.ToolStripMenuItem();
+            this.bestStatsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.previousMatchToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.nextMatchToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.recentMatchToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.bestTeamsMenu = new System.Windows.Forms.ToolStripMenuItem();
             this.teleTotalToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.teleLowerButton = new System.Windows.Forms.ToolStripMenuItem();
@@ -74,11 +82,6 @@ namespace Bot_Scout_RAPID_REACT
             this.defenseToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.climbToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.overallScoreToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.driverSheetMenu = new System.Windows.Forms.ToolStripMenuItem();
-            this.bestStatsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.previousMatchToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.nextMatchToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.recentMatchToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.averageScoresMenu = new System.Windows.Forms.ToolStripMenuItem();
             this.teamTrendsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.bestTeamsTableLayout = new System.Windows.Forms.TableLayoutPanel();
@@ -199,9 +202,6 @@ namespace Bot_Scout_RAPID_REACT
             this.posTar = new System.Windows.Forms.RadioButton();
             this.posHub = new System.Windows.Forms.RadioButton();
             this.label53 = new System.Windows.Forms.Label();
-            this.matchToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.makeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.editToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.matchName = new System.Windows.Forms.Label();
             this.getMatchDataBut = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -448,6 +448,7 @@ namespace Bot_Scout_RAPID_REACT
             this.climbEnd.Name = "climbEnd";
             this.climbEnd.Size = new System.Drawing.Size(100, 20);
             this.climbEnd.TabIndex = 13;
+            this.climbEnd.TextChanged += new System.EventHandler(this.climbEnd_TextChanged);
             // 
             // pictureBox1
             // 
@@ -484,6 +485,7 @@ namespace Bot_Scout_RAPID_REACT
             // 
             this.menuStrip1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(100)))), ((int)(((byte)(150)))));
             this.menuStrip1.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.menuStrip1.GripStyle = System.Windows.Forms.ToolStripGripStyle.Visible;
             this.menuStrip1.ImageScalingSize = new System.Drawing.Size(24, 24);
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.matchToolStripMenuItem,
@@ -496,6 +498,78 @@ namespace Bot_Scout_RAPID_REACT
             this.menuStrip1.Size = new System.Drawing.Size(1084, 26);
             this.menuStrip1.TabIndex = 34;
             this.menuStrip1.Text = "menuStrip1";
+            // 
+            // matchToolStripMenuItem
+            // 
+            this.matchToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.makeToolStripMenuItem,
+            this.editToolStripMenuItem});
+            this.matchToolStripMenuItem.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.matchToolStripMenuItem.Name = "matchToolStripMenuItem";
+            this.matchToolStripMenuItem.Size = new System.Drawing.Size(66, 22);
+            this.matchToolStripMenuItem.Text = "Match";
+            // 
+            // makeToolStripMenuItem
+            // 
+            this.makeToolStripMenuItem.Name = "makeToolStripMenuItem";
+            this.makeToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.M)));
+            this.makeToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.makeToolStripMenuItem.Text = "Make";
+            this.makeToolStripMenuItem.Click += new System.EventHandler(this.makeToolStripMenuItem_Click);
+            // 
+            // editToolStripMenuItem
+            // 
+            this.editToolStripMenuItem.Name = "editToolStripMenuItem";
+            this.editToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.E)));
+            this.editToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.editToolStripMenuItem.Text = "Edit";
+            this.editToolStripMenuItem.Click += new System.EventHandler(this.editToolStripMenuItem_Click);
+            // 
+            // driverSheetMenu
+            // 
+            this.driverSheetMenu.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.bestStatsToolStripMenuItem,
+            this.previousMatchToolStripMenuItem,
+            this.nextMatchToolStripMenuItem,
+            this.recentMatchToolStripMenuItem});
+            this.driverSheetMenu.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.driverSheetMenu.Name = "driverSheetMenu";
+            this.driverSheetMenu.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.D)));
+            this.driverSheetMenu.Size = new System.Drawing.Size(113, 22);
+            this.driverSheetMenu.Text = "Driver Sheet";
+            this.driverSheetMenu.Click += new System.EventHandler(this.driverSheetMenu_Click);
+            // 
+            // bestStatsToolStripMenuItem
+            // 
+            this.bestStatsToolStripMenuItem.Name = "bestStatsToolStripMenuItem";
+            this.bestStatsToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.B)));
+            this.bestStatsToolStripMenuItem.Size = new System.Drawing.Size(249, 22);
+            this.bestStatsToolStripMenuItem.Text = "Best Stats";
+            this.bestStatsToolStripMenuItem.Click += new System.EventHandler(this.bestStatsToolStripMenuItem_Click);
+            // 
+            // previousMatchToolStripMenuItem
+            // 
+            this.previousMatchToolStripMenuItem.Name = "previousMatchToolStripMenuItem";
+            this.previousMatchToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.P)));
+            this.previousMatchToolStripMenuItem.Size = new System.Drawing.Size(249, 22);
+            this.previousMatchToolStripMenuItem.Text = "Previous Match";
+            this.previousMatchToolStripMenuItem.Click += new System.EventHandler(this.previousMatchToolStripMenuItem_Click);
+            // 
+            // nextMatchToolStripMenuItem
+            // 
+            this.nextMatchToolStripMenuItem.Name = "nextMatchToolStripMenuItem";
+            this.nextMatchToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.N)));
+            this.nextMatchToolStripMenuItem.Size = new System.Drawing.Size(249, 22);
+            this.nextMatchToolStripMenuItem.Text = "Next Match";
+            this.nextMatchToolStripMenuItem.Click += new System.EventHandler(this.nextMatchToolStripMenuItem_Click);
+            // 
+            // recentMatchToolStripMenuItem
+            // 
+            this.recentMatchToolStripMenuItem.Name = "recentMatchToolStripMenuItem";
+            this.recentMatchToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.R)));
+            this.recentMatchToolStripMenuItem.Size = new System.Drawing.Size(249, 22);
+            this.recentMatchToolStripMenuItem.Text = "Recent Match";
+            this.recentMatchToolStripMenuItem.Click += new System.EventHandler(this.recentMatchToolStripMenuItem_Click);
             // 
             // bestTeamsMenu
             // 
@@ -592,52 +666,6 @@ namespace Bot_Scout_RAPID_REACT
             this.overallScoreToolStripMenuItem.Name = "overallScoreToolStripMenuItem";
             this.overallScoreToolStripMenuItem.Size = new System.Drawing.Size(179, 22);
             this.overallScoreToolStripMenuItem.Text = "Overall Score";
-            // 
-            // driverSheetMenu
-            // 
-            this.driverSheetMenu.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.bestStatsToolStripMenuItem,
-            this.previousMatchToolStripMenuItem,
-            this.nextMatchToolStripMenuItem,
-            this.recentMatchToolStripMenuItem});
-            this.driverSheetMenu.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.driverSheetMenu.Name = "driverSheetMenu";
-            this.driverSheetMenu.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.D)));
-            this.driverSheetMenu.Size = new System.Drawing.Size(113, 22);
-            this.driverSheetMenu.Text = "Driver Sheet";
-            this.driverSheetMenu.Click += new System.EventHandler(this.driverSheetMenu_Click);
-            // 
-            // bestStatsToolStripMenuItem
-            // 
-            this.bestStatsToolStripMenuItem.Name = "bestStatsToolStripMenuItem";
-            this.bestStatsToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.B)));
-            this.bestStatsToolStripMenuItem.Size = new System.Drawing.Size(249, 22);
-            this.bestStatsToolStripMenuItem.Text = "Best Stats";
-            this.bestStatsToolStripMenuItem.Click += new System.EventHandler(this.bestStatsToolStripMenuItem_Click);
-            // 
-            // previousMatchToolStripMenuItem
-            // 
-            this.previousMatchToolStripMenuItem.Name = "previousMatchToolStripMenuItem";
-            this.previousMatchToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.P)));
-            this.previousMatchToolStripMenuItem.Size = new System.Drawing.Size(249, 22);
-            this.previousMatchToolStripMenuItem.Text = "Previous Match";
-            this.previousMatchToolStripMenuItem.Click += new System.EventHandler(this.previousMatchToolStripMenuItem_Click);
-            // 
-            // nextMatchToolStripMenuItem
-            // 
-            this.nextMatchToolStripMenuItem.Name = "nextMatchToolStripMenuItem";
-            this.nextMatchToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.N)));
-            this.nextMatchToolStripMenuItem.Size = new System.Drawing.Size(249, 22);
-            this.nextMatchToolStripMenuItem.Text = "Next Match";
-            this.nextMatchToolStripMenuItem.Click += new System.EventHandler(this.nextMatchToolStripMenuItem_Click);
-            // 
-            // recentMatchToolStripMenuItem
-            // 
-            this.recentMatchToolStripMenuItem.Name = "recentMatchToolStripMenuItem";
-            this.recentMatchToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.R)));
-            this.recentMatchToolStripMenuItem.Size = new System.Drawing.Size(249, 22);
-            this.recentMatchToolStripMenuItem.Text = "Recent Match";
-            this.recentMatchToolStripMenuItem.Click += new System.EventHandler(this.recentMatchToolStripMenuItem_Click);
             // 
             // averageScoresMenu
             // 
@@ -1967,38 +1995,12 @@ namespace Bot_Scout_RAPID_REACT
             this.label53.AutoSize = true;
             this.label53.Font = new System.Drawing.Font("MV Boli", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label53.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label53.Location = new System.Drawing.Point(-3, 437);
+            this.label53.Location = new System.Drawing.Point(-5, 442);
             this.label53.Name = "label53";
             this.label53.Size = new System.Drawing.Size(245, 125);
             this.label53.TabIndex = 86;
             this.label53.Text = "Enter data, press tab, \r\ncontinue. When you \r\nget to a checkbox,\r\nuse the arrow k" +
     "eys \r\nto navigate\r\n";
-            // 
-            // matchToolStripMenuItem
-            // 
-            this.matchToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.makeToolStripMenuItem,
-            this.editToolStripMenuItem});
-            this.matchToolStripMenuItem.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.matchToolStripMenuItem.Name = "matchToolStripMenuItem";
-            this.matchToolStripMenuItem.Size = new System.Drawing.Size(66, 22);
-            this.matchToolStripMenuItem.Text = "Match";
-            // 
-            // makeToolStripMenuItem
-            // 
-            this.makeToolStripMenuItem.Name = "makeToolStripMenuItem";
-            this.makeToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.M)));
-            this.makeToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.makeToolStripMenuItem.Text = "Make";
-            this.makeToolStripMenuItem.Click += new System.EventHandler(this.makeToolStripMenuItem_Click);
-            // 
-            // editToolStripMenuItem
-            // 
-            this.editToolStripMenuItem.Name = "editToolStripMenuItem";
-            this.editToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.E)));
-            this.editToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.editToolStripMenuItem.Text = "Edit";
-            this.editToolStripMenuItem.Click += new System.EventHandler(this.editToolStripMenuItem_Click);
             // 
             // matchName
             // 
@@ -2023,7 +2025,7 @@ namespace Bot_Scout_RAPID_REACT
             // Form1
             // 
             this.BackColor = System.Drawing.Color.SteelBlue;
-            this.ClientSize = new System.Drawing.Size(1084, 561);
+            this.ClientSize = new System.Drawing.Size(1084, 572);
             this.Controls.Add(this.getMatchDataBut);
             this.Controls.Add(this.matchName);
             this.Controls.Add(this.label53);
@@ -2069,6 +2071,7 @@ namespace Bot_Scout_RAPID_REACT
             this.Controls.Add(this.label4);
             this.Controls.Add(this.button3);
             this.Controls.Add(this.menuStrip1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.HelpButton = true;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MainMenuStrip = this.menuStrip1;

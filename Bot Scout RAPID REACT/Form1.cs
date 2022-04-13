@@ -5,6 +5,7 @@ using System.Collections.Generic;
 
 //TODO: Best scores, add tele low, high, and total, climb time, defense, and overall score
 //TODO: Average climb time, and climb type and total score
+//TODO: Make alt previous match command to fix it
 
 //TODO: Team Trends (looks at most recent match score, and compares it with the average total score
 //TODO: Drive type for data entry and drive sheet
@@ -1689,7 +1690,7 @@ namespace Bot_Scout_RAPID_REACT
             int i = 1;
             string team1 = team.Text;
             string match1 = match.Text;
-            int lineMatch;
+            int lineMatch = 0;
             //Form1 match = new Form1();
             try {
                 
@@ -1716,6 +1717,83 @@ namespace Bot_Scout_RAPID_REACT
                 }
 
                 //Here, it will take all the data from the sheet and put it in the inputs
+                //Taxi
+                if (getMatchData(6, lineMatch + 1, "Taxi") == "y")
+                {
+                    taxiYes.Checked = true;
+                }
+                else if( getMatchData(6, lineMatch + 1, "Taxi") == "n" )
+                {
+                    taxiNo.Checked = true;
+                }
+                //Tele
+                teleLower.Text = getMatchData(12, 13, lineMatch + 2, "Tele Lower");
+                teleUpper.Text = getMatchData(12, 13, lineMatch + 3, "Tele Upper");
+                //Autos
+                autoUpper.Text = getMatchData(12, 13, lineMatch + 5, "Auto Upper");
+                autoLower.Text = getMatchData(12, 13, lineMatch + 6, "Auto Lower");
+                //Missed
+                autoMissed.Text = getMatchData(13, 14, lineMatch + 7, "Auto Missed");
+                teleMissed.Text = getMatchData(13, 14, lineMatch + 9, "Tele Missed");
+                //Climb
+                climbStart.Text = getMatchData(7, 8, lineMatch + 10, "Start");
+                climbEnd.Text = getMatchData(5, 6, lineMatch + 11, "End");
+                string climbTT = getMatchData(12, lineMatch + 13, "Climb Type");
+                
+                if(climbTT == "l")
+                {
+                    lowClimb.Checked = true;
+                }
+                else if (climbTT == "m")
+                {
+                    midClimb.Checked = true;
+                }
+                else if (climbTT == "h")
+                {
+                    highClimb.Checked = true;
+                }
+                else if (climbTT == "t")
+                {
+                    travClimb.Checked = true;
+                }
+                else if (climbTT == "n")
+                {
+                    noClimb.Checked = true;
+                }
+                //Defense
+                defense.Text = getMatchData(9, 10, lineMatch + 14, "Defense");
+                //Position
+                string posT = getMatchData(10, lineMatch + 15, "Position");
+                if (posT == "l")
+                {
+                    posLaunch.Checked = true;
+                }
+                else if (posT == "h")
+                {
+                    posHub.Checked = true;
+                }
+                else if (posT == "t")
+                {
+                    posTar.Checked = true;
+                }
+                else if (posT == "o")
+                {
+                    posOther.Checked = true;
+                }
+                //Entry
+                string entryT = getMatchData(7, lineMatch + 16, "Entry");
+                if (entryT == "f")
+                {
+                    enterFront.Checked = true;
+                }
+                else if (entryT == "s")
+                {
+                    enterSide.Checked = true;
+                }
+
+
+                //teleLower.Text = "yep";
+                //Console.WriteLine(getMatchData(12, 13, lineMatch + 2, "Tele Lower"));
 
                 //TODO: Make it so the submit button brings changes to specific line for editing
             }
@@ -1723,6 +1801,33 @@ namespace Bot_Scout_RAPID_REACT
             {
                 matchName.Text = "Nope " + l;
             }
+        }
+
+        public string getMatchData(int val1, int val2, int line, string contains)
+        {
+            string score = "";
+            if (GetLine(team.Text + ".txt", line).Contains(contains))
+            {
+                string num1 = GetLine(team.Text + ".txt", line)[val1].ToString();
+                string num2 = GetLine(team.Text + ".txt", line)[val2].ToString();
+                score = Int32.Parse(num1 + num2) + "";
+            }
+            return score;
+        }
+        public string getMatchData(int val, int line, string contains)
+        {
+            string score = "";
+            if (GetLine(team.Text + ".txt", line).Contains(contains))
+            {
+                string num1 = GetLine(team.Text + ".txt", line)[val].ToString();
+                score = num1;
+            }
+            return score;
+        }
+        
+        private void climbEnd_TextChanged(object sender, EventArgs e)
+        {
+
         }
     }
 
