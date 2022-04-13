@@ -1,13 +1,15 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.IO;
 using System.Windows.Forms;
-using System.Collections.Generic;
 
-//TODO: Best scores, add tele low, high, and total, climb time, defense, and overall score
+//TODO: Best scores, climb time, defense, and overall score
 //TODO: Average climb time, and climb type and total score
+//TODO: Make alt previous match command to fix it
 
 //TODO: Team Trends (looks at most recent match score, and compares it with the average total score
 //TODO: Drive type for data entry and drive sheet
+//COMPLETE: Edit matches
 
 namespace Bot_Scout_RAPID_REACT
 {
@@ -28,6 +30,7 @@ namespace Bot_Scout_RAPID_REACT
             averageTeamTable.Location = new System.Drawing.Point(pX, pY);
             driverSheetTable.Location = new System.Drawing.Point(pX, pY);
             teamTrendLayout.Location = new System.Drawing.Point(pX, pY);
+            getMatchDataBut.Visible = false;
         }
 
         private void Form1_Load(object sender, EventArgs e)
@@ -53,7 +56,11 @@ namespace Bot_Scout_RAPID_REACT
             string current = Directory.GetCurrentDirectory() + "\\";
             try
             {
-                if (!shutdownBot.Checked)
+                if (!shutdownBot.Checked && matchName.Text == "Edit Match")
+                {
+                    editMatchData();
+                }
+                else if (!shutdownBot.Checked && matchName.Text == "Make Match")
                 {
                     statusText.Text = "Loading...";
 
@@ -65,8 +72,6 @@ namespace Bot_Scout_RAPID_REACT
 
                     string autoAccuracy;
                     string teleAccuracy;
-                    int team1;
-                    string prompt;
                     if (!File.Exists("blank.txt"))
                     {
                         addTeam("blank");
@@ -79,17 +84,12 @@ namespace Bot_Scout_RAPID_REACT
                         addLines(team.Text);
 
                     }
-                    //addTeam(team.Text);
-                    //addLines(team.Text);
-
-
-                    //User match data
                     climbTime = (Int32.Parse(climbStart.Text) - Int32.Parse(climbEnd.Text));
 
                     double autoUpperInt = Double.Parse(autoUpper.Text);
                     double autoLowerInt = Double.Parse(autoLower.Text);
                     double autoMissedInt = Double.Parse(autoMissed.Text);
-                    if((autoUpperInt + autoLowerInt) / (autoUpperInt + autoLowerInt + autoMissedInt) * 100 + "" == "NaN")
+                    if ((autoUpperInt + autoLowerInt) / (autoUpperInt + autoLowerInt + autoMissedInt) * 100 + "" == "NaN")
                     {
                         autoAccuracy = "00";
                     }
@@ -97,7 +97,7 @@ namespace Bot_Scout_RAPID_REACT
                     {
                         autoAccuracy = (autoUpperInt + autoLowerInt) / (autoUpperInt + autoLowerInt + autoMissedInt) * 100 + "";
                     }
-                    
+
 
                     double teleUpperInt = Double.Parse(teleUpper.Text);
                     double teleLowerInt = Double.Parse(teleLower.Text);
@@ -111,19 +111,24 @@ namespace Bot_Scout_RAPID_REACT
                     {
                         teleAccuracy = (teleUpperInt + teleLowerInt) / (teleUpperInt + teleLowerInt + teleMissedInt) * 100 + "";
                     }
-                    
+
                     //User match data
-                    writeToFile(team.Text, "Match Number: " + match.Text);
+                    if ((match.Text).ToString().Length == 1)
+                    {
+                        writeToFile(team.Text, "Match Number: 0" + match.Text);
+                    }
+                    else
+                    {
+                        writeToFile(team.Text, "Match Number: " + match.Text);
+                    }
                     if (taxiYes.Checked)
                     {
-                        writeToFile(team.Text, "Match Number: y");
+                        writeToFile(team.Text, "Taxi: y");
                     }
                     else if (taxiNo.Checked)
                     {
-                        writeToFile(team.Text, "Match Number: n");
+                        writeToFile(team.Text, "Taxi: n");
                     }
-                    //writeToFile(team.Text, "Taxi: " + taxi.Text);
-                    //writeToFile(team.Text, "Tele Lower: " + teleLower.Text);
                     if ((teleLower.Text).ToString().Length == 1)
                     {
                         writeToFile(team.Text, "Tele Lower: 0" + teleLower.Text);
@@ -132,7 +137,7 @@ namespace Bot_Scout_RAPID_REACT
                     {
                         writeToFile(team.Text, "Tele Lower: " + teleLower.Text);
                     }
-                    //writeToFile(team.Text, "Tele Upper: " + teleUpper.Text);
+
                     if ((teleUpper.Text).ToString().Length == 1)
                     {
                         writeToFile(team.Text, "Tele Upper: 0" + teleUpper.Text);
@@ -156,7 +161,7 @@ namespace Bot_Scout_RAPID_REACT
 
 
 
-                    //writeToFile(team.Text, "Auto Upper: " + autoUpper.Text);
+
                     if ((autoUpper.Text).ToString().Length == 1)
                     {
                         writeToFile(team.Text, "Auto Upper: 0" + autoUpper.Text);
@@ -165,7 +170,7 @@ namespace Bot_Scout_RAPID_REACT
                     {
                         writeToFile(team.Text, "Auto Upper: " + autoUpper.Text);
                     }
-                    //writeToFile(team.Text, "Auto Lower: " + autoLower.Text);
+
                     if ((autoLower.Text).ToString().Length == 1)
                     {
                         writeToFile(team.Text, "Auto Lower: 0" + autoLower.Text);
@@ -175,8 +180,6 @@ namespace Bot_Scout_RAPID_REACT
                         writeToFile(team.Text, "Auto Lower: " + autoLower.Text);
                     }
 
-
-                    //writeToFile(team.Text, "Auto Missed: " + autoMissed.Text);
                     if ((autoMissed.Text).ToString().Length == 1)
                     {
                         writeToFile(team.Text, "Auto Missed: 0" + autoMissed.Text);
@@ -186,7 +189,7 @@ namespace Bot_Scout_RAPID_REACT
                         writeToFile(team.Text, "Auto Missed: " + autoMissed.Text);
                     }
 
-                    writeToFile(team.Text, "Tele Missed: " + teleMissed.Text);
+                    writeToFile(team.Text, "Random text, just ignore");
                     if ((teleMissed.Text).ToString().Length == 1)
                     {
                         writeToFile(team.Text, "Tele Missed: 0" + teleMissed.Text);
@@ -196,8 +199,6 @@ namespace Bot_Scout_RAPID_REACT
                         writeToFile(team.Text, "Tele Missed: " + teleMissed.Text);
                     }
 
-
-                    //writeToFile(team.Text, "Start: " + climbStart.Text);
                     if ((climbStart.Text).ToString().Length == 1)
                     {
                         writeToFile(team.Text, "Start: 0" + climbStart.Text);
@@ -206,7 +207,7 @@ namespace Bot_Scout_RAPID_REACT
                     {
                         writeToFile(team.Text, "Start: " + climbStart.Text);
                     }
-                    //writeToFile(team.Text, "End: " + climbEnd.Text);
+
                     if ((climbEnd.Text).ToString().Length == 1)
                     {
                         writeToFile(team.Text, "End: 0" + climbEnd.Text);
@@ -224,7 +225,6 @@ namespace Bot_Scout_RAPID_REACT
                     {
                         writeToFile(team.Text, "Total Climb Time: " + climbTime);
                     }
-                    //writeToFile(team.Text, "Climb Type: " + climbType.Text);
                     if (lowClimb.Checked)
                     {
                         writeToFile(team.Text, "Climb Type: l");
@@ -251,24 +251,23 @@ namespace Bot_Scout_RAPID_REACT
                         climbType = "n";
                     }
                     writeToFile(team.Text, "Defense: " + "0" + defense.Text);
-                    //writeToFile(team.Text, "Position: " + position.Text);
                     if (posHub.Checked)
                     {
                         writeToFile(team.Text, "Position: h");
                     }
                     else if (posLaunch.Checked)
                     {
-                        writeToFile(team.Text, "Entry: l");
+                        writeToFile(team.Text, "Position: l");
                     }
                     else if (posTar.Checked)
                     {
-                        writeToFile(team.Text, "Entry: t");
+                        writeToFile(team.Text, "Position: t");
                     }
                     else if (posOther.Checked)
                     {
-                        writeToFile(team.Text, "Entry: o");
+                        writeToFile(team.Text, "Position: o");
                     }
-                    //writeToFile(team.Text, "Entry: " + climbEnter.Text);
+
                     if (enterFront.Checked)
                     {
                         writeToFile(team.Text, "Entry: f");
@@ -320,7 +319,7 @@ namespace Bot_Scout_RAPID_REACT
 
 
 
-                    
+
                     int climbPoints;
                     if (climbType == "l")
                     {
@@ -348,7 +347,7 @@ namespace Bot_Scout_RAPID_REACT
                         taxiPoints = 2;
                     }
 
-                    int totalPoints = (teleCargo + autoCargo) + climbPoints+taxiPoints;
+                    int totalPoints = (teleCargo + autoCargo) + climbPoints + taxiPoints;
                     writeToFile(team.Text, "Total Score: " + totalPoints);
 
 
@@ -358,11 +357,14 @@ namespace Bot_Scout_RAPID_REACT
                 }
                 else
                 {
-                    string tempShut = GetLine(team.Text + ".txt", 1)[11] + "";
-                    int shutdowns = Int32.Parse(tempShut) + 1;
-                    lineChanger("Shutdowns: " + shutdowns, current + team.Text + ".txt", 1);
+                    if (matchName.Text == "Make Match")
+                    {
+                        string tempShut = GetLine(team.Text + ".txt", 1)[11] + "";
+                        int shutdowns = Int32.Parse(tempShut) + 1;
+                        lineChanger("Shutdowns: " + shutdowns, current + team.Text + ".txt", 1);
+                    }
                 }
-                //Thread.Sleep(2000);
+
                 team.Text = "";
                 match.Text = "";
                 teleLower.Text = "";
@@ -373,11 +375,20 @@ namespace Bot_Scout_RAPID_REACT
                 autoMissed.Text = "";
                 climbEnd.Text = "";
                 climbStart.Text = "";
-                //climbType.Text = "";
-                //climbEnter.Text = "";
+                noClimb.Checked = false;
+                lowClimb.Checked = false;
+                midClimb.Checked = false;
+                highClimb.Checked = false;
+                travClimb.Checked = false;
+                enterFront.Checked = false;
+                enterSide.Checked = false;
                 defense.Text = "";
-                //position.Text = "";
-                //taxi.Text = "";
+                posHub.Checked = false;
+                posTar.Checked = false;
+                posLaunch.Checked = false;
+                posHub.Checked = false;
+                taxiNo.Checked = false;
+                taxiYes.Checked = false;
 
             }
             catch
@@ -422,7 +433,6 @@ namespace Bot_Scout_RAPID_REACT
             bool emptyLine = false;
             while (emptyLine == false)
             {
-                //Thread.Sleep(10);
                 if (GetLine(current + team + ".txt", i) != GetLine(current + "blank.txt", 1))
                 {
 
@@ -451,24 +461,10 @@ namespace Bot_Scout_RAPID_REACT
         {
 
         }
-
-        private void button4_Click(object sender, EventArgs e)
-        {
-            //Data data = new Data();
-            //data.ShowDialog();
-        }
-
-        private void button5_Click(object sender, EventArgs e)
-        {
-            //BestTeams best = new BestTeams();
-            //best.ShowDialog();
-        }
-
-        private void button6_Click(object sender, EventArgs e)
-        {
-            //Average ave = new Average();
-            //ave.ShowDialog();
-        }
+        //Just ignore this...
+        private void button4_Click(object sender, EventArgs e) { }
+        private void button5_Click(object sender, EventArgs e) { }
+        private void button6_Click(object sender, EventArgs e) { }
 
         private void bestTeamsMenu_Click(object sender, EventArgs e)
         {
@@ -502,15 +498,15 @@ namespace Bot_Scout_RAPID_REACT
 
         private void autoLowerMenu_Click(object sender, EventArgs e)
         {
-            //BestTeams bestTeams = new BestTeams();
+
             bestTeamsStats("Auto Lower", 12, 13, 0, 0, false, "Lower Auto");
         }
         public void bestScore(string team)
         {
-            bool matchEnd = false;
+
             Form1 match = new Form1();
             int autoTotal1 = 0;
-            int autoLow1 = 0;
+
             int teleHigh1 = 0;
             int teleLow1 = 0;
             int time1 = 500;
@@ -566,17 +562,6 @@ namespace Bot_Scout_RAPID_REACT
                         defense1 = tempNum;
                     }
                 }
-
-                /*
-             if(match.GetLine(team+".txt", i).Contains("Total Climb Time")){
-               string num1 = match.GetLine(team+".txt", i)[18].ToString();
-               string num2 = match.GetLine(team+".txt", i)[19].ToString();
-               tempNum = Int32.Parse(num1+num2);
-               if(tempNum < time){
-                 time = tempNum;
-               }
-             }
-       */
                 if (match.GetLine(team + ".txt", i).Contains("Climb Type"))
                 {
                     string climb = match.GetLine(team + ".txt", i)[12].ToString();
@@ -665,13 +650,13 @@ namespace Bot_Scout_RAPID_REACT
                     {
                         driveData(1);
                     }
-                    catch (Exception l)
+                    catch (Exception)
                     {
 
                     }
                 }
             }
-            catch (Exception l)
+            catch (Exception)
             {
                 loadText.Text = "Can't find team";
             }
@@ -1382,7 +1367,7 @@ namespace Bot_Scout_RAPID_REACT
 
             team2.Text = "Team " + teleHighTeam2;
             team2Data.Text = "" + teleHigh2;
-            /*
+
             team3.Text = "Team " + teleHighTeam3;
             team3Data.Text = "" + teleHigh3;
 
@@ -1409,7 +1394,7 @@ namespace Bot_Scout_RAPID_REACT
 
             team11.Text = "Team " + teleHighTeam11;
             team11Data.Text = "" + teleHigh11;
-            
+
             team12.Text = "Team " + teleHighTeam12;
             team12Data.Text = "" + teleHigh12;
 
@@ -1436,36 +1421,6 @@ namespace Bot_Scout_RAPID_REACT
 
             team20.Text = "Team " + teleHighTeam20;
             team20Data.Text = "" + teleHigh20;
-            */
-
-            Console.WriteLine("2. Team " + teleHighTeam2 + " " + name + ": " + teleHigh2);
-            Console.WriteLine("3. Team " + teleHighTeam3 + " " + name + ": " + teleHigh3);
-            Console.WriteLine("4. Team " + teleHighTeam4 + " " + name + ": " + teleHigh4);
-            Console.WriteLine("5. Team " + teleHighTeam5 + " " + name + ": " + teleHigh5);
-            Console.WriteLine("6. Team " + teleHighTeam6 + " " + name + ": " + teleHigh6);
-            Console.WriteLine("7. Team " + teleHighTeam7 + " " + name + ": " + teleHigh7);
-            Console.WriteLine("8. Team " + teleHighTeam8 + " " + name + ": " + teleHigh8);
-            Console.WriteLine("9. Team " + teleHighTeam9 + " " + name + ": " + teleHigh9);
-            Console.WriteLine("10. Team " + teleHighTeam10 + " " + name + ": " + teleHigh10);
-            Console.WriteLine("11. Team " + teleHighTeam11 + " " + name + ": " + teleHigh11);
-            Console.WriteLine("12. Team " + teleHighTeam12 + " " + name + ": " + teleHigh12);
-            Console.WriteLine("13. Team " + teleHighTeam13 + " " + name + ": " + teleHigh13);
-            Console.WriteLine("14. Team " + teleHighTeam14 + " " + name + ": " + teleHigh14);
-            Console.WriteLine("15. Team " + teleHighTeam15 + " " + name + ": " + teleHigh15);
-            Console.WriteLine("16. Team " + teleHighTeam16 + " " + name + ": " + teleHigh16);
-            Console.WriteLine("17. Team " + teleHighTeam17 + " " + name + ": " + teleHigh17);
-            Console.WriteLine("18. Team " + teleHighTeam18 + " " + name + ": " + teleHigh18);
-            Console.WriteLine("19. Team " + teleHighTeam19 + " " + name + ": " + teleHigh19);
-            Console.WriteLine("20. Team " + teleHighTeam20 + " " + name + ": " + teleHigh20);
-
-
-
-
-            Console.WriteLine();
-            Console.ForegroundColor = ConsoleColor.DarkCyan;
-            Console.WriteLine("Press Enter to go back to menu");
-            Console.ForegroundColor = ConsoleColor.White;
-            Console.ReadLine();
         }
 
         private void bestStatsToolStripMenuItem_Click(object sender, EventArgs e)
@@ -1473,7 +1428,7 @@ namespace Bot_Scout_RAPID_REACT
             try
             {
                 bestScore(team.Text);
-                loadText.Text = "Good job LAMBO";
+                loadText.Text = "Loaded OK I guess...";
             }
             catch
             {
@@ -1494,13 +1449,13 @@ namespace Bot_Scout_RAPID_REACT
                     {
                         driveData(-1);
                     }
-                    catch (Exception l)
+                    catch (Exception)
                     {
                         Console.WriteLine("Whoops");
                     }
                 }
             }
-            catch (Exception l)
+            catch (Exception)
             {
                 loadText.Text = "Can't find team";
             }
@@ -1519,13 +1474,13 @@ namespace Bot_Scout_RAPID_REACT
                     {
                         driveData(1);
                     }
-                    catch (Exception l)
+                    catch (Exception)
                     {
 
                     }
                 }
             }
-            catch (Exception l)
+            catch (Exception)
             {
                 loadText.Text = "Can't find team";
             }
@@ -1551,15 +1506,15 @@ namespace Bot_Scout_RAPID_REACT
                 }
             }
             Console.WriteLine(score / j);
-            return "" + (score/j);
+            return "" + (score / j);
         }
         public void averageCargo()
         {
             try
             {
                 Form1 match = new Form1();
-                
-                
+
+
                 averageTeleLower.Text = getAverage("Tele Lower", 12, 13);
                 averageTeleUpper.Text = getAverage("Tele Upper", 12, 13);
                 averageAutoUpper.Text = getAverage("Auto Lower", 12, 13);
@@ -1568,14 +1523,14 @@ namespace Bot_Scout_RAPID_REACT
                 averageAuto.Text = getAverage("Auto Cargo Score", 18, 19);
                 averageAutoAcc.Text = getAverage("Auto Accuracy", 15, 16) + "%";
                 averageTeleAcc.Text = getAverage("Tele Accuracy", 15, 16) + "%";
-                
+
 
 
                 loadText.Text = "Data Loaded";
 
                 //return 1;
             }
-            catch (Exception l)
+            catch (Exception)
             {
 
             }
@@ -1593,7 +1548,6 @@ namespace Bot_Scout_RAPID_REACT
 
         public void TrendTeam()
         {
-            int totalPoints;
             List<int> points = new List<int>();
             //points.Add()
         }
@@ -1657,6 +1611,453 @@ namespace Bot_Scout_RAPID_REACT
                 driveData(1);
                 i = Int32.Parse(lineMatch.Text);
             }
+        }
+
+        private void makeToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            matchName.Text = "Make Match";
+            getMatchDataBut.Visible = false;
+        }
+
+        private void editToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            matchName.Text = "Edit Match";
+            getMatchDataBut.Visible = true;
+        }
+
+
+        //This is the method that is run when the submit button is clicked on match edit mode
+        public void editMatchData()
+        {
+            int autoCargo;
+            string climbType = "";
+            int teleCargo;
+
+            int climbTime;
+
+            string autoAccuracy;
+            string teleAccuracy;
+            int lineMatch = findMatchNumber();
+            climbTime = (Int32.Parse(climbStart.Text) - Int32.Parse(climbEnd.Text));
+
+            double autoUpperInt = Double.Parse(autoUpper.Text);
+            double autoLowerInt = Double.Parse(autoLower.Text);
+            double autoMissedInt = Double.Parse(autoMissed.Text);
+            if ((autoUpperInt + autoLowerInt) / (autoUpperInt + autoLowerInt + autoMissedInt) * 100 + "" == "NaN")
+            {
+                autoAccuracy = "00";
+            }
+            else
+            {
+                autoAccuracy = (autoUpperInt + autoLowerInt) / (autoUpperInt + autoLowerInt + autoMissedInt) * 100 + "";
+            }
+
+
+            double teleUpperInt = Double.Parse(teleUpper.Text);
+            double teleLowerInt = Double.Parse(teleLower.Text);
+            double teleMissedInt = Double.Parse(teleMissed.Text);
+            if ((teleUpperInt + teleLowerInt) / (teleUpperInt + teleLowerInt + teleMissedInt) * 100 + "" == "NaN")
+            {
+
+                teleAccuracy = "00";
+            }
+            else
+            {
+                teleAccuracy = (teleUpperInt + teleLowerInt) / (teleUpperInt + teleLowerInt + teleMissedInt) * 100 + "";
+            }
+
+            if (taxiYes.Checked)
+            {
+                lineChanger("Taxi: y", team.Text + ".txt", lineMatch + 1);
+
+            }
+            else if (taxiNo.Checked)
+            {
+                lineChanger("Taxi: n", team.Text + ".txt", lineMatch + 1);
+            }
+
+            //Tele Cargo
+            if ((teleLower.Text).ToString().Length == 1)
+            {
+                lineChanger("Tele Lower: 0" + teleLower.Text, team.Text + ".txt", lineMatch + 2);
+
+            }
+            else
+            {
+                lineChanger("Tele Lower: " + teleLower.Text, team.Text + ".txt", lineMatch + 2);
+            }
+
+            if ((teleUpper.Text).ToString().Length == 1)
+            {
+                lineChanger("Tele Upper: 0" + teleUpper.Text, team.Text + ".txt", lineMatch + 3);
+            }
+            else
+            {
+                lineChanger("Tele Upper: " + teleUpper.Text, team.Text + ".txt", lineMatch + 3);
+            }
+
+            //Autos
+            int totalAuto = Int32.Parse(autoUpper.Text) + Int32.Parse(autoLower.Text);
+
+            if ((totalAuto).ToString().Length == 1)
+            {
+                lineChanger("Auto Cargo Total: 0" + totalAuto, team.Text + ".txt", lineMatch + 4);
+                //writeToFile(team.Text, "Auto Cargo Total: 0" + totalAuto);
+            }
+            else
+            {
+                lineChanger("Auto Cargo Total: " + totalAuto, team.Text + ".txt", lineMatch + 4);
+                // writeToFile(team.Text, "Auto Cargo Total: " + totalAuto);
+            }
+
+            //writeToFile(team.Text, "Auto Upper: " + autoUpper.Text);
+            if ((autoUpper.Text).ToString().Length == 1)
+            {
+                lineChanger("Auto Upper: 0" + autoUpper.Text, team.Text + ".txt", lineMatch + 5);
+            }
+            else
+            {
+                lineChanger("Auto Upper: " + autoUpper.Text, team.Text + ".txt", lineMatch + 5);
+            }
+            //writeToFile(team.Text, "Auto Lower: " + autoLower.Text);
+            if ((autoLower.Text).ToString().Length == 1)
+            {
+                lineChanger("Auto Lower: 0" + autoLower.Text, team.Text + ".txt", lineMatch + 6);
+            }
+            else
+            {
+                lineChanger("Auto Lower: " + autoLower.Text, team.Text + ".txt", lineMatch + 6);
+            }
+
+            //Missed cargo
+            if ((autoMissed.Text).ToString().Length == 1)
+            {
+                lineChanger("Auto Missed: 0" + autoMissed.Text, team.Text + ".txt", lineMatch + 7);
+            }
+            else
+            {
+                lineChanger("Auto Missed: " + autoMissed.Text, team.Text + ".txt", lineMatch + 7);
+            }
+
+            lineChanger("Still random text, you just had to edit the file", team.Text + ".txt", lineMatch + 8);
+            if ((teleMissed.Text).ToString().Length == 1)
+            {
+                lineChanger("Tele Missed: 0" + teleMissed.Text, team.Text + ".txt", lineMatch + 9);
+            }
+            else
+            {
+                lineChanger("Tele Missed: " + teleMissed.Text, team.Text + ".txt", lineMatch + 9);
+            }
+
+            //writeToFile(team.Text, "Start: " + climbStart.Text);
+            if ((climbStart.Text).ToString().Length == 1)
+            {
+                lineChanger("Start: 0" + climbStart.Text, team.Text + ".txt", lineMatch + 10);
+            }
+            else
+            {
+                lineChanger("Start: " + climbStart.Text, team.Text + ".txt", lineMatch + 10);
+            }
+            //writeToFile(team.Text, "End: " + climbEnd.Text);
+            if ((climbEnd.Text).ToString().Length == 1)
+            {
+                lineChanger("End: 0" + climbEnd.Text, team.Text + ".txt", lineMatch + 11);
+            }
+            else
+            {
+                lineChanger("End: " + climbEnd.Text, team.Text + ".txt", lineMatch + 11);
+            }
+
+            if ((climbTime).ToString().Length == 1)
+            {
+                lineChanger("Total Climb Time: 0" + climbTime, team.Text + ".txt", lineMatch + 12);
+            }
+            else
+            {
+                lineChanger("Total Climb Time: " + climbTime, team.Text + ".txt", lineMatch + 12);
+            }
+            //writeToFile(team.Text, "Climb Type: " + climbType.Text);
+            if (lowClimb.Checked)
+            {
+                lineChanger("Climb Type: l", team.Text + ".txt", lineMatch + 13);
+                climbType = "l";
+            }
+            else if (midClimb.Checked)
+            {
+                lineChanger("Climb Type: m", team.Text + ".txt", lineMatch + 13);
+                climbType = "m";
+            }
+            else if (highClimb.Checked)
+            {
+                lineChanger("Climb Type: h", team.Text + ".txt", lineMatch + 13);
+                climbType = "h";
+            }
+            else if (travClimb.Checked)
+            {
+                lineChanger("Climb Type: t", team.Text + ".txt", lineMatch + 13);
+                climbType = "t";
+            }
+            else if (noClimb.Checked)
+            {
+                lineChanger("Climb Type: n", team.Text + ".txt", lineMatch + 13);
+                climbType = "n";
+            }
+            lineChanger("Defense: 0" + defense.Text, team.Text + ".txt", lineMatch + 14);
+            if (posHub.Checked)
+            {
+                lineChanger("Position: h", team.Text + ".txt", lineMatch + 15);
+            }
+            else if (posLaunch.Checked)
+            {
+                lineChanger("Position: l", team.Text + ".txt", lineMatch + 15);
+            }
+            else if (posTar.Checked)
+            {
+                lineChanger("Position: t", team.Text + ".txt", lineMatch + 15);
+            }
+            else if (posOther.Checked)
+            {
+                lineChanger("Position: o", team.Text + ".txt", lineMatch + 15);
+            }
+
+            if (enterFront.Checked)
+            {
+                lineChanger("Entry: f", team.Text + ".txt", lineMatch + 16);
+            }
+            else if (enterSide.Checked)
+            {
+                lineChanger("Entry: s", team.Text + ".txt", lineMatch + 16);
+            }
+
+            teleCargo = (Int32.Parse(teleUpper.Text) * 2) + (Int32.Parse(teleLower.Text) * 1);
+            autoCargo = (Int32.Parse(autoUpper.Text) * 4) + (Int32.Parse(autoLower.Text) * 2);
+            //Calculated match data
+
+            //Total Cargo
+            if ((teleCargo).ToString().Length == 1)
+            {
+                lineChanger("Tele Cargo Score: 0" + teleCargo, team.Text + ".txt", lineMatch + 17);
+            }
+            else
+            {
+                lineChanger("Tele Cargo Score: " + teleCargo, team.Text + ".txt", lineMatch + 17);
+            }
+            if ((autoCargo).ToString().Length == 1)
+            {
+                lineChanger("Auto Cargo Score: 0" + autoCargo, team.Text + ".txt", lineMatch + 18);
+            }
+            else
+            {
+                lineChanger("Auto Cargo Score: " + autoCargo, team.Text + ".txt", lineMatch + 18);
+            }
+            //Accuracy
+            if ((autoAccuracy).ToString().Length == 1)
+            {
+                lineChanger("Auto Accuracy: 0" + autoAccuracy + "%", team.Text + ".txt", lineMatch + 19);
+            }
+            else
+            {
+                lineChanger("Auto Accuracy: " + autoAccuracy + "%", team.Text + ".txt", lineMatch + 19);
+            }
+
+            if ((teleAccuracy).ToString().Length == 1)
+            {
+                lineChanger("Tele Accuracy: 0" + teleAccuracy + "%", team.Text + ".txt", lineMatch + 20);
+            }
+            else
+            {
+                lineChanger("Tele Accuracy: " + teleAccuracy + "%", team.Text + ".txt", lineMatch + 20);
+            }
+
+
+            //Total Score
+
+            int climbPoints;
+            if (climbType == "l")
+            {
+                climbPoints = 4;
+            }
+            else if (climbType == "m")
+            {
+                climbPoints = 6;
+            }
+            else if (climbType == "h")
+            {
+                climbPoints = 10;
+            }
+            else if (climbType == "t")
+            {
+                climbPoints = 15;
+            }
+            else
+            {
+                climbPoints = 0;
+            }
+            int taxiPoints = 0;
+            if (taxiYes.Checked)
+            {
+                taxiPoints = 2;
+            }
+
+            int totalPoints = (teleCargo + autoCargo) + climbPoints + taxiPoints;
+            lineChanger("Total Score: " + totalPoints, team.Text + ".txt", lineMatch + 21);
+            writeToFile(team.Text, "Total Score: " + totalPoints);
+
+
+
+            writeToFile(team.Text, "------------------------");
+            statusText.Text = "Match Data Edited!";
+
+        }
+
+        public int findMatchNumber()
+        {
+            bool foundMatch = false;
+            string match1 = match.Text;
+            string team1 = team.Text;
+            int i = 1;
+            int lineMatch = 0;
+            while (!foundMatch)
+            {
+                if (GetLine(team1 + ".txt", i).Contains("Match Number"))
+                {
+                    string num1 = GetLine(team1 + ".txt", i)[14].ToString();
+                    string num2 = GetLine(team1 + ".txt", i)[15].ToString();
+                    string matchNum = num1 + num2;
+                    Console.WriteLine("Match calculated: " + matchNum);
+                    Console.WriteLine("Match Wanted: " + match.Text);
+                    if (matchNum == match1)
+                    {
+                        Console.WriteLine("Match Wanted: " + match.Text);
+                        lineMatch = i;
+                        foundMatch = true;
+                    }
+
+                }
+                i++;
+            }
+            return lineMatch;
+        }
+        private void button4_Click_1(object sender, EventArgs e)
+        {
+            string team1 = team.Text;
+            string match1 = match.Text;
+            int lineMatch = 0;
+            try
+            {
+                lineMatch = findMatchNumber();
+                if (getMatchData(6, lineMatch + 1, "Taxi") == "y")
+                {
+                    taxiYes.Checked = true;
+                }
+                else if (getMatchData(6, lineMatch + 1, "Taxi") == "n")
+                {
+                    taxiNo.Checked = true;
+                }
+                //Tele
+                teleLower.Text = getMatchData(12, 13, lineMatch + 2, "Tele Lower");
+                teleUpper.Text = getMatchData(12, 13, lineMatch + 3, "Tele Upper");
+                //Autos
+                autoUpper.Text = getMatchData(12, 13, lineMatch + 5, "Auto Upper");
+                autoLower.Text = getMatchData(12, 13, lineMatch + 6, "Auto Lower");
+                //Missed
+                autoMissed.Text = getMatchData(13, 14, lineMatch + 7, "Auto Missed");
+                teleMissed.Text = getMatchData(13, 14, lineMatch + 9, "Tele Missed");
+                //Climb
+                climbStart.Text = getMatchData(7, 8, lineMatch + 10, "Start");
+                climbEnd.Text = getMatchData(5, 6, lineMatch + 11, "End");
+                string climbTT = getMatchData(12, lineMatch + 13, "Climb Type");
+
+                if (climbTT == "l")
+                {
+                    lowClimb.Checked = true;
+                }
+                else if (climbTT == "m")
+                {
+                    midClimb.Checked = true;
+                }
+                else if (climbTT == "h")
+                {
+                    highClimb.Checked = true;
+                }
+                else if (climbTT == "t")
+                {
+                    travClimb.Checked = true;
+                }
+                else if (climbTT == "n")
+                {
+                    noClimb.Checked = true;
+                }
+                //Defense
+                defense.Text = getMatchData(9, 10, lineMatch + 14, "Defense");
+                //Position
+                string posT = getMatchData(10, lineMatch + 15, "Position");
+                if (posT == "l")
+                {
+                    posLaunch.Checked = true;
+                }
+                else if (posT == "h")
+                {
+                    posHub.Checked = true;
+                }
+                else if (posT == "t")
+                {
+                    posTar.Checked = true;
+                }
+                else if (posT == "o")
+                {
+                    posOther.Checked = true;
+                }
+                //Entry
+                string entryT = getMatchData(7, lineMatch + 16, "Entry");
+                if (entryT == "f")
+                {
+                    enterFront.Checked = true;
+                }
+                else if (entryT == "s")
+                {
+                    enterSide.Checked = true;
+                }
+
+
+
+            }
+            catch (Exception l)
+            {
+                matchName.Text = "Nope " + l;
+            }
+        }
+
+        public string getMatchData(int val1, int val2, int line, string contains)
+        {
+            string score = "";
+            if (GetLine(team.Text + ".txt", line).Contains(contains))
+            {
+                string num1 = GetLine(team.Text + ".txt", line)[val1].ToString();
+                string num2 = GetLine(team.Text + ".txt", line)[val2].ToString();
+                score = Int32.Parse(num1 + num2) + "";
+            }
+            return score;
+        }
+        public string getMatchData(int val, int line, string contains)
+        {
+            string score = "";
+            if (GetLine(team.Text + ".txt", line).Contains(contains))
+            {
+                string num1 = GetLine(team.Text + ".txt", line)[val].ToString();
+                score = num1;
+            }
+            return score;
+        }
+
+        private void climbEnd_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void taxiNo_CheckedChanged(object sender, EventArgs e)
+        {
+
         }
     }
 
