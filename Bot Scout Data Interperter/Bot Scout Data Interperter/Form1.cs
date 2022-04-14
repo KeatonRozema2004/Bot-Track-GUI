@@ -155,7 +155,48 @@ namespace Bot_Scout_Data_Interperter
 
         private void editMatchSelect_SelectedIndexChanged(object sender, EventArgs e)
         {
+            dynamic[] matchData = functions.zzGetMatchDataFromTeamByMatchNumber(dataDirectoryLabel.Text, teamDataTeamSelect.Text, editMatchSelect.Text.Split(':')[1]);
+            int[] matchNumbers = matchData[0];
+            string[] matchLabels = matchData[1];
 
+            for (int z = 0; matchLabels.Length > z; z++)
+            {
+                if (matchLabels[z] == "Taxi")
+                {
+                    if (matchNumbers[z] == 2)
+                        taxiChange.Text = " y";
+                    else
+                        taxiChange.Text = " n";   
+                } else if (matchLabels[z] == "Auto Lower")
+                {
+                    autoLowerChange.Text = (matchNumbers[z] / 2).ToString();
+                } else if (matchLabels[z] == "Auto Upper")
+                {
+                    autoUpperChange.Text = (matchNumbers[z] / 4).ToString();
+                } else if (matchLabels[z] == "Auto Missed")
+                {
+                    autoMissedChange.Text = matchNumbers[z].ToString(); 
+                } else if (matchLabels[z] == "Tele Lower")
+                {
+                    teleLowerChange.Text = matchNumbers[z].ToString();
+                } else if (matchLabels[z] == "Tele Upper")
+                {
+                    teleUpperChange.Text = (matchNumbers[z] / 2).ToString();
+                } else if (matchLabels[z] == "Tele Missed")
+                {
+                    teleMissedChange.Text = matchNumbers[z].ToString();
+                } else if (matchLabels[z] == "Climb")
+                {
+                    if (matchNumbers[z] == 4)
+                        climbChange.Text = " l";
+                    else if (matchNumbers[z] == 6)
+                        climbChange.Text = " m";
+                    else if (matchNumbers[z] == 10)
+                        climbChange.Text = " h";
+                    else if (matchNumbers[z] == 15)
+                        climbChange.Text = " t";
+                }
+            }
         }
 
         private void teamChartData_Click(object sender, EventArgs e)
@@ -177,6 +218,9 @@ namespace Bot_Scout_Data_Interperter
             return teamNames.ToArray();
         }
 
-
+        private void changeButtonSubmit_Click(object sender, EventArgs e)
+        {
+            functions.zzRunEditChangeSubmit(dataDirectoryLabel.Text, teamDataTeamSelect.Text, editMatchSelect.Text, taxiChange.Text, autoLowerChange.Text, autoUpperChange.Text, autoMissedChange.Text, teleLowerChange.Text, teleUpperChange.Text, teleMissedChange.Text, climbChange.Text);
+        }
     }
 }

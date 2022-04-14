@@ -29,9 +29,9 @@ namespace Bot_Scout_Data_Interperter
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea2 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend2 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series2 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea1 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend1 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series1 = new System.Windows.Forms.DataVisualization.Charting.Series();
             this.getDataDirectoryButton = new System.Windows.Forms.Button();
             this.dataFolderDirectoryLabel = new System.Windows.Forms.Label();
             this.dataDirectoryLabel = new System.Windows.Forms.Label();
@@ -51,6 +51,24 @@ namespace Bot_Scout_Data_Interperter
             this.tabPage3 = new System.Windows.Forms.TabPage();
             this.teamDataMatchSelect = new System.Windows.Forms.ListBox();
             this.tabPage4 = new System.Windows.Forms.TabPage();
+            this.changeButtonSubmit = new System.Windows.Forms.Button();
+            this.climbChange = new System.Windows.Forms.ComboBox();
+            this.label8 = new System.Windows.Forms.Label();
+            this.label7 = new System.Windows.Forms.Label();
+            this.teleMissedChange = new System.Windows.Forms.TextBox();
+            this.teleLowerChange = new System.Windows.Forms.TextBox();
+            this.label6 = new System.Windows.Forms.Label();
+            this.teleUpperChange = new System.Windows.Forms.TextBox();
+            this.label5 = new System.Windows.Forms.Label();
+            this.autoMissedChange = new System.Windows.Forms.TextBox();
+            this.label4 = new System.Windows.Forms.Label();
+            this.autoLowerChange = new System.Windows.Forms.TextBox();
+            this.label3 = new System.Windows.Forms.Label();
+            this.autoUpperChange = new System.Windows.Forms.TextBox();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
+            this.editMatchSelectLabel = new System.Windows.Forms.Label();
+            this.editMatchSelect = new System.Windows.Forms.ComboBox();
             this.graph_table_control = new System.Windows.Forms.TabControl();
             this.tabPage6 = new System.Windows.Forms.TabPage();
             this.teamChartData = new System.Windows.Forms.DataVisualization.Charting.Chart();
@@ -64,25 +82,7 @@ namespace Bot_Scout_Data_Interperter
             this.tele_lower = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tele_missed = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.climb = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.editMatchSelect = new System.Windows.Forms.ComboBox();
-            this.editMatchSelectLabel = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
-            this.taxiChange = new System.Windows.Forms.TextBox();
-            this.label2 = new System.Windows.Forms.Label();
-            this.autoUpperChange = new System.Windows.Forms.TextBox();
-            this.label3 = new System.Windows.Forms.Label();
-            this.autoLowerChange = new System.Windows.Forms.TextBox();
-            this.label4 = new System.Windows.Forms.Label();
-            this.autoMissedChange = new System.Windows.Forms.TextBox();
-            this.label5 = new System.Windows.Forms.Label();
-            this.teleUpperChange = new System.Windows.Forms.TextBox();
-            this.label6 = new System.Windows.Forms.Label();
-            this.teleLowerChange = new System.Windows.Forms.TextBox();
-            this.teleMissedChange = new System.Windows.Forms.TextBox();
-            this.label7 = new System.Windows.Forms.Label();
-            this.label8 = new System.Windows.Forms.Label();
-            this.climbChange = new System.Windows.Forms.ComboBox();
-            this.changeButtonSubmit = new System.Windows.Forms.Button();
+            this.taxiChange = new System.Windows.Forms.ComboBox();
             this.tab_body.SuspendLayout();
             this.tabPage1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.overview_table)).BeginInit();
@@ -292,6 +292,7 @@ namespace Bot_Scout_Data_Interperter
             // 
             // tabPage4
             // 
+            this.tabPage4.Controls.Add(this.taxiChange);
             this.tabPage4.Controls.Add(this.changeButtonSubmit);
             this.tabPage4.Controls.Add(this.climbChange);
             this.tabPage4.Controls.Add(this.label8);
@@ -307,7 +308,6 @@ namespace Bot_Scout_Data_Interperter
             this.tabPage4.Controls.Add(this.label3);
             this.tabPage4.Controls.Add(this.autoUpperChange);
             this.tabPage4.Controls.Add(this.label2);
-            this.tabPage4.Controls.Add(this.taxiChange);
             this.tabPage4.Controls.Add(this.label1);
             this.tabPage4.Controls.Add(this.editMatchSelectLabel);
             this.tabPage4.Controls.Add(this.editMatchSelect);
@@ -318,6 +318,179 @@ namespace Bot_Scout_Data_Interperter
             this.tabPage4.TabIndex = 1;
             this.tabPage4.Text = "Edit";
             this.tabPage4.UseVisualStyleBackColor = true;
+            // 
+            // changeButtonSubmit
+            // 
+            this.changeButtonSubmit.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.changeButtonSubmit.Location = new System.Drawing.Point(6, 251);
+            this.changeButtonSubmit.Name = "changeButtonSubmit";
+            this.changeButtonSubmit.Size = new System.Drawing.Size(225, 30);
+            this.changeButtonSubmit.TabIndex = 18;
+            this.changeButtonSubmit.Text = "Submit Changes";
+            this.changeButtonSubmit.UseVisualStyleBackColor = true;
+            this.changeButtonSubmit.Click += new System.EventHandler(this.changeButtonSubmit_Click);
+            // 
+            // climbChange
+            // 
+            this.climbChange.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.climbChange.FormattingEnabled = true;
+            this.climbChange.Items.AddRange(new object[] {
+            " l",
+            " m",
+            " h",
+            " t"});
+            this.climbChange.Location = new System.Drawing.Point(44, 224);
+            this.climbChange.Name = "climbChange";
+            this.climbChange.Size = new System.Drawing.Size(190, 21);
+            this.climbChange.TabIndex = 17;
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Location = new System.Drawing.Point(3, 230);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(35, 13);
+            this.label8.TabIndex = 16;
+            this.label8.Text = "Climb:";
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Location = new System.Drawing.Point(3, 201);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(67, 13);
+            this.label7.TabIndex = 15;
+            this.label7.Text = "Tele Missed:";
+            // 
+            // teleMissedChange
+            // 
+            this.teleMissedChange.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.teleMissedChange.Location = new System.Drawing.Point(76, 198);
+            this.teleMissedChange.Name = "teleMissedChange";
+            this.teleMissedChange.Size = new System.Drawing.Size(155, 20);
+            this.teleMissedChange.TabIndex = 14;
+            // 
+            // teleLowerChange
+            // 
+            this.teleLowerChange.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.teleLowerChange.Location = new System.Drawing.Point(76, 172);
+            this.teleLowerChange.Name = "teleLowerChange";
+            this.teleLowerChange.Size = new System.Drawing.Size(155, 20);
+            this.teleLowerChange.TabIndex = 13;
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Location = new System.Drawing.Point(3, 175);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(63, 13);
+            this.label6.TabIndex = 12;
+            this.label6.Text = "Tele Lower:";
+            // 
+            // teleUpperChange
+            // 
+            this.teleUpperChange.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.teleUpperChange.Location = new System.Drawing.Point(76, 146);
+            this.teleUpperChange.Name = "teleUpperChange";
+            this.teleUpperChange.Size = new System.Drawing.Size(155, 20);
+            this.teleUpperChange.TabIndex = 11;
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(3, 149);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(63, 13);
+            this.label5.TabIndex = 10;
+            this.label5.Text = "Tele Upper:";
+            // 
+            // autoMissedChange
+            // 
+            this.autoMissedChange.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.autoMissedChange.Location = new System.Drawing.Point(76, 120);
+            this.autoMissedChange.Name = "autoMissedChange";
+            this.autoMissedChange.Size = new System.Drawing.Size(155, 20);
+            this.autoMissedChange.TabIndex = 9;
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(6, 123);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(68, 13);
+            this.label4.TabIndex = 8;
+            this.label4.Text = "Auto Missed:";
+            // 
+            // autoLowerChange
+            // 
+            this.autoLowerChange.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.autoLowerChange.Location = new System.Drawing.Point(76, 94);
+            this.autoLowerChange.Name = "autoLowerChange";
+            this.autoLowerChange.Size = new System.Drawing.Size(155, 20);
+            this.autoLowerChange.TabIndex = 7;
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(6, 97);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(64, 13);
+            this.label3.TabIndex = 6;
+            this.label3.Text = "Auto Lower:";
+            // 
+            // autoUpperChange
+            // 
+            this.autoUpperChange.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.autoUpperChange.Location = new System.Drawing.Point(76, 63);
+            this.autoUpperChange.Name = "autoUpperChange";
+            this.autoUpperChange.Size = new System.Drawing.Size(155, 20);
+            this.autoUpperChange.TabIndex = 5;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(6, 66);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(64, 13);
+            this.label2.TabIndex = 4;
+            this.label2.Text = "Auto Upper:";
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(6, 40);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(30, 13);
+            this.label1.TabIndex = 2;
+            this.label1.Text = "Taxi:";
+            // 
+            // editMatchSelectLabel
+            // 
+            this.editMatchSelectLabel.AutoSize = true;
+            this.editMatchSelectLabel.Location = new System.Drawing.Point(6, 9);
+            this.editMatchSelectLabel.Name = "editMatchSelectLabel";
+            this.editMatchSelectLabel.Size = new System.Drawing.Size(70, 13);
+            this.editMatchSelectLabel.TabIndex = 1;
+            this.editMatchSelectLabel.Text = "Select Match";
+            // 
+            // editMatchSelect
+            // 
+            this.editMatchSelect.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.editMatchSelect.FormattingEnabled = true;
+            this.editMatchSelect.Location = new System.Drawing.Point(82, 6);
+            this.editMatchSelect.Name = "editMatchSelect";
+            this.editMatchSelect.Size = new System.Drawing.Size(149, 21);
+            this.editMatchSelect.TabIndex = 0;
+            this.editMatchSelect.SelectedIndexChanged += new System.EventHandler(this.editMatchSelect_SelectedIndexChanged);
             // 
             // graph_table_control
             // 
@@ -348,16 +521,16 @@ namespace Bot_Scout_Data_Interperter
             this.teamChartData.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            chartArea2.Name = "ChartArea1";
-            this.teamChartData.ChartAreas.Add(chartArea2);
-            legend2.Name = "Legend1";
-            this.teamChartData.Legends.Add(legend2);
+            chartArea1.Name = "ChartArea1";
+            this.teamChartData.ChartAreas.Add(chartArea1);
+            legend1.Name = "Legend1";
+            this.teamChartData.Legends.Add(legend1);
             this.teamChartData.Location = new System.Drawing.Point(6, 6);
             this.teamChartData.Name = "teamChartData";
-            series2.ChartArea = "ChartArea1";
-            series2.Legend = "Legend1";
-            series2.Name = "Series1";
-            this.teamChartData.Series.Add(series2);
+            series1.ChartArea = "ChartArea1";
+            series1.Legend = "Legend1";
+            series1.Name = "Series1";
+            this.teamChartData.Series.Add(series1);
             this.teamChartData.Size = new System.Drawing.Size(481, 300);
             this.teamChartData.TabIndex = 0;
             this.teamChartData.Tag = "";
@@ -444,181 +617,18 @@ namespace Bot_Scout_Data_Interperter
             this.climb.Name = "climb";
             this.climb.ReadOnly = true;
             // 
-            // editMatchSelect
-            // 
-            this.editMatchSelect.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.editMatchSelect.FormattingEnabled = true;
-            this.editMatchSelect.Location = new System.Drawing.Point(82, 6);
-            this.editMatchSelect.Name = "editMatchSelect";
-            this.editMatchSelect.Size = new System.Drawing.Size(149, 21);
-            this.editMatchSelect.TabIndex = 0;
-            this.editMatchSelect.SelectedIndexChanged += new System.EventHandler(this.editMatchSelect_SelectedIndexChanged);
-            // 
-            // editMatchSelectLabel
-            // 
-            this.editMatchSelectLabel.AutoSize = true;
-            this.editMatchSelectLabel.Location = new System.Drawing.Point(6, 9);
-            this.editMatchSelectLabel.Name = "editMatchSelectLabel";
-            this.editMatchSelectLabel.Size = new System.Drawing.Size(70, 13);
-            this.editMatchSelectLabel.TabIndex = 1;
-            this.editMatchSelectLabel.Text = "Select Match";
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(6, 40);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(30, 13);
-            this.label1.TabIndex = 2;
-            this.label1.Text = "Taxi:";
-            // 
             // taxiChange
             // 
             this.taxiChange.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.taxiChange.Location = new System.Drawing.Point(47, 37);
+            this.taxiChange.FormattingEnabled = true;
+            this.taxiChange.Items.AddRange(new object[] {
+            " y",
+            " n"});
+            this.taxiChange.Location = new System.Drawing.Point(42, 36);
             this.taxiChange.Name = "taxiChange";
-            this.taxiChange.Size = new System.Drawing.Size(184, 20);
-            this.taxiChange.TabIndex = 3;
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(6, 66);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(64, 13);
-            this.label2.TabIndex = 4;
-            this.label2.Text = "Auto Upper:";
-            // 
-            // autoUpperChange
-            // 
-            this.autoUpperChange.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.autoUpperChange.Location = new System.Drawing.Point(76, 63);
-            this.autoUpperChange.Name = "autoUpperChange";
-            this.autoUpperChange.Size = new System.Drawing.Size(155, 20);
-            this.autoUpperChange.TabIndex = 5;
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(6, 97);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(64, 13);
-            this.label3.TabIndex = 6;
-            this.label3.Text = "Auto Lower:";
-            // 
-            // autoLowerChange
-            // 
-            this.autoLowerChange.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.autoLowerChange.Location = new System.Drawing.Point(76, 94);
-            this.autoLowerChange.Name = "autoLowerChange";
-            this.autoLowerChange.Size = new System.Drawing.Size(155, 20);
-            this.autoLowerChange.TabIndex = 7;
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(6, 123);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(68, 13);
-            this.label4.TabIndex = 8;
-            this.label4.Text = "Auto Missed:";
-            // 
-            // autoMissedChange
-            // 
-            this.autoMissedChange.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.autoMissedChange.Location = new System.Drawing.Point(76, 120);
-            this.autoMissedChange.Name = "autoMissedChange";
-            this.autoMissedChange.Size = new System.Drawing.Size(155, 20);
-            this.autoMissedChange.TabIndex = 9;
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(3, 149);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(63, 13);
-            this.label5.TabIndex = 10;
-            this.label5.Text = "Tele Upper:";
-            // 
-            // teleUpperChange
-            // 
-            this.teleUpperChange.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.teleUpperChange.Location = new System.Drawing.Point(76, 146);
-            this.teleUpperChange.Name = "teleUpperChange";
-            this.teleUpperChange.Size = new System.Drawing.Size(155, 20);
-            this.teleUpperChange.TabIndex = 11;
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(3, 175);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(63, 13);
-            this.label6.TabIndex = 12;
-            this.label6.Text = "Tele Lower:";
-            // 
-            // teleLowerChange
-            // 
-            this.teleLowerChange.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.teleLowerChange.Location = new System.Drawing.Point(76, 172);
-            this.teleLowerChange.Name = "teleLowerChange";
-            this.teleLowerChange.Size = new System.Drawing.Size(155, 20);
-            this.teleLowerChange.TabIndex = 13;
-            // 
-            // teleMissedChange
-            // 
-            this.teleMissedChange.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.teleMissedChange.Location = new System.Drawing.Point(76, 198);
-            this.teleMissedChange.Name = "teleMissedChange";
-            this.teleMissedChange.Size = new System.Drawing.Size(155, 20);
-            this.teleMissedChange.TabIndex = 14;
-            // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(3, 201);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(67, 13);
-            this.label7.TabIndex = 15;
-            this.label7.Text = "Tele Missed:";
-            // 
-            // label8
-            // 
-            this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(3, 230);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(35, 13);
-            this.label8.TabIndex = 16;
-            this.label8.Text = "Climb:";
-            // 
-            // climbChange
-            // 
-            this.climbChange.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.climbChange.FormattingEnabled = true;
-            this.climbChange.Location = new System.Drawing.Point(44, 224);
-            this.climbChange.Name = "climbChange";
-            this.climbChange.Size = new System.Drawing.Size(190, 21);
-            this.climbChange.TabIndex = 17;
-            // 
-            // changeButtonSubmit
-            // 
-            this.changeButtonSubmit.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.changeButtonSubmit.Location = new System.Drawing.Point(6, 251);
-            this.changeButtonSubmit.Name = "changeButtonSubmit";
-            this.changeButtonSubmit.Size = new System.Drawing.Size(225, 30);
-            this.changeButtonSubmit.TabIndex = 18;
-            this.changeButtonSubmit.Text = "Submit Changes";
-            this.changeButtonSubmit.UseVisualStyleBackColor = true;
+            this.taxiChange.Size = new System.Drawing.Size(189, 21);
+            this.taxiChange.TabIndex = 19;
             // 
             // Main_page
             // 
@@ -704,8 +714,8 @@ namespace Bot_Scout_Data_Interperter
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.TextBox autoUpperChange;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TextBox taxiChange;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.ComboBox taxiChange;
     }
 }
 

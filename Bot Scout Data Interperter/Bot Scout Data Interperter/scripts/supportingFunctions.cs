@@ -213,7 +213,7 @@ namespace Bot_Scout_Data_Interperter.scripts
                             matchData.Add(Int32.Parse(currentArray[1]));
                             matchLabels.Add("Tele Missed");
                         }
-                        if (currentArray[0] == "Position")
+                        if (currentArray[0] == "Climb Type")
                         {
                             if (currentArray[1] == " l")
                             {
@@ -308,7 +308,7 @@ namespace Bot_Scout_Data_Interperter.scripts
                         currentMatchNumbers.Add(Int32.Parse(lineValues[1]));
                         matchLabels.Add("Tele Missed");
                     }
-                    else if (lineValues[0] == "Position")
+                    else if (lineValues[0] == "Climb Type")
                     {
                         if (lineValues[1] == " l")
                         {
@@ -389,6 +389,76 @@ namespace Bot_Scout_Data_Interperter.scripts
             }
 
             return matches.ToArray();
+        }
+
+/*        public void lineChanger(string newText, string fileName, int line_to_edit)
+        {
+            string[] arrLine = File.ReadAllLines(fileName);
+            arrLine[line_to_edit - 1] = newText;
+            File.WriteAllLines(fileName, arrLine);
+        }*/
+
+        public void zzRunEditChangeSubmit(string fileDirectory, string teamNumber, string matchSelect, string taxi, string autoLow, string autoHigh, string autoMiss, string teleLow, string teleHigh, string teleMiss, string climb) 
+        {  
+            string teamFile = zzGetFileDirectoryFromTeamName(fileDirectory, teamNumber);
+            string[] fileLines = File.ReadAllLines(teamFile);
+
+            bool matchFound = false;
+
+            for (int z = 0; fileLines.Length > z; z++)
+            {
+                string line = fileLines[z];
+                string[] lineTitle = line.Split(':');
+                if (line == matchSelect)
+                {
+                    matchFound = true;
+                } 
+                if (lineTitle.Length == 1)
+                {
+                    matchFound = false;
+                }
+
+
+                if (matchFound == true)
+                {
+                    if (lineTitle.Length > 1)
+                    {
+                        if (lineTitle[0] == "Taxi")
+                        {
+                            fileLines[z] = "Taxi:" + taxi;
+                        }
+                        else if (lineTitle[0] == "Auto Upper")
+                        {
+                            fileLines[z] = "Auto Upper: " + autoHigh;
+                        }
+                        else if (lineTitle[0] == "Auto Lower")
+                        {
+                            fileLines[z] = "Auto Lower: " + autoLow;
+                        }
+                        else if (lineTitle[0] == "Auto Missed")
+                        {
+                            fileLines[z] = "Auto Missed: " + autoMiss;
+                        }
+                        else if (lineTitle[0] == "Tele Upper")
+                        {
+                            fileLines[z] = "Tele Upper: " + teleHigh;
+                        }
+                        else if (lineTitle[0] == "Tele Lower")
+                        {
+                            fileLines[z] = "Tele Lower: " + teleLow;
+                        }
+                        else if (lineTitle[0] == "Tele Missed")
+                        {
+                            fileLines[z] = "Tele Missed: " + teleMiss;
+                        }
+                        else if (lineTitle[0] == "Climb Type")
+                        {
+                            fileLines[z] = "Climb Type:" + climb;
+                        }
+                    }
+                }
+            }
+            File.WriteAllLines(teamFile, fileLines);
         }
 
         private string zzParseTextDocumentData(string data)
