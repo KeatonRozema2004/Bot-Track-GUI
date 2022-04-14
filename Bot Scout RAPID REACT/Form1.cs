@@ -123,6 +123,9 @@ namespace Bot_Scout_RAPID_REACT
                     else if (taxiNo.Checked)
                     {
                         writeToFile(team.Text, "Taxi: n");
+                    } else if (taxiNo.Checked == false && taxiYes.Checked == false)
+                    {
+                        writeToFile(team.Text, "Taxi: n");
                     }
                     if ((teleLower.Text).ToString().Length == 1)
                     {

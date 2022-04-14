@@ -29,9 +29,9 @@ namespace Bot_Scout_Data_Interperter
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea1 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend1 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series1 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea3 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend3 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series3 = new System.Windows.Forms.DataVisualization.Charting.Series();
             this.getDataDirectoryButton = new System.Windows.Forms.Button();
             this.dataFolderDirectoryLabel = new System.Windows.Forms.Label();
             this.dataDirectoryLabel = new System.Windows.Forms.Label();
@@ -51,6 +51,7 @@ namespace Bot_Scout_Data_Interperter
             this.tabPage3 = new System.Windows.Forms.TabPage();
             this.teamDataMatchSelect = new System.Windows.Forms.ListBox();
             this.tabPage4 = new System.Windows.Forms.TabPage();
+            this.taxiChange = new System.Windows.Forms.ComboBox();
             this.changeButtonSubmit = new System.Windows.Forms.Button();
             this.climbChange = new System.Windows.Forms.ComboBox();
             this.label8 = new System.Windows.Forms.Label();
@@ -75,14 +76,13 @@ namespace Bot_Scout_Data_Interperter
             this.tabPage7 = new System.Windows.Forms.TabPage();
             this.match_table_view = new System.Windows.Forms.DataGridView();
             this.taxi = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.tele_lower = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.tele_upper = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.auto_upper = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.auto_lower = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.auto_missed = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.tele_upper = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.tele_lower = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tele_missed = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.climb = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.taxiChange = new System.Windows.Forms.ComboBox();
             this.tab_body.SuspendLayout();
             this.tabPage1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.overview_table)).BeginInit();
@@ -319,6 +319,19 @@ namespace Bot_Scout_Data_Interperter
             this.tabPage4.Text = "Edit";
             this.tabPage4.UseVisualStyleBackColor = true;
             // 
+            // taxiChange
+            // 
+            this.taxiChange.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.taxiChange.FormattingEnabled = true;
+            this.taxiChange.Items.AddRange(new object[] {
+            " y",
+            " n"});
+            this.taxiChange.Location = new System.Drawing.Point(42, 36);
+            this.taxiChange.Name = "taxiChange";
+            this.taxiChange.Size = new System.Drawing.Size(189, 21);
+            this.taxiChange.TabIndex = 19;
+            // 
             // changeButtonSubmit
             // 
             this.changeButtonSubmit.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
@@ -521,16 +534,16 @@ namespace Bot_Scout_Data_Interperter
             this.teamChartData.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            chartArea1.Name = "ChartArea1";
-            this.teamChartData.ChartAreas.Add(chartArea1);
-            legend1.Name = "Legend1";
-            this.teamChartData.Legends.Add(legend1);
+            chartArea3.Name = "ChartArea1";
+            this.teamChartData.ChartAreas.Add(chartArea3);
+            legend3.Name = "Legend1";
+            this.teamChartData.Legends.Add(legend3);
             this.teamChartData.Location = new System.Drawing.Point(6, 6);
             this.teamChartData.Name = "teamChartData";
-            series1.ChartArea = "ChartArea1";
-            series1.Legend = "Legend1";
-            series1.Name = "Series1";
-            this.teamChartData.Series.Add(series1);
+            series3.ChartArea = "ChartArea1";
+            series3.Legend = "Legend1";
+            series3.Name = "Series1";
+            this.teamChartData.Series.Add(series3);
             this.teamChartData.Size = new System.Drawing.Size(481, 300);
             this.teamChartData.TabIndex = 0;
             this.teamChartData.Tag = "";
@@ -557,11 +570,11 @@ namespace Bot_Scout_Data_Interperter
             this.match_table_view.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.match_table_view.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.taxi,
+            this.tele_lower,
+            this.tele_upper,
             this.auto_upper,
             this.auto_lower,
             this.auto_missed,
-            this.tele_upper,
-            this.tele_lower,
             this.tele_missed,
             this.climb});
             this.match_table_view.Location = new System.Drawing.Point(6, 3);
@@ -574,6 +587,18 @@ namespace Bot_Scout_Data_Interperter
             this.taxi.HeaderText = "Taxi";
             this.taxi.Name = "taxi";
             this.taxi.ReadOnly = true;
+            // 
+            // tele_lower
+            // 
+            this.tele_lower.HeaderText = "Tele Lower";
+            this.tele_lower.Name = "tele_lower";
+            this.tele_lower.ReadOnly = true;
+            // 
+            // tele_upper
+            // 
+            this.tele_upper.HeaderText = "Tele Upper";
+            this.tele_upper.Name = "tele_upper";
+            this.tele_upper.ReadOnly = true;
             // 
             // auto_upper
             // 
@@ -593,18 +618,6 @@ namespace Bot_Scout_Data_Interperter
             this.auto_missed.Name = "auto_missed";
             this.auto_missed.ReadOnly = true;
             // 
-            // tele_upper
-            // 
-            this.tele_upper.HeaderText = "Tele Upper";
-            this.tele_upper.Name = "tele_upper";
-            this.tele_upper.ReadOnly = true;
-            // 
-            // tele_lower
-            // 
-            this.tele_lower.HeaderText = "Tele Lower";
-            this.tele_lower.Name = "tele_lower";
-            this.tele_lower.ReadOnly = true;
-            // 
             // tele_missed
             // 
             this.tele_missed.HeaderText = "Tele Missed";
@@ -616,19 +629,6 @@ namespace Bot_Scout_Data_Interperter
             this.climb.HeaderText = "Climb";
             this.climb.Name = "climb";
             this.climb.ReadOnly = true;
-            // 
-            // taxiChange
-            // 
-            this.taxiChange.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.taxiChange.FormattingEnabled = true;
-            this.taxiChange.Items.AddRange(new object[] {
-            " y",
-            " n"});
-            this.taxiChange.Location = new System.Drawing.Point(42, 36);
-            this.taxiChange.Name = "taxiChange";
-            this.taxiChange.Size = new System.Drawing.Size(189, 21);
-            this.taxiChange.TabIndex = 19;
             // 
             // Main_page
             // 
@@ -689,14 +689,6 @@ namespace Bot_Scout_Data_Interperter
         private System.Windows.Forms.TabPage tabPage6;
         private System.Windows.Forms.TabPage tabPage7;
         private System.Windows.Forms.DataGridView match_table_view;
-        private System.Windows.Forms.DataGridViewTextBoxColumn taxi;
-        private System.Windows.Forms.DataGridViewTextBoxColumn auto_upper;
-        private System.Windows.Forms.DataGridViewTextBoxColumn auto_lower;
-        private System.Windows.Forms.DataGridViewTextBoxColumn auto_missed;
-        private System.Windows.Forms.DataGridViewTextBoxColumn tele_upper;
-        private System.Windows.Forms.DataGridViewTextBoxColumn tele_lower;
-        private System.Windows.Forms.DataGridViewTextBoxColumn tele_missed;
-        private System.Windows.Forms.DataGridViewTextBoxColumn climb;
         private System.Windows.Forms.Label editMatchSelectLabel;
         private System.Windows.Forms.ComboBox editMatchSelect;
         private System.Windows.Forms.Button changeButtonSubmit;
@@ -716,6 +708,14 @@ namespace Bot_Scout_Data_Interperter
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.ComboBox taxiChange;
+        private System.Windows.Forms.DataGridViewTextBoxColumn taxi;
+        private System.Windows.Forms.DataGridViewTextBoxColumn tele_lower;
+        private System.Windows.Forms.DataGridViewTextBoxColumn tele_upper;
+        private System.Windows.Forms.DataGridViewTextBoxColumn auto_upper;
+        private System.Windows.Forms.DataGridViewTextBoxColumn auto_lower;
+        private System.Windows.Forms.DataGridViewTextBoxColumn auto_missed;
+        private System.Windows.Forms.DataGridViewTextBoxColumn tele_missed;
+        private System.Windows.Forms.DataGridViewTextBoxColumn climb;
     }
 }
 

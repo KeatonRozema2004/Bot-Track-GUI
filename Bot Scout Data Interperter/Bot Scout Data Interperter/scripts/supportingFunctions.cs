@@ -130,7 +130,10 @@ namespace Bot_Scout_Data_Interperter.scripts
                     }
                 }  
             }
-            return returnPoints/matchesPlayed;
+            if (returnPoints > 0)
+                return returnPoints / matchesPlayed;
+            else
+                return 0;
         }
 
         public int zzGetTeamMatchesPlayed(string[] fileLines)
@@ -172,7 +175,7 @@ namespace Bot_Scout_Data_Interperter.scripts
                     }
                     if (matchPassOff)
                     {
-                        if (currentArray[0] == "Taxi" && currentArray[1] == " y")
+                        if (currentArray[0] == "Taxi" && currentArray[1] == " y") 
                         {
                             matchData.Add(2);
                             matchLabels.Add("Taxi");
@@ -231,6 +234,10 @@ namespace Bot_Scout_Data_Interperter.scripts
                             {
                                 matchData.Add(15);
                                 matchLabels.Add("Climb");
+                            } else if (currentArray[1] == " n")
+                            {
+                                matchData.Add(0);
+                                matchLabels.Add("Climb");
                             }
                         }
                     }
@@ -264,7 +271,8 @@ namespace Bot_Scout_Data_Interperter.scripts
                     }
                 } else
                 {
-                    matchTrue = false;
+                    if (line == "------------------------")
+                        matchTrue = false;
                 }
                 if (matchTrue == true)
                 {
@@ -304,7 +312,7 @@ namespace Bot_Scout_Data_Interperter.scripts
                         matchLabels.Add("Tele Lower");
                     }
                     else if (lineValues[0] == "Tele Missed")
-                    {
+                    {   
                         currentMatchNumbers.Add(Int32.Parse(lineValues[1]));
                         matchLabels.Add("Tele Missed");
                     }
@@ -330,7 +338,7 @@ namespace Bot_Scout_Data_Interperter.scripts
                             currentMatchNumbers.Add(15);
                             matchLabels.Add("Climb");
                         }
-                        else
+                        else if (lineValues[1] == " n")
                         {
                             currentMatchNumbers.Add(0);
                             matchLabels.Add("Climb");
