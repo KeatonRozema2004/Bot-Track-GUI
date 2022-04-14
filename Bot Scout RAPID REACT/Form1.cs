@@ -4,7 +4,7 @@ using System.IO;
 using System.Windows.Forms;
 
 //TODO: Drive type for data entry and drive sheet
-
+//TODO: Make it so it detects if the string is a number (or turns the string to a number, then back into a string)
 
 namespace Bot_Scout_RAPID_REACT
 {
@@ -2079,6 +2079,11 @@ namespace Bot_Scout_RAPID_REACT
         private void overallScoreToolStripMenuItem_Click(object sender, EventArgs e)
         {
             bestTeamsStats("Total Score", 13, 14, 0, 0, false, "Total Scores");
+        }
+
+        private void button4_Click_2(object sender, EventArgs e)
+        {
+
         }
     }
 

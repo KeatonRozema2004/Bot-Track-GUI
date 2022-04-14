@@ -1,12 +1,12 @@
 Shutdowns: 01
 Match Number: 10
 Taxi: y
-Tele Lower: 03
-Tele Upper: 02
+Tele Lower: 3
+Tele Upper: 2
 Auto Cargo Total: 02
-Auto Upper: 01
-Auto Lower: 01
-Auto Missed: 01
+Auto Upper: 15
+Auto Lower: 1
+Auto Missed: 1
 Still random text, you just had to edit the file
 Tele Missed: 01
 Start: 01
