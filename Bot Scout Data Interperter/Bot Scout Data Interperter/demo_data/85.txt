@@ -1,58 +1,58 @@
-Match Number: 1
+Shutdowns: 01
+Match Number: 10
 Taxi: y
-Auto Upper: 03
-Auto Lower: 05
-Auto Missed: 02
-Tele Upper: 23
-Tele Lower: 10
-Tele Missed: 02
-Position: t
-Defense: 0
-Climb Type: m
-Start: 50
-End: 6
+Tele Lower: 03
+Tele Upper: 02
+Auto Cargo Total: 02
+Auto Upper: 01
+Auto Lower: 01
+Auto Missed: 01
+Still random text, you just had to edit the file
+Tele Missed: 01
+Start: 01
+End: 01
+Total Climb Time: 00
+Climb Type: l
+Defense: 01
+Position: h
 Entry: f
-Total Climb Time: 44
-Tele Cargo Score: 56
-Auto Cargo Score: 22
-Auto Accuracy: 80%
-Tele Accuracy: 94.28571428571428%
+Tele Cargo Score: 07
+Auto Cargo Score: 06
+Auto Accuracy: 66.6666666666667%
+Tele Accuracy: 83.3333333333333%
+Total Score: 19
 ------------------------
-0
-0
-0
-0
-0
-0
-0
-0
-0
-0
-0
-0
-0
-0
-0
-0
-0
-0
-0
-0
-0
-0
-0
-0
-0
-0
-0
-0
-0
-0
-0
-0
-0
-0
-0
+Match Number: 15
+Taxi: n
+Tele Lower: 01
+Tele Upper: 05
+Auto Cargo Total: 03
+Auto Upper: 02
+Auto Lower: 01
+Auto Missed: 01
+nOPE
+Tele Missed: 06
+Start: 30
+End: 04
+Total Climb Time: 26
+Climb Type: l
+Defense: 02
+Position: l
+Entry: f
+Tele Cargo Score: 11
+Auto Cargo Score: 10
+Auto Accuracy: 75%
+Tele Accuracy: 50%
+Total Score: 25
+------------------------
+Total Score: 17
+------------------------
+Total Score: 17
+------------------------
+Total Score: 17
+------------------------
+Total Score: 19
+------------------------
 0
 0
 0
