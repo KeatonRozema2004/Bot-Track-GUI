@@ -11,7 +11,7 @@ using System.Windows.Forms;
 //TODO: Dropdown menu instead of radio buttons
 //TODO: Check if team exists, if not, delete it
 //TODO: Make folders for teams in other divisions
-//TODO: Make a "Creat Team" Tab
+//TODO: Make a "Create Team" Tab
 //TODO: Fix get best overall score
 //TODO: Replicate Driver sheet
 //TODO: Make sure it works correctly by doing test ones
@@ -680,7 +680,7 @@ namespace Bot_Scout_RAPID_REACT
         }
 
 
-        public void driveData(int matchInc, int changeStart)
+        public void driveData(int matchInc, int changeStart, string matchText)
         {
             bool matchEnd = false;
             Form1 match = new Form1();
@@ -1460,26 +1460,30 @@ namespace Bot_Scout_RAPID_REACT
                 notify("Error... Check if the team exists");
             }
         }
-
+        public void prevMatch(int matchBack)
+        {
+            string team1 = team.Text;
+            Form1 match = new Form1();
+            int i = Int32.Parse(lineMatch.Text);
+            if (match.GetLine(team1 + ".txt", i - (23 + (22 * matchBack))).Contains("Match Number"))
+                {
+                try
+                {
+                    driveData(1, 46);
+                    notify("Loaded the previous match for team " + team1);
+                }
+                catch (Exception)
+                {
+                    Console.WriteLine("Whoops");
+                }
+            }
+        }
         private void previousMatchToolStripMenuItem_Click(object sender, EventArgs e)
         {
             try
             {
-                string team1 = team.Text;
-                Form1 match = new Form1();
-                int i = Int32.Parse(lineMatch.Text);
-                if (match.GetLine(team1 + ".txt", i - 45).Contains("Match Number"))
-                {
-                    try
-                    {
-                        driveData(1, 46);
-                        notify("Loaded the previous match for team " + team1);
-                    }
-                    catch (Exception)
-                    {
-                        Console.WriteLine("Whoops");
-                    }
-                }
+                recentMatch();
+                prevMatch(1);
                 
             }
             catch (Exception)
@@ -1631,6 +1635,10 @@ namespace Bot_Scout_RAPID_REACT
         }
 
         private void recentMatchToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            recentMatch();
+        }
+        public void recentMatch()
         {
             string team1 = team.Text;
             Form1 match = new Form1();
