@@ -39,7 +39,13 @@ namespace Bot_Scout_Data_Interperter
             teamChartData.ChartAreas[0].AxisX.LabelStyle.Angle = -90;
             teamChartData.ChartAreas[0].AxisX.LabelStyle.Interval = 1;
             teamChartData.ChartAreas[0].AxisY.LabelStyle.Interval = 2;
-            
+
+            ListSortDirection direction = (ListSortDirection)SortOrder.Ascending;
+            overview_table.Sort(overview_table.Columns[5], direction);
+
+            //overview_table.Columns[5].SortMode = DataGridViewColumnSortMode.Automatic; //DataGridViewColumnSortMode.Automatic;
+
+
         }
 
         private void zzResetData()
@@ -83,6 +89,9 @@ namespace Bot_Scout_Data_Interperter
 
                     // teamDataMatchSelect.Items.Add(teamName);
                 }
+
+                ListSortDirection direction = (ListSortDirection)SortOrder.Ascending;
+                overview_table.Sort(overview_table.Columns[5], direction);
 
                 // string tempDirectory = @"D:\GitHub\Bot-Track-GUI\Bot Scout Data Interperter\Bot Scout Data Interperter\demo_data\85.txt";
                 // string[] test = functions.zzGetMatchDataForTeam(directory, "85");
@@ -230,7 +239,7 @@ namespace Bot_Scout_Data_Interperter
                     string pathString = System.IO.Path.Combine(outputDirectory, fileName.Split('.')[0]);
                     for (int z = 0; fileMatches.Length > z; z++)
                     {
-                        dynamic[] matchData = functions.zzGetMatchDataFromTeamByMatchNumber(dataDirectoryLabel.Text, fileName.Split('.')[0], fileMatches[z].Split(':')[0]);
+                        dynamic[] matchData = functions.zzGetMatchDataFromTeamByMatchNumber(dataDirectoryLabel.Text, fileName.Split('.')[0], fileMatches[z].Split(':')[1]);
                         int[] matchNumbers = matchData[0];
                         string[] matchLabels = matchData[1];
 
@@ -251,9 +260,30 @@ namespace Bot_Scout_Data_Interperter
                             teamChartData.Series["Average"].Points.AddXY(averageLables[x], averageNumbers[x]);
                         }
 
-                        teamChartData.SaveImage(pathString + @"/" + fileMatches[z], System.Windows.Forms.DataVisualization.Charting.ChartImageFormat.Png);
+                        DirectoryInfo directory = Directory.CreateDirectory(pathString);
+
+                        string imageFileName = fileMatches[z].Split(':')[0] + "-" + fileMatches[z].Split(':')[1] + ".png";
+
+                        string filePath = Path.Combine(pathString, imageFileName);
+
+                        teamChartData.SaveImage(filePath, System.Windows.Forms.DataVisualization.Charting.ChartImageFormat.Png);
                     }
                 }
+
+                int height = overview_table.Height;
+                overview_table.Height = (overview_table.RowCount + 1) * overview_table.RowTemplate.Height;
+
+                //Create a Bitmap and draw the DataGridView on it.
+                Bitmap bitmap = new Bitmap(overview_table.Width, overview_table.Height);
+                overview_table.DrawToBitmap(bitmap, new Rectangle(0, 0, overview_table.Width, overview_table.Height));
+
+                //Resize DataGridView back to original height.
+                overview_table.Height = height;
+
+                //Save the Bitmap to folder.
+
+                string overviewPath = Path.Combine(outputDirectory, "Overview.png");
+                bitmap.Save(overviewPath);
             }
         }
 
