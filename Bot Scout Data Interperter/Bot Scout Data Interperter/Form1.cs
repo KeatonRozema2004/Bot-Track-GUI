@@ -206,6 +206,57 @@ namespace Bot_Scout_Data_Interperter
 
         }
 
+
+        private void changeButtonSubmit_Click(object sender, EventArgs e)
+        {
+            functions.zzRunEditChangeSubmit(dataDirectoryLabel.Text, teamDataTeamSelect.Text, editMatchSelect.Text, taxiChange.Text, autoLowerChange.Text, autoUpperChange.Text, autoMissedChange.Text, teleLowerChange.Text, teleUpperChange.Text, teleMissedChange.Text, climbChange.Text);
+        }
+
+        private void saveTeamChartsButton_Click(object sender, EventArgs e)
+        {
+            string[] teamFiles = functions.zzGetDataFilesFromDirectory(dataDirectoryLabel.Text);
+
+            FolderBrowserDialog folderBrowserDialog = new FolderBrowserDialog();
+
+            if (folderBrowserDialog.ShowDialog() == DialogResult.OK)
+            {
+                string outputDirectory = folderBrowserDialog.SelectedPath;
+                
+                foreach (string teamFile in teamFiles)
+                {
+                    string fileName = Path.GetFileName(teamFile);
+                    string[] fileMatches = functions.zzGetMatchesPlayedByTeam(fileName.Split('.')[0], teamFile);
+
+                    string pathString = System.IO.Path.Combine(outputDirectory, fileName.Split('.')[0]);
+                    for (int z = 0; fileMatches.Length > z; z++)
+                    {
+                        dynamic[] matchData = functions.zzGetMatchDataFromTeamByMatchNumber(dataDirectoryLabel.Text, fileName.Split('.')[0], fileMatches[z].Split(':')[0]);
+                        int[] matchNumbers = matchData[0];
+                        string[] matchLabels = matchData[1];
+
+                        dynamic[] averageData = functions.zzReturnMatchAveragePointsByTeamNumber(dataDirectoryLabel.Text, fileName.Split('.')[0]);
+                        int[] averageNumbers = averageData[0];
+                        string[] averageLables = averageData[1];
+
+                        teamChartData.Series["Match"].Points.Clear();
+                        teamChartData.Series["Average"].Points.Clear();
+
+                        for (int y = 0; matchLabels.Length > y; y++)
+                        {
+                            teamChartData.Series["Match"].Points.AddXY(matchLabels[y], matchNumbers[y]);
+                        }
+
+                        for (int x = 0; averageLables.Length > x; x++)
+                        {
+                            teamChartData.Series["Average"].Points.AddXY(averageLables[x], averageNumbers[x]);
+                        }
+
+                        teamChartData.SaveImage(pathString + @"/" + fileMatches[z], System.Windows.Forms.DataVisualization.Charting.ChartImageFormat.Png);
+                    }
+                }
+            }
+        }
+
         private string[] zzGetRecordedTeamNumbers()
         {
             string[] files = functions.zzGetDataFilesFromDirectory(dataDirectoryLabel.Text);
@@ -218,11 +269,6 @@ namespace Bot_Scout_Data_Interperter
             }
 
             return teamNames.ToArray();
-        }
-
-        private void changeButtonSubmit_Click(object sender, EventArgs e)
-        {
-            functions.zzRunEditChangeSubmit(dataDirectoryLabel.Text, teamDataTeamSelect.Text, editMatchSelect.Text, taxiChange.Text, autoLowerChange.Text, autoUpperChange.Text, autoMissedChange.Text, teleLowerChange.Text, teleUpperChange.Text, teleMissedChange.Text, climbChange.Text);
         }
     }
 }
