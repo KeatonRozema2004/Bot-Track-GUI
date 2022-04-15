@@ -145,6 +145,9 @@ namespace Bot_Scout_RAPID_REACT
             this.team8 = new System.Windows.Forms.Label();
             this.team7 = new System.Windows.Forms.Label();
             this.driverSheetTable = new System.Windows.Forms.TableLayoutPanel();
+            this.threeentry = new System.Windows.Forms.Label();
+            this.twoentry = new System.Windows.Forms.Label();
+            this.oneentry = new System.Windows.Forms.Label();
             this.threetotalScore = new System.Windows.Forms.Label();
             this.threedefense = new System.Windows.Forms.Label();
             this.threeclimbType = new System.Windows.Forms.Label();
@@ -216,11 +219,6 @@ namespace Bot_Scout_RAPID_REACT
             this.teamTrendLayout = new System.Windows.Forms.TableLayoutPanel();
             this.teamTrend = new System.Windows.Forms.Label();
             this.label49 = new System.Windows.Forms.Label();
-            this.lowClimb = new System.Windows.Forms.RadioButton();
-            this.noClimb = new System.Windows.Forms.RadioButton();
-            this.travClimb = new System.Windows.Forms.RadioButton();
-            this.highClimb = new System.Windows.Forms.RadioButton();
-            this.midClimb = new System.Windows.Forms.RadioButton();
             this.enterSide = new System.Windows.Forms.RadioButton();
             this.enterFront = new System.Windows.Forms.RadioButton();
             this.posOther = new System.Windows.Forms.RadioButton();
@@ -231,13 +229,10 @@ namespace Bot_Scout_RAPID_REACT
             this.matchName = new System.Windows.Forms.Label();
             this.getMatchDataBut = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.panel2 = new System.Windows.Forms.Panel();
             this.panel4 = new System.Windows.Forms.Panel();
             this.notifyIcon1 = new System.Windows.Forms.NotifyIcon(this.components);
             this.taxied = new System.Windows.Forms.ComboBox();
-            this.oneentry = new System.Windows.Forms.Label();
-            this.twoentry = new System.Windows.Forms.Label();
-            this.threeentry = new System.Windows.Forms.Label();
+            this.climbDrop = new System.Windows.Forms.ComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.menuStrip1.SuspendLayout();
             this.bestTeamsTableLayout.SuspendLayout();
@@ -246,7 +241,6 @@ namespace Bot_Scout_RAPID_REACT
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
             this.teamTrendLayout.SuspendLayout();
             this.panel1.SuspendLayout();
-            this.panel2.SuspendLayout();
             this.panel4.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -1473,6 +1467,36 @@ namespace Bot_Scout_RAPID_REACT
             this.driverSheetTable.Size = new System.Drawing.Size(573, 273);
             this.driverSheetTable.TabIndex = 74;
             // 
+            // threeentry
+            // 
+            this.threeentry.AutoSize = true;
+            this.threeentry.Font = new System.Drawing.Font("Microsoft YaHei UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.threeentry.Location = new System.Drawing.Point(396, 173);
+            this.threeentry.Name = "threeentry";
+            this.threeentry.Size = new System.Drawing.Size(47, 27);
+            this.threeentry.TabIndex = 91;
+            this.threeentry.Text = "Not Valid";
+            // 
+            // twoentry
+            // 
+            this.twoentry.AutoSize = true;
+            this.twoentry.Font = new System.Drawing.Font("Microsoft YaHei UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.twoentry.Location = new System.Drawing.Point(333, 173);
+            this.twoentry.Name = "twoentry";
+            this.twoentry.Size = new System.Drawing.Size(47, 27);
+            this.twoentry.TabIndex = 91;
+            this.twoentry.Text = "Not Valid";
+            // 
+            // oneentry
+            // 
+            this.oneentry.AutoSize = true;
+            this.oneentry.Font = new System.Drawing.Font("Microsoft YaHei UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.oneentry.Location = new System.Drawing.Point(238, 173);
+            this.oneentry.Name = "oneentry";
+            this.oneentry.Size = new System.Drawing.Size(80, 19);
+            this.oneentry.TabIndex = 90;
+            this.oneentry.Text = "Not Valid";
+            // 
             // threetotalScore
             // 
             this.threetotalScore.AutoSize = true;
@@ -2204,61 +2228,6 @@ namespace Bot_Scout_RAPID_REACT
             this.label49.Text = "Team Trend\r\n\r\n";
             this.label49.Click += new System.EventHandler(this.label49_Click);
             // 
-            // lowClimb
-            // 
-            this.lowClimb.AutoSize = true;
-            this.lowClimb.Location = new System.Drawing.Point(4, 3);
-            this.lowClimb.Name = "lowClimb";
-            this.lowClimb.Size = new System.Drawing.Size(45, 17);
-            this.lowClimb.TabIndex = 15;
-            this.lowClimb.TabStop = true;
-            this.lowClimb.Text = "Low";
-            this.lowClimb.UseVisualStyleBackColor = true;
-            // 
-            // noClimb
-            // 
-            this.noClimb.AutoSize = true;
-            this.noClimb.Location = new System.Drawing.Point(102, 4);
-            this.noClimb.Name = "noClimb";
-            this.noClimb.Size = new System.Drawing.Size(51, 17);
-            this.noClimb.TabIndex = 19;
-            this.noClimb.TabStop = true;
-            this.noClimb.Text = "None";
-            this.noClimb.UseVisualStyleBackColor = true;
-            // 
-            // travClimb
-            // 
-            this.travClimb.AutoSize = true;
-            this.travClimb.Location = new System.Drawing.Point(49, 26);
-            this.travClimb.Name = "travClimb";
-            this.travClimb.Size = new System.Drawing.Size(69, 17);
-            this.travClimb.TabIndex = 18;
-            this.travClimb.TabStop = true;
-            this.travClimb.Text = "Traversal";
-            this.travClimb.UseVisualStyleBackColor = true;
-            // 
-            // highClimb
-            // 
-            this.highClimb.AutoSize = true;
-            this.highClimb.Location = new System.Drawing.Point(49, 3);
-            this.highClimb.Name = "highClimb";
-            this.highClimb.Size = new System.Drawing.Size(47, 17);
-            this.highClimb.TabIndex = 11;
-            this.highClimb.TabStop = true;
-            this.highClimb.Text = "High";
-            this.highClimb.UseVisualStyleBackColor = true;
-            // 
-            // midClimb
-            // 
-            this.midClimb.AutoSize = true;
-            this.midClimb.Location = new System.Drawing.Point(6, 30);
-            this.midClimb.Name = "midClimb";
-            this.midClimb.Size = new System.Drawing.Size(42, 17);
-            this.midClimb.TabIndex = 16;
-            this.midClimb.TabStop = true;
-            this.midClimb.Text = "Mid";
-            this.midClimb.UseVisualStyleBackColor = true;
-            // 
             // enterSide
             // 
             this.enterSide.AutoSize = true;
@@ -2369,19 +2338,6 @@ namespace Bot_Scout_RAPID_REACT
             this.panel1.Size = new System.Drawing.Size(156, 46);
             this.panel1.TabIndex = 6;
             // 
-            // panel2
-            // 
-            this.panel2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel2.Controls.Add(this.noClimb);
-            this.panel2.Controls.Add(this.lowClimb);
-            this.panel2.Controls.Add(this.travClimb);
-            this.panel2.Controls.Add(this.midClimb);
-            this.panel2.Controls.Add(this.highClimb);
-            this.panel2.Location = new System.Drawing.Point(134, 297);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(161, 47);
-            this.panel2.TabIndex = 11;
-            // 
             // panel4
             // 
             this.panel4.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
@@ -2411,43 +2367,27 @@ namespace Bot_Scout_RAPID_REACT
             this.taxied.Size = new System.Drawing.Size(100, 21);
             this.taxied.TabIndex = 5;
             // 
-            // oneentry
+            // climbDrop
             // 
-            this.oneentry.AutoSize = true;
-            this.oneentry.Font = new System.Drawing.Font("Microsoft YaHei UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.oneentry.Location = new System.Drawing.Point(238, 173);
-            this.oneentry.Name = "oneentry";
-            this.oneentry.Size = new System.Drawing.Size(80, 19);
-            this.oneentry.TabIndex = 90;
-            this.oneentry.Text = "Not Valid";
-            // 
-            // twoentry
-            // 
-            this.twoentry.AutoSize = true;
-            this.twoentry.Font = new System.Drawing.Font("Microsoft YaHei UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.twoentry.Location = new System.Drawing.Point(333, 173);
-            this.twoentry.Name = "twoentry";
-            this.twoentry.Size = new System.Drawing.Size(47, 27);
-            this.twoentry.TabIndex = 91;
-            this.twoentry.Text = "Not Valid";
-            // 
-            // threeentry
-            // 
-            this.threeentry.AutoSize = true;
-            this.threeentry.Font = new System.Drawing.Font("Microsoft YaHei UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.threeentry.Location = new System.Drawing.Point(396, 173);
-            this.threeentry.Name = "threeentry";
-            this.threeentry.Size = new System.Drawing.Size(47, 27);
-            this.threeentry.TabIndex = 91;
-            this.threeentry.Text = "Not Valid";
+            this.climbDrop.FormattingEnabled = true;
+            this.climbDrop.Items.AddRange(new object[] {
+            "None",
+            "Low",
+            "Mid",
+            "High",
+            "Traversal"});
+            this.climbDrop.Location = new System.Drawing.Point(134, 309);
+            this.climbDrop.Name = "climbDrop";
+            this.climbDrop.Size = new System.Drawing.Size(100, 21);
+            this.climbDrop.TabIndex = 11;
             // 
             // Form1
             // 
             this.BackColor = System.Drawing.Color.SteelBlue;
             this.ClientSize = new System.Drawing.Size(1084, 572);
+            this.Controls.Add(this.climbDrop);
             this.Controls.Add(this.taxied);
             this.Controls.Add(this.panel4);
-            this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.getMatchDataBut);
             this.Controls.Add(this.matchName);
@@ -2511,8 +2451,6 @@ namespace Bot_Scout_RAPID_REACT
             this.teamTrendLayout.PerformLayout();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
-            this.panel2.ResumeLayout(false);
-            this.panel2.PerformLayout();
             this.panel4.ResumeLayout(false);
             this.panel4.PerformLayout();
             this.ResumeLayout(false);
@@ -2679,13 +2617,8 @@ namespace Bot_Scout_RAPID_REACT
         private System.Windows.Forms.Label label56;
         private System.Windows.Forms.Label averageTeleUpper;
         private System.Windows.Forms.Label averageTeleLower;
-        private System.Windows.Forms.RadioButton midClimb;
-        private System.Windows.Forms.RadioButton lowClimb;
         private System.Windows.Forms.RadioButton enterSide;
         private System.Windows.Forms.RadioButton enterFront;
-        private System.Windows.Forms.RadioButton noClimb;
-        private System.Windows.Forms.RadioButton travClimb;
-        private System.Windows.Forms.RadioButton highClimb;
         private System.Windows.Forms.RadioButton posOther;
         private System.Windows.Forms.RadioButton posLaunch;
         private System.Windows.Forms.RadioButton posTar;
@@ -2697,7 +2630,6 @@ namespace Bot_Scout_RAPID_REACT
         private System.Windows.Forms.Label matchName;
         private System.Windows.Forms.Button getMatchDataBut;
         private System.Windows.Forms.Panel panel4;
-        private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.NotifyIcon notifyIcon1;
         private System.Windows.Forms.Label averageTotalScore;
@@ -2737,6 +2669,7 @@ namespace Bot_Scout_RAPID_REACT
         private System.Windows.Forms.Label threeentry;
         private System.Windows.Forms.Label twoentry;
         private System.Windows.Forms.Label oneentry;
+        private System.Windows.Forms.ComboBox climbDrop;
     }
 }
 

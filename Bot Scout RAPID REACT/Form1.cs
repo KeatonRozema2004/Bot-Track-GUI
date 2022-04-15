@@ -235,27 +235,27 @@ namespace Bot_Scout_RAPID_REACT
                     {
                         writeToFile(team.Text, "Total Climb Time: " + climbTime);
                     }
-                    if (lowClimb.Checked)
+                    if (climbDrop.Text == "Low")
                     {
                         writeToFile(team.Text, "Climb Type: l");
                         climbType = "l";
                     }
-                    else if (midClimb.Checked)
+                    else if (climbDrop.Text == "Mid")
                     {
                         writeToFile(team.Text, "Climb Type: m");
                         climbType = "m";
                     }
-                    else if (highClimb.Checked)
+                    else if (climbDrop.Text == "High")
                     {
                         writeToFile(team.Text, "Climb Type: h");
                         climbType = "h";
                     }
-                    else if (travClimb.Checked)
+                    else if (climbDrop.Text == "Traversal")
                     {
                         writeToFile(team.Text, "Climb Type: t");
                         climbType = "t";
                     }
-                    else if (noClimb.Checked)
+                    else if (climbDrop.Text == "None")
                     {
                         writeToFile(team.Text, "Climb Type: n");
                         climbType = "n";
@@ -385,11 +385,7 @@ namespace Bot_Scout_RAPID_REACT
                 autoMissed.Text = "";
                 climbEnd.Text = "";
                 climbStart.Text = "";
-                noClimb.Checked = false;
-                lowClimb.Checked = false;
-                midClimb.Checked = false;
-                highClimb.Checked = false;
-                travClimb.Checked = false;
+                climbDrop.Text = "";
                 enterFront.Checked = false;
                 enterSide.Checked = false;
                 defense.Text = "";
@@ -2033,27 +2029,27 @@ namespace Bot_Scout_RAPID_REACT
                 lineChanger("Total Climb Time: " + climbTime, team.Text + ".txt", lineMatch + 12);
             }
             //writeToFile(team.Text, "Climb Type: " + climbType.Text);
-            if (lowClimb.Checked)
+            if (climbDrop.Text == "Low")
             {
                 lineChanger("Climb Type: l", team.Text + ".txt", lineMatch + 13);
                 climbType = "l";
             }
-            else if (midClimb.Checked)
+            else if (climbDrop.Text == "Mid")
             {
                 lineChanger("Climb Type: m", team.Text + ".txt", lineMatch + 13);
                 climbType = "m";
             }
-            else if (highClimb.Checked)
+            else if (climbDrop.Text == "High")
             {
                 lineChanger("Climb Type: h", team.Text + ".txt", lineMatch + 13);
                 climbType = "h";
             }
-            else if (travClimb.Checked)
+            else if (climbDrop.Text == "Traversal")
             {
                 lineChanger("Climb Type: t", team.Text + ".txt", lineMatch + 13);
                 climbType = "t";
             }
-            else if (noClimb.Checked)
+            else if (climbDrop.Text == "None")
             {
                 lineChanger("Climb Type: n", team.Text + ".txt", lineMatch + 13);
                 climbType = "n";
@@ -2226,23 +2222,23 @@ namespace Bot_Scout_RAPID_REACT
 
                 if (climbTT == "l")
                 {
-                    lowClimb.Checked = true;
+                    climbDrop.Text = "Low";
                 }
                 else if (climbTT == "m")
                 {
-                    midClimb.Checked = true;
+                    climbDrop.Text = "Mid";
                 }
                 else if (climbTT == "h")
                 {
-                    highClimb.Checked = true;
+                    climbDrop.Text = "High";
                 }
                 else if (climbTT == "t")
                 {
-                    travClimb.Checked = true;
+                    climbDrop.Text = "Traversal";
                 }
                 else if (climbTT == "n")
                 {
-                    noClimb.Checked = true;
+                    climbDrop.Text = "None";
                 }
                 //Defense
                 defense.Text = getMatchData(9, 10, lineMatch + 14, "Defense");
