@@ -9,7 +9,7 @@ using System.Windows.Forms;
 //TODO: Go back to team 27, match 5, just take a look at match
 //TODO: PRIORITY, MAKE LOOK BETTER, AND FOR MATCHES
 //TODO: Dropdown menu instead of radio buttons
-//TODO: Check if team exists, if not, delete it
+//COMPLETE: Check if team exists, if not, delete it
 //TODO: Make folders for teams in other divisions
 //TODO: Make a "Create Team" Tab
 //TODO: Fix get best overall score
@@ -66,7 +66,7 @@ namespace Bot_Scout_RAPID_REACT
                 {
                     editMatchData();
                 }
-                else if (!shutdownBot.Checked && matchName.Text == "Make Match")
+                else if (!shutdownBot.Checked && matchName.Text == "Make Match" && File.Exists(team.Text + ".txt"))
                 {
                     statusText.Text = "Loading...";
 
@@ -127,14 +127,15 @@ namespace Bot_Scout_RAPID_REACT
                     {
                         writeToFile(team.Text, "Match Number: " + match.Text);
                     }
-                    if (taxiYes.Checked)
+                    if (taxied.Text == "Yes")
                     {
                         writeToFile(team.Text, "Taxi: y");
                     }
-                    else if (taxiNo.Checked)
+                    else if (taxied.Text == "No")
                     {
                         writeToFile(team.Text, "Taxi: n");
-                    } else if (taxiNo.Checked == false && taxiYes.Checked == false)
+                    } 
+                    else if (taxied.Text != "Yes" && taxied.Text != "No")
                     {
                         writeToFile(team.Text, "Taxi: n");
                     }
@@ -351,7 +352,7 @@ namespace Bot_Scout_RAPID_REACT
                         climbPoints = 0;
                     }
                     int taxiPoints = 0;
-                    if (taxiYes.Checked)
+                    if (taxied.Text == "Yes")
                     {
                         taxiPoints = 2;
                     }
@@ -375,7 +376,7 @@ namespace Bot_Scout_RAPID_REACT
                 }
 
                 team.Text = "";
-                match.Text = "";
+                //match.Text = "";
                 teleLower.Text = "";
                 teleUpper.Text = "";
                 teleMissed.Text = "";
@@ -396,8 +397,7 @@ namespace Bot_Scout_RAPID_REACT
                 posTar.Checked = false;
                 posLaunch.Checked = false;
                 posHub.Checked = false;
-                taxiNo.Checked = false;
-                taxiYes.Checked = false;
+                taxied.Text = "";
                 //notifyIcon1.Text = "Done";
                 notify("Finished");
                 //notifyIcon1.
@@ -665,7 +665,7 @@ namespace Bot_Scout_RAPID_REACT
                 {
                     try
                     {
-                        driveData(1, 0, matchText.Text, teleLow, teleHigh.Text, autoTotal.Text, time.Text, climbType2.Text, defense2.Text, totalScore2.Text);
+                        driveData(1, 0, matchText.Text, teleLow, teleHigh, autoTotal, time, climbType2, defense2, totalScore2);
                     }
                     catch (Exception)
                     {
@@ -680,7 +680,7 @@ namespace Bot_Scout_RAPID_REACT
         }
 
 
-        public void driveData(int matchInc, int changeStart, string mT, Label tlT, string tuT, string atT, string cTimeT, string cTypeT, string dT, string tsT)
+        public void driveData(int matchInc, int changeStart, string mT, Label tlT, Label tuT, Label atT, Label cTimeT, Label cTypeT, Label dT, Label tsT)
         {
             bool matchEnd = false;
             Form1 match = new Form1();
@@ -693,6 +693,7 @@ namespace Bot_Scout_RAPID_REACT
                 i += matchInc;
 
 
+
                 if (match.GetLine(team1 + ".txt", i).Contains("Match Number"))
                 {
                     mT = match.GetLine(team1 + ".txt", i);
@@ -702,7 +703,7 @@ namespace Bot_Scout_RAPID_REACT
                 {
                     string num1 = match.GetLine(team1 + ".txt", i)[12].ToString();
                     string num2 = match.GetLine(team1 + ".txt", i)[13].ToString();
-                    tlT.Text = num1 + num2;
+                    oneteleLow.Text = num1 + num2;
 
                 }
 
@@ -710,7 +711,7 @@ namespace Bot_Scout_RAPID_REACT
                 {
                     string num1 = match.GetLine(team1 + ".txt", i)[12].ToString();
                     string num2 = match.GetLine(team1 + ".txt", i)[13].ToString();
-                    tuT = num1 + num2;
+                    oneteleHigh.Text = num1 + num2;
 
                 }
 
@@ -718,32 +719,194 @@ namespace Bot_Scout_RAPID_REACT
                 {
                     string num1 = match.GetLine(team1 + ".txt", i)[18].ToString();
                     string num2 = match.GetLine(team1 + ".txt", i)[19].ToString();
-                    atT = num1 + num2;
+                    oneautoTotal.Text = num1 + num2;
                 }
 
                 if (match.GetLine(team1 + ".txt", i).Contains("Climb Time"))
                 {
                     string num1 = match.GetLine(team1 + ".txt", i)[18].ToString();
                     string num2 = match.GetLine(team1 + ".txt", i)[19].ToString();
-                    cTimeT = num1 + num2;
+                    onetime.Text = num1 + num2;
                 }
 
                 if (match.GetLine(team1 + ".txt", i).Contains("Climb Type"))
                 {
                     string climb = match.GetLine(team1 + ".txt", i)[12].ToString();
-                    cTypeT = climb;
+                    oneclimbType2.Text = climb;
                 }
 
                 if (match.GetLine(team1 + ".txt", i).Contains("Defense"))
                 {
                     string num1 = match.GetLine(team1 + ".txt", i)[10].ToString();
-                    dT = num1;
+                    onedefense2.Text = num1;
+                }
+                if(match.GetLine(team1 + ".txt", i).Contains("Entry"))
+                {
+                    string num1 = match.GetLine(team1 + ".txt", i)[7].ToString();
+                    oneentry.Text = num1;
                 }
                 if (match.GetLine(team1 + ".txt", i).Contains("Total Score"))
                 {
                     string num1 = match.GetLine(team1 + ".txt", i)[13].ToString();
                     string num2 = match.GetLine(team1 + ".txt", i)[14].ToString();
-                    tsT = num1 + num2;
+                    onetotalScore2.Text = num1 + num2;
+                }
+                if (match.GetLine(team1 + ".txt", i).Contains("-----"))
+                {
+                    matchEnd = true;
+                    lineMatch.Text = "" + i;
+                    Console.WriteLine("Ended");
+                }
+
+            }
+
+        }
+        public void driveData2(int matchInc, int changeStart, string mT, Label tlT, Label tuT, Label atT, Label cTimeT, Label cTypeT, Label dT, Label tsT)
+        {
+            bool matchEnd = false;
+            Form1 match = new Form1();
+            int i = Int32.Parse(lineMatch.Text) - changeStart;
+            Console.WriteLine("It's " + i);
+            string team1 = team.Text;
+
+            while (matchEnd == false)
+            {
+                i += matchInc;
+                if (match.GetLine(team1 + ".txt", i).Contains("Match Number"))
+                {
+                    mT = match.GetLine(team1 + ".txt", i);
+
+                }
+                if (match.GetLine(team1 + ".txt", i).Contains("Tele Lower"))
+                {
+                    string num1 = match.GetLine(team1 + ".txt", i)[12].ToString();
+                    string num2 = match.GetLine(team1 + ".txt", i)[13].ToString();
+                    twoteleLow.Text = num1 + num2;
+
+                }
+
+                if (match.GetLine(team1 + ".txt", i).Contains("Tele Upper"))
+                {
+                    string num1 = match.GetLine(team1 + ".txt", i)[12].ToString();
+                    string num2 = match.GetLine(team1 + ".txt", i)[13].ToString();
+                    twoteleHigh.Text = num1 + num2;
+
+                }
+
+                if (match.GetLine(team1 + ".txt", i).Contains("Auto Cargo Total"))
+                {
+                    string num1 = match.GetLine(team1 + ".txt", i)[18].ToString();
+                    string num2 = match.GetLine(team1 + ".txt", i)[19].ToString();
+                    twoautoTotal.Text = num1 + num2;
+                }
+
+                if (match.GetLine(team1 + ".txt", i).Contains("Climb Time"))
+                {
+                    string num1 = match.GetLine(team1 + ".txt", i)[18].ToString();
+                    string num2 = match.GetLine(team1 + ".txt", i)[19].ToString();
+                    twotime.Text = num1 + num2;
+                }
+
+                if (match.GetLine(team1 + ".txt", i).Contains("Climb Type"))
+                {
+                    string climb = match.GetLine(team1 + ".txt", i)[12].ToString();
+                    twoclimbType2.Text = climb;
+                    Console.WriteLine("Got it");
+                }
+
+                if (match.GetLine(team1 + ".txt", i).Contains("Defense"))
+                {
+                    string num1 = match.GetLine(team1 + ".txt", i)[10].ToString();
+                    twodefense2.Text = num1;
+                }
+                if (match.GetLine(team1 + ".txt", i).Contains("Entry"))
+                {
+                    string num1 = match.GetLine(team1 + ".txt", i)[7].ToString();
+                    twoentry.Text = num1;
+                }
+                if (match.GetLine(team1 + ".txt", i).Contains("Total Score"))
+                {
+                    string num1 = match.GetLine(team1 + ".txt", i)[13].ToString();
+                    string num2 = match.GetLine(team1 + ".txt", i)[14].ToString();
+                    twototalScore2.Text = num1 + num2;
+                }
+                if (match.GetLine(team1 + ".txt", i).Contains("-----"))
+                {
+                    matchEnd = true;
+                    lineMatch.Text = "" + i;
+                }
+
+            }
+
+        }
+        public void driveData3(int matchInc, int changeStart, string mT, Label tlT, Label tuT, Label atT, Label cTimeT, Label cTypeT, Label dT, Label tsT)
+        {
+            bool matchEnd = false;
+            Form1 match = new Form1();
+            int i = Int32.Parse(lineMatch.Text) - changeStart;
+            Console.WriteLine("It's " + i);
+            string team1 = team.Text;
+
+            while (matchEnd == false)
+            {
+                i += matchInc;
+                if (match.GetLine(team1 + ".txt", i).Contains("Match Number"))
+                {
+                    mT = match.GetLine(team1 + ".txt", i);
+
+                }
+                if (match.GetLine(team1 + ".txt", i).Contains("Tele Lower"))
+                {
+                    string num1 = match.GetLine(team1 + ".txt", i)[12].ToString();
+                    string num2 = match.GetLine(team1 + ".txt", i)[13].ToString();
+                    threeteleLow.Text = num1 + num2;
+
+                }
+
+                if (match.GetLine(team1 + ".txt", i).Contains("Tele Upper"))
+                {
+                    string num1 = match.GetLine(team1 + ".txt", i)[12].ToString();
+                    string num2 = match.GetLine(team1 + ".txt", i)[13].ToString();
+                    threeteleHigh.Text = num1 + num2;
+
+                }
+
+                if (match.GetLine(team1 + ".txt", i).Contains("Auto Cargo Total"))
+                {
+                    string num1 = match.GetLine(team1 + ".txt", i)[18].ToString();
+                    string num2 = match.GetLine(team1 + ".txt", i)[19].ToString();
+                    threeautoTotal.Text = num1 + num2;
+                }
+
+                if (match.GetLine(team1 + ".txt", i).Contains("Climb Time"))
+                {
+                    string num1 = match.GetLine(team1 + ".txt", i)[18].ToString();
+                    string num2 = match.GetLine(team1 + ".txt", i)[19].ToString();
+                    threetime.Text = num1 + num2;
+                }
+
+                if (match.GetLine(team1 + ".txt", i).Contains("Climb Type"))
+                {
+                    string climb = match.GetLine(team1 + ".txt", i)[12].ToString();
+                    threeclimbType.Text = climb;
+                    Console.WriteLine("Got it2");
+                }
+
+                if (match.GetLine(team1 + ".txt", i).Contains("Defense"))
+                {
+                    string num1 = match.GetLine(team1 + ".txt", i)[10].ToString();
+                    threedefense.Text = num1;
+                }
+                if (match.GetLine(team1 + ".txt", i).Contains("Entry"))
+                {
+                    string num1 = match.GetLine(team1 + ".txt", i)[7].ToString();
+                    threeentry.Text = num1;
+                }
+                if (match.GetLine(team1 + ".txt", i).Contains("Total Score"))
+                {
+                    string num1 = match.GetLine(team1 + ".txt", i)[13].ToString();
+                    string num2 = match.GetLine(team1 + ".txt", i)[14].ToString();
+                    threetotalScore.Text = num1 + num2;
                 }
                 if (match.GetLine(team1 + ".txt", i).Contains("-----"))
                 {
@@ -1460,16 +1623,65 @@ namespace Bot_Scout_RAPID_REACT
                 notify("Error... Check if the team exists");
             }
         }
-        public void prevMatch(int matchBack)
+        public void prevMatch(int matchBack1)
         {
             string team1 = team.Text;
             Form1 match = new Form1();
             int i = Int32.Parse(lineMatch.Text);
-            if (match.GetLine(team1 + ".txt", i - (23 + (22 * (matchBack-1)))).Contains("Match Number"))
+            if (match.GetLine(team1 + ".txt", i - (23 + (22 * (matchBack1-1)))).Contains("Match Number"))
                 {
                 try
                 {
-                    driveData(1, (24 + (22 * (matchBack - 1))), matchText.Text, oneteleLow, oneteleHigh.Text, oneautoTotal.Text, onetime.Text, oneclimbType2.Text, onedefense2.Text, onetotalScore2.Text);
+                    notify("Message");
+                    driveData(1, (24 + (22 * (matchBack1-1))), matchText.Text, oneteleLow, oneteleHigh, oneautoTotal, onetime, oneclimbType2, onedefense2, onetotalScore2);
+                   // driveData2(1, (24 + (22 * (matchBack2 - 1))), matchText.Text, oneteleLow, oneteleHigh, oneautoTotal, onetime, oneclimbType2, onedefense2, onetotalScore2);
+                    //driveData(1, (24 + (22 * (matchBack2 - 2))), matchText.Text, twoteleLow, twoteleHigh.Text, twoautoTotal.Text, twotime.Text, twoclimbType2.Text, twodefense2.Text, twototalScore2.Text);
+                    //driveData(1, (24 + (22 * (matchBack3 - 3))), matchText.Text, threeteleLow, threeteleHigh.Text, threeautoTotal.Text, threetime.Text, threeclimbType.Text, threedefense.Text, threetotalScore.Text);
+                    notify("Loaded the previous match for team " + team1);
+                }
+                catch (Exception)
+                {
+                    Console.WriteLine("Whoops");
+                }
+            }
+        }
+        public void prevMatch2(int matchBack2)
+        {
+            string team1 = team.Text;
+            Form1 match = new Form1();
+            int i = Int32.Parse(lineMatch.Text);
+            if (match.GetLine(team1 + ".txt", i - (23 + (22 * (matchBack2 - 1)))).Contains("Match Number"))
+            {
+                try
+                {
+                    notify("Message");
+                    driveData2(1, (24 + (22 * (matchBack2 - 1))), matchText.Text, oneteleLow, oneteleHigh, oneautoTotal, onetime, oneclimbType2, onedefense2, onetotalScore2);
+                    //driveData2(1, (24 + (22 * (matchBack2 - 1))), matchText.Text, oneteleLow, oneteleHigh, oneautoTotal, onetime, oneclimbType2, onedefense2, onetotalScore2);
+                    //driveData(1, (24 + (22 * (matchBack2 - 2))), matchText.Text, twoteleLow, twoteleHigh.Text, twoautoTotal.Text, twotime.Text, twoclimbType2.Text, twodefense2.Text, twototalScore2.Text);
+                    //driveData(1, (24 + (22 * (matchBack3 - 3))), matchText.Text, threeteleLow, threeteleHigh.Text, threeautoTotal.Text, threetime.Text, threeclimbType.Text, threedefense.Text, threetotalScore.Text);
+                    notify("Loaded the previous match for team " + team1);
+                }
+                catch (Exception)
+                {
+                    Console.WriteLine("Whoops");
+                }
+            }
+        }
+        public void prevMatch3(int matchBack3)
+        {
+            string team1 = team.Text;
+            Form1 match = new Form1();
+            int i = Int32.Parse(lineMatch.Text);
+            if (match.GetLine(team1 + ".txt", i - ((23 + (22 * (matchBack3 - 1)))+1)).Contains("Match Number"))
+            {
+                try
+                {
+                    notify("Message");
+                    Console.WriteLine("P3");
+                    driveData3(1, ((24 + (22 * (matchBack3 - 1)))+1), matchText.Text, threeteleLow, oneteleHigh, oneautoTotal, onetime, oneclimbType2, onedefense2, onetotalScore2);
+                    //driveData2(1, (24 + (22 * (matchBack2 - 1))), matchText.Text, oneteleLow, oneteleHigh, oneautoTotal, onetime, oneclimbType2, onedefense2, onetotalScore2);
+                    //driveData(1, (24 + (22 * (matchBack2 - 2))), matchText.Text, twoteleLow, twoteleHigh.Text, twoautoTotal.Text, twotime.Text, twoclimbType2.Text, twodefense2.Text, twototalScore2.Text);
+                    //driveData(1, (24 + (22 * (matchBack3 - 3))), matchText.Text, threeteleLow, threeteleHigh.Text, threeautoTotal.Text, threetime.Text, threeclimbType.Text, threedefense.Text, threetotalScore.Text);
                     notify("Loaded the previous match for team " + team1);
                 }
                 catch (Exception)
@@ -1484,7 +1696,13 @@ namespace Bot_Scout_RAPID_REACT
             {
                 recentMatch();
                 prevMatch(1);
-                
+                recentMatch();
+                prevMatch2(2);
+                recentMatch();
+                prevMatch3(3);
+                recentMatch();
+                bestScore(team.Text);
+
             }
             catch (Exception)
             {
@@ -1504,7 +1722,7 @@ namespace Bot_Scout_RAPID_REACT
                 {
                     try
                     {
-                        driveData(1, 0, matchText.Text, teleLow, teleHigh.Text, autoTotal.Text, time.Text, climbType2.Text, defense2.Text, totalScore2.Text);
+                        driveData(1, 0, matchText.Text, teleLow, teleHigh, autoTotal, time, climbType2, defense2, totalScore2);
                         notify("Loaded the next match for team " + team1);
                     }
                     catch (Exception)
@@ -1646,7 +1864,7 @@ namespace Bot_Scout_RAPID_REACT
             //int i = Int32.Parse(lineMatch.Text);
             while (GetLine(team1 + ".txt", i + 1).Contains("Match Number"))
             {
-                driveData(1, 0, matchText.Text, teleLow, teleHigh.Text, autoTotal.Text, time.Text, climbType2.Text, defense2.Text, totalScore2.Text);
+                driveData(1, 0, matchText.Text, oneteleLow, oneteleHigh, oneautoTotal, onetime, oneclimbType2, onedefense2, onetotalScore2);
                 i = Int32.Parse(lineMatch.Text);
             }
         }
@@ -1704,12 +1922,12 @@ namespace Bot_Scout_RAPID_REACT
                 teleAccuracy = (teleUpperInt + teleLowerInt) / (teleUpperInt + teleLowerInt + teleMissedInt) * 100 + "";
             }
 
-            if (taxiYes.Checked)
+            if (taxied.Text == "Yes")
             {
                 lineChanger("Taxi: y", team.Text + ".txt", lineMatch + 1);
 
             }
-            else if (taxiNo.Checked)
+            else if (taxied.Text == "No")
             {
                 lineChanger("Taxi: n", team.Text + ".txt", lineMatch + 1);
             }
@@ -1932,7 +2150,7 @@ namespace Bot_Scout_RAPID_REACT
                 climbPoints = 0;
             }
             int taxiPoints = 0;
-            if (taxiYes.Checked)
+            if (taxied.Text == "Yes")
             {
                 taxiPoints = 2;
             }
@@ -1986,11 +2204,11 @@ namespace Bot_Scout_RAPID_REACT
                 lineMatch = findMatchNumber();
                 if (getMatchData(6, lineMatch + 1, "Taxi") == "y")
                 {
-                    taxiYes.Checked = true;
+                    taxied.Text = "Yes";
                 }
                 else if (getMatchData(6, lineMatch + 1, "Taxi") == "n")
                 {
-                    taxiNo.Checked = true;
+                    taxied.Text = "No";
                 }
                 //Tele
                 teleLower.Text = getMatchData(12, 13, lineMatch + 2, "Tele Lower");
@@ -2114,6 +2332,36 @@ namespace Bot_Scout_RAPID_REACT
         }
 
         private void Form1_Load_1(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label68_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label67_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void twoteleLow_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label68_Click_1(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label67_Click_1(object sender, EventArgs e)
+        {
+
+        }
+
+        private void menuStrip1_ItemClicked(object sender, ToolStripItemClickedEventArgs e)
         {
 
         }
