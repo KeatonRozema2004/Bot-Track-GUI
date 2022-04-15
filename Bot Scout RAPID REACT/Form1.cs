@@ -3,7 +3,18 @@ using System.Collections.Generic;
 using System.IO;
 using System.Windows.Forms;
 
-//TODO: Drive type for data entry and drive sheet
+
+//TODO: Make safeguards so doesn't enter empty data
+//TODO: Make tab key work
+//TODO: Go back to team 27, match 5, just take a look at match
+//TODO: PRIORITY, MAKE LOOK BETTER, AND FOR MATCHES
+//TODO: Dropdown menu instead of radio buttons
+//TODO: Check if team exists, if not, delete it
+//TODO: Make folders for teams in other divisions
+//TODO: Make a "Creat Team" Tab
+//TODO: Fix get best overall score
+//TODO: Replicate Driver sheet
+//TODO: Make sure it works correctly by doing test ones
 //TODO: Make it so it detects if the string is a number (or turns the string to a number, then back into a string)
 
 namespace Bot_Scout_RAPID_REACT
