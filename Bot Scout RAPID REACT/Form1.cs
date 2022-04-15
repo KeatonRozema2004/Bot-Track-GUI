@@ -665,7 +665,7 @@ namespace Bot_Scout_RAPID_REACT
                 {
                     try
                     {
-                        driveData(1, 0);
+                        driveData(1, 0, matchText.Text, teleLow, teleHigh.Text, autoTotal.Text, time.Text, climbType2.Text, defense2.Text, totalScore2.Text);
                     }
                     catch (Exception)
                     {
@@ -680,7 +680,7 @@ namespace Bot_Scout_RAPID_REACT
         }
 
 
-        public void driveData(int matchInc, int changeStart, string matchText)
+        public void driveData(int matchInc, int changeStart, string mT, Label tlT, string tuT, string atT, string cTimeT, string cTypeT, string dT, string tsT)
         {
             bool matchEnd = false;
             Form1 match = new Form1();
@@ -695,14 +695,14 @@ namespace Bot_Scout_RAPID_REACT
 
                 if (match.GetLine(team1 + ".txt", i).Contains("Match Number"))
                 {
-                    matchText.Text = match.GetLine(team1 + ".txt", i);
+                    mT = match.GetLine(team1 + ".txt", i);
 
                 }
                 if (match.GetLine(team1 + ".txt", i).Contains("Tele Lower"))
                 {
                     string num1 = match.GetLine(team1 + ".txt", i)[12].ToString();
                     string num2 = match.GetLine(team1 + ".txt", i)[13].ToString();
-                    teleLow.Text = num1 + num2;
+                    tlT.Text = num1 + num2;
 
                 }
 
@@ -710,7 +710,7 @@ namespace Bot_Scout_RAPID_REACT
                 {
                     string num1 = match.GetLine(team1 + ".txt", i)[12].ToString();
                     string num2 = match.GetLine(team1 + ".txt", i)[13].ToString();
-                    teleHigh.Text = num1 + num2;
+                    tuT = num1 + num2;
 
                 }
 
@@ -718,32 +718,32 @@ namespace Bot_Scout_RAPID_REACT
                 {
                     string num1 = match.GetLine(team1 + ".txt", i)[18].ToString();
                     string num2 = match.GetLine(team1 + ".txt", i)[19].ToString();
-                    autoTotal.Text = num1 + num2;
+                    atT = num1 + num2;
                 }
 
                 if (match.GetLine(team1 + ".txt", i).Contains("Climb Time"))
                 {
                     string num1 = match.GetLine(team1 + ".txt", i)[18].ToString();
                     string num2 = match.GetLine(team1 + ".txt", i)[19].ToString();
-                    time.Text = num1 + num2;
+                    cTimeT = num1 + num2;
                 }
 
                 if (match.GetLine(team1 + ".txt", i).Contains("Climb Type"))
                 {
                     string climb = match.GetLine(team1 + ".txt", i)[12].ToString();
-                    climbType2.Text = climb;
+                    cTypeT = climb;
                 }
 
                 if (match.GetLine(team1 + ".txt", i).Contains("Defense"))
                 {
                     string num1 = match.GetLine(team1 + ".txt", i)[10].ToString();
-                    defense2.Text = num1;
+                    dT = num1;
                 }
                 if (match.GetLine(team1 + ".txt", i).Contains("Total Score"))
                 {
                     string num1 = match.GetLine(team1 + ".txt", i)[13].ToString();
                     string num2 = match.GetLine(team1 + ".txt", i)[14].ToString();
-                    totalScore2.Text = num1 + num2;
+                    tsT = num1 + num2;
                 }
                 if (match.GetLine(team1 + ".txt", i).Contains("-----"))
                 {
@@ -1465,11 +1465,11 @@ namespace Bot_Scout_RAPID_REACT
             string team1 = team.Text;
             Form1 match = new Form1();
             int i = Int32.Parse(lineMatch.Text);
-            if (match.GetLine(team1 + ".txt", i - (23 + (22 * matchBack))).Contains("Match Number"))
+            if (match.GetLine(team1 + ".txt", i - (23 + (22 * (matchBack-1)))).Contains("Match Number"))
                 {
                 try
                 {
-                    driveData(1, 46);
+                    driveData(1, (24 + (22 * (matchBack - 1))), matchText.Text, oneteleLow, oneteleHigh.Text, oneautoTotal.Text, onetime.Text, oneclimbType2.Text, onedefense2.Text, onetotalScore2.Text);
                     notify("Loaded the previous match for team " + team1);
                 }
                 catch (Exception)
@@ -1504,7 +1504,7 @@ namespace Bot_Scout_RAPID_REACT
                 {
                     try
                     {
-                        driveData(1, 0);
+                        driveData(1, 0, matchText.Text, teleLow, teleHigh.Text, autoTotal.Text, time.Text, climbType2.Text, defense2.Text, totalScore2.Text);
                         notify("Loaded the next match for team " + team1);
                     }
                     catch (Exception)
@@ -1646,7 +1646,7 @@ namespace Bot_Scout_RAPID_REACT
             //int i = Int32.Parse(lineMatch.Text);
             while (GetLine(team1 + ".txt", i + 1).Contains("Match Number"))
             {
-                driveData(1, 0);
+                driveData(1, 0, matchText.Text, teleLow, teleHigh.Text, autoTotal.Text, time.Text, climbType2.Text, defense2.Text, totalScore2.Text);
                 i = Int32.Parse(lineMatch.Text);
             }
         }
@@ -2104,6 +2104,16 @@ namespace Bot_Scout_RAPID_REACT
         }
 
         private void button4_Click_2(object sender, EventArgs e)
+        {
+
+        }
+
+        private void teleLow_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Form1_Load_1(object sender, EventArgs e)
         {
 
         }

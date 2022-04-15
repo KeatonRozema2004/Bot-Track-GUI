@@ -145,20 +145,30 @@ namespace Bot_Scout_RAPID_REACT
             this.team8 = new System.Windows.Forms.Label();
             this.team7 = new System.Windows.Forms.Label();
             this.driverSheetTable = new System.Windows.Forms.TableLayoutPanel();
-            this.label45 = new System.Windows.Forms.Label();
+            this.label66 = new System.Windows.Forms.Label();
+            this.label64 = new System.Windows.Forms.Label();
+            this.label63 = new System.Windows.Forms.Label();
+            this.label62 = new System.Windows.Forms.Label();
+            this.label60 = new System.Windows.Forms.Label();
+            this.label59 = new System.Windows.Forms.Label();
+            this.label57 = new System.Windows.Forms.Label();
+            this.label58 = new System.Windows.Forms.Label();
             this.label43 = new System.Windows.Forms.Label();
-            this.label37 = new System.Windows.Forms.Label();
-            this.label40 = new System.Windows.Forms.Label();
-            this.label41 = new System.Windows.Forms.Label();
             this.label42 = new System.Windows.Forms.Label();
+            this.label41 = new System.Windows.Forms.Label();
+            this.totalScore2 = new System.Windows.Forms.Label();
             this.defense2 = new System.Windows.Forms.Label();
             this.climbType2 = new System.Windows.Forms.Label();
+            this.label40 = new System.Windows.Forms.Label();
             this.time = new System.Windows.Forms.Label();
+            this.label37 = new System.Windows.Forms.Label();
+            this.label45 = new System.Windows.Forms.Label();
+            this.label46 = new System.Windows.Forms.Label();
             this.autoTotal = new System.Windows.Forms.Label();
             this.teleHigh = new System.Windows.Forms.Label();
-            this.label46 = new System.Windows.Forms.Label();
             this.teleLow = new System.Windows.Forms.Label();
-            this.totalScore2 = new System.Windows.Forms.Label();
+            this.label61 = new System.Windows.Forms.Label();
+            this.label65 = new System.Windows.Forms.Label();
             this.matchText = new System.Windows.Forms.Label();
             this.lineMatch = new System.Windows.Forms.Label();
             this.loadText = new System.Windows.Forms.Label();
@@ -206,16 +216,13 @@ namespace Bot_Scout_RAPID_REACT
             this.panel3 = new System.Windows.Forms.Panel();
             this.panel4 = new System.Windows.Forms.Panel();
             this.notifyIcon1 = new System.Windows.Forms.NotifyIcon(this.components);
-            this.label57 = new System.Windows.Forms.Label();
-            this.label58 = new System.Windows.Forms.Label();
-            this.label59 = new System.Windows.Forms.Label();
-            this.label60 = new System.Windows.Forms.Label();
-            this.label61 = new System.Windows.Forms.Label();
-            this.label62 = new System.Windows.Forms.Label();
-            this.label63 = new System.Windows.Forms.Label();
-            this.label64 = new System.Windows.Forms.Label();
-            this.label65 = new System.Windows.Forms.Label();
-            this.label66 = new System.Windows.Forms.Label();
+            this.oneteleLow = new System.Windows.Forms.Label();
+            this.oneteleHigh = new System.Windows.Forms.Label();
+            this.oneautoTotal = new System.Windows.Forms.Label();
+            this.onetime = new System.Windows.Forms.Label();
+            this.oneclimbType2 = new System.Windows.Forms.Label();
+            this.onedefense2 = new System.Windows.Forms.Label();
+            this.onetotalScore2 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.menuStrip1.SuspendLayout();
             this.bestTeamsTableLayout.SuspendLayout();
@@ -1381,12 +1388,18 @@ namespace Bot_Scout_RAPID_REACT
             this.driverSheetTable.ColumnCount = 8;
             this.driverSheetTable.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 51.2931F));
             this.driverSheetTable.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 48.7069F));
-            this.driverSheetTable.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 58F));
-            this.driverSheetTable.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 62F));
+            this.driverSheetTable.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 92F));
+            this.driverSheetTable.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 28F));
             this.driverSheetTable.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 53F));
             this.driverSheetTable.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 63F));
             this.driverSheetTable.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 41F));
             this.driverSheetTable.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 42F));
+            this.driverSheetTable.Controls.Add(this.onetotalScore2, 2, 8);
+            this.driverSheetTable.Controls.Add(this.onedefense2, 2, 7);
+            this.driverSheetTable.Controls.Add(this.oneclimbType2, 2, 6);
+            this.driverSheetTable.Controls.Add(this.onetime, 2, 4);
+            this.driverSheetTable.Controls.Add(this.oneautoTotal, 2, 3);
+            this.driverSheetTable.Controls.Add(this.oneteleHigh, 2, 2);
             this.driverSheetTable.Controls.Add(this.label66, 1, 5);
             this.driverSheetTable.Controls.Add(this.label64, 7, 0);
             this.driverSheetTable.Controls.Add(this.label63, 6, 0);
@@ -1411,7 +1424,8 @@ namespace Bot_Scout_RAPID_REACT
             this.driverSheetTable.Controls.Add(this.teleLow, 1, 1);
             this.driverSheetTable.Controls.Add(this.label61, 4, 0);
             this.driverSheetTable.Controls.Add(this.label65, 0, 5);
-            this.driverSheetTable.Location = new System.Drawing.Point(511, 69);
+            this.driverSheetTable.Controls.Add(this.oneteleLow, 2, 1);
+            this.driverSheetTable.Location = new System.Drawing.Point(526, 110);
             this.driverSheetTable.Name = "driverSheetTable";
             this.driverSheetTable.RowCount = 9;
             this.driverSheetTable.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 48.03922F));
@@ -1427,15 +1441,85 @@ namespace Bot_Scout_RAPID_REACT
             this.driverSheetTable.Size = new System.Drawing.Size(573, 273);
             this.driverSheetTable.TabIndex = 74;
             // 
-            // label45
+            // label66
             // 
-            this.label45.AutoSize = true;
-            this.label45.Font = new System.Drawing.Font("Microsoft YaHei UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label45.Location = new System.Drawing.Point(6, 54);
-            this.label45.Name = "label45";
-            this.label45.Size = new System.Drawing.Size(91, 19);
-            this.label45.TabIndex = 75;
-            this.label45.Text = "Tele Upper";
+            this.label66.AutoSize = true;
+            this.label66.Font = new System.Drawing.Font("Microsoft YaHei UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label66.Location = new System.Drawing.Point(125, 173);
+            this.label66.Name = "label66";
+            this.label66.Size = new System.Drawing.Size(80, 19);
+            this.label66.TabIndex = 89;
+            this.label66.Text = "Not Valid";
+            // 
+            // label64
+            // 
+            this.label64.AutoSize = true;
+            this.label64.Font = new System.Drawing.Font("Microsoft YaHei UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label64.Location = new System.Drawing.Point(530, 3);
+            this.label64.Name = "label64";
+            this.label64.Size = new System.Drawing.Size(18, 19);
+            this.label64.TabIndex = 96;
+            this.label64.Text = "6";
+            // 
+            // label63
+            // 
+            this.label63.AutoSize = true;
+            this.label63.Font = new System.Drawing.Font("Microsoft YaHei UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label63.Location = new System.Drawing.Point(486, 3);
+            this.label63.Name = "label63";
+            this.label63.Size = new System.Drawing.Size(18, 19);
+            this.label63.TabIndex = 95;
+            this.label63.Text = "5";
+            // 
+            // label62
+            // 
+            this.label62.AutoSize = true;
+            this.label62.Font = new System.Drawing.Font("Microsoft YaHei UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label62.Location = new System.Drawing.Point(420, 3);
+            this.label62.Name = "label62";
+            this.label62.Size = new System.Drawing.Size(18, 19);
+            this.label62.TabIndex = 94;
+            this.label62.Text = "4";
+            // 
+            // label60
+            // 
+            this.label60.AutoSize = true;
+            this.label60.Font = new System.Drawing.Font("Microsoft YaHei UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label60.Location = new System.Drawing.Point(333, 3);
+            this.label60.Name = "label60";
+            this.label60.Size = new System.Drawing.Size(18, 19);
+            this.label60.TabIndex = 92;
+            this.label60.Text = "2";
+            // 
+            // label59
+            // 
+            this.label59.AutoSize = true;
+            this.label59.Font = new System.Drawing.Font("Microsoft YaHei UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label59.Location = new System.Drawing.Point(238, 3);
+            this.label59.Name = "label59";
+            this.label59.Size = new System.Drawing.Size(18, 19);
+            this.label59.TabIndex = 91;
+            this.label59.Text = "1";
+            // 
+            // label57
+            // 
+            this.label57.AutoSize = true;
+            this.label57.Font = new System.Drawing.Font("Microsoft YaHei UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label57.Location = new System.Drawing.Point(125, 3);
+            this.label57.Name = "label57";
+            this.label57.Size = new System.Drawing.Size(94, 19);
+            this.label57.TabIndex = 89;
+            this.label57.Text = "Best Scores";
+            // 
+            // label58
+            // 
+            this.label58.AutoSize = true;
+            this.label58.Font = new System.Drawing.Font("Microsoft YaHei UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label58.Location = new System.Drawing.Point(6, 3);
+            this.label58.Name = "label58";
+            this.label58.Size = new System.Drawing.Size(95, 19);
+            this.label58.TabIndex = 90;
+            this.label58.Text = "Data Name";
             // 
             // label43
             // 
@@ -1447,25 +1531,15 @@ namespace Bot_Scout_RAPID_REACT
             this.label43.TabIndex = 77;
             this.label43.Text = "Total Score";
             // 
-            // label37
+            // label42
             // 
-            this.label37.AutoSize = true;
-            this.label37.Font = new System.Drawing.Font("Microsoft YaHei UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label37.Location = new System.Drawing.Point(6, 87);
-            this.label37.Name = "label37";
-            this.label37.Size = new System.Drawing.Size(88, 19);
-            this.label37.TabIndex = 8;
-            this.label37.Text = "Auto Total";
-            // 
-            // label40
-            // 
-            this.label40.AutoSize = true;
-            this.label40.Font = new System.Drawing.Font("Microsoft YaHei UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label40.Location = new System.Drawing.Point(6, 129);
-            this.label40.Name = "label40";
-            this.label40.Size = new System.Drawing.Size(93, 19);
-            this.label40.TabIndex = 7;
-            this.label40.Text = "Climb Time";
+            this.label42.AutoSize = true;
+            this.label42.Font = new System.Drawing.Font("Microsoft YaHei UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label42.Location = new System.Drawing.Point(6, 226);
+            this.label42.Name = "label42";
+            this.label42.Size = new System.Drawing.Size(71, 19);
+            this.label42.TabIndex = 5;
+            this.label42.Text = "Defense";
             // 
             // label41
             // 
@@ -1477,15 +1551,15 @@ namespace Bot_Scout_RAPID_REACT
             this.label41.TabIndex = 6;
             this.label41.Text = "Climb Type";
             // 
-            // label42
+            // totalScore2
             // 
-            this.label42.AutoSize = true;
-            this.label42.Font = new System.Drawing.Font("Microsoft YaHei UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label42.Location = new System.Drawing.Point(6, 226);
-            this.label42.Name = "label42";
-            this.label42.Size = new System.Drawing.Size(71, 19);
-            this.label42.TabIndex = 5;
-            this.label42.Text = "Defense";
+            this.totalScore2.AutoSize = true;
+            this.totalScore2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.totalScore2.Location = new System.Drawing.Point(125, 249);
+            this.totalScore2.Name = "totalScore2";
+            this.totalScore2.Size = new System.Drawing.Size(50, 16);
+            this.totalScore2.TabIndex = 78;
+            this.totalScore2.Text = "Empty";
             // 
             // defense2
             // 
@@ -1507,6 +1581,16 @@ namespace Bot_Scout_RAPID_REACT
             this.climbType2.TabIndex = 11;
             this.climbType2.Text = "Empty";
             // 
+            // label40
+            // 
+            this.label40.AutoSize = true;
+            this.label40.Font = new System.Drawing.Font("Microsoft YaHei UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label40.Location = new System.Drawing.Point(6, 129);
+            this.label40.Name = "label40";
+            this.label40.Size = new System.Drawing.Size(93, 19);
+            this.label40.TabIndex = 7;
+            this.label40.Text = "Climb Time";
+            // 
             // time
             // 
             this.time.AutoSize = true;
@@ -1516,6 +1600,36 @@ namespace Bot_Scout_RAPID_REACT
             this.time.Size = new System.Drawing.Size(50, 16);
             this.time.TabIndex = 12;
             this.time.Text = "Empty";
+            // 
+            // label37
+            // 
+            this.label37.AutoSize = true;
+            this.label37.Font = new System.Drawing.Font("Microsoft YaHei UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label37.Location = new System.Drawing.Point(6, 87);
+            this.label37.Name = "label37";
+            this.label37.Size = new System.Drawing.Size(88, 19);
+            this.label37.TabIndex = 8;
+            this.label37.Text = "Auto Total";
+            // 
+            // label45
+            // 
+            this.label45.AutoSize = true;
+            this.label45.Font = new System.Drawing.Font("Microsoft YaHei UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label45.Location = new System.Drawing.Point(6, 54);
+            this.label45.Name = "label45";
+            this.label45.Size = new System.Drawing.Size(91, 19);
+            this.label45.TabIndex = 75;
+            this.label45.Text = "Tele Upper";
+            // 
+            // label46
+            // 
+            this.label46.AutoSize = true;
+            this.label46.Font = new System.Drawing.Font("Microsoft YaHei UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label46.Location = new System.Drawing.Point(6, 28);
+            this.label46.Name = "label46";
+            this.label46.Size = new System.Drawing.Size(75, 19);
+            this.label46.TabIndex = 76;
+            this.label46.Text = "Tele Low";
             // 
             // autoTotal
             // 
@@ -1537,16 +1651,6 @@ namespace Bot_Scout_RAPID_REACT
             this.teleHigh.TabIndex = 14;
             this.teleHigh.Text = "Empty";
             // 
-            // label46
-            // 
-            this.label46.AutoSize = true;
-            this.label46.Font = new System.Drawing.Font("Microsoft YaHei UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label46.Location = new System.Drawing.Point(6, 28);
-            this.label46.Name = "label46";
-            this.label46.Size = new System.Drawing.Size(75, 19);
-            this.label46.TabIndex = 76;
-            this.label46.Text = "Tele Low";
-            // 
             // teleLow
             // 
             this.teleLow.AutoSize = true;
@@ -1556,16 +1660,27 @@ namespace Bot_Scout_RAPID_REACT
             this.teleLow.Size = new System.Drawing.Size(50, 16);
             this.teleLow.TabIndex = 9;
             this.teleLow.Text = "Empty";
+            this.teleLow.Click += new System.EventHandler(this.teleLow_Click);
             // 
-            // totalScore2
+            // label61
             // 
-            this.totalScore2.AutoSize = true;
-            this.totalScore2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.totalScore2.Location = new System.Drawing.Point(125, 249);
-            this.totalScore2.Name = "totalScore2";
-            this.totalScore2.Size = new System.Drawing.Size(50, 16);
-            this.totalScore2.TabIndex = 78;
-            this.totalScore2.Text = "Empty";
+            this.label61.AutoSize = true;
+            this.label61.Font = new System.Drawing.Font("Microsoft YaHei UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label61.Location = new System.Drawing.Point(364, 3);
+            this.label61.Name = "label61";
+            this.label61.Size = new System.Drawing.Size(18, 19);
+            this.label61.TabIndex = 93;
+            this.label61.Text = "3";
+            // 
+            // label65
+            // 
+            this.label65.AutoSize = true;
+            this.label65.Font = new System.Drawing.Font("Microsoft YaHei UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label65.Location = new System.Drawing.Point(6, 173);
+            this.label65.Name = "label65";
+            this.label65.Size = new System.Drawing.Size(96, 19);
+            this.label65.TabIndex = 97;
+            this.label65.Text = "Climb Entry";
             // 
             // matchText
             // 
@@ -1594,9 +1709,9 @@ namespace Bot_Scout_RAPID_REACT
             this.loadText.ForeColor = System.Drawing.SystemColors.HighlightText;
             this.loadText.Location = new System.Drawing.Point(541, 38);
             this.loadText.Name = "loadText";
-            this.loadText.Size = new System.Drawing.Size(168, 17);
+            this.loadText.Size = new System.Drawing.Size(132, 17);
             this.loadText.TabIndex = 77;
-            this.loadText.Text = "Enter Valid Team Number";
+            this.loadText.Text = "Enter Team Number";
             this.loadText.Click += new System.EventHandler(this.loadText_Click);
             // 
             // averageTeamTable
@@ -2071,105 +2186,75 @@ namespace Bot_Scout_RAPID_REACT
             this.notifyIcon1.Text = "notifyIcon1";
             this.notifyIcon1.Visible = true;
             // 
-            // label57
+            // oneteleLow
             // 
-            this.label57.AutoSize = true;
-            this.label57.Font = new System.Drawing.Font("Microsoft YaHei UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label57.Location = new System.Drawing.Point(125, 3);
-            this.label57.Name = "label57";
-            this.label57.Size = new System.Drawing.Size(94, 19);
-            this.label57.TabIndex = 89;
-            this.label57.Text = "Best Scores";
+            this.oneteleLow.AutoSize = true;
+            this.oneteleLow.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.oneteleLow.Location = new System.Drawing.Point(238, 28);
+            this.oneteleLow.Name = "oneteleLow";
+            this.oneteleLow.Size = new System.Drawing.Size(50, 16);
+            this.oneteleLow.TabIndex = 89;
+            this.oneteleLow.Text = "Empty";
             // 
-            // label58
+            // oneteleHigh
             // 
-            this.label58.AutoSize = true;
-            this.label58.Font = new System.Drawing.Font("Microsoft YaHei UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label58.Location = new System.Drawing.Point(6, 3);
-            this.label58.Name = "label58";
-            this.label58.Size = new System.Drawing.Size(95, 19);
-            this.label58.TabIndex = 90;
-            this.label58.Text = "Data Name";
+            this.oneteleHigh.AutoSize = true;
+            this.oneteleHigh.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.oneteleHigh.Location = new System.Drawing.Point(238, 54);
+            this.oneteleHigh.Name = "oneteleHigh";
+            this.oneteleHigh.Size = new System.Drawing.Size(50, 16);
+            this.oneteleHigh.TabIndex = 90;
+            this.oneteleHigh.Text = "Empty";
             // 
-            // label59
+            // oneautoTotal
             // 
-            this.label59.AutoSize = true;
-            this.label59.Font = new System.Drawing.Font("Microsoft YaHei UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label59.Location = new System.Drawing.Point(238, 3);
-            this.label59.Name = "label59";
-            this.label59.Size = new System.Drawing.Size(18, 19);
-            this.label59.TabIndex = 91;
-            this.label59.Text = "1";
+            this.oneautoTotal.AutoSize = true;
+            this.oneautoTotal.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.oneautoTotal.Location = new System.Drawing.Point(238, 87);
+            this.oneautoTotal.Name = "oneautoTotal";
+            this.oneautoTotal.Size = new System.Drawing.Size(50, 16);
+            this.oneautoTotal.TabIndex = 91;
+            this.oneautoTotal.Text = "Empty";
             // 
-            // label60
+            // onetime
             // 
-            this.label60.AutoSize = true;
-            this.label60.Font = new System.Drawing.Font("Microsoft YaHei UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label60.Location = new System.Drawing.Point(299, 3);
-            this.label60.Name = "label60";
-            this.label60.Size = new System.Drawing.Size(18, 19);
-            this.label60.TabIndex = 92;
-            this.label60.Text = "2";
+            this.onetime.AutoSize = true;
+            this.onetime.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.onetime.Location = new System.Drawing.Point(238, 129);
+            this.onetime.Name = "onetime";
+            this.onetime.Size = new System.Drawing.Size(50, 16);
+            this.onetime.TabIndex = 91;
+            this.onetime.Text = "Empty";
             // 
-            // label61
+            // oneclimbType2
             // 
-            this.label61.AutoSize = true;
-            this.label61.Font = new System.Drawing.Font("Microsoft YaHei UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label61.Location = new System.Drawing.Point(364, 3);
-            this.label61.Name = "label61";
-            this.label61.Size = new System.Drawing.Size(18, 19);
-            this.label61.TabIndex = 93;
-            this.label61.Text = "3";
+            this.oneclimbType2.AutoSize = true;
+            this.oneclimbType2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.oneclimbType2.Location = new System.Drawing.Point(238, 203);
+            this.oneclimbType2.Name = "oneclimbType2";
+            this.oneclimbType2.Size = new System.Drawing.Size(50, 16);
+            this.oneclimbType2.TabIndex = 91;
+            this.oneclimbType2.Text = "Empty";
             // 
-            // label62
+            // onedefense2
             // 
-            this.label62.AutoSize = true;
-            this.label62.Font = new System.Drawing.Font("Microsoft YaHei UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label62.Location = new System.Drawing.Point(420, 3);
-            this.label62.Name = "label62";
-            this.label62.Size = new System.Drawing.Size(18, 19);
-            this.label62.TabIndex = 94;
-            this.label62.Text = "4";
+            this.onedefense2.AutoSize = true;
+            this.onedefense2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.onedefense2.Location = new System.Drawing.Point(238, 226);
+            this.onedefense2.Name = "onedefense2";
+            this.onedefense2.Size = new System.Drawing.Size(50, 16);
+            this.onedefense2.TabIndex = 91;
+            this.onedefense2.Text = "Empty";
             // 
-            // label63
+            // onetotalScore2
             // 
-            this.label63.AutoSize = true;
-            this.label63.Font = new System.Drawing.Font("Microsoft YaHei UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label63.Location = new System.Drawing.Point(486, 3);
-            this.label63.Name = "label63";
-            this.label63.Size = new System.Drawing.Size(18, 19);
-            this.label63.TabIndex = 95;
-            this.label63.Text = "5";
-            // 
-            // label64
-            // 
-            this.label64.AutoSize = true;
-            this.label64.Font = new System.Drawing.Font("Microsoft YaHei UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label64.Location = new System.Drawing.Point(530, 3);
-            this.label64.Name = "label64";
-            this.label64.Size = new System.Drawing.Size(18, 19);
-            this.label64.TabIndex = 96;
-            this.label64.Text = "6";
-            // 
-            // label65
-            // 
-            this.label65.AutoSize = true;
-            this.label65.Font = new System.Drawing.Font("Microsoft YaHei UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label65.Location = new System.Drawing.Point(6, 173);
-            this.label65.Name = "label65";
-            this.label65.Size = new System.Drawing.Size(96, 19);
-            this.label65.TabIndex = 97;
-            this.label65.Text = "Climb Entry";
-            // 
-            // label66
-            // 
-            this.label66.AutoSize = true;
-            this.label66.Font = new System.Drawing.Font("Microsoft YaHei UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label66.Location = new System.Drawing.Point(125, 173);
-            this.label66.Name = "label66";
-            this.label66.Size = new System.Drawing.Size(80, 19);
-            this.label66.TabIndex = 89;
-            this.label66.Text = "Not Valid";
+            this.onetotalScore2.AutoSize = true;
+            this.onetotalScore2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.onetotalScore2.Location = new System.Drawing.Point(238, 249);
+            this.onetotalScore2.Name = "onetotalScore2";
+            this.onetotalScore2.Size = new System.Drawing.Size(50, 16);
+            this.onetotalScore2.TabIndex = 91;
+            this.onetotalScore2.Text = "Empty";
             // 
             // Form1
             // 
@@ -2226,6 +2311,7 @@ namespace Bot_Scout_RAPID_REACT
             this.MainMenuStrip = this.menuStrip1;
             this.Name = "Form1";
             this.Text = "Scouting Data Entry";
+            this.Load += new System.EventHandler(this.Form1_Load_1);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
@@ -2446,6 +2532,13 @@ namespace Bot_Scout_RAPID_REACT
         private System.Windows.Forms.Label label61;
         private System.Windows.Forms.Label label66;
         private System.Windows.Forms.Label label65;
+        private System.Windows.Forms.Label oneteleLow;
+        private System.Windows.Forms.Label oneteleHigh;
+        private System.Windows.Forms.Label onetotalScore2;
+        private System.Windows.Forms.Label onedefense2;
+        private System.Windows.Forms.Label oneclimbType2;
+        private System.Windows.Forms.Label onetime;
+        private System.Windows.Forms.Label oneautoTotal;
     }
 }
 
