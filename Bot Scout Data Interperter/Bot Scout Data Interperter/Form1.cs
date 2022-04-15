@@ -147,6 +147,8 @@ namespace Bot_Scout_Data_Interperter
 
             string mp = String.Join(",", matchPoints.Select(p => p.ToString()).ToArray());
             string ma = String.Join(",", average.Select(p => p.ToString()).ToArray());
+            string headers = String.Join(",", labels.Select(p => p.ToString()).ToArray());
+
             match_table_view.Rows.Add(mp.Split(','));
             match_table_view.Rows.Add(ma.Split(','));
             match_table_view.Rows[0].DefaultCellStyle.BackColor = Color.LightBlue;
