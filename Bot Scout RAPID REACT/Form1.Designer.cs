@@ -85,6 +85,10 @@ namespace Bot_Scout_RAPID_REACT
             this.averageScoresMenu = new System.Windows.Forms.ToolStripMenuItem();
             this.insightsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.bestScoresToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.teleUpperToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.createTeamToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.teamNumber = new System.Windows.Forms.ToolStripTextBox();
+            this.toolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.bestTeamsTableLayout = new System.Windows.Forms.TableLayoutPanel();
             this.label36 = new System.Windows.Forms.Label();
             this.label35 = new System.Windows.Forms.Label();
@@ -231,22 +235,55 @@ namespace Bot_Scout_RAPID_REACT
             this.shotSpotDrop = new System.Windows.Forms.ComboBox();
             this.entryDrop = new System.Windows.Forms.ComboBox();
             this.alliancePanel = new System.Windows.Forms.TableLayoutPanel();
-            this.averageAlliance1 = new System.Windows.Forms.Label();
-            this.averageAlliance2 = new System.Windows.Forms.Label();
-            this.areaTwoThree = new System.Windows.Forms.Label();
-            this.areaTwoTwo = new System.Windows.Forms.Label();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.team2One = new System.Windows.Forms.Label();
+            this.areaTwoOneTele = new System.Windows.Forms.Label();
             this.areaTwoOne = new System.Windows.Forms.Label();
+            this.panel3 = new System.Windows.Forms.Panel();
+            this.team2Two = new System.Windows.Forms.Label();
+            this.areaTwoTwoTele = new System.Windows.Forms.Label();
+            this.areaTwoTwo = new System.Windows.Forms.Label();
+            this.panel4 = new System.Windows.Forms.Panel();
+            this.team2Three = new System.Windows.Forms.Label();
+            this.areaTwoThreeTele = new System.Windows.Forms.Label();
+            this.areaTwoThree = new System.Windows.Forms.Label();
+            this.panel5 = new System.Windows.Forms.Panel();
+            this.averageAlliance2 = new System.Windows.Forms.Label();
+            this.panel6 = new System.Windows.Forms.Panel();
+            this.averageAlliance1 = new System.Windows.Forms.Label();
+            this.panel7 = new System.Windows.Forms.Panel();
+            this.team1Two = new System.Windows.Forms.Label();
+            this.areaOneThreeTele = new System.Windows.Forms.Label();
             this.areaOneThree = new System.Windows.Forms.Label();
+            this.panel8 = new System.Windows.Forms.Panel();
+            this.team1One = new System.Windows.Forms.Label();
+            this.areaOneTwoTele = new System.Windows.Forms.Label();
             this.areaOneTwo = new System.Windows.Forms.Label();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.areaOneOneTele = new System.Windows.Forms.Label();
+            this.team1CaptainOne = new System.Windows.Forms.Label();
+            this.areaOneOne = new System.Windows.Forms.Label();
             this.label67 = new System.Windows.Forms.Label();
             this.label68 = new System.Windows.Forms.Label();
             this.label69 = new System.Windows.Forms.Label();
             this.label70 = new System.Windows.Forms.Label();
             this.slot1 = new System.Windows.Forms.TextBox();
             this.slot2 = new System.Windows.Forms.TextBox();
-            this.areaOneOne = new System.Windows.Forms.Label();
             this.label71 = new System.Windows.Forms.Label();
-            this.teleUpperToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.areaOneOneAverage = new System.Windows.Forms.Label();
+            this.areaOneTwoAverage = new System.Windows.Forms.Label();
+            this.areaOneThreeAverage = new System.Windows.Forms.Label();
+            this.areaTwoOneAverage = new System.Windows.Forms.Label();
+            this.areaTwoTwoAverage = new System.Windows.Forms.Label();
+            this.areaTwoThreeAverage = new System.Windows.Forms.Label();
+            this.climbOneOne = new System.Windows.Forms.Label();
+            this.climbOneTwo = new System.Windows.Forms.Label();
+            this.climbOneThree = new System.Windows.Forms.Label();
+            this.climbTwoOne = new System.Windows.Forms.Label();
+            this.climbTwoTwo = new System.Windows.Forms.Label();
+            this.climbTwoThree = new System.Windows.Forms.Label();
+            this.upperAverage1 = new System.Windows.Forms.Label();
+            this.upperAverage2 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.menuStrip1.SuspendLayout();
             this.bestTeamsTableLayout.SuspendLayout();
@@ -255,6 +292,14 @@ namespace Bot_Scout_RAPID_REACT
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
             this.teamTrendLayout.SuspendLayout();
             this.alliancePanel.SuspendLayout();
+            this.panel2.SuspendLayout();
+            this.panel3.SuspendLayout();
+            this.panel4.SuspendLayout();
+            this.panel5.SuspendLayout();
+            this.panel6.SuspendLayout();
+            this.panel7.SuspendLayout();
+            this.panel8.SuspendLayout();
+            this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // button3
@@ -496,7 +541,7 @@ namespace Bot_Scout_RAPID_REACT
             this.pictureBox1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox1.BackgroundImage")));
             this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.pictureBox1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.pictureBox1.Location = new System.Drawing.Point(625, 0);
+            this.pictureBox1.Location = new System.Drawing.Point(669, 0);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(28, 26);
             this.pictureBox1.TabIndex = 27;
@@ -531,7 +576,8 @@ namespace Bot_Scout_RAPID_REACT
             this.driverSheetMenu,
             this.bestTeamsMenu,
             this.averageScoresMenu,
-            this.insightsToolStripMenuItem});
+            this.insightsToolStripMenuItem,
+            this.createTeamToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Size = new System.Drawing.Size(1084, 26);
@@ -554,7 +600,7 @@ namespace Bot_Scout_RAPID_REACT
             // 
             this.makeToolStripMenuItem.Name = "makeToolStripMenuItem";
             this.makeToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.M)));
-            this.makeToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.makeToolStripMenuItem.Size = new System.Drawing.Size(176, 22);
             this.makeToolStripMenuItem.Text = "Make";
             this.makeToolStripMenuItem.Click += new System.EventHandler(this.makeToolStripMenuItem_Click);
             // 
@@ -562,7 +608,7 @@ namespace Bot_Scout_RAPID_REACT
             // 
             this.editToolStripMenuItem.Name = "editToolStripMenuItem";
             this.editToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.E)));
-            this.editToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.editToolStripMenuItem.Size = new System.Drawing.Size(176, 22);
             this.editToolStripMenuItem.Text = "Edit";
             this.editToolStripMenuItem.Click += new System.EventHandler(this.editToolStripMenuItem_Click);
             // 
@@ -736,6 +782,36 @@ namespace Bot_Scout_RAPID_REACT
             this.bestScoresToolStripMenuItem.Size = new System.Drawing.Size(218, 22);
             this.bestScoresToolStripMenuItem.Text = "Best Scores";
             this.bestScoresToolStripMenuItem.Click += new System.EventHandler(this.bestScoresToolStripMenuItem_Click);
+            // 
+            // teleUpperToolStripMenuItem
+            // 
+            this.teleUpperToolStripMenuItem.Name = "teleUpperToolStripMenuItem";
+            this.teleUpperToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.U)));
+            this.teleUpperToolStripMenuItem.Size = new System.Drawing.Size(218, 22);
+            this.teleUpperToolStripMenuItem.Text = "Tele Upper";
+            this.teleUpperToolStripMenuItem.Click += new System.EventHandler(this.teleUpperToolStripMenuItem_Click);
+            // 
+            // createTeamToolStripMenuItem
+            // 
+            this.createTeamToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.teamNumber,
+            this.toolStripMenuItem1});
+            this.createTeamToolStripMenuItem.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.createTeamToolStripMenuItem.Name = "createTeamToolStripMenuItem";
+            this.createTeamToolStripMenuItem.Size = new System.Drawing.Size(117, 22);
+            this.createTeamToolStripMenuItem.Text = "Create Team";
+            // 
+            // teamNumber
+            // 
+            this.teamNumber.Name = "teamNumber";
+            this.teamNumber.Size = new System.Drawing.Size(100, 23);
+            // 
+            // toolStripMenuItem1
+            // 
+            this.toolStripMenuItem1.Name = "toolStripMenuItem1";
+            this.toolStripMenuItem1.Size = new System.Drawing.Size(180, 22);
+            this.toolStripMenuItem1.Text = "Create Team";
+            this.toolStripMenuItem1.Click += new System.EventHandler(this.toolStripMenuItem1_Click);
             // 
             // bestTeamsTableLayout
             // 
@@ -2372,98 +2448,306 @@ namespace Bot_Scout_RAPID_REACT
             this.alliancePanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(27)))), ((int)(((byte)(113)))), ((int)(((byte)(165)))));
             this.alliancePanel.CellBorderStyle = System.Windows.Forms.TableLayoutPanelCellBorderStyle.Single;
             this.alliancePanel.ColumnCount = 5;
-            this.alliancePanel.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 42.10526F));
-            this.alliancePanel.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 57.89474F));
-            this.alliancePanel.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 89F));
-            this.alliancePanel.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 91F));
-            this.alliancePanel.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 66F));
-            this.alliancePanel.Controls.Add(this.averageAlliance1, 4, 1);
-            this.alliancePanel.Controls.Add(this.averageAlliance2, 4, 2);
-            this.alliancePanel.Controls.Add(this.areaTwoThree, 3, 2);
-            this.alliancePanel.Controls.Add(this.areaTwoTwo, 2, 2);
-            this.alliancePanel.Controls.Add(this.areaTwoOne, 1, 2);
-            this.alliancePanel.Controls.Add(this.areaOneThree, 3, 1);
-            this.alliancePanel.Controls.Add(this.areaOneTwo, 2, 1);
+            this.alliancePanel.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 39.63415F));
+            this.alliancePanel.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 60.36585F));
+            this.alliancePanel.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 146F));
+            this.alliancePanel.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 115F));
+            this.alliancePanel.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 104F));
+            this.alliancePanel.Controls.Add(this.panel2, 1, 2);
+            this.alliancePanel.Controls.Add(this.panel3, 2, 2);
+            this.alliancePanel.Controls.Add(this.panel4, 3, 2);
+            this.alliancePanel.Controls.Add(this.panel5, 4, 2);
+            this.alliancePanel.Controls.Add(this.panel6, 4, 1);
+            this.alliancePanel.Controls.Add(this.panel7, 3, 1);
+            this.alliancePanel.Controls.Add(this.panel8, 2, 1);
+            this.alliancePanel.Controls.Add(this.panel1, 1, 1);
             this.alliancePanel.Controls.Add(this.label67, 0, 0);
             this.alliancePanel.Controls.Add(this.label68, 1, 0);
             this.alliancePanel.Controls.Add(this.label69, 2, 0);
             this.alliancePanel.Controls.Add(this.label70, 3, 0);
             this.alliancePanel.Controls.Add(this.slot1, 0, 1);
             this.alliancePanel.Controls.Add(this.slot2, 0, 2);
-            this.alliancePanel.Controls.Add(this.areaOneOne, 1, 1);
             this.alliancePanel.Controls.Add(this.label71, 4, 0);
-            this.alliancePanel.Location = new System.Drawing.Point(384, 125);
+            this.alliancePanel.Location = new System.Drawing.Point(273, 108);
             this.alliancePanel.Name = "alliancePanel";
             this.alliancePanel.RowCount = 3;
-            this.alliancePanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 29.56522F));
-            this.alliancePanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 70.43478F));
-            this.alliancePanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 84F));
+            this.alliancePanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 15.82278F));
+            this.alliancePanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 84.17722F));
+            this.alliancePanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 113F));
             this.alliancePanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-            this.alliancePanel.Size = new System.Drawing.Size(423, 192);
+            this.alliancePanel.Size = new System.Drawing.Size(534, 245);
             this.alliancePanel.TabIndex = 89;
             // 
-            // averageAlliance1
+            // panel2
             // 
-            this.averageAlliance1.AutoSize = true;
-            this.averageAlliance1.Location = new System.Drawing.Point(358, 32);
-            this.averageAlliance1.Name = "averageAlliance1";
-            this.averageAlliance1.Size = new System.Drawing.Size(27, 13);
-            this.averageAlliance1.TabIndex = 99;
-            this.averageAlliance1.Text = "N/A";
+            this.panel2.Controls.Add(this.climbTwoOne);
+            this.panel2.Controls.Add(this.areaTwoOneAverage);
+            this.panel2.Controls.Add(this.team2One);
+            this.panel2.Controls.Add(this.areaTwoOneTele);
+            this.panel2.Controls.Add(this.areaTwoOne);
+            this.panel2.Location = new System.Drawing.Point(69, 133);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(92, 101);
+            this.panel2.TabIndex = 97;
             // 
-            // averageAlliance2
+            // team2One
             // 
-            this.averageAlliance2.AutoSize = true;
-            this.averageAlliance2.Location = new System.Drawing.Point(358, 106);
-            this.averageAlliance2.Name = "averageAlliance2";
-            this.averageAlliance2.Size = new System.Drawing.Size(27, 13);
-            this.averageAlliance2.TabIndex = 103;
-            this.averageAlliance2.Text = "N/A";
+            this.team2One.AutoSize = true;
+            this.team2One.Location = new System.Drawing.Point(-1, 3);
+            this.team2One.Name = "team2One";
+            this.team2One.Size = new System.Drawing.Size(27, 13);
+            this.team2One.TabIndex = 101;
+            this.team2One.Text = "N/A";
             // 
-            // areaTwoThree
+            // areaTwoOneTele
             // 
-            this.areaTwoThree.AutoSize = true;
-            this.areaTwoThree.Location = new System.Drawing.Point(266, 106);
-            this.areaTwoThree.Name = "areaTwoThree";
-            this.areaTwoThree.Size = new System.Drawing.Size(27, 13);
-            this.areaTwoThree.TabIndex = 101;
-            this.areaTwoThree.Text = "N/A";
-            // 
-            // areaTwoTwo
-            // 
-            this.areaTwoTwo.AutoSize = true;
-            this.areaTwoTwo.Location = new System.Drawing.Point(176, 106);
-            this.areaTwoTwo.Name = "areaTwoTwo";
-            this.areaTwoTwo.Size = new System.Drawing.Size(27, 13);
-            this.areaTwoTwo.TabIndex = 100;
-            this.areaTwoTwo.Text = "N/A";
+            this.areaTwoOneTele.AutoSize = true;
+            this.areaTwoOneTele.Location = new System.Drawing.Point(0, 40);
+            this.areaTwoOneTele.Name = "areaTwoOneTele";
+            this.areaTwoOneTele.Size = new System.Drawing.Size(27, 13);
+            this.areaTwoOneTele.TabIndex = 100;
+            this.areaTwoOneTele.Text = "N/A";
             // 
             // areaTwoOne
             // 
             this.areaTwoOne.AutoSize = true;
-            this.areaTwoOne.Location = new System.Drawing.Point(76, 106);
+            this.areaTwoOne.Location = new System.Drawing.Point(0, 22);
             this.areaTwoOne.Name = "areaTwoOne";
             this.areaTwoOne.Size = new System.Drawing.Size(27, 13);
             this.areaTwoOne.TabIndex = 99;
             this.areaTwoOne.Text = "N/A";
             // 
+            // panel3
+            // 
+            this.panel3.Controls.Add(this.climbTwoTwo);
+            this.panel3.Controls.Add(this.areaTwoTwoAverage);
+            this.panel3.Controls.Add(this.team2Two);
+            this.panel3.Controls.Add(this.areaTwoTwoTele);
+            this.panel3.Controls.Add(this.areaTwoTwo);
+            this.panel3.Location = new System.Drawing.Point(168, 133);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(93, 106);
+            this.panel3.TabIndex = 91;
+            // 
+            // team2Two
+            // 
+            this.team2Two.AutoSize = true;
+            this.team2Two.Location = new System.Drawing.Point(0, 3);
+            this.team2Two.Name = "team2Two";
+            this.team2Two.Size = new System.Drawing.Size(27, 13);
+            this.team2Two.TabIndex = 102;
+            this.team2Two.Text = "N/A";
+            // 
+            // areaTwoTwoTele
+            // 
+            this.areaTwoTwoTele.AutoSize = true;
+            this.areaTwoTwoTele.Location = new System.Drawing.Point(3, 40);
+            this.areaTwoTwoTele.Name = "areaTwoTwoTele";
+            this.areaTwoTwoTele.Size = new System.Drawing.Size(27, 13);
+            this.areaTwoTwoTele.TabIndex = 101;
+            this.areaTwoTwoTele.Text = "N/A";
+            // 
+            // areaTwoTwo
+            // 
+            this.areaTwoTwo.AutoSize = true;
+            this.areaTwoTwo.Location = new System.Drawing.Point(3, 22);
+            this.areaTwoTwo.Name = "areaTwoTwo";
+            this.areaTwoTwo.Size = new System.Drawing.Size(27, 13);
+            this.areaTwoTwo.TabIndex = 100;
+            this.areaTwoTwo.Text = "N/A";
+            this.areaTwoTwo.Click += new System.EventHandler(this.areaTwoTwo_Click);
+            // 
+            // panel4
+            // 
+            this.panel4.Controls.Add(this.climbTwoThree);
+            this.panel4.Controls.Add(this.areaTwoThreeAverage);
+            this.panel4.Controls.Add(this.team2Three);
+            this.panel4.Controls.Add(this.areaTwoThreeTele);
+            this.panel4.Controls.Add(this.areaTwoThree);
+            this.panel4.Location = new System.Drawing.Point(315, 133);
+            this.panel4.Name = "panel4";
+            this.panel4.Size = new System.Drawing.Size(93, 101);
+            this.panel4.TabIndex = 91;
+            // 
+            // team2Three
+            // 
+            this.team2Three.AutoSize = true;
+            this.team2Three.Location = new System.Drawing.Point(0, 3);
+            this.team2Three.Name = "team2Three";
+            this.team2Three.Size = new System.Drawing.Size(27, 13);
+            this.team2Three.TabIndex = 103;
+            this.team2Three.Text = "N/A";
+            // 
+            // areaTwoThreeTele
+            // 
+            this.areaTwoThreeTele.AutoSize = true;
+            this.areaTwoThreeTele.Location = new System.Drawing.Point(1, 40);
+            this.areaTwoThreeTele.Name = "areaTwoThreeTele";
+            this.areaTwoThreeTele.Size = new System.Drawing.Size(27, 13);
+            this.areaTwoThreeTele.TabIndex = 102;
+            this.areaTwoThreeTele.Text = "N/A";
+            // 
+            // areaTwoThree
+            // 
+            this.areaTwoThree.AutoSize = true;
+            this.areaTwoThree.Location = new System.Drawing.Point(1, 22);
+            this.areaTwoThree.Name = "areaTwoThree";
+            this.areaTwoThree.Size = new System.Drawing.Size(27, 13);
+            this.areaTwoThree.TabIndex = 101;
+            this.areaTwoThree.Text = "N/A";
+            // 
+            // panel5
+            // 
+            this.panel5.Controls.Add(this.upperAverage2);
+            this.panel5.Controls.Add(this.averageAlliance2);
+            this.panel5.Location = new System.Drawing.Point(431, 133);
+            this.panel5.Name = "panel5";
+            this.panel5.Size = new System.Drawing.Size(93, 106);
+            this.panel5.TabIndex = 91;
+            // 
+            // averageAlliance2
+            // 
+            this.averageAlliance2.AutoSize = true;
+            this.averageAlliance2.Location = new System.Drawing.Point(3, 81);
+            this.averageAlliance2.Name = "averageAlliance2";
+            this.averageAlliance2.Size = new System.Drawing.Size(27, 13);
+            this.averageAlliance2.TabIndex = 103;
+            this.averageAlliance2.Text = "N/A";
+            // 
+            // panel6
+            // 
+            this.panel6.Controls.Add(this.upperAverage1);
+            this.panel6.Controls.Add(this.averageAlliance1);
+            this.panel6.Location = new System.Drawing.Point(431, 25);
+            this.panel6.Name = "panel6";
+            this.panel6.Size = new System.Drawing.Size(93, 100);
+            this.panel6.TabIndex = 91;
+            // 
+            // averageAlliance1
+            // 
+            this.averageAlliance1.AutoSize = true;
+            this.averageAlliance1.Location = new System.Drawing.Point(3, 67);
+            this.averageAlliance1.Name = "averageAlliance1";
+            this.averageAlliance1.Size = new System.Drawing.Size(27, 13);
+            this.averageAlliance1.TabIndex = 99;
+            this.averageAlliance1.Text = "N/A";
+            // 
+            // panel7
+            // 
+            this.panel7.Controls.Add(this.climbOneThree);
+            this.panel7.Controls.Add(this.areaOneThreeAverage);
+            this.panel7.Controls.Add(this.team1Two);
+            this.panel7.Controls.Add(this.areaOneThreeTele);
+            this.panel7.Controls.Add(this.areaOneThree);
+            this.panel7.Location = new System.Drawing.Point(315, 25);
+            this.panel7.Name = "panel7";
+            this.panel7.Size = new System.Drawing.Size(93, 100);
+            this.panel7.TabIndex = 91;
+            // 
+            // team1Two
+            // 
+            this.team1Two.AutoSize = true;
+            this.team1Two.Location = new System.Drawing.Point(0, 3);
+            this.team1Two.Name = "team1Two";
+            this.team1Two.Size = new System.Drawing.Size(27, 13);
+            this.team1Two.TabIndex = 98;
+            this.team1Two.Text = "N/A";
+            // 
+            // areaOneThreeTele
+            // 
+            this.areaOneThreeTele.AutoSize = true;
+            this.areaOneThreeTele.Location = new System.Drawing.Point(0, 39);
+            this.areaOneThreeTele.Name = "areaOneThreeTele";
+            this.areaOneThreeTele.Size = new System.Drawing.Size(27, 13);
+            this.areaOneThreeTele.TabIndex = 99;
+            this.areaOneThreeTele.Text = "N/A";
+            // 
             // areaOneThree
             // 
             this.areaOneThree.AutoSize = true;
-            this.areaOneThree.Location = new System.Drawing.Point(266, 32);
+            this.areaOneThree.Location = new System.Drawing.Point(0, 21);
             this.areaOneThree.Name = "areaOneThree";
             this.areaOneThree.Size = new System.Drawing.Size(27, 13);
             this.areaOneThree.TabIndex = 98;
             this.areaOneThree.Text = "N/A";
             // 
+            // panel8
+            // 
+            this.panel8.Controls.Add(this.climbOneTwo);
+            this.panel8.Controls.Add(this.areaOneTwoAverage);
+            this.panel8.Controls.Add(this.team1One);
+            this.panel8.Controls.Add(this.areaOneTwoTele);
+            this.panel8.Controls.Add(this.areaOneTwo);
+            this.panel8.Location = new System.Drawing.Point(168, 25);
+            this.panel8.Name = "panel8";
+            this.panel8.Size = new System.Drawing.Size(93, 100);
+            this.panel8.TabIndex = 91;
+            // 
+            // team1One
+            // 
+            this.team1One.AutoSize = true;
+            this.team1One.Location = new System.Drawing.Point(3, 3);
+            this.team1One.Name = "team1One";
+            this.team1One.Size = new System.Drawing.Size(27, 13);
+            this.team1One.TabIndex = 98;
+            this.team1One.Text = "N/A";
+            // 
+            // areaOneTwoTele
+            // 
+            this.areaOneTwoTele.AutoSize = true;
+            this.areaOneTwoTele.Location = new System.Drawing.Point(3, 34);
+            this.areaOneTwoTele.Name = "areaOneTwoTele";
+            this.areaOneTwoTele.Size = new System.Drawing.Size(27, 13);
+            this.areaOneTwoTele.TabIndex = 98;
+            this.areaOneTwoTele.Text = "N/A";
+            // 
             // areaOneTwo
             // 
             this.areaOneTwo.AutoSize = true;
-            this.areaOneTwo.Location = new System.Drawing.Point(176, 32);
+            this.areaOneTwo.Location = new System.Drawing.Point(3, 21);
             this.areaOneTwo.Name = "areaOneTwo";
             this.areaOneTwo.Size = new System.Drawing.Size(27, 13);
             this.areaOneTwo.TabIndex = 97;
             this.areaOneTwo.Text = "N/A";
+            // 
+            // panel1
+            // 
+            this.panel1.Controls.Add(this.climbOneOne);
+            this.panel1.Controls.Add(this.areaOneOneAverage);
+            this.panel1.Controls.Add(this.areaOneOneTele);
+            this.panel1.Controls.Add(this.team1CaptainOne);
+            this.panel1.Controls.Add(this.areaOneOne);
+            this.panel1.Location = new System.Drawing.Point(69, 25);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(92, 100);
+            this.panel1.TabIndex = 90;
+            // 
+            // areaOneOneTele
+            // 
+            this.areaOneOneTele.AutoSize = true;
+            this.areaOneOneTele.Location = new System.Drawing.Point(0, 26);
+            this.areaOneOneTele.Name = "areaOneOneTele";
+            this.areaOneOneTele.Size = new System.Drawing.Size(27, 13);
+            this.areaOneOneTele.TabIndex = 98;
+            this.areaOneOneTele.Text = "N/A";
+            // 
+            // team1CaptainOne
+            // 
+            this.team1CaptainOne.AutoSize = true;
+            this.team1CaptainOne.Location = new System.Drawing.Point(0, 0);
+            this.team1CaptainOne.Name = "team1CaptainOne";
+            this.team1CaptainOne.Size = new System.Drawing.Size(27, 13);
+            this.team1CaptainOne.TabIndex = 97;
+            this.team1CaptainOne.Text = "N/A";
+            // 
+            // areaOneOne
+            // 
+            this.areaOneOne.AutoSize = true;
+            this.areaOneOne.Location = new System.Drawing.Point(0, 13);
+            this.areaOneOne.Name = "areaOneOne";
+            this.areaOneOne.Size = new System.Drawing.Size(27, 13);
+            this.areaOneOne.TabIndex = 96;
+            this.areaOneOne.Text = "N/A";
             // 
             // label67
             // 
@@ -2477,7 +2761,7 @@ namespace Bot_Scout_RAPID_REACT
             // label68
             // 
             this.label68.AutoSize = true;
-            this.label68.Location = new System.Drawing.Point(76, 1);
+            this.label68.Location = new System.Drawing.Point(69, 1);
             this.label68.Name = "label68";
             this.label68.Size = new System.Drawing.Size(43, 13);
             this.label68.TabIndex = 91;
@@ -2486,7 +2770,7 @@ namespace Bot_Scout_RAPID_REACT
             // label69
             // 
             this.label69.AutoSize = true;
-            this.label69.Location = new System.Drawing.Point(176, 1);
+            this.label69.Location = new System.Drawing.Point(168, 1);
             this.label69.Name = "label69";
             this.label69.Size = new System.Drawing.Size(50, 13);
             this.label69.TabIndex = 92;
@@ -2495,7 +2779,7 @@ namespace Bot_Scout_RAPID_REACT
             // label70
             // 
             this.label70.AutoSize = true;
-            this.label70.Location = new System.Drawing.Point(266, 1);
+            this.label70.Location = new System.Drawing.Point(315, 1);
             this.label70.Name = "label70";
             this.label70.Size = new System.Drawing.Size(68, 13);
             this.label70.TabIndex = 93;
@@ -2503,43 +2787,152 @@ namespace Bot_Scout_RAPID_REACT
             // 
             // slot1
             // 
-            this.slot1.Location = new System.Drawing.Point(4, 35);
+            this.slot1.Location = new System.Drawing.Point(4, 25);
             this.slot1.Name = "slot1";
-            this.slot1.Size = new System.Drawing.Size(65, 20);
+            this.slot1.Size = new System.Drawing.Size(58, 20);
             this.slot1.TabIndex = 94;
             // 
             // slot2
             // 
-            this.slot2.Location = new System.Drawing.Point(4, 109);
+            this.slot2.Location = new System.Drawing.Point(4, 133);
             this.slot2.Name = "slot2";
-            this.slot2.Size = new System.Drawing.Size(65, 20);
+            this.slot2.Size = new System.Drawing.Size(58, 20);
             this.slot2.TabIndex = 95;
-            // 
-            // areaOneOne
-            // 
-            this.areaOneOne.AutoSize = true;
-            this.areaOneOne.Location = new System.Drawing.Point(76, 32);
-            this.areaOneOne.Name = "areaOneOne";
-            this.areaOneOne.Size = new System.Drawing.Size(27, 13);
-            this.areaOneOne.TabIndex = 96;
-            this.areaOneOne.Text = "N/A";
             // 
             // label71
             // 
             this.label71.AutoSize = true;
-            this.label71.Location = new System.Drawing.Point(358, 1);
+            this.label71.Location = new System.Drawing.Point(431, 1);
             this.label71.Name = "label71";
             this.label71.Size = new System.Drawing.Size(47, 13);
             this.label71.TabIndex = 102;
             this.label71.Text = "Average";
             // 
-            // teleUpperToolStripMenuItem
+            // areaOneOneAverage
             // 
-            this.teleUpperToolStripMenuItem.Name = "teleUpperToolStripMenuItem";
-            this.teleUpperToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.U)));
-            this.teleUpperToolStripMenuItem.Size = new System.Drawing.Size(218, 22);
-            this.teleUpperToolStripMenuItem.Text = "Tele Upper";
-            this.teleUpperToolStripMenuItem.Click += new System.EventHandler(this.teleUpperToolStripMenuItem_Click);
+            this.areaOneOneAverage.AutoSize = true;
+            this.areaOneOneAverage.Location = new System.Drawing.Point(0, 47);
+            this.areaOneOneAverage.Name = "areaOneOneAverage";
+            this.areaOneOneAverage.Size = new System.Drawing.Size(27, 13);
+            this.areaOneOneAverage.TabIndex = 99;
+            this.areaOneOneAverage.Text = "N/A";
+            // 
+            // areaOneTwoAverage
+            // 
+            this.areaOneTwoAverage.AutoSize = true;
+            this.areaOneTwoAverage.Location = new System.Drawing.Point(3, 47);
+            this.areaOneTwoAverage.Name = "areaOneTwoAverage";
+            this.areaOneTwoAverage.Size = new System.Drawing.Size(27, 13);
+            this.areaOneTwoAverage.TabIndex = 99;
+            this.areaOneTwoAverage.Text = "N/A";
+            // 
+            // areaOneThreeAverage
+            // 
+            this.areaOneThreeAverage.AutoSize = true;
+            this.areaOneThreeAverage.Location = new System.Drawing.Point(1, 54);
+            this.areaOneThreeAverage.Name = "areaOneThreeAverage";
+            this.areaOneThreeAverage.Size = new System.Drawing.Size(27, 13);
+            this.areaOneThreeAverage.TabIndex = 100;
+            this.areaOneThreeAverage.Text = "N/A";
+            // 
+            // areaTwoOneAverage
+            // 
+            this.areaTwoOneAverage.AutoSize = true;
+            this.areaTwoOneAverage.Location = new System.Drawing.Point(0, 63);
+            this.areaTwoOneAverage.Name = "areaTwoOneAverage";
+            this.areaTwoOneAverage.Size = new System.Drawing.Size(27, 13);
+            this.areaTwoOneAverage.TabIndex = 102;
+            this.areaTwoOneAverage.Text = "N/A";
+            // 
+            // areaTwoTwoAverage
+            // 
+            this.areaTwoTwoAverage.AutoSize = true;
+            this.areaTwoTwoAverage.Location = new System.Drawing.Point(3, 63);
+            this.areaTwoTwoAverage.Name = "areaTwoTwoAverage";
+            this.areaTwoTwoAverage.Size = new System.Drawing.Size(27, 13);
+            this.areaTwoTwoAverage.TabIndex = 103;
+            this.areaTwoTwoAverage.Text = "N/A";
+            // 
+            // areaTwoThreeAverage
+            // 
+            this.areaTwoThreeAverage.AutoSize = true;
+            this.areaTwoThreeAverage.Location = new System.Drawing.Point(0, 54);
+            this.areaTwoThreeAverage.Name = "areaTwoThreeAverage";
+            this.areaTwoThreeAverage.Size = new System.Drawing.Size(27, 13);
+            this.areaTwoThreeAverage.TabIndex = 104;
+            this.areaTwoThreeAverage.Text = "N/A";
+            // 
+            // climbOneOne
+            // 
+            this.climbOneOne.AutoSize = true;
+            this.climbOneOne.Location = new System.Drawing.Point(-1, 67);
+            this.climbOneOne.Name = "climbOneOne";
+            this.climbOneOne.Size = new System.Drawing.Size(27, 13);
+            this.climbOneOne.TabIndex = 100;
+            this.climbOneOne.Text = "N/A";
+            // 
+            // climbOneTwo
+            // 
+            this.climbOneTwo.AutoSize = true;
+            this.climbOneTwo.Location = new System.Drawing.Point(3, 67);
+            this.climbOneTwo.Name = "climbOneTwo";
+            this.climbOneTwo.Size = new System.Drawing.Size(27, 13);
+            this.climbOneTwo.TabIndex = 100;
+            this.climbOneTwo.Text = "N/A";
+            // 
+            // climbOneThree
+            // 
+            this.climbOneThree.AutoSize = true;
+            this.climbOneThree.Location = new System.Drawing.Point(2, 67);
+            this.climbOneThree.Name = "climbOneThree";
+            this.climbOneThree.Size = new System.Drawing.Size(27, 13);
+            this.climbOneThree.TabIndex = 101;
+            this.climbOneThree.Text = "N/A";
+            // 
+            // climbTwoOne
+            // 
+            this.climbTwoOne.AutoSize = true;
+            this.climbTwoOne.Location = new System.Drawing.Point(-1, 84);
+            this.climbTwoOne.Name = "climbTwoOne";
+            this.climbTwoOne.Size = new System.Drawing.Size(27, 13);
+            this.climbTwoOne.TabIndex = 103;
+            this.climbTwoOne.Text = "N/A";
+            // 
+            // climbTwoTwo
+            // 
+            this.climbTwoTwo.AutoSize = true;
+            this.climbTwoTwo.Location = new System.Drawing.Point(3, 84);
+            this.climbTwoTwo.Name = "climbTwoTwo";
+            this.climbTwoTwo.Size = new System.Drawing.Size(27, 13);
+            this.climbTwoTwo.TabIndex = 104;
+            this.climbTwoTwo.Text = "N/A";
+            // 
+            // climbTwoThree
+            // 
+            this.climbTwoThree.AutoSize = true;
+            this.climbTwoThree.Location = new System.Drawing.Point(1, 67);
+            this.climbTwoThree.Name = "climbTwoThree";
+            this.climbTwoThree.Size = new System.Drawing.Size(27, 13);
+            this.climbTwoThree.TabIndex = 105;
+            this.climbTwoThree.Text = "N/A";
+            // 
+            // upperAverage1
+            // 
+            this.upperAverage1.AutoSize = true;
+            this.upperAverage1.Location = new System.Drawing.Point(3, 39);
+            this.upperAverage1.Name = "upperAverage1";
+            this.upperAverage1.Size = new System.Drawing.Size(27, 13);
+            this.upperAverage1.TabIndex = 100;
+            this.upperAverage1.Text = "N/A";
+            // 
+            // upperAverage2
+            // 
+            this.upperAverage2.AutoSize = true;
+            this.upperAverage2.Location = new System.Drawing.Point(3, 54);
+            this.upperAverage2.Name = "upperAverage2";
+            this.upperAverage2.Size = new System.Drawing.Size(27, 13);
+            this.upperAverage2.TabIndex = 104;
+            this.upperAverage2.Text = "N/A";
             // 
             // Form1
             // 
@@ -2612,6 +3005,22 @@ namespace Bot_Scout_RAPID_REACT
             this.teamTrendLayout.PerformLayout();
             this.alliancePanel.ResumeLayout(false);
             this.alliancePanel.PerformLayout();
+            this.panel2.ResumeLayout(false);
+            this.panel2.PerformLayout();
+            this.panel3.ResumeLayout(false);
+            this.panel3.PerformLayout();
+            this.panel4.ResumeLayout(false);
+            this.panel4.PerformLayout();
+            this.panel5.ResumeLayout(false);
+            this.panel5.PerformLayout();
+            this.panel6.ResumeLayout(false);
+            this.panel6.PerformLayout();
+            this.panel7.ResumeLayout(false);
+            this.panel7.PerformLayout();
+            this.panel8.ResumeLayout(false);
+            this.panel8.PerformLayout();
+            this.panel1.ResumeLayout(false);
+            this.panel1.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -2822,8 +3231,6 @@ namespace Bot_Scout_RAPID_REACT
         private System.Windows.Forms.Label label69;
         private System.Windows.Forms.ToolStripMenuItem bestScoresToolStripMenuItem;
         private System.Windows.Forms.Label label70;
-        private System.Windows.Forms.TextBox slot1;
-        private System.Windows.Forms.TextBox slot2;
         private System.Windows.Forms.Label areaOneOne;
         private System.Windows.Forms.Label areaOneThree;
         private System.Windows.Forms.Label areaOneTwo;
@@ -2834,6 +3241,45 @@ namespace Bot_Scout_RAPID_REACT
         private System.Windows.Forms.Label averageAlliance2;
         private System.Windows.Forms.Label label71;
         private System.Windows.Forms.ToolStripMenuItem teleUpperToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem createTeamToolStripMenuItem;
+        private System.Windows.Forms.ToolStripTextBox teamNumber;
+        private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem1;
+        private System.Windows.Forms.TextBox slot1;
+        private System.Windows.Forms.TextBox slot2;
+        private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.Panel panel3;
+        private System.Windows.Forms.Panel panel4;
+        private System.Windows.Forms.Panel panel5;
+        private System.Windows.Forms.Panel panel6;
+        private System.Windows.Forms.Panel panel7;
+        private System.Windows.Forms.Panel panel8;
+        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Label team1CaptainOne;
+        private System.Windows.Forms.Label areaOneTwoTele;
+        private System.Windows.Forms.Label areaOneThreeTele;
+        private System.Windows.Forms.Label areaOneOneTele;
+        private System.Windows.Forms.Label team1Two;
+        private System.Windows.Forms.Label team1One;
+        private System.Windows.Forms.Label areaTwoOneTele;
+        private System.Windows.Forms.Label areaTwoTwoTele;
+        private System.Windows.Forms.Label areaTwoThreeTele;
+        private System.Windows.Forms.Label team2One;
+        private System.Windows.Forms.Label team2Two;
+        private System.Windows.Forms.Label team2Three;
+        private System.Windows.Forms.Label areaTwoOneAverage;
+        private System.Windows.Forms.Label areaTwoTwoAverage;
+        private System.Windows.Forms.Label areaTwoThreeAverage;
+        private System.Windows.Forms.Label areaOneThreeAverage;
+        private System.Windows.Forms.Label areaOneTwoAverage;
+        private System.Windows.Forms.Label areaOneOneAverage;
+        private System.Windows.Forms.Label climbTwoOne;
+        private System.Windows.Forms.Label climbTwoTwo;
+        private System.Windows.Forms.Label climbTwoThree;
+        private System.Windows.Forms.Label climbOneThree;
+        private System.Windows.Forms.Label climbOneTwo;
+        private System.Windows.Forms.Label climbOneOne;
+        private System.Windows.Forms.Label upperAverage2;
+        private System.Windows.Forms.Label upperAverage1;
     }
 }
 

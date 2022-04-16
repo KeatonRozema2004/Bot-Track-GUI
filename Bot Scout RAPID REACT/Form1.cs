@@ -5,21 +5,31 @@ using System.Windows.Forms;
 
 
 //TODO: Make safeguards so doesn't enter empty data
-//TODO: Make tab key work
 //TODO: Go back to team 27, match 5, just take a look at match
-//TODO: PRIORITY, MAKE LOOK BETTER, AND FOR MATCHES
-//TODO: Dropdown menu instead of radio buttons, taxi, climb, entry, and shot spot
-//COMPLETE: Check if team exists, if not, don't make it
+//TODO: MAKE LOOK BETTER, AND FOR MATCHES
 //TODO: Make a "Create Team" Tab
-//TODO: Fix get best overall score
-//TODO: Replicate Driver sheet
 //TODO: Make sure it works correctly by doing test ones
 //TODO: Make total score so if team gets a single number score, it turns into a double
 //TODO: Make it so it detects if the string is a number (or turns the string to a number, then back into a string)
-
-
 //TODO: compare alliances together (Alliance Insights)
-//TODO: Alliance Tab
+
+//494 T
+//2586 T
+//5205 M
+
+//4391 T
+//2771 T
+//85 H
+
+
+//TODO: Best climb, percentage climb, top cargo, average cargo, all in the same box
+
+//COMPLETE: Alliance Tab
+//COMPLETE: Make tab key work
+//COMPLETE: Fix get best overall score
+//COMPLETE: Replicate Driver sheet
+//COMPLETE: Dropdown menu instead of radio buttons, taxi, climb, entry, and shot spot
+//COMPLETE: Check if team exists, if not, don't make it
 
 namespace Bot_Scout_RAPID_REACT
 {
@@ -2407,6 +2417,10 @@ namespace Bot_Scout_RAPID_REACT
             string[] a6 = new string[3] { "5166", "5050", "7160" }; //
             string[] a7 = new string[3] { "4391", "2771", "85" };
             string[] a8 = new string[3] { "5216", "4325", "3668" };
+
+            string[] ct = new string[3] { "N/A", "N/A", "N/A" };
+            string[] ct2 = new string[3] { "Traversal", "Traversal", "Mid" };
+            string[] ct7 = new string[3] { "Traversal", "Traversal", "High" };
             try
             {
                 if (best == "total score")
@@ -2545,6 +2559,74 @@ namespace Bot_Scout_RAPID_REACT
                         getAllianceBestTeleOne(a8, 2);
                     }
                 }
+                else if (best == "tele average")
+                {
+                    if (slot1.Text == "1")
+                    {
+                        getAllianceAverageTeleOne(a1, 1, ct);
+                    }
+                    if (slot1.Text == "2")
+                    {
+                        getAllianceAverageTeleOne(a2, 1, ct2);
+                    }
+                    if (slot1.Text == "3")
+                    {
+                        getAllianceAverageTeleOne(a3, 1, ct);
+                    }
+                    if (slot1.Text == "4")
+                    {
+                        getAllianceAverageTeleOne(a4, 1, ct);
+                    }
+                    if (slot1.Text == "5")
+                    {
+                        getAllianceAverageTeleOne(a5, 1, ct);
+                    }
+                    if (slot1.Text == "6")
+                    {
+                        getAllianceAverageTeleOne(a6, 1, ct);
+                    }
+                    if (slot1.Text == "7")
+                    {
+                        getAllianceAverageTeleOne(a7, 1, ct7);
+                    }
+                    if (slot1.Text == "8")
+                    {
+                        getAllianceAverageTeleOne(a8, 1, ct);
+                    }
+                    if (slot2.Text == "1")
+                    {
+                        Console.WriteLine("Tried");
+                        getAllianceAverageTeleOne(a1, 2, ct);
+                    }
+                    if (slot2.Text == "2")
+                    {
+                        getAllianceAverageTeleOne(a2, 2, ct2);
+                    }
+                    if (slot2.Text == "3")
+                    {
+                        getAllianceAverageTeleOne(a3, 2, ct);
+                    }
+                    if (slot2.Text == "4")
+                    {
+                        getAllianceAverageTeleOne(a4, 2, ct);
+                    }
+                    if (slot2.Text == "5")
+                    {
+                        getAllianceAverageTeleOne(a5, 2, ct);
+                    }
+                    if (slot2.Text == "6")
+                    {
+                        getAllianceAverageTeleOne(a6, 2, ct);
+                    }
+                    if (slot2.Text == "7")
+                    {
+                        getAllianceAverageTeleOne(a7, 2, ct7);
+                    }
+                    if (slot2.Text == "8")
+                    {
+                        getAllianceAverageTeleOne(a8, 2, ct);
+                    }
+                }
 
             }
             catch (Exception l)
@@ -2557,19 +2639,26 @@ namespace Bot_Scout_RAPID_REACT
             int tS1 = getBestScoreAlliance(team, 0);
             int tS2 = getBestScoreAlliance(team, 1);
             int tS3 = getBestScoreAlliance(team, 2);
-
+            //TODO: Something
             if (placement == 1)
             {
-                areaOneOne.Text = "Team " + team[0] + ": " + tS1 + "";
-                areaOneTwo.Text = "Team " + team[1] + ": " + tS2 + "";
-                areaOneThree.Text = "Team " + team[2] + ": " + tS3 + "";
+                areaOneOne.Text = "Best Score"+ ": " + tS1 + "";
+                team1CaptainOne.Text = "Team " + team[0];
+                areaOneTwo.Text = "Best Score" + ": " + tS2 + "";
+                team1One.Text = "Team " + team[1];
+                areaOneThree.Text = "Best Score" +  ": " + tS3 + "";
+                //team1CaptainOne.Text = "Best Score: " + team[2];
+                team1Two.Text = "Team " + team[2];
                 averageAlliance1.Text = ((tS1 + tS2 + tS3) / 3) + "";
             }
             if (placement == 2)
             {
                 areaTwoOne.Text = "Team " + team[0] + ": " + tS1 + "";
+                team2One.Text = "Team " + team[0];
                 areaTwoTwo.Text = "Team " + team[1] + ": " + tS2 + "";
+                team2Two.Text = "Team " + team[1];
                 areaTwoThree.Text = "Team " + team[2] + ": " + tS3 + "";
+                team2Three.Text = "Team " + team[2];
                 averageAlliance2.Text = ((tS1 + tS2 + tS3) / 3) + "";
             }
 
@@ -2627,17 +2716,76 @@ namespace Bot_Scout_RAPID_REACT
 
             if (placement == 1)
             {
-                areaOneOne.Text = "Team " + team[0] + ": " + tS1 + "";
-                areaOneTwo.Text = "Team " + team[1] + ": " + tS2 + "";
-                areaOneThree.Text = "Team " + team[2] + ": " + tS3 + "";
-                averageAlliance1.Text = ((tS1 + tS2 + tS3) / 3) + "";
+                areaOneOneTele.Text = "Tele Upper" +  ": " + tS1 + "";
+                areaOneTwoTele.Text = "Tele Upper" +  ": " + tS2 + "";
+                areaOneThreeTele.Text = "Tele Upper " + ": " + tS3 + "";
+                upperAverage1.Text = ("Best Tele\n Average: " + (tS1 + tS2 + tS3) / 3) + "";
             }
             if (placement == 2)
             {
-                areaTwoOne.Text = "Team " + team[0] + ": " + tS1 + "";
-                areaTwoTwo.Text = "Team " + team[1] + ": " + tS2 + "";
-                areaTwoThree.Text = "Team " + team[2] + ": " + tS3 + "";
-                averageAlliance2.Text = ((tS1 + tS2 + tS3) / 3) + "";
+                areaTwoOneTele.Text = "Tele Upper" + ": " + tS1 + "";
+                areaTwoTwoTele.Text = "Tele Upper" +  ": " + tS2 + "";
+                areaTwoThreeTele.Text = "Tele Upper" + ": " + tS3 + "";
+                upperAverage2.Text = ("Best Tele\n Average: " + (tS1 + tS2 + tS3) / 3) + "";
+            }
+            
+
+        }
+        public int getAverageTeleAlliance(string[] team, int a)
+        {
+            int totalScore = 0;
+            int tempNum = 0;
+            int i = 1;
+            int j = 0;
+            int aScore;
+            while (GetLine(team[a] + ".txt", i) != GetLine("blank.txt", 1))
+            {
+
+                i++;
+
+                if (GetLine(team[a] + ".txt", i).Contains("Tele Upper"))
+                {
+                    j++;
+                    string num1 = GetLine(team[a] + ".txt", i)[12].ToString();
+                    string num2 = GetLine(team[a] + ".txt", i)[13].ToString();
+                    tempNum = Int32.Parse(num1 + num2);
+                    totalScore += tempNum;
+                    
+                    
+                    /*if (tempNum > totalScore)
+                    {
+                        totalScore = tempNum;
+                    }*/
+                }
+            }
+            aScore = totalScore / j;
+            return aScore;
+        }
+        public void getAllianceAverageTeleOne(string[] team, int placement, string[] cT)
+        {
+            int tS1 = getAverageTeleAlliance(team, 0);
+            int tS2 = getAverageTeleAlliance(team, 1);
+            int tS3 = getAverageTeleAlliance(team, 2);
+
+            if (placement == 1)
+            {
+                areaOneOneAverage.Text = "Tele Average" + ": " + tS1 + "";
+                areaOneTwoAverage.Text = "Tele Average" + ": " + tS2 + "";
+                areaOneThreeAverage.Text = "Tele Average " + ": " + tS3 + "";
+                averageAlliance1.Text = ("Tele Averages: " + (tS1 + tS2 + tS3) / 3) + "";
+                climbOneOne.Text = "Climb: " + cT[0];
+                climbOneTwo.Text = "Climb: " + cT[1];
+                climbOneThree.Text = "Climb: " + cT[2];
+            }
+            if (placement == 2)
+            {
+                areaTwoOneAverage.Text = "Tele Average" + ": " + tS1 + "";
+                areaTwoTwoAverage.Text = "Tele Average" + ": " + tS2 + "";
+                areaTwoThreeAverage.Text = "Tele Average" + ": " + tS3 + "";
+                averageAlliance2.Text = ("Tele Averages: " + (tS1 + tS2 + tS3) / 3) + "";
+                climbTwoOne.Text = "Climb: " + cT[0];
+                climbTwoTwo.Text = "Climb: " + cT[1];
+                climbTwoThree.Text = "Climb: " + cT[2];
             }
 
         }
@@ -2650,6 +2798,8 @@ namespace Bot_Scout_RAPID_REACT
             teamTrendLayout.Visible = false;
             alliancePanel.Visible = true;
             alliances("total score");
+            alliances("tele score");
+            alliances("average tele");
         }
 
         private void teleUpperToolStripMenuItem_Click(object sender, EventArgs e)
@@ -2660,6 +2810,30 @@ namespace Bot_Scout_RAPID_REACT
             teamTrendLayout.Visible = false;
             alliancePanel.Visible = true;
             alliances("tele upper");
+            alliances("total score");
+            alliances("tele average");
+        }
+
+        private void toolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            if (!File.Exists(teamNumber.Text + ".txt"))
+            {
+                addTeam(teamNumber.Text);
+                addLines(teamNumber.Text);
+                notify("Created team " + teamNumber.Text);
+                teamNumber.Text = "";
+            }
+            else
+            {
+                notify("This team is already added yo");
+            }
+            
+
+        }
+
+        private void areaTwoTwo_Click(object sender, EventArgs e)
+        {
+
         }
     }
         
