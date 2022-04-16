@@ -8,14 +8,18 @@ using System.Windows.Forms;
 //TODO: Make tab key work
 //TODO: Go back to team 27, match 5, just take a look at match
 //TODO: PRIORITY, MAKE LOOK BETTER, AND FOR MATCHES
-//TODO: Dropdown menu instead of radio buttons
-//COMPLETE: Check if team exists, if not, delete it
-//TODO: Make folders for teams in other divisions
+//TODO: Dropdown menu instead of radio buttons, taxi, climb, entry, and shot spot
+//COMPLETE: Check if team exists, if not, don't make it
 //TODO: Make a "Create Team" Tab
 //TODO: Fix get best overall score
 //TODO: Replicate Driver sheet
 //TODO: Make sure it works correctly by doing test ones
+//TODO: Make total score so if team gets a single number score, it turns into a double
 //TODO: Make it so it detects if the string is a number (or turns the string to a number, then back into a string)
+
+
+//TODO: compare alliances together (Alliance Insights)
+//TODO: Alliance Tab
 
 namespace Bot_Scout_RAPID_REACT
 {
@@ -23,19 +27,22 @@ namespace Bot_Scout_RAPID_REACT
     {
         public Form1()
         {
+            
 
-            int pX = 500;
-            int pY = 170;
+            int pX = 240;
+            int pY = 100;
             InitializeComponent();
             bestTeamsTableLayout.Visible = false;
             averageTeamTable.Visible = false;
             driverSheetTable.Visible = false;
             teamTrendLayout.Visible = false;
+            alliancePanel.Visible = false;
             //Sets the location of the table
             bestTeamsTableLayout.Location = new System.Drawing.Point(pX, pY);
             averageTeamTable.Location = new System.Drawing.Point(pX, pY);
             driverSheetTable.Location = new System.Drawing.Point(pX, pY);
             teamTrendLayout.Location = new System.Drawing.Point(pX, pY);
+            alliancePanel.Location = new System.Drawing.Point(pX, pY);
             getMatchDataBut.Visible = false;
         }
 
@@ -261,28 +268,28 @@ namespace Bot_Scout_RAPID_REACT
                         climbType = "n";
                     }
                     writeToFile(team.Text, "Defense: " + "0" + defense.Text);
-                    if (posHub.Checked)
+                    if (shotSpotDrop.Text == "Hub")
                     {
                         writeToFile(team.Text, "Position: h");
                     }
-                    else if (posLaunch.Checked)
+                    else if (shotSpotDrop.Text == "Launchpad")
                     {
                         writeToFile(team.Text, "Position: l");
                     }
-                    else if (posTar.Checked)
+                    else if (shotSpotDrop.Text == "Tarmac")
                     {
                         writeToFile(team.Text, "Position: t");
                     }
-                    else if (posOther.Checked)
+                    else if (shotSpotDrop.Text == "Other")
                     {
                         writeToFile(team.Text, "Position: o");
                     }
 
-                    if (enterFront.Checked)
+                    if (entryDrop.Text == "Front")
                     {
                         writeToFile(team.Text, "Entry: f");
                     }
-                    else if (enterSide.Checked)
+                    else if (entryDrop.Text == "Side")
                     {
                         writeToFile(team.Text, "Entry: s");
                     }
@@ -386,13 +393,9 @@ namespace Bot_Scout_RAPID_REACT
                 climbEnd.Text = "";
                 climbStart.Text = "";
                 climbDrop.Text = "";
-                enterFront.Checked = false;
-                enterSide.Checked = false;
+                entryDrop.Text = "";
                 defense.Text = "";
-                posHub.Checked = false;
-                posTar.Checked = false;
-                posLaunch.Checked = false;
-                posHub.Checked = false;
+                shotSpotDrop.Text = "";
                 taxied.Text = "";
                 //notifyIcon1.Text = "Done";
                 notify("Finished");
@@ -485,6 +488,7 @@ namespace Bot_Scout_RAPID_REACT
             averageTeamTable.Visible = false;
             driverSheetTable.Visible = false;
             teamTrendLayout.Visible = false;
+            alliancePanel.Visible = false;
         }
 
         private void tableLayoutPanel1_Paint(object sender, PaintEventArgs e)
@@ -498,6 +502,7 @@ namespace Bot_Scout_RAPID_REACT
             driverSheetTable.Visible = true;
             averageTeamTable.Visible = false;
             teamTrendLayout.Visible = false;
+            alliancePanel.Visible = false;
         }
 
         private void averageScoresMenu_Click(object sender, EventArgs e)
@@ -506,6 +511,7 @@ namespace Bot_Scout_RAPID_REACT
             averageTeamTable.Visible = true;
             driverSheetTable.Visible = false;
             teamTrendLayout.Visible = false;
+            alliancePanel.Visible = false;
             averageCargo();
         }
 
@@ -2055,28 +2061,28 @@ namespace Bot_Scout_RAPID_REACT
                 climbType = "n";
             }
             lineChanger("Defense: 0" + defense.Text, team.Text + ".txt", lineMatch + 14);
-            if (posHub.Checked)
+            if (shotSpotDrop.Text == "Hub")
             {
                 lineChanger("Position: h", team.Text + ".txt", lineMatch + 15);
             }
-            else if (posLaunch.Checked)
+            else if (shotSpotDrop.Text == "Launchpad")
             {
                 lineChanger("Position: l", team.Text + ".txt", lineMatch + 15);
             }
-            else if (posTar.Checked)
+            else if (shotSpotDrop.Text == "Position")
             {
                 lineChanger("Position: t", team.Text + ".txt", lineMatch + 15);
             }
-            else if (posOther.Checked)
+            else if (shotSpotDrop.Text == "Other")
             {
                 lineChanger("Position: o", team.Text + ".txt", lineMatch + 15);
             }
 
-            if (enterFront.Checked)
+            if (entryDrop.Text == "Front")
             {
                 lineChanger("Entry: f", team.Text + ".txt", lineMatch + 16);
             }
-            else if (enterSide.Checked)
+            else if (entryDrop.Text == "Side")
             {
                 lineChanger("Entry: s", team.Text + ".txt", lineMatch + 16);
             }
@@ -2246,29 +2252,29 @@ namespace Bot_Scout_RAPID_REACT
                 string posT = getMatchData(10, lineMatch + 15, "Position");
                 if (posT == "l")
                 {
-                    posLaunch.Checked = true;
+                    shotSpotDrop.Text = "Launchpad";
                 }
                 else if (posT == "h")
                 {
-                    posHub.Checked = true;
+                    shotSpotDrop.Text = "Hub";
                 }
                 else if (posT == "t")
                 {
-                    posTar.Checked = true;
+                    shotSpotDrop.Text = "Tarmac";
                 }
                 else if (posT == "o")
                 {
-                    posOther.Checked = true;
+                    shotSpotDrop.Text = "Other";
                 }
                 //Entry
                 string entryT = getMatchData(7, lineMatch + 16, "Entry");
                 if (entryT == "f")
                 {
-                    enterFront.Checked = true;
+                    entryDrop.Text = "Front";
                 }
                 else if (entryT == "s")
                 {
-                    enterSide.Checked = true;
+                    entryDrop.Text = "Side";
                 }
 
 
@@ -2361,6 +2367,301 @@ namespace Bot_Scout_RAPID_REACT
         {
 
         }
+
+        private void driverSheetTable_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void textBox9_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void matchToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void alliancesToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+        }
+
+        private void insightsToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            bestTeamsTableLayout.Visible = false;
+            averageTeamTable.Visible = false;
+            driverSheetTable.Visible = false;
+            teamTrendLayout.Visible = false;
+            alliancePanel.Visible = true;
+            alliances("total score");
+        }
+
+        public void alliances(string best)
+        {
+            string[] a1 = new string[3] { "27", "2337", "5090" };
+            string[] a2 = new string[3] { "494", "2586", "5205" };
+            string[] a3 = new string[3] { "3620", "4003", "857" }; 
+            string[] a4 = new string[3] { "3707", "2620", "1188" };
+            string[] a5 = new string[3] { "910", "2959", "6002" };
+            string[] a6 = new string[3] { "5166", "5050", "7160" }; //
+            string[] a7 = new string[3] { "4391", "2771", "85" };
+            string[] a8 = new string[3] { "5216", "4325", "3668" };
+            try
+            {
+                if (best == "total score")
+                {
+                    if (slot1.Text == "1")
+                    {
+                        Console.WriteLine("Tried");
+                        getAllianceBestScoreOne(a1, 1);
+                    }
+                    if (slot1.Text == "2")
+                    {
+                        getAllianceBestScoreOne(a2, 1);
+                    }
+                    if (slot1.Text == "3")
+                    {
+                        getAllianceBestScoreOne(a3, 1);
+                    }
+                    if (slot1.Text == "4")
+                    {
+                        getAllianceBestScoreOne(a4, 1);
+                    }
+                    if (slot1.Text == "5")
+                    {
+                        getAllianceBestScoreOne(a5, 1);
+                    }
+                    if (slot1.Text == "6")
+                    {
+                        getAllianceBestScoreOne(a6, 1);
+                    }
+                    if (slot1.Text == "7")
+                    {
+                        getAllianceBestScoreOne(a7, 1);
+                    }
+                    if (slot1.Text == "8")
+                    {
+                        getAllianceBestScoreOne(a8, 1);
+                    }
+                    if (slot2.Text == "1")
+                    {
+                        Console.WriteLine("Tried");
+                        getAllianceBestScoreOne(a1, 2);
+                    }
+                    if (slot2.Text == "2")
+                    {
+                        getAllianceBestScoreOne(a2, 2);
+                    }
+                    if (slot2.Text == "3")
+                    {
+                        getAllianceBestScoreOne(a3, 2);
+                    }
+                    if (slot2.Text == "4")
+                    {
+                        getAllianceBestScoreOne(a4, 2);
+                    }
+                    if (slot2.Text == "5")
+                    {
+                        getAllianceBestScoreOne(a5, 2);
+                    }
+                    if (slot2.Text == "6")
+                    {
+                        getAllianceBestScoreOne(a6, 2);
+                    }
+                    if (slot2.Text == "7")
+                    {
+                        getAllianceBestScoreOne(a7, 2);
+                    }
+                    if (slot2.Text == "8")
+                    {
+                        getAllianceBestScoreOne(a8, 2);
+                    }
+                }
+                else if(best == "tele upper"){
+                    if (slot1.Text == "1")
+                    {
+                        getAllianceBestTeleOne(a1, 1);
+                    }
+                    if (slot1.Text == "2")
+                    {
+                        getAllianceBestTeleOne(a2, 1);
+                    }
+                    if (slot1.Text == "3")
+                    {
+                        getAllianceBestTeleOne(a3, 1);
+                    }
+                    if (slot1.Text == "4")
+                    {
+                        getAllianceBestTeleOne(a4, 1);
+                    }
+                    if (slot1.Text == "5")
+                    {
+                        getAllianceBestTeleOne(a5, 1);
+                    }
+                    if (slot1.Text == "6")
+                    {
+                        getAllianceBestTeleOne(a6, 1);
+                    }
+                    if (slot1.Text == "7")
+                    {
+                        getAllianceBestTeleOne(a7, 1);
+                    }
+                    if (slot1.Text == "8")
+                    {
+                        getAllianceBestTeleOne(a8, 1);
+                    }
+                    if (slot2.Text == "1")
+                    {
+                        Console.WriteLine("Tried");
+                        getAllianceBestTeleOne(a1, 2);
+                    }
+                    if (slot2.Text == "2")
+                    {
+                        getAllianceBestTeleOne(a2, 2);
+                    }
+                    if (slot2.Text == "3")
+                    {
+                        getAllianceBestTeleOne(a3, 2);
+                    }
+                    if (slot2.Text == "4")
+                    {
+                        getAllianceBestTeleOne(a4, 2);
+                    }
+                    if (slot2.Text == "5")
+                    {
+                        getAllianceBestTeleOne(a5, 2);
+                    }
+                    if (slot2.Text == "6")
+                    {
+                        getAllianceBestTeleOne(a6, 2);
+                    }
+                    if (slot2.Text == "7")
+                    {
+                        getAllianceBestTeleOne(a7, 2);
+                    }
+                    if (slot2.Text == "8")
+                    {
+                        getAllianceBestTeleOne(a8, 2);
+                    }
+                }
+
+            }
+            catch (Exception l)
+            {
+                Console.WriteLine(l);
+            }
+        }
+        public void getAllianceBestScoreOne(string[] team, int placement)
+        {
+            int tS1 = getBestScoreAlliance(team, 0);
+            int tS2 = getBestScoreAlliance(team, 1);
+            int tS3 = getBestScoreAlliance(team, 2);
+
+            if (placement == 1)
+            {
+                areaOneOne.Text = "Team " + team[0] + ": " + tS1 + "";
+                areaOneTwo.Text = "Team " + team[1] + ": " + tS2 + "";
+                areaOneThree.Text = "Team " + team[2] + ": " + tS3 + "";
+                averageAlliance1.Text = ((tS1 + tS2 + tS3) / 3) + "";
+            }
+            if (placement == 2)
+            {
+                areaTwoOne.Text = "Team " + team[0] + ": " + tS1 + "";
+                areaTwoTwo.Text = "Team " + team[1] + ": " + tS2 + "";
+                areaTwoThree.Text = "Team " + team[2] + ": " + tS3 + "";
+                averageAlliance2.Text = ((tS1 + tS2 + tS3) / 3) + "";
+            }
+
+        }
+        public int getBestScoreAlliance(string[] team, int a)
+        {
+            int totalScore = 0;
+            int tempNum = 0;
+            int i = 1;
+            while (GetLine(team[a] + ".txt", i) != GetLine("blank.txt", 1))
+            {
+
+                i++;
+                if (GetLine(team[a] + ".txt", i).Contains("Total Score"))
+                {
+                    string num1 = GetLine(team[a] + ".txt", i)[13].ToString();
+                    string num2 = GetLine(team[a] + ".txt", i)[14].ToString();
+                    tempNum = Int32.Parse(num1 + num2);
+                    if (tempNum > totalScore)
+                    {
+                        totalScore = tempNum;
+                    }
+                }
+            }
+            return totalScore;
+        }
+
+        public int getBestTeleAlliance(string[] team, int a)
+        {
+            int totalScore = 0;
+            int tempNum = 0;
+            int i = 1;
+            while (GetLine(team[a] + ".txt", i) != GetLine("blank.txt", 1))
+            {
+
+                i++;
+                if (GetLine(team[a] + ".txt", i).Contains("Tele Upper"))
+                {
+                    string num1 = GetLine(team[a] + ".txt", i)[12].ToString();
+                    string num2 = GetLine(team[a] + ".txt", i)[13].ToString();
+                    tempNum = Int32.Parse(num1 + num2);
+                    if (tempNum > totalScore)
+                    {
+                        totalScore = tempNum;
+                    }
+                }
+            }
+            return totalScore;
+        }
+        public void getAllianceBestTeleOne(string[] team, int placement)
+        {
+            int tS1 = getBestTeleAlliance(team, 0);
+            int tS2 = getBestTeleAlliance(team, 1);
+            int tS3 = getBestTeleAlliance(team, 2);
+
+            if (placement == 1)
+            {
+                areaOneOne.Text = "Team " + team[0] + ": " + tS1 + "";
+                areaOneTwo.Text = "Team " + team[1] + ": " + tS2 + "";
+                areaOneThree.Text = "Team " + team[2] + ": " + tS3 + "";
+                averageAlliance1.Text = ((tS1 + tS2 + tS3) / 3) + "";
+            }
+            if (placement == 2)
+            {
+                areaTwoOne.Text = "Team " + team[0] + ": " + tS1 + "";
+                areaTwoTwo.Text = "Team " + team[1] + ": " + tS2 + "";
+                areaTwoThree.Text = "Team " + team[2] + ": " + tS3 + "";
+                averageAlliance2.Text = ((tS1 + tS2 + tS3) / 3) + "";
+            }
+
+        }
+
+        private void bestScoresToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            bestTeamsTableLayout.Visible = false;
+            averageTeamTable.Visible = false;
+            driverSheetTable.Visible = false;
+            teamTrendLayout.Visible = false;
+            alliancePanel.Visible = true;
+            alliances("total score");
+        }
+
+        private void teleUpperToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            bestTeamsTableLayout.Visible = false;
+            averageTeamTable.Visible = false;
+            driverSheetTable.Visible = false;
+            teamTrendLayout.Visible = false;
+            alliancePanel.Visible = true;
+            alliances("tele upper");
+        }
     }
+        
 
 }
