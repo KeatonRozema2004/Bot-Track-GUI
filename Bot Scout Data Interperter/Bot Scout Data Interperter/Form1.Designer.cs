@@ -29,9 +29,9 @@ namespace Bot_Scout_Data_Interperter
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea3 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend3 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series3 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea2 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend2 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series2 = new System.Windows.Forms.DataVisualization.Charting.Series();
             this.getDataDirectoryButton = new System.Windows.Forms.Button();
             this.dataFolderDirectoryLabel = new System.Windows.Forms.Label();
             this.dataDirectoryLabel = new System.Windows.Forms.Label();
@@ -83,6 +83,8 @@ namespace Bot_Scout_Data_Interperter
             this.auto_missed = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tele_missed = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.climb = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.saveTeamChartsButton = new System.Windows.Forms.Button();
+            this.label9 = new System.Windows.Forms.Label();
             this.tab_body.SuspendLayout();
             this.tabPage1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.overview_table)).BeginInit();
@@ -534,16 +536,16 @@ namespace Bot_Scout_Data_Interperter
             this.teamChartData.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            chartArea3.Name = "ChartArea1";
-            this.teamChartData.ChartAreas.Add(chartArea3);
-            legend3.Name = "Legend1";
-            this.teamChartData.Legends.Add(legend3);
+            chartArea2.Name = "ChartArea1";
+            this.teamChartData.ChartAreas.Add(chartArea2);
+            legend2.Name = "Legend1";
+            this.teamChartData.Legends.Add(legend2);
             this.teamChartData.Location = new System.Drawing.Point(6, 6);
             this.teamChartData.Name = "teamChartData";
-            series3.ChartArea = "ChartArea1";
-            series3.Legend = "Legend1";
-            series3.Name = "Series1";
-            this.teamChartData.Series.Add(series3);
+            series2.ChartArea = "ChartArea1";
+            series2.Legend = "Legend1";
+            series2.Name = "Series1";
+            this.teamChartData.Series.Add(series2);
             this.teamChartData.Size = new System.Drawing.Size(481, 300);
             this.teamChartData.TabIndex = 0;
             this.teamChartData.Tag = "";
@@ -630,11 +632,34 @@ namespace Bot_Scout_Data_Interperter
             this.climb.Name = "climb";
             this.climb.ReadOnly = true;
             // 
+            // saveTeamChartsButton
+            // 
+            this.saveTeamChartsButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.saveTeamChartsButton.Location = new System.Drawing.Point(638, 25);
+            this.saveTeamChartsButton.Name = "saveTeamChartsButton";
+            this.saveTeamChartsButton.Size = new System.Drawing.Size(150, 23);
+            this.saveTeamChartsButton.TabIndex = 4;
+            this.saveTeamChartsButton.Text = "Save Team Match Charts";
+            this.saveTeamChartsButton.UseVisualStyleBackColor = true;
+            this.saveTeamChartsButton.Click += new System.EventHandler(this.saveTeamChartsButton_Click);
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Location = new System.Drawing.Point(749, 9);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(35, 13);
+            this.label9.TabIndex = 5;
+            this.label9.Text = "label9";
+            this.label9.Visible = false;
+            // 
             // Main_page
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.label9);
+            this.Controls.Add(this.saveTeamChartsButton);
             this.Controls.Add(this.tab_body);
             this.Controls.Add(this.dataDirectoryLabel);
             this.Controls.Add(this.dataFolderDirectoryLabel);
@@ -716,6 +741,8 @@ namespace Bot_Scout_Data_Interperter
         private System.Windows.Forms.DataGridViewTextBoxColumn auto_missed;
         private System.Windows.Forms.DataGridViewTextBoxColumn tele_missed;
         private System.Windows.Forms.DataGridViewTextBoxColumn climb;
+        private System.Windows.Forms.Button saveTeamChartsButton;
+        private System.Windows.Forms.Label label9;
     }
 }
 

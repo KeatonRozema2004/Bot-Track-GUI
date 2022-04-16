@@ -423,7 +423,8 @@ namespace Bot_Scout_Data_Interperter.scripts
                 } 
                 if (lineTitle.Length == 1)
                 {
-                    matchFound = false;
+                    if (line == "------------------------")
+                        matchFound = false;
                 }
 
 
