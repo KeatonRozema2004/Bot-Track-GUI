@@ -284,6 +284,7 @@ namespace Bot_Scout_RAPID_REACT
             this.climbTwoThree = new System.Windows.Forms.Label();
             this.upperAverage1 = new System.Windows.Forms.Label();
             this.upperAverage2 = new System.Windows.Forms.Label();
+            this.bestTeamsBar = new System.Windows.Forms.ProgressBar();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.menuStrip1.SuspendLayout();
             this.bestTeamsTableLayout.SuspendLayout();
@@ -322,6 +323,7 @@ namespace Bot_Scout_RAPID_REACT
             // label4
             // 
             this.label4.AutoSize = true;
+            this.label4.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.label4.Location = new System.Drawing.Point(95, 57);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(34, 13);
@@ -346,6 +348,7 @@ namespace Bot_Scout_RAPID_REACT
             // label5
             // 
             this.label5.AutoSize = true;
+            this.label5.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.label5.Location = new System.Drawing.Point(92, 83);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(37, 13);
@@ -355,6 +358,7 @@ namespace Bot_Scout_RAPID_REACT
             // label6
             // 
             this.label6.AutoSize = true;
+            this.label6.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.label6.Location = new System.Drawing.Point(37, 274);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(91, 13);
@@ -378,6 +382,7 @@ namespace Bot_Scout_RAPID_REACT
             // label7
             // 
             this.label7.AutoSize = true;
+            this.label7.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.label7.Location = new System.Drawing.Point(37, 246);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(91, 13);
@@ -387,6 +392,7 @@ namespace Bot_Scout_RAPID_REACT
             // label8
             // 
             this.label8.AutoSize = true;
+            this.label8.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.label8.Location = new System.Drawing.Point(40, 112);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(92, 13);
@@ -396,6 +402,7 @@ namespace Bot_Scout_RAPID_REACT
             // label9
             // 
             this.label9.AutoSize = true;
+            this.label9.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.label9.Location = new System.Drawing.Point(40, 144);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(92, 13);
@@ -420,6 +427,7 @@ namespace Bot_Scout_RAPID_REACT
             // label10
             // 
             this.label10.AutoSize = true;
+            this.label10.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.label10.Location = new System.Drawing.Point(63, 167);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(65, 13);
@@ -436,6 +444,7 @@ namespace Bot_Scout_RAPID_REACT
             // label11
             // 
             this.label11.AutoSize = true;
+            this.label11.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.label11.Location = new System.Drawing.Point(63, 297);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(64, 13);
@@ -452,6 +461,7 @@ namespace Bot_Scout_RAPID_REACT
             // label12
             // 
             this.label12.AutoSize = true;
+            this.label12.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.label12.Location = new System.Drawing.Point(95, 191);
             this.label12.Name = "label12";
             this.label12.Size = new System.Drawing.Size(27, 13);
@@ -461,6 +471,7 @@ namespace Bot_Scout_RAPID_REACT
             // label13
             // 
             this.label13.AutoSize = true;
+            this.label13.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.label13.Location = new System.Drawing.Point(78, 220);
             this.label13.Name = "label13";
             this.label13.Size = new System.Drawing.Size(54, 13);
@@ -471,6 +482,7 @@ namespace Bot_Scout_RAPID_REACT
             // label14
             // 
             this.label14.AutoSize = true;
+            this.label14.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.label14.Location = new System.Drawing.Point(70, 431);
             this.label14.Name = "label14";
             this.label14.Size = new System.Drawing.Size(59, 13);
@@ -480,6 +492,7 @@ namespace Bot_Scout_RAPID_REACT
             // label15
             // 
             this.label15.AutoSize = true;
+            this.label15.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.label15.Location = new System.Drawing.Point(70, 404);
             this.label15.Name = "label15";
             this.label15.Size = new System.Drawing.Size(62, 13);
@@ -489,6 +502,7 @@ namespace Bot_Scout_RAPID_REACT
             // label16
             // 
             this.label16.AutoSize = true;
+            this.label16.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.label16.Location = new System.Drawing.Point(75, 378);
             this.label16.Name = "label16";
             this.label16.Size = new System.Drawing.Size(57, 13);
@@ -498,6 +512,7 @@ namespace Bot_Scout_RAPID_REACT
             // label17
             // 
             this.label17.AutoSize = true;
+            this.label17.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.label17.Location = new System.Drawing.Point(68, 353);
             this.label17.Name = "label17";
             this.label17.Size = new System.Drawing.Size(59, 13);
@@ -507,6 +522,7 @@ namespace Bot_Scout_RAPID_REACT
             // label18
             // 
             this.label18.AutoSize = true;
+            this.label18.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.label18.Location = new System.Drawing.Point(81, 325);
             this.label18.Name = "label18";
             this.label18.Size = new System.Drawing.Size(47, 13);
@@ -771,8 +787,8 @@ namespace Bot_Scout_RAPID_REACT
             this.insightsToolStripMenuItem.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.insightsToolStripMenuItem.Name = "insightsToolStripMenuItem";
             this.insightsToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.I)));
-            this.insightsToolStripMenuItem.Size = new System.Drawing.Size(78, 22);
-            this.insightsToolStripMenuItem.Text = "Insights";
+            this.insightsToolStripMenuItem.Size = new System.Drawing.Size(141, 22);
+            this.insightsToolStripMenuItem.Text = "Alliance Insights";
             this.insightsToolStripMenuItem.Click += new System.EventHandler(this.insightsToolStripMenuItem_Click);
             // 
             // bestScoresToolStripMenuItem
@@ -2448,8 +2464,8 @@ namespace Bot_Scout_RAPID_REACT
             this.alliancePanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(27)))), ((int)(((byte)(113)))), ((int)(((byte)(165)))));
             this.alliancePanel.CellBorderStyle = System.Windows.Forms.TableLayoutPanelCellBorderStyle.Single;
             this.alliancePanel.ColumnCount = 5;
-            this.alliancePanel.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 39.63415F));
-            this.alliancePanel.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 60.36585F));
+            this.alliancePanel.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 39.72603F));
+            this.alliancePanel.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 60.27397F));
             this.alliancePanel.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 146F));
             this.alliancePanel.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 115F));
             this.alliancePanel.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 104F));
@@ -2468,14 +2484,14 @@ namespace Bot_Scout_RAPID_REACT
             this.alliancePanel.Controls.Add(this.slot1, 0, 1);
             this.alliancePanel.Controls.Add(this.slot2, 0, 2);
             this.alliancePanel.Controls.Add(this.label71, 4, 0);
-            this.alliancePanel.Location = new System.Drawing.Point(273, 108);
+            this.alliancePanel.Location = new System.Drawing.Point(354, 97);
             this.alliancePanel.Name = "alliancePanel";
             this.alliancePanel.RowCount = 3;
             this.alliancePanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 15.82278F));
             this.alliancePanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 84.17722F));
             this.alliancePanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 113F));
             this.alliancePanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-            this.alliancePanel.Size = new System.Drawing.Size(534, 245);
+            this.alliancePanel.Size = new System.Drawing.Size(589, 245);
             this.alliancePanel.TabIndex = 89;
             // 
             // panel2
@@ -2485,7 +2501,7 @@ namespace Bot_Scout_RAPID_REACT
             this.panel2.Controls.Add(this.team2One);
             this.panel2.Controls.Add(this.areaTwoOneTele);
             this.panel2.Controls.Add(this.areaTwoOne);
-            this.panel2.Location = new System.Drawing.Point(69, 133);
+            this.panel2.Location = new System.Drawing.Point(91, 133);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(92, 101);
             this.panel2.TabIndex = 97;
@@ -2524,7 +2540,7 @@ namespace Bot_Scout_RAPID_REACT
             this.panel3.Controls.Add(this.team2Two);
             this.panel3.Controls.Add(this.areaTwoTwoTele);
             this.panel3.Controls.Add(this.areaTwoTwo);
-            this.panel3.Location = new System.Drawing.Point(168, 133);
+            this.panel3.Location = new System.Drawing.Point(223, 133);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(93, 106);
             this.panel3.TabIndex = 91;
@@ -2564,7 +2580,7 @@ namespace Bot_Scout_RAPID_REACT
             this.panel4.Controls.Add(this.team2Three);
             this.panel4.Controls.Add(this.areaTwoThreeTele);
             this.panel4.Controls.Add(this.areaTwoThree);
-            this.panel4.Location = new System.Drawing.Point(315, 133);
+            this.panel4.Location = new System.Drawing.Point(370, 133);
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(93, 101);
             this.panel4.TabIndex = 91;
@@ -2600,7 +2616,7 @@ namespace Bot_Scout_RAPID_REACT
             // 
             this.panel5.Controls.Add(this.upperAverage2);
             this.panel5.Controls.Add(this.averageAlliance2);
-            this.panel5.Location = new System.Drawing.Point(431, 133);
+            this.panel5.Location = new System.Drawing.Point(486, 133);
             this.panel5.Name = "panel5";
             this.panel5.Size = new System.Drawing.Size(93, 106);
             this.panel5.TabIndex = 91;
@@ -2618,7 +2634,7 @@ namespace Bot_Scout_RAPID_REACT
             // 
             this.panel6.Controls.Add(this.upperAverage1);
             this.panel6.Controls.Add(this.averageAlliance1);
-            this.panel6.Location = new System.Drawing.Point(431, 25);
+            this.panel6.Location = new System.Drawing.Point(486, 25);
             this.panel6.Name = "panel6";
             this.panel6.Size = new System.Drawing.Size(93, 100);
             this.panel6.TabIndex = 91;
@@ -2639,7 +2655,7 @@ namespace Bot_Scout_RAPID_REACT
             this.panel7.Controls.Add(this.team1Two);
             this.panel7.Controls.Add(this.areaOneThreeTele);
             this.panel7.Controls.Add(this.areaOneThree);
-            this.panel7.Location = new System.Drawing.Point(315, 25);
+            this.panel7.Location = new System.Drawing.Point(370, 25);
             this.panel7.Name = "panel7";
             this.panel7.Size = new System.Drawing.Size(93, 100);
             this.panel7.TabIndex = 91;
@@ -2678,7 +2694,7 @@ namespace Bot_Scout_RAPID_REACT
             this.panel8.Controls.Add(this.team1One);
             this.panel8.Controls.Add(this.areaOneTwoTele);
             this.panel8.Controls.Add(this.areaOneTwo);
-            this.panel8.Location = new System.Drawing.Point(168, 25);
+            this.panel8.Location = new System.Drawing.Point(223, 25);
             this.panel8.Name = "panel8";
             this.panel8.Size = new System.Drawing.Size(93, 100);
             this.panel8.TabIndex = 91;
@@ -2717,7 +2733,7 @@ namespace Bot_Scout_RAPID_REACT
             this.panel1.Controls.Add(this.areaOneOneTele);
             this.panel1.Controls.Add(this.team1CaptainOne);
             this.panel1.Controls.Add(this.areaOneOne);
-            this.panel1.Location = new System.Drawing.Point(69, 25);
+            this.panel1.Location = new System.Drawing.Point(91, 25);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(92, 100);
             this.panel1.TabIndex = 90;
@@ -2752,36 +2768,44 @@ namespace Bot_Scout_RAPID_REACT
             // label67
             // 
             this.label67.AutoSize = true;
+            this.label67.Font = new System.Drawing.Font("Shojumaru", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label67.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.label67.Location = new System.Drawing.Point(4, 1);
             this.label67.Name = "label67";
-            this.label67.Size = new System.Drawing.Size(49, 13);
+            this.label67.Size = new System.Drawing.Size(77, 20);
             this.label67.TabIndex = 90;
             this.label67.Text = "Alliances";
             // 
             // label68
             // 
             this.label68.AutoSize = true;
-            this.label68.Location = new System.Drawing.Point(69, 1);
+            this.label68.Font = new System.Drawing.Font("Shojumaru", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label68.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.label68.Location = new System.Drawing.Point(91, 1);
             this.label68.Name = "label68";
-            this.label68.Size = new System.Drawing.Size(43, 13);
+            this.label68.Size = new System.Drawing.Size(70, 15);
             this.label68.TabIndex = 91;
             this.label68.Text = "Captain";
             // 
             // label69
             // 
             this.label69.AutoSize = true;
-            this.label69.Location = new System.Drawing.Point(168, 1);
+            this.label69.Font = new System.Drawing.Font("Shojumaru", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label69.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.label69.Location = new System.Drawing.Point(223, 1);
             this.label69.Name = "label69";
-            this.label69.Size = new System.Drawing.Size(50, 13);
+            this.label69.Size = new System.Drawing.Size(86, 15);
             this.label69.TabIndex = 92;
             this.label69.Text = "First Pick";
             // 
             // label70
             // 
             this.label70.AutoSize = true;
-            this.label70.Location = new System.Drawing.Point(315, 1);
+            this.label70.Font = new System.Drawing.Font("Shojumaru", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label70.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.label70.Location = new System.Drawing.Point(370, 1);
             this.label70.Name = "label70";
-            this.label70.Size = new System.Drawing.Size(68, 13);
+            this.label70.Size = new System.Drawing.Size(103, 15);
             this.label70.TabIndex = 93;
             this.label70.Text = "Second Pick";
             // 
@@ -2802,9 +2826,11 @@ namespace Bot_Scout_RAPID_REACT
             // label71
             // 
             this.label71.AutoSize = true;
-            this.label71.Location = new System.Drawing.Point(431, 1);
+            this.label71.Font = new System.Drawing.Font("Shojumaru", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label71.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.label71.Location = new System.Drawing.Point(486, 1);
             this.label71.Name = "label71";
-            this.label71.Size = new System.Drawing.Size(47, 13);
+            this.label71.Size = new System.Drawing.Size(74, 15);
             this.label71.TabIndex = 102;
             this.label71.Text = "Average";
             // 
@@ -2934,10 +2960,18 @@ namespace Bot_Scout_RAPID_REACT
             this.upperAverage2.TabIndex = 104;
             this.upperAverage2.Text = "N/A";
             // 
+            // bestTeamsBar
+            // 
+            this.bestTeamsBar.Location = new System.Drawing.Point(476, 54);
+            this.bestTeamsBar.Name = "bestTeamsBar";
+            this.bestTeamsBar.Size = new System.Drawing.Size(212, 23);
+            this.bestTeamsBar.TabIndex = 90;
+            // 
             // Form1
             // 
-            this.BackColor = System.Drawing.Color.SteelBlue;
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(81)))), ((int)(((byte)(117)))));
             this.ClientSize = new System.Drawing.Size(1084, 572);
+            this.Controls.Add(this.bestTeamsBar);
             this.Controls.Add(this.alliancePanel);
             this.Controls.Add(this.entryDrop);
             this.Controls.Add(this.shotSpotDrop);
@@ -3280,6 +3314,7 @@ namespace Bot_Scout_RAPID_REACT
         private System.Windows.Forms.Label climbOneOne;
         private System.Windows.Forms.Label upperAverage2;
         private System.Windows.Forms.Label upperAverage1;
+        private System.Windows.Forms.ProgressBar bestTeamsBar;
     }
 }
 

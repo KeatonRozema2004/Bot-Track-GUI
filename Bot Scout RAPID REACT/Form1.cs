@@ -5,25 +5,15 @@ using System.Windows.Forms;
 
 
 //TODO: Make safeguards so doesn't enter empty data
-//TODO: Go back to team 27, match 5, just take a look at match
-//TODO: MAKE LOOK BETTER, AND FOR MATCHES
-//TODO: Make a "Create Team" Tab
-//TODO: Make sure it works correctly by doing test ones
-//TODO: Make total score so if team gets a single number score, it turns into a double
 //TODO: Make it so it detects if the string is a number (or turns the string to a number, then back into a string)
-//TODO: compare alliances together (Alliance Insights)
-
-//494 T
-//2586 T
-//5205 M
-
-//4391 T
-//2771 T
-//85 H
-
-
 //TODO: Best climb, percentage climb, top cargo, average cargo, all in the same box
 
+//COMPLETE: MAKE LOOK BETTER, AND FOR MATCHES
+//COMPLETE: Make a "Create Team" Tab
+//COMPLETE: Make sure it works correctly by doing test ones
+//COMPLETE: Make total score so if team gets a single number score, it turns into a double
+//COMPLETE: compare alliances together (Alliance Insights)
+//COMPLETE: Test alliance thing
 //COMPLETE: Alliance Tab
 //COMPLETE: Make tab key work
 //COMPLETE: Fix get best overall score
@@ -42,6 +32,7 @@ namespace Bot_Scout_RAPID_REACT
             int pX = 240;
             int pY = 100;
             InitializeComponent();
+            bestTeamsBar.Visible = false;
             bestTeamsTableLayout.Visible = false;
             averageTeamTable.Visible = false;
             driverSheetTable.Visible = false;
@@ -69,7 +60,7 @@ namespace Bot_Scout_RAPID_REACT
         public void addLines(string team)
         {
             File.AppendAllText(team + ".txt", "Shutdowns: 0" + Environment.NewLine);
-            for (int i = 0; i < 5000; i++)
+            for (int i = 0; i < 2000; i++)
             {
                 File.AppendAllText(team + ".txt", "0" + Environment.NewLine);
             }
@@ -1646,9 +1637,6 @@ namespace Bot_Scout_RAPID_REACT
                 {
                     notify("Message");
                     driveData(1, (24 + (22 * (matchBack1-1))), matchText.Text, oneteleLow, oneteleHigh, oneautoTotal, onetime, oneclimbType2, onedefense2, onetotalScore2);
-                   // driveData2(1, (24 + (22 * (matchBack2 - 1))), matchText.Text, oneteleLow, oneteleHigh, oneautoTotal, onetime, oneclimbType2, onedefense2, onetotalScore2);
-                    //driveData(1, (24 + (22 * (matchBack2 - 2))), matchText.Text, twoteleLow, twoteleHigh.Text, twoautoTotal.Text, twotime.Text, twoclimbType2.Text, twodefense2.Text, twototalScore2.Text);
-                    //driveData(1, (24 + (22 * (matchBack3 - 3))), matchText.Text, threeteleLow, threeteleHigh.Text, threeautoTotal.Text, threetime.Text, threeclimbType.Text, threedefense.Text, threetotalScore.Text);
                     notify("Loaded the previous match for team " + team1);
                 }
                 catch (Exception)
@@ -1706,14 +1694,26 @@ namespace Bot_Scout_RAPID_REACT
         {
             try
             {
+                bestTeamsBar.Visible = true;
+                bestTeamsBar.Value = 0;
+                bestTeamsBar.Maximum = 8;
                 recentMatch();
+                bestTeamsBar.Value++;
                 prevMatch(1);
+                bestTeamsBar.Value++;
                 recentMatch();
+                bestTeamsBar.Value++;
                 prevMatch2(2);
+                bestTeamsBar.Value++;
                 recentMatch();
+                bestTeamsBar.Value++;
                 prevMatch3(3);
+                bestTeamsBar.Value++;
                 recentMatch();
+                bestTeamsBar.Value++;
                 bestScore(team.Text);
+                bestTeamsBar.Value++;
+                bestTeamsBar.Visible = false;
 
             }
             catch (Exception)
@@ -2409,12 +2409,15 @@ namespace Bot_Scout_RAPID_REACT
 
         public void alliances(string best)
         {
+
+            //These are all the team numbers in the playoffs, based on seed number
+            //When teams are figured out,it would be best to debug and make sure each team gives out acurate data
             string[] a1 = new string[3] { "27", "2337", "5090" };
             string[] a2 = new string[3] { "494", "2586", "5205" };
             string[] a3 = new string[3] { "3620", "4003", "857" }; 
             string[] a4 = new string[3] { "3707", "2620", "1188" };
             string[] a5 = new string[3] { "910", "2959", "6002" };
-            string[] a6 = new string[3] { "5166", "5050", "7160" }; //
+            string[] a6 = new string[3] { "5166", "5050", "7160" };
             string[] a7 = new string[3] { "4391", "2771", "85" };
             string[] a8 = new string[3] { "5216", "4325", "3668" };
 
