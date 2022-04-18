@@ -7,6 +7,9 @@ using System.Windows.Forms;
 //TODO: Make safeguards so doesn't enter empty data
 //TODO: Make it so it detects if the string is a number (or turns the string to a number, then back into a string)
 //TODO: Best climb, percentage climb, top cargo, average cargo, all in the same box
+//TODO: Add a GUI "Add Alliance" tab
+//TODO: Loading bar for everything
+
 
 //COMPLETE: MAKE LOOK BETTER, AND FOR MATCHES
 //COMPLETE: Make a "Create Team" Tab
@@ -2642,7 +2645,6 @@ namespace Bot_Scout_RAPID_REACT
             int tS1 = getBestScoreAlliance(team, 0);
             int tS2 = getBestScoreAlliance(team, 1);
             int tS3 = getBestScoreAlliance(team, 2);
-            //TODO: Something
             if (placement == 1)
             {
                 areaOneOne.Text = "Best Score"+ ": " + tS1 + "";
@@ -2650,7 +2652,6 @@ namespace Bot_Scout_RAPID_REACT
                 areaOneTwo.Text = "Best Score" + ": " + tS2 + "";
                 team1One.Text = "Team " + team[1];
                 areaOneThree.Text = "Best Score" +  ": " + tS3 + "";
-                //team1CaptainOne.Text = "Best Score: " + team[2];
                 team1Two.Text = "Team " + team[2];
                 averageAlliance1.Text = ((tS1 + tS2 + tS3) / 3) + "";
             }

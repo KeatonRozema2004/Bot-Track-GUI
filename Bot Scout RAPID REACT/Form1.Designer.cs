@@ -285,6 +285,7 @@ namespace Bot_Scout_RAPID_REACT
             this.upperAverage1 = new System.Windows.Forms.Label();
             this.upperAverage2 = new System.Windows.Forms.Label();
             this.bestTeamsBar = new System.Windows.Forms.ProgressBar();
+            this.helpProvider1 = new System.Windows.Forms.HelpProvider();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.menuStrip1.SuspendLayout();
             this.bestTeamsTableLayout.SuspendLayout();
@@ -603,6 +604,7 @@ namespace Bot_Scout_RAPID_REACT
             // 
             // matchToolStripMenuItem
             // 
+            this.matchToolStripMenuItem.Alignment = System.Windows.Forms.ToolStripItemAlignment.Right;
             this.matchToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.makeToolStripMenuItem,
             this.editToolStripMenuItem});
@@ -809,6 +811,7 @@ namespace Bot_Scout_RAPID_REACT
             // 
             // createTeamToolStripMenuItem
             // 
+            this.createTeamToolStripMenuItem.Alignment = System.Windows.Forms.ToolStripItemAlignment.Right;
             this.createTeamToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.teamNumber,
             this.toolStripMenuItem1});
@@ -2962,9 +2965,9 @@ namespace Bot_Scout_RAPID_REACT
             // 
             // bestTeamsBar
             // 
-            this.bestTeamsBar.Location = new System.Drawing.Point(476, 54);
+            this.bestTeamsBar.Location = new System.Drawing.Point(242, 56);
             this.bestTeamsBar.Name = "bestTeamsBar";
-            this.bestTeamsBar.Size = new System.Drawing.Size(212, 23);
+            this.bestTeamsBar.Size = new System.Drawing.Size(782, 23);
             this.bestTeamsBar.TabIndex = 90;
             // 
             // Form1
@@ -3315,6 +3318,7 @@ namespace Bot_Scout_RAPID_REACT
         private System.Windows.Forms.Label upperAverage2;
         private System.Windows.Forms.Label upperAverage1;
         private System.Windows.Forms.ProgressBar bestTeamsBar;
+        private System.Windows.Forms.HelpProvider helpProvider1;
     }
 }
 
