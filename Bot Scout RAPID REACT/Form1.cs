@@ -271,6 +271,11 @@ namespace Bot_Scout_RAPID_REACT
                         writeToFile(team.Text, "Climb Type: n");
                         climbType = "n";
                     }
+                    else if(climbDrop.Text != "Low" && climbDrop.Text != "Mid" && climbDrop.Text != "High" && climbDrop.Text != "Traversal")
+                    {
+                        writeToFile(team.Text, "Climb Type: n");
+                        climbType = "n";
+                    }
                     writeToFile(team.Text, "Defense: " + "0" + defense.Text);
                     if (shotSpotDrop.Text == "Hub")
                     {
@@ -285,6 +290,10 @@ namespace Bot_Scout_RAPID_REACT
                         writeToFile(team.Text, "Position: t");
                     }
                     else if (shotSpotDrop.Text == "Other")
+                    {
+                        writeToFile(team.Text, "Position: o");
+                    }
+                    else
                     {
                         writeToFile(team.Text, "Position: o");
                     }
@@ -578,7 +587,7 @@ namespace Bot_Scout_RAPID_REACT
 
                 if (match.GetLine(team + ".txt", i).Contains("Defense"))
                 {
-                    string num1 = match.GetLine(team + ".txt", i)[9].ToString();
+                    string num1 = match.GetLine(team + ".txt", i)[10].ToString();
                     tempNum = Int32.Parse(num1);
                     if (tempNum > defense1)
                     {
